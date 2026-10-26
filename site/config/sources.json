@@ -147,6 +147,8 @@
     {
       "id": "hiring_tracker",
       "kind": "gsheet",
+      "shape": "hiring_funnel",
+      "_shape_note": "The real tracker has no Roles or Candidates tab. connectors/hiring.js reads its open-roles, recruiter and Offers & Joiners tabs (config/hiring.json) and builds those two tables, so the catalogue's hiring metrics count real candidates.",
       "dept": "hiring",
       "label": "Hiring tracker",
       "ref": "REPLACE_WITH_SPREADSHEET_ID",

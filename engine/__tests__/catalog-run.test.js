@@ -123,7 +123,7 @@ function buildFixtures() {
       { ticket: 'S5', status: 'In Progress', type: 'release', cycle_days: 90 }
     ],
     'hiring_tracker::Roles': [
-      ...repeat(6, (i) => ({ role: `R${i}`, status: 'open' })),
+      ...repeat(6, (i) => ({ role: `R${i}`, status: 'open', headcount: 2 })),
       ...repeat(2, (i) => ({ role: `C${i}`, status: 'closed' }))
     ],
     'hiring_tracker::Candidates': [

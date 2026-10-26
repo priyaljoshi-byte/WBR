@@ -47,7 +47,7 @@ const ROOT = path.join(HERE, '..', '..');
  * bin/pulse.js already honours PULSE_DATA_DIR, so pointing it at an empty
  * directory is all it takes to pin this to config.
  */
-const CHECK_ENV = { ...process.env, PULSE_DATA_DIR: path.join(ROOT, 'node_modules', '.pulse-empty-data') };
+const CHECK_ENV = { ...process.env, PULSE_DATA_DIR: path.join(ROOT, 'node_modules', '.pulse-empty-data'), PULSE_OFFLINE: '1' };
 const readJson = async (name) =>
   JSON.parse(await readFile(path.join(ROOT, 'config', name), 'utf8'));
 
@@ -350,7 +350,7 @@ test('pulse check prints the four reviews and what each one reads', async () => 
   assert.ok(!/is read in NO meeting/.test(stdout));
   assert.equal(
     catalog.metrics.length,
-    6 + 15 + 15 + 17,
+    7 + 15 + 15 + 17,
     'the four rooms partition the catalogue exactly once'
   );
 });

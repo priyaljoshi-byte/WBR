@@ -405,10 +405,16 @@
       "denominator": { "kind": "column_total", "column": "followers", "label": "total" }, "direction": "up", "target": null, "warn_at": null, "crit_at": null,
       "caption": "{{raw}} of {{denominator}} {{denominator_label}}" },
 
+    { "id": "hiring_plan", "label": "Openings in plan", "dept": "hiring", "unit": "count",
+      "source": { "ref": "hiring_tracker", "tab": "Roles", "agg": "sum", "column": "headcount", "where": { "column": "status", "in": ["open", "on_hold"] } },
+      "denominator": { "kind": "self" }, "direction": "up", "target": null, "warn_at": null, "crit_at": null,
+      "caption": "{{raw}} openings",
+      "_note": "Headcount summed over every role on the open-roles tab that is not Closed. The 'in plan' every other hiring ring is read against." },
+
     { "id": "hiring_open_roles", "label": "Open roles", "dept": "hiring", "unit": "count",
       "source": { "ref": "hiring_tracker", "tab": "Roles", "agg": "count", "where": { "column": "status", "equals": "open" } },
-      "denominator": { "kind": "static", "value": null, "label": "in plan" }, "direction": "up", "target": null, "warn_at": null, "crit_at": null,
-      "caption": "{{raw}} of {{denominator}} {{denominator_label}}" },
+      "denominator": { "kind": "self" }, "direction": "up", "target": null, "warn_at": null, "crit_at": null,
+      "caption": "{{raw}} open" },
 
     { "id": "hiring_in_process", "label": "In process", "dept": "hiring", "unit": "count",
       "source": { "ref": "hiring_tracker", "tab": "Candidates", "agg": "count", "where": { "column": "status", "in": ["screening", "interviewing"] } },
@@ -422,12 +428,12 @@
 
     { "id": "hiring_accepted", "label": "Offer accepted", "dept": "hiring", "unit": "count",
       "source": { "ref": "hiring_tracker", "tab": "Candidates", "agg": "count", "where": { "column": "status", "equals": "accepted" } },
-      "denominator": { "kind": "static", "value": null, "label": "in plan" }, "direction": "up", "target": null, "warn_at": 0.7, "crit_at": 0.4,
+      "denominator": { "kind": "metric", "metric": "hiring_plan", "label": "in plan" }, "direction": "up", "target": null, "warn_at": 0.7, "crit_at": 0.4,
       "caption": "{{raw}} of {{denominator}} {{denominator_label}}" },
 
     { "id": "hiring_joined", "label": "Joined", "dept": "hiring", "unit": "count",
       "source": { "ref": "hiring_tracker", "tab": "Candidates", "agg": "count", "where": { "column": "status", "equals": "joined" } },
-      "denominator": { "kind": "static", "value": null, "label": "in plan" }, "direction": "up", "target": null, "warn_at": 0.7, "crit_at": 0.4,
+      "denominator": { "kind": "metric", "metric": "hiring_plan", "label": "in plan" }, "direction": "up", "target": null, "warn_at": 0.7, "crit_at": 0.4,
       "caption": "{{raw}} of {{denominator}} {{denominator_label}}" },
 
     { "id": "hiring_time_to_close", "label": "Time to close", "dept": "hiring", "unit": "duration_days",

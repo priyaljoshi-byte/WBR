@@ -3,9 +3,9 @@
     "id": "run-2026-10-26",
     "periodStart": "2026-10-26",
     "periodEnd": "2026-11-01",
-    "startedAt": "2026-10-26T15:49:48.279Z",
-    "finishedAt": "2026-10-26T15:49:48.279Z",
-    "status": "failed",
+    "startedAt": "2026-10-26T18:27:57.828Z",
+    "finishedAt": "2026-10-26T18:27:57.828Z",
+    "status": "partial",
     "triggeredBy": "cron",
     "meetingId": "india_charter"
   },
@@ -15,20 +15,21 @@
       "metricId": "in_pipeline_india",
       "periodStart": "2026-10-26",
       "periodEnd": "2026-11-01",
-      "raw": null,
+      "raw": 0,
       "denominator": null,
       "normalized": null,
       "priorRaw": null,
       "priorNormalized": null,
       "delta": null,
-      "health": "missing",
+      "health": "untracked",
       "freshness": "unknown",
       "unit": "currency_inr",
-      "caption": "— open",
+      "caption": "₹0 open",
       "rowCount": 0,
-      "computedAt": "2026-10-26T15:49:48.279Z",
+      "computedAt": "2026-10-26T18:27:57.828Z",
       "warnings": [
-        "source \"india_crm\" errored: India pipeline: not connected yet - the id is still a placeholder in sources.json"
+        "the sheet could not be read (That sheet is private, so the browser is not allowed to read it. Open the sheet, press Share, and under \"General access\" choose \"Anyone with the link\" with the role Viewer. Nothing else needs changing, and view access does not let Pulse edit anything.), so the last upload was used",
+        "read from the uploaded file \"SLG Pipeline  - July Sales Funnel.csv\" (Subham)"
       ]
     },
     {
@@ -36,21 +37,23 @@
       "metricId": "india_closed_won",
       "periodStart": "2026-10-26",
       "periodEnd": "2026-11-01",
-      "raw": null,
+      "raw": 0,
       "denominator": null,
       "normalized": null,
       "priorRaw": null,
       "priorNormalized": null,
       "delta": null,
-      "health": "missing",
+      "health": "untracked",
       "freshness": "unknown",
       "unit": "currency_inr",
-      "caption": "— of — target",
+      "caption": "₹0 of — target",
       "rowCount": 0,
-      "computedAt": "2026-10-26T15:49:48.279Z",
+      "computedAt": "2026-10-26T18:27:57.828Z",
       "warnings": [
-        "source \"india_crm\" errored: India pipeline: not connected yet - the id is still a placeholder in sources.json",
-        "denominator for \"india_closed_won\" is static but has no usable value"
+        "the sheet could not be read (That sheet is private, so the browser is not allowed to read it. Open the sheet, press Share, and under \"General access\" choose \"Anyone with the link\" with the role Viewer. Nothing else needs changing, and view access does not let Pulse edit anything.), so the last upload was used",
+        "read from the uploaded file \"SLG Pipeline  - July Sales Funnel.csv\" (Subham)",
+        "denominator for \"india_closed_won\" is static but has no usable value",
+        "denominator is missing - no ring arc can be drawn"
       ]
     },
     {
@@ -58,21 +61,22 @@
       "metricId": "india_in_poc",
       "periodStart": "2026-10-26",
       "periodEnd": "2026-11-01",
-      "raw": null,
-      "denominator": null,
+      "raw": 0,
+      "denominator": 0,
       "normalized": null,
       "priorRaw": null,
       "priorNormalized": null,
       "delta": null,
-      "health": "missing",
+      "health": "untracked",
       "freshness": "unknown",
       "unit": "currency_inr",
-      "caption": "— of — open",
+      "caption": "₹0 of ₹0 open",
       "rowCount": 0,
-      "computedAt": "2026-10-26T15:49:48.279Z",
+      "computedAt": "2026-10-26T18:27:57.828Z",
       "warnings": [
-        "source \"india_crm\" errored: India pipeline: not connected yet - the id is still a placeholder in sources.json",
-        "denominator metric \"in_pipeline_india\" for \"india_in_poc\" has no value"
+        "the sheet could not be read (That sheet is private, so the browser is not allowed to read it. Open the sheet, press Share, and under \"General access\" choose \"Anyone with the link\" with the role Viewer. Nothing else needs changing, and view access does not let Pulse edit anything.), so the last upload was used",
+        "read from the uploaded file \"SLG Pipeline  - July Sales Funnel.csv\" (Subham)",
+        "denominator is 0 - no ring arc can be drawn"
       ]
     },
     {
@@ -80,21 +84,22 @@
       "metricId": "india_proposal",
       "periodStart": "2026-10-26",
       "periodEnd": "2026-11-01",
-      "raw": null,
-      "denominator": null,
+      "raw": 0,
+      "denominator": 0,
       "normalized": null,
       "priorRaw": null,
       "priorNormalized": null,
       "delta": null,
-      "health": "missing",
+      "health": "untracked",
       "freshness": "unknown",
       "unit": "currency_inr",
-      "caption": "—",
+      "caption": "₹0",
       "rowCount": 0,
-      "computedAt": "2026-10-26T15:49:48.279Z",
+      "computedAt": "2026-10-26T18:27:57.828Z",
       "warnings": [
-        "source \"india_crm\" errored: India pipeline: not connected yet - the id is still a placeholder in sources.json",
-        "denominator metric \"in_pipeline_india\" for \"india_proposal\" has no value"
+        "the sheet could not be read (That sheet is private, so the browser is not allowed to read it. Open the sheet, press Share, and under \"General access\" choose \"Anyone with the link\" with the role Viewer. Nothing else needs changing, and view access does not let Pulse edit anything.), so the last upload was used",
+        "read from the uploaded file \"SLG Pipeline  - July Sales Funnel.csv\" (Subham)",
+        "denominator is 0 - no ring arc can be drawn"
       ]
     },
     {
@@ -113,9 +118,9 @@
       "unit": "currency_inr",
       "caption": "— created",
       "rowCount": 0,
-      "computedAt": "2026-10-26T15:49:48.279Z",
+      "computedAt": "2026-10-26T18:27:57.828Z",
       "warnings": [
-        "source \"india_crm_created\" errored: India pipeline created: not connected yet - the id is still a placeholder in sources.json"
+        "source \"india_crm_created\" errored: India pipeline created: not connected yet - paste the link or upload a CSV on the Sources page"
       ]
     },
     {
@@ -133,10 +138,13 @@
       "freshness": "unknown",
       "unit": "percent",
       "caption": "—",
-      "rowCount": 0,
-      "computedAt": "2026-10-26T15:49:48.279Z",
+      "rowCount": 16,
+      "computedAt": "2026-10-26T18:27:57.828Z",
       "warnings": [
-        "source \"india_crm\" errored: India pipeline: not connected yet - the id is still a placeholder in sources.json"
+        "the sheet could not be read (That sheet is private, so the browser is not allowed to read it. Open the sheet, press Share, and under \"General access\" choose \"Anyone with the link\" with the role Viewer. Nothing else needs changing, and view access does not let Pulse edit anything.), so the last upload was used",
+        "read from the uploaded file \"SLG Pipeline  - July Sales Funnel.csv\" (Subham)",
+        "column \"won_flag\" is not in the source at all - 16 rows skipped, not counted as 0",
+        "16 row(s) matched but none held a usable number in \"won_flag\" - value is unknown, not 0"
       ]
     },
     {
@@ -144,21 +152,23 @@
       "metricId": "india_meetings_held",
       "periodStart": "2026-10-26",
       "periodEnd": "2026-11-01",
-      "raw": null,
+      "raw": 0,
       "denominator": null,
       "normalized": null,
       "priorRaw": null,
       "priorNormalized": null,
       "delta": null,
-      "health": "missing",
+      "health": "untracked",
       "freshness": "unknown",
       "unit": "count",
-      "caption": "— of — target",
+      "caption": "0 of — target",
       "rowCount": 0,
-      "computedAt": "2026-10-26T15:49:48.279Z",
+      "computedAt": "2026-10-26T18:27:57.828Z",
       "warnings": [
-        "source \"india_crm\" errored: India pipeline: not connected yet - the id is still a placeholder in sources.json",
-        "denominator for \"india_meetings_held\" is static but has no usable value"
+        "the sheet could not be read (That sheet is private, so the browser is not allowed to read it. Open the sheet, press Share, and under \"General access\" choose \"Anyone with the link\" with the role Viewer. Nothing else needs changing, and view access does not let Pulse edit anything.), so the last upload was used",
+        "read from the uploaded file \"SLG Pipeline  - July Sales Funnel.csv\" (Subham)",
+        "denominator for \"india_meetings_held\" is static but has no usable value",
+        "denominator is missing - no ring arc can be drawn"
       ]
     },
     {
@@ -166,21 +176,23 @@
       "metricId": "india_opps_created",
       "periodStart": "2026-10-26",
       "periodEnd": "2026-11-01",
-      "raw": null,
+      "raw": 0,
       "denominator": null,
       "normalized": null,
       "priorRaw": null,
       "priorNormalized": null,
       "delta": null,
-      "health": "missing",
+      "health": "untracked",
       "freshness": "unknown",
       "unit": "count",
-      "caption": "— of — target",
+      "caption": "0 of — target",
       "rowCount": 0,
-      "computedAt": "2026-10-26T15:49:48.279Z",
+      "computedAt": "2026-10-26T18:27:57.828Z",
       "warnings": [
-        "source \"india_crm\" errored: India pipeline: not connected yet - the id is still a placeholder in sources.json",
-        "denominator for \"india_opps_created\" is static but has no usable value"
+        "the sheet could not be read (That sheet is private, so the browser is not allowed to read it. Open the sheet, press Share, and under \"General access\" choose \"Anyone with the link\" with the role Viewer. Nothing else needs changing, and view access does not let Pulse edit anything.), so the last upload was used",
+        "read from the uploaded file \"SLG Pipeline  - July Sales Funnel.csv\" (Subham)",
+        "denominator for \"india_opps_created\" is static but has no usable value",
+        "denominator is missing - no ring arc can be drawn"
       ]
     },
     {
@@ -188,21 +200,23 @@
       "metricId": "india_accounts_worked",
       "periodStart": "2026-10-26",
       "periodEnd": "2026-11-01",
-      "raw": null,
+      "raw": 0,
       "denominator": null,
       "normalized": null,
       "priorRaw": null,
       "priorNormalized": null,
       "delta": null,
-      "health": "missing",
+      "health": "untracked",
       "freshness": "unknown",
       "unit": "count",
-      "caption": "— of — target",
-      "rowCount": 0,
-      "computedAt": "2026-10-26T15:49:48.279Z",
+      "caption": "0 of — target",
+      "rowCount": 16,
+      "computedAt": "2026-10-26T18:27:57.828Z",
       "warnings": [
-        "source \"india_crm\" errored: India pipeline: not connected yet - the id is still a placeholder in sources.json",
-        "denominator for \"india_accounts_worked\" is static but has no usable value"
+        "the sheet could not be read (That sheet is private, so the browser is not allowed to read it. Open the sheet, press Share, and under \"General access\" choose \"Anyone with the link\" with the role Viewer. Nothing else needs changing, and view access does not let Pulse edit anything.), so the last upload was used",
+        "read from the uploaded file \"SLG Pipeline  - July Sales Funnel.csv\" (Subham)",
+        "denominator for \"india_accounts_worked\" is static but has no usable value",
+        "denominator is missing - no ring arc can be drawn"
       ]
     },
     {
@@ -221,9 +235,9 @@
       "unit": "currency_inr",
       "caption": "— of — budget",
       "rowCount": 0,
-      "computedAt": "2026-10-26T15:49:48.279Z",
+      "computedAt": "2026-10-26T18:27:57.828Z",
       "warnings": [
-        "source \"ads_india\" errored: Paid media - India: not connected yet - the id is still a placeholder in sources.json",
+        "source \"ads_india\" errored: Paid media - India: not connected yet - paste the link or upload a CSV on the Sources page",
         "denominator for \"pm_india_spend\" is static but has no usable value"
       ],
       "segment": "india",
@@ -245,9 +259,9 @@
       "unit": "count",
       "caption": "— of — target",
       "rowCount": 0,
-      "computedAt": "2026-10-26T15:49:48.279Z",
+      "computedAt": "2026-10-26T18:27:57.828Z",
       "warnings": [
-        "source \"ads_india\" errored: Paid media - India: not connected yet - the id is still a placeholder in sources.json",
+        "source \"ads_india\" errored: Paid media - India: not connected yet - paste the link or upload a CSV on the Sources page",
         "denominator for \"pm_india_leads\" is static but has no usable value"
       ],
       "segment": "india",
@@ -269,9 +283,9 @@
       "unit": "count",
       "caption": "— of — leads",
       "rowCount": 0,
-      "computedAt": "2026-10-26T15:49:48.279Z",
+      "computedAt": "2026-10-26T18:27:57.828Z",
       "warnings": [
-        "source \"ads_india\" errored: Paid media - India: not connected yet - the id is still a placeholder in sources.json",
+        "source \"ads_india\" errored: Paid media - India: not connected yet - paste the link or upload a CSV on the Sources page",
         "denominator metric \"pm_india_leads\" for \"pm_india_qualified\" has no value"
       ],
       "segment": "india",
@@ -293,9 +307,9 @@
       "unit": "currency_inr",
       "caption": "—",
       "rowCount": 0,
-      "computedAt": "2026-10-26T15:49:48.279Z",
+      "computedAt": "2026-10-26T18:27:57.828Z",
       "warnings": [
-        "source \"ads_india\" errored: Paid media - India: not connected yet - the id is still a placeholder in sources.json"
+        "source \"ads_india\" errored: Paid media - India: not connected yet - paste the link or upload a CSV on the Sources page"
       ],
       "segment": "india",
       "family": "pm_cpl"
@@ -316,9 +330,9 @@
       "unit": "currency_inr",
       "caption": "—",
       "rowCount": 0,
-      "computedAt": "2026-10-26T15:49:48.279Z",
+      "computedAt": "2026-10-26T18:27:57.828Z",
       "warnings": [
-        "source \"ads_india\" errored: Paid media - India: not connected yet - the id is still a placeholder in sources.json"
+        "source \"ads_india\" errored: Paid media - India: not connected yet - paste the link or upload a CSV on the Sources page"
       ],
       "segment": "india",
       "family": "pm_cac"
@@ -328,20 +342,21 @@
       "metricId": "pm_india_pipeline_sourced",
       "periodStart": "2026-10-26",
       "periodEnd": "2026-11-01",
-      "raw": null,
+      "raw": 0,
       "denominator": null,
       "normalized": null,
       "priorRaw": null,
       "priorNormalized": null,
       "delta": null,
-      "health": "missing",
+      "health": "untracked",
       "freshness": "unknown",
       "unit": "currency_inr",
-      "caption": "— sourced",
+      "caption": "₹0 sourced",
       "rowCount": 0,
-      "computedAt": "2026-10-26T15:49:48.279Z",
+      "computedAt": "2026-10-26T18:27:57.828Z",
       "warnings": [
-        "source \"india_crm\" errored: India pipeline: not connected yet - the id is still a placeholder in sources.json"
+        "the sheet could not be read (That sheet is private, so the browser is not allowed to read it. Open the sheet, press Share, and under \"General access\" choose \"Anyone with the link\" with the role Viewer. Nothing else needs changing, and view access does not let Pulse edit anything.), so the last upload was used",
+        "read from the uploaded file \"SLG Pipeline  - July Sales Funnel.csv\" (Subham)"
       ],
       "segment": "india",
       "family": "pm_sourced"
@@ -357,64 +372,7 @@
         "Raghav"
       ],
       "raisedBy": "engine",
-      "raisedAt": "2026-10-26T15:49:48.279Z",
-      "resolvedAt": null,
-      "metricIds": [
-        "in_pipeline_india"
-      ],
-      "id": "missing_data:in_pipeline_india",
-      "kind": "missing_data",
-      "title": "Pipeline open is missing",
-      "body": "India pipeline did not return a value for \"Pipeline open\". Error: India pipeline: not connected yet - the id is still a placeholder in sources.json. Subham owns this source - it needs a successful sync before the next review."
-    },
-    {
-      "dept": "india_sales",
-      "owner": "Subham",
-      "ownerTeam": [
-        "Subham",
-        "Arfin",
-        "Raghav"
-      ],
-      "raisedBy": "engine",
-      "raisedAt": "2026-10-26T15:49:48.279Z",
-      "resolvedAt": null,
-      "metricIds": [
-        "india_accounts_worked"
-      ],
-      "id": "missing_data:india_accounts_worked",
-      "kind": "missing_data",
-      "title": "Accounts worked is missing",
-      "body": "India pipeline did not return a value for \"Accounts worked\". Error: India pipeline: not connected yet - the id is still a placeholder in sources.json. Subham owns this source - it needs a successful sync before the next review."
-    },
-    {
-      "dept": "india_sales",
-      "owner": "Subham",
-      "ownerTeam": [
-        "Subham",
-        "Arfin",
-        "Raghav"
-      ],
-      "raisedBy": "engine",
-      "raisedAt": "2026-10-26T15:49:48.279Z",
-      "resolvedAt": null,
-      "metricIds": [
-        "india_closed_won"
-      ],
-      "id": "missing_data:india_closed_won",
-      "kind": "missing_data",
-      "title": "Closed won is missing",
-      "body": "India pipeline did not return a value for \"Closed won\". Error: India pipeline: not connected yet - the id is still a placeholder in sources.json. Subham owns this source - it needs a successful sync before the next review."
-    },
-    {
-      "dept": "india_sales",
-      "owner": "Subham",
-      "ownerTeam": [
-        "Subham",
-        "Arfin",
-        "Raghav"
-      ],
-      "raisedBy": "engine",
-      "raisedAt": "2026-10-26T15:49:48.279Z",
+      "raisedAt": "2026-10-26T18:27:57.828Z",
       "resolvedAt": null,
       "metricIds": [
         "india_created_wk"
@@ -422,7 +380,7 @@
       "id": "missing_data:india_created_wk",
       "kind": "missing_data",
       "title": "Pipeline created is missing",
-      "body": "India pipeline created did not return a value for \"Pipeline created\". Error: India pipeline created: not connected yet - the id is still a placeholder in sources.json. Subham owns this source - it needs a successful sync before the next review."
+      "body": "India pipeline created did not return a value for \"Pipeline created\". Error: India pipeline created: not connected yet - paste the link or upload a CSV on the Sources page. Subham owns this source - it needs a successful sync before the next review."
     },
     {
       "dept": "india_sales",
@@ -433,83 +391,7 @@
         "Raghav"
       ],
       "raisedBy": "engine",
-      "raisedAt": "2026-10-26T15:49:48.279Z",
-      "resolvedAt": null,
-      "metricIds": [
-        "india_in_poc"
-      ],
-      "id": "missing_data:india_in_poc",
-      "kind": "missing_data",
-      "title": "In POC is missing",
-      "body": "India pipeline did not return a value for \"In POC\". Error: India pipeline: not connected yet - the id is still a placeholder in sources.json. Subham owns this source - it needs a successful sync before the next review."
-    },
-    {
-      "dept": "india_sales",
-      "owner": "Subham",
-      "ownerTeam": [
-        "Subham",
-        "Arfin",
-        "Raghav"
-      ],
-      "raisedBy": "engine",
-      "raisedAt": "2026-10-26T15:49:48.279Z",
-      "resolvedAt": null,
-      "metricIds": [
-        "india_meetings_held"
-      ],
-      "id": "missing_data:india_meetings_held",
-      "kind": "missing_data",
-      "title": "Meetings held is missing",
-      "body": "India pipeline did not return a value for \"Meetings held\". Error: India pipeline: not connected yet - the id is still a placeholder in sources.json. Subham owns this source - it needs a successful sync before the next review."
-    },
-    {
-      "dept": "india_sales",
-      "owner": "Subham",
-      "ownerTeam": [
-        "Subham",
-        "Arfin",
-        "Raghav"
-      ],
-      "raisedBy": "engine",
-      "raisedAt": "2026-10-26T15:49:48.279Z",
-      "resolvedAt": null,
-      "metricIds": [
-        "india_opps_created"
-      ],
-      "id": "missing_data:india_opps_created",
-      "kind": "missing_data",
-      "title": "Opportunities created is missing",
-      "body": "India pipeline did not return a value for \"Opportunities created\". Error: India pipeline: not connected yet - the id is still a placeholder in sources.json. Subham owns this source - it needs a successful sync before the next review."
-    },
-    {
-      "dept": "india_sales",
-      "owner": "Subham",
-      "ownerTeam": [
-        "Subham",
-        "Arfin",
-        "Raghav"
-      ],
-      "raisedBy": "engine",
-      "raisedAt": "2026-10-26T15:49:48.279Z",
-      "resolvedAt": null,
-      "metricIds": [
-        "india_proposal"
-      ],
-      "id": "missing_data:india_proposal",
-      "kind": "missing_data",
-      "title": "Proposal stage is missing",
-      "body": "India pipeline did not return a value for \"Proposal stage\". Error: India pipeline: not connected yet - the id is still a placeholder in sources.json. Subham owns this source - it needs a successful sync before the next review."
-    },
-    {
-      "dept": "india_sales",
-      "owner": "Subham",
-      "ownerTeam": [
-        "Subham",
-        "Arfin",
-        "Raghav"
-      ],
-      "raisedBy": "engine",
-      "raisedAt": "2026-10-26T15:49:48.279Z",
+      "raisedAt": "2026-10-26T18:27:57.828Z",
       "resolvedAt": null,
       "metricIds": [
         "india_win_rate"
@@ -517,7 +399,7 @@
       "id": "missing_data:india_win_rate",
       "kind": "missing_data",
       "title": "Win rate is missing",
-      "body": "India pipeline did not return a value for \"Win rate\". Error: India pipeline: not connected yet - the id is still a placeholder in sources.json. Subham owns this source - it needs a successful sync before the next review."
+      "body": "India pipeline did not return a value for \"Win rate\". Error: the sheet could not be read (That sheet is private, so the browser is not allowed to read it. Open the sheet, press Share, and under \"General access\" choose \"Anyone with the link\" with the role Viewer. Nothing else needs changing, and view access does not let Pulse edit anything.), so the last upload was used. Subham owns this source - it needs a successful sync before the next review."
     },
     {
       "dept": "perf_marketing",
@@ -527,7 +409,7 @@
         "Imran"
       ],
       "raisedBy": "engine",
-      "raisedAt": "2026-10-26T15:49:48.279Z",
+      "raisedAt": "2026-10-26T18:27:57.828Z",
       "resolvedAt": null,
       "metricIds": [
         "pm_india_cac"
@@ -535,7 +417,7 @@
       "id": "missing_data:pm_india_cac",
       "kind": "missing_data",
       "title": "CAC (paid) is missing",
-      "body": "Paid media - India did not return a value for \"CAC (paid)\". Error: Paid media - India: not connected yet - the id is still a placeholder in sources.json. Raghav owns this source - it needs a successful sync before the next review."
+      "body": "Paid media - India did not return a value for \"CAC (paid)\". Error: Paid media - India: not connected yet - paste the link or upload a CSV on the Sources page. Raghav owns this source - it needs a successful sync before the next review."
     },
     {
       "dept": "perf_marketing",
@@ -545,7 +427,7 @@
         "Imran"
       ],
       "raisedBy": "engine",
-      "raisedAt": "2026-10-26T15:49:48.279Z",
+      "raisedAt": "2026-10-26T18:27:57.828Z",
       "resolvedAt": null,
       "metricIds": [
         "pm_india_cpl"
@@ -553,7 +435,7 @@
       "id": "missing_data:pm_india_cpl",
       "kind": "missing_data",
       "title": "Cost per lead is missing",
-      "body": "Paid media - India did not return a value for \"Cost per lead\". Error: Paid media - India: not connected yet - the id is still a placeholder in sources.json. Raghav owns this source - it needs a successful sync before the next review."
+      "body": "Paid media - India did not return a value for \"Cost per lead\". Error: Paid media - India: not connected yet - paste the link or upload a CSV on the Sources page. Raghav owns this source - it needs a successful sync before the next review."
     },
     {
       "dept": "perf_marketing",
@@ -563,7 +445,7 @@
         "Imran"
       ],
       "raisedBy": "engine",
-      "raisedAt": "2026-10-26T15:49:48.279Z",
+      "raisedAt": "2026-10-26T18:27:57.828Z",
       "resolvedAt": null,
       "metricIds": [
         "pm_india_leads"
@@ -571,7 +453,7 @@
       "id": "missing_data:pm_india_leads",
       "kind": "missing_data",
       "title": "Leads is missing",
-      "body": "Paid media - India did not return a value for \"Leads\". Error: Paid media - India: not connected yet - the id is still a placeholder in sources.json. Raghav owns this source - it needs a successful sync before the next review."
+      "body": "Paid media - India did not return a value for \"Leads\". Error: Paid media - India: not connected yet - paste the link or upload a CSV on the Sources page. Raghav owns this source - it needs a successful sync before the next review."
     },
     {
       "dept": "perf_marketing",
@@ -581,25 +463,7 @@
         "Imran"
       ],
       "raisedBy": "engine",
-      "raisedAt": "2026-10-26T15:49:48.279Z",
-      "resolvedAt": null,
-      "metricIds": [
-        "pm_india_pipeline_sourced"
-      ],
-      "id": "missing_data:pm_india_pipeline_sourced",
-      "kind": "missing_data",
-      "title": "Pipeline sourced is missing",
-      "body": "India pipeline did not return a value for \"Pipeline sourced\". Error: India pipeline: not connected yet - the id is still a placeholder in sources.json. Raghav owns this source - it needs a successful sync before the next review."
-    },
-    {
-      "dept": "perf_marketing",
-      "owner": "Raghav",
-      "ownerTeam": [
-        "Raghav",
-        "Imran"
-      ],
-      "raisedBy": "engine",
-      "raisedAt": "2026-10-26T15:49:48.279Z",
+      "raisedAt": "2026-10-26T18:27:57.828Z",
       "resolvedAt": null,
       "metricIds": [
         "pm_india_qualified"
@@ -607,7 +471,7 @@
       "id": "missing_data:pm_india_qualified",
       "kind": "missing_data",
       "title": "Qualified is missing",
-      "body": "Paid media - India did not return a value for \"Qualified\". Error: Paid media - India: not connected yet - the id is still a placeholder in sources.json. Raghav owns this source - it needs a successful sync before the next review."
+      "body": "Paid media - India did not return a value for \"Qualified\". Error: Paid media - India: not connected yet - paste the link or upload a CSV on the Sources page. Raghav owns this source - it needs a successful sync before the next review."
     },
     {
       "dept": "perf_marketing",
@@ -617,7 +481,7 @@
         "Imran"
       ],
       "raisedBy": "engine",
-      "raisedAt": "2026-10-26T15:49:48.279Z",
+      "raisedAt": "2026-10-26T18:27:57.828Z",
       "resolvedAt": null,
       "metricIds": [
         "pm_india_spend"
@@ -625,7 +489,7 @@
       "id": "missing_data:pm_india_spend",
       "kind": "missing_data",
       "title": "Spend is missing",
-      "body": "Paid media - India did not return a value for \"Spend\". Error: Paid media - India: not connected yet - the id is still a placeholder in sources.json. Raghav owns this source - it needs a successful sync before the next review."
+      "body": "Paid media - India did not return a value for \"Spend\". Error: Paid media - India: not connected yet - paste the link or upload a CSV on the Sources page. Raghav owns this source - it needs a successful sync before the next review."
     },
     {
       "dept": "india_sales",
@@ -636,7 +500,7 @@
         "Raghav"
       ],
       "raisedBy": "engine",
-      "raisedAt": "2026-10-26T15:49:48.279Z",
+      "raisedAt": "2026-10-26T18:27:57.828Z",
       "resolvedAt": null,
       "metricIds": [
         "in_pipeline_india"
@@ -655,7 +519,7 @@
         "Raghav"
       ],
       "raisedBy": "engine",
-      "raisedAt": "2026-10-26T15:49:48.279Z",
+      "raisedAt": "2026-10-26T18:27:57.828Z",
       "resolvedAt": null,
       "metricIds": [
         "india_accounts_worked"
@@ -674,7 +538,7 @@
         "Raghav"
       ],
       "raisedBy": "engine",
-      "raisedAt": "2026-10-26T15:49:48.279Z",
+      "raisedAt": "2026-10-26T18:27:57.828Z",
       "resolvedAt": null,
       "metricIds": [
         "india_closed_won"
@@ -693,7 +557,7 @@
         "Raghav"
       ],
       "raisedBy": "engine",
-      "raisedAt": "2026-10-26T15:49:48.279Z",
+      "raisedAt": "2026-10-26T18:27:57.828Z",
       "resolvedAt": null,
       "metricIds": [
         "india_created_wk"
@@ -712,7 +576,7 @@
         "Raghav"
       ],
       "raisedBy": "engine",
-      "raisedAt": "2026-10-26T15:49:48.279Z",
+      "raisedAt": "2026-10-26T18:27:57.828Z",
       "resolvedAt": null,
       "metricIds": [
         "india_in_poc"
@@ -731,7 +595,7 @@
         "Raghav"
       ],
       "raisedBy": "engine",
-      "raisedAt": "2026-10-26T15:49:48.279Z",
+      "raisedAt": "2026-10-26T18:27:57.828Z",
       "resolvedAt": null,
       "metricIds": [
         "india_meetings_held"
@@ -750,7 +614,7 @@
         "Raghav"
       ],
       "raisedBy": "engine",
-      "raisedAt": "2026-10-26T15:49:48.279Z",
+      "raisedAt": "2026-10-26T18:27:57.828Z",
       "resolvedAt": null,
       "metricIds": [
         "india_opps_created"
@@ -769,7 +633,7 @@
         "Raghav"
       ],
       "raisedBy": "engine",
-      "raisedAt": "2026-10-26T15:49:48.279Z",
+      "raisedAt": "2026-10-26T18:27:57.828Z",
       "resolvedAt": null,
       "metricIds": [
         "india_proposal"
@@ -788,7 +652,7 @@
         "Raghav"
       ],
       "raisedBy": "engine",
-      "raisedAt": "2026-10-26T15:49:48.279Z",
+      "raisedAt": "2026-10-26T18:27:57.828Z",
       "resolvedAt": null,
       "metricIds": [
         "india_win_rate"
@@ -806,7 +670,7 @@
         "Imran"
       ],
       "raisedBy": "engine",
-      "raisedAt": "2026-10-26T15:49:48.279Z",
+      "raisedAt": "2026-10-26T18:27:57.828Z",
       "resolvedAt": null,
       "metricIds": [
         "pm_india_cac"
@@ -824,7 +688,7 @@
         "Imran"
       ],
       "raisedBy": "engine",
-      "raisedAt": "2026-10-26T15:49:48.279Z",
+      "raisedAt": "2026-10-26T18:27:57.828Z",
       "resolvedAt": null,
       "metricIds": [
         "pm_india_cpl"
@@ -842,7 +706,7 @@
         "Imran"
       ],
       "raisedBy": "engine",
-      "raisedAt": "2026-10-26T15:49:48.279Z",
+      "raisedAt": "2026-10-26T18:27:57.828Z",
       "resolvedAt": null,
       "metricIds": [
         "pm_india_leads"
@@ -860,7 +724,7 @@
         "Imran"
       ],
       "raisedBy": "engine",
-      "raisedAt": "2026-10-26T15:49:48.279Z",
+      "raisedAt": "2026-10-26T18:27:57.828Z",
       "resolvedAt": null,
       "metricIds": [
         "pm_india_pipeline_sourced"
@@ -878,7 +742,7 @@
         "Imran"
       ],
       "raisedBy": "engine",
-      "raisedAt": "2026-10-26T15:49:48.279Z",
+      "raisedAt": "2026-10-26T18:27:57.828Z",
       "resolvedAt": null,
       "metricIds": [
         "pm_india_qualified"
@@ -896,7 +760,7 @@
         "Imran"
       ],
       "raisedBy": "engine",
-      "raisedAt": "2026-10-26T15:49:48.279Z",
+      "raisedAt": "2026-10-26T18:27:57.828Z",
       "resolvedAt": null,
       "metricIds": [
         "pm_india_spend"
@@ -915,7 +779,7 @@
         "Raghav"
       ],
       "raisedBy": "engine",
-      "raisedAt": "2026-10-26T15:49:48.279Z",
+      "raisedAt": "2026-10-26T18:27:57.828Z",
       "resolvedAt": null,
       "metricIds": [
         "in_pipeline_india"
@@ -934,7 +798,7 @@
         "Raghav"
       ],
       "raisedBy": "engine",
-      "raisedAt": "2026-10-26T15:49:48.279Z",
+      "raisedAt": "2026-10-26T18:27:57.828Z",
       "resolvedAt": null,
       "metricIds": [
         "india_accounts_worked"
@@ -953,7 +817,7 @@
         "Raghav"
       ],
       "raisedBy": "engine",
-      "raisedAt": "2026-10-26T15:49:48.279Z",
+      "raisedAt": "2026-10-26T18:27:57.828Z",
       "resolvedAt": null,
       "metricIds": [
         "india_closed_won"
@@ -972,7 +836,7 @@
         "Raghav"
       ],
       "raisedBy": "engine",
-      "raisedAt": "2026-10-26T15:49:48.279Z",
+      "raisedAt": "2026-10-26T18:27:57.828Z",
       "resolvedAt": null,
       "metricIds": [
         "india_created_wk"
@@ -991,7 +855,7 @@
         "Raghav"
       ],
       "raisedBy": "engine",
-      "raisedAt": "2026-10-26T15:49:48.279Z",
+      "raisedAt": "2026-10-26T18:27:57.828Z",
       "resolvedAt": null,
       "metricIds": [
         "india_in_poc"
@@ -1010,7 +874,7 @@
         "Raghav"
       ],
       "raisedBy": "engine",
-      "raisedAt": "2026-10-26T15:49:48.279Z",
+      "raisedAt": "2026-10-26T18:27:57.828Z",
       "resolvedAt": null,
       "metricIds": [
         "india_meetings_held"
@@ -1029,7 +893,7 @@
         "Raghav"
       ],
       "raisedBy": "engine",
-      "raisedAt": "2026-10-26T15:49:48.279Z",
+      "raisedAt": "2026-10-26T18:27:57.828Z",
       "resolvedAt": null,
       "metricIds": [
         "india_opps_created"
@@ -1048,7 +912,7 @@
         "Raghav"
       ],
       "raisedBy": "engine",
-      "raisedAt": "2026-10-26T15:49:48.279Z",
+      "raisedAt": "2026-10-26T18:27:57.828Z",
       "resolvedAt": null,
       "metricIds": [
         "india_proposal"
@@ -1067,7 +931,7 @@
         "Raghav"
       ],
       "raisedBy": "engine",
-      "raisedAt": "2026-10-26T15:49:48.279Z",
+      "raisedAt": "2026-10-26T18:27:57.828Z",
       "resolvedAt": null,
       "metricIds": [
         "india_win_rate"
@@ -1085,7 +949,7 @@
         "Imran"
       ],
       "raisedBy": "engine",
-      "raisedAt": "2026-10-26T15:49:48.279Z",
+      "raisedAt": "2026-10-26T18:27:57.828Z",
       "resolvedAt": null,
       "metricIds": [
         "pm_india_cac"
@@ -1103,7 +967,7 @@
         "Imran"
       ],
       "raisedBy": "engine",
-      "raisedAt": "2026-10-26T15:49:48.279Z",
+      "raisedAt": "2026-10-26T18:27:57.828Z",
       "resolvedAt": null,
       "metricIds": [
         "pm_india_cpl"
@@ -1121,7 +985,7 @@
         "Imran"
       ],
       "raisedBy": "engine",
-      "raisedAt": "2026-10-26T15:49:48.279Z",
+      "raisedAt": "2026-10-26T18:27:57.828Z",
       "resolvedAt": null,
       "metricIds": [
         "pm_india_leads"
@@ -1139,7 +1003,7 @@
         "Imran"
       ],
       "raisedBy": "engine",
-      "raisedAt": "2026-10-26T15:49:48.279Z",
+      "raisedAt": "2026-10-26T18:27:57.828Z",
       "resolvedAt": null,
       "metricIds": [
         "pm_india_pipeline_sourced"
@@ -1157,7 +1021,7 @@
         "Imran"
       ],
       "raisedBy": "engine",
-      "raisedAt": "2026-10-26T15:49:48.279Z",
+      "raisedAt": "2026-10-26T18:27:57.828Z",
       "resolvedAt": null,
       "metricIds": [
         "pm_india_qualified"
@@ -1175,7 +1039,7 @@
         "Imran"
       ],
       "raisedBy": "engine",
-      "raisedAt": "2026-10-26T15:49:48.279Z",
+      "raisedAt": "2026-10-26T18:27:57.828Z",
       "resolvedAt": null,
       "metricIds": [
         "pm_india_spend"

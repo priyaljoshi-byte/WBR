@@ -58,10 +58,20 @@ const loadConfig = async () => {
     }
   }
 
+  // What was saved on the Sources screen - real sheet ids, the tab a link
+  // was copied from, column maps, uploaded files - laid over the placeholders.
+  const { loadLive, mergeLive } = await import('../connectors/live.js');
+  const live = await loadLive(process.env);
+  if (live.error && live.error !== 'offline') console.warn(`Supabase not reachable (${live.error}) - using config/sources.json only.`);
+  else if (!live.error) {
+    console.log(`Sources screen: ${live.sources.size} source rows, ${live.mappings.size} column maps, ${live.uploads.size} uploads.`);
+  }
+  const sourcesConfig = mergeLive(await readJson(join(ROOT, 'config/sources.json')), live);
+
   return {
     org: await readJson(join(ROOT, 'config/org.json')),
     catalog: applied,
-    sources: await readJson(join(ROOT, 'config/sources.json')),
+    sources: sourcesConfig,
     // Optional. A repo with no meetings.json has one room and one dashboard.
     meetings: await readJsonOr(join(ROOT, 'config/meetings.json'), null)
   };
@@ -307,7 +317,9 @@ async function runOne({ meeting, org, catalog, sources, meetings, period, week, 
     periodEnd: period.end,
     prior,
     now: new Date().toISOString(),
-    fetch: (source, _query, p) => fetchSource(source, p ?? period, process.env)
+    // The metric's tab rides along as _tab: the hiring tracker serves two
+    // different tables from one source, chosen by it.
+    fetch: (source, query, p) => fetchSource({ ...source, _tab: query && query.tab }, p ?? period, process.env)
   });
 
   if (meeting) run.meetingId = meeting.id;

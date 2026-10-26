@@ -140,6 +140,9 @@ export function buildFunnels({ roleRows, candidateTabs, offerRows = [] }, config
     const joined = normText(o['Joining Status']) === 'joined';
     const accepted = joined || /accepted/.test(normText(o['Offer Status'])) || normText(o['Joining Status']) === 'yet to join';
     if (joined || accepted) offers.set(n, joined ? 'joined' : 'offer');
+    // "Offer Intent Shared", "Internal Approval Requested": an offer is in
+    // motion but nobody has said yes yet.
+    else if (normText(o['Offer Status'])) offers.set(n, 'offer_out');
   }
 
   const byRole = new Map(roles.map((r) => [r.key, []]));
@@ -152,7 +155,8 @@ export function buildFunnels({ roleRows, candidateTabs, offerRows = [] }, config
       if (!name) continue;
       const c = classify(row, config);
       const fromOffers = offers.get(normText(name));
-      if (fromOffers) c.reached = Math.max(c.reached, order.indexOf(fromOffers));
+      const offerOut = fromOffers === 'offer_out';
+      if (fromOffers && !offerOut) c.reached = Math.max(c.reached, order.indexOf(fromOffers));
       const stageText = String(row['Current Stage'] || '').trim();
       if (!c.known) unknownWords.set(stageText, (unknownWords.get(stageText) || 0) + 1);
       const roleText = String(row.Role || '').trim();
@@ -163,7 +167,8 @@ export function buildFunnels({ roleRows, candidateTabs, offerRows = [] }, config
         stageText,
         reached: c.reached,
         reachedLabel: stages[c.reached].label,
-        status: c.status
+        status: c.status,
+        offerOut
       };
       const key = idx.get(normRole(roleText));
       if (key && byRole.has(key)) byRole.get(key).push(cand);
@@ -218,4 +223,54 @@ export function buildFunnels({ roleRows, candidateTabs, offerRows = [] }, config
     healthyFromLabel: stages[healthyFrom].label,
     perOpening
   };
+}
+
+/**
+ * The funnel as two plain tables, for the weekly run. The catalogue's hiring
+ * metrics count rows of a "Roles" tab and a "Candidates" tab with a status
+ * column; the real tracker has neither, so this is that shape, built from it.
+ *
+ * Candidate status words are the catalogue's own:
+ *   screening    still moving, not yet at Round 1
+ *   interviewing still moving, Round 1 to founder round
+ *   offer_out    an offer is out (Offers & Joiners) and not yet accepted
+ *   accepted     offer accepted, not joined
+ *   joined
+ *   dropped | hold | parked   stopped, with the reason
+ *
+ * Names, roles and stages only - same rule as the page.
+ */
+export function funnelTables(result, config) {
+  const order = config.stages.map((s) => s.id);
+  const r1 = order.indexOf('r1');
+  const offer = order.indexOf('offer');
+  const joined = order.indexOf('joined');
+  const candidates = [];
+  const all = [
+    ...result.funnels.map((f) => ({ role: f.name, cands: f.candidates })),
+    ...result.unmatched.map((u) => ({ role: u.role, cands: u.candidates }))
+  ];
+  for (const { role, cands } of all) {
+    for (const c of cands) {
+      let status;
+      if (c.reached >= joined) status = 'joined';
+      else if (c.reached >= offer) status = 'accepted';
+      else if (c.offerOut) status = 'offer_out';
+      else if (c.status !== 'active') status = c.status;
+      else status = c.reached >= r1 ? 'interviewing' : 'screening';
+      candidates.push({
+        candidate: c.name, role, recruiter: c.recruiter,
+        // No days_to_close: the tracker records no date a candidate entered
+        // the pipeline, so there is nothing to subtract. Leaving the column out
+        // makes "Time to close" read missing once, not 113 blank-cell warnings.
+        stage: config.stages[c.reached].id, sheet_stage: c.stageText, status
+      });
+    }
+  }
+  const roles = result.funnels.map((f) => ({
+    role: f.name, status: f.status, priority: f.priority, headcount: f.headcount,
+    openings: f.openings, hired: f.hired, candidates: f.total, active: f.active,
+    healthy: f.healthy, need: f.need, health: f.health / 100
+  }));
+  return { roles, candidates };
 }

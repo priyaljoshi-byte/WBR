@@ -3,121 +3,126 @@
     "id": "run-2026-10-26",
     "periodStart": "2026-10-26",
     "periodEnd": "2026-11-01",
-    "startedAt": "2026-10-26T15:49:48.259Z",
-    "finishedAt": "2026-10-26T15:49:48.259Z",
-    "status": "failed",
+    "startedAt": "2026-10-26T18:27:56.945Z",
+    "finishedAt": "2026-10-26T18:27:56.945Z",
+    "status": "partial",
     "triggeredBy": "cron",
     "meetingId": "hiring"
   },
   "snapshots": [
     {
       "runId": "run-2026-10-26",
-      "metricId": "hiring_open_roles",
+      "metricId": "hiring_plan",
       "periodStart": "2026-10-26",
       "periodEnd": "2026-11-01",
-      "raw": null,
+      "raw": 31,
       "denominator": null,
       "normalized": null,
       "priorRaw": null,
       "priorNormalized": null,
       "delta": null,
-      "health": "missing",
+      "health": "untracked",
       "freshness": "unknown",
       "unit": "count",
-      "caption": "— of — in plan",
-      "rowCount": 0,
-      "computedAt": "2026-10-26T15:49:48.259Z",
-      "warnings": [
-        "source \"hiring_tracker\" errored: Hiring tracker: not connected yet - the id is still a placeholder in sources.json",
-        "denominator for \"hiring_open_roles\" is static but has no usable value"
-      ]
+      "caption": "31 openings",
+      "rowCount": 25,
+      "computedAt": "2026-10-26T18:27:56.945Z",
+      "warnings": []
+    },
+    {
+      "runId": "run-2026-10-26",
+      "metricId": "hiring_open_roles",
+      "periodStart": "2026-10-26",
+      "periodEnd": "2026-11-01",
+      "raw": 25,
+      "denominator": null,
+      "normalized": null,
+      "priorRaw": null,
+      "priorNormalized": null,
+      "delta": null,
+      "health": "untracked",
+      "freshness": "unknown",
+      "unit": "count",
+      "caption": "25 open",
+      "rowCount": 25,
+      "computedAt": "2026-10-26T18:27:56.945Z",
+      "warnings": []
     },
     {
       "runId": "run-2026-10-26",
       "metricId": "hiring_in_process",
       "periodStart": "2026-10-26",
       "periodEnd": "2026-11-01",
-      "raw": null,
-      "denominator": null,
-      "normalized": null,
+      "raw": 50,
+      "denominator": 25,
+      "normalized": 100,
       "priorRaw": null,
       "priorNormalized": null,
       "delta": null,
-      "health": "missing",
+      "health": "untracked",
       "freshness": "unknown",
       "unit": "count",
-      "caption": "— candidates",
-      "rowCount": 0,
-      "computedAt": "2026-10-26T15:49:48.259Z",
-      "warnings": [
-        "source \"hiring_tracker\" errored: Hiring tracker: not connected yet - the id is still a placeholder in sources.json",
-        "denominator metric \"hiring_open_roles\" for \"hiring_in_process\" has no value"
-      ]
+      "caption": "50 candidates",
+      "rowCount": 50,
+      "computedAt": "2026-10-26T18:27:56.945Z",
+      "warnings": []
     },
     {
       "runId": "run-2026-10-26",
       "metricId": "hiring_offers_out",
       "periodStart": "2026-10-26",
       "periodEnd": "2026-11-01",
-      "raw": null,
+      "raw": 0,
       "denominator": null,
       "normalized": null,
       "priorRaw": null,
       "priorNormalized": null,
       "delta": null,
-      "health": "missing",
+      "health": "untracked",
       "freshness": "unknown",
       "unit": "count",
-      "caption": "— out",
+      "caption": "0 out",
       "rowCount": 0,
-      "computedAt": "2026-10-26T15:49:48.259Z",
-      "warnings": [
-        "source \"hiring_tracker\" errored: Hiring tracker: not connected yet - the id is still a placeholder in sources.json"
-      ]
+      "computedAt": "2026-10-26T18:27:56.945Z",
+      "warnings": []
     },
     {
       "runId": "run-2026-10-26",
       "metricId": "hiring_accepted",
       "periodStart": "2026-10-26",
       "periodEnd": "2026-11-01",
-      "raw": null,
-      "denominator": null,
-      "normalized": null,
+      "raw": 2,
+      "denominator": 31,
+      "normalized": 6,
       "priorRaw": null,
       "priorNormalized": null,
       "delta": null,
-      "health": "missing",
+      "health": "untracked",
       "freshness": "unknown",
       "unit": "count",
-      "caption": "— of — in plan",
-      "rowCount": 0,
-      "computedAt": "2026-10-26T15:49:48.259Z",
-      "warnings": [
-        "source \"hiring_tracker\" errored: Hiring tracker: not connected yet - the id is still a placeholder in sources.json",
-        "denominator for \"hiring_accepted\" is static but has no usable value"
-      ]
+      "caption": "2 of 31 in plan",
+      "rowCount": 2,
+      "computedAt": "2026-10-26T18:27:56.945Z",
+      "warnings": []
     },
     {
       "runId": "run-2026-10-26",
       "metricId": "hiring_joined",
       "periodStart": "2026-10-26",
       "periodEnd": "2026-11-01",
-      "raw": null,
-      "denominator": null,
-      "normalized": null,
+      "raw": 0,
+      "denominator": 31,
+      "normalized": 0,
       "priorRaw": null,
       "priorNormalized": null,
       "delta": null,
-      "health": "missing",
+      "health": "untracked",
       "freshness": "unknown",
       "unit": "count",
-      "caption": "— of — in plan",
+      "caption": "0 of 31 in plan",
       "rowCount": 0,
-      "computedAt": "2026-10-26T15:49:48.259Z",
-      "warnings": [
-        "source \"hiring_tracker\" errored: Hiring tracker: not connected yet - the id is still a placeholder in sources.json",
-        "denominator for \"hiring_joined\" is static but has no usable value"
-      ]
+      "computedAt": "2026-10-26T18:27:56.945Z",
+      "warnings": []
     },
     {
       "runId": "run-2026-10-26",
@@ -134,10 +139,11 @@
       "freshness": "unknown",
       "unit": "duration_days",
       "caption": "—",
-      "rowCount": 0,
-      "computedAt": "2026-10-26T15:49:48.259Z",
+      "rowCount": 113,
+      "computedAt": "2026-10-26T18:27:56.945Z",
       "warnings": [
-        "source \"hiring_tracker\" errored: Hiring tracker: not connected yet - the id is still a placeholder in sources.json"
+        "column \"days_to_close\" is not in the source at all - 113 rows skipped, not counted as 0",
+        "113 row(s) matched but none held a usable number in \"days_to_close\" - value is unknown, not 0"
       ]
     }
   ],
@@ -151,102 +157,7 @@
         "Rishi"
       ],
       "raisedBy": "engine",
-      "raisedAt": "2026-10-26T15:49:48.259Z",
-      "resolvedAt": null,
-      "metricIds": [
-        "hiring_accepted"
-      ],
-      "id": "missing_data:hiring_accepted",
-      "kind": "missing_data",
-      "title": "Offer accepted is missing",
-      "body": "Hiring tracker did not return a value for \"Offer accepted\". Error: Hiring tracker: not connected yet - the id is still a placeholder in sources.json. Satwik owns this source - it needs a successful sync before the next review."
-    },
-    {
-      "dept": "hiring",
-      "owner": "Satwik",
-      "ownerTeam": [
-        "Satwik",
-        "Omer",
-        "Rishi"
-      ],
-      "raisedBy": "engine",
-      "raisedAt": "2026-10-26T15:49:48.259Z",
-      "resolvedAt": null,
-      "metricIds": [
-        "hiring_in_process"
-      ],
-      "id": "missing_data:hiring_in_process",
-      "kind": "missing_data",
-      "title": "In process is missing",
-      "body": "Hiring tracker did not return a value for \"In process\". Error: Hiring tracker: not connected yet - the id is still a placeholder in sources.json. Satwik owns this source - it needs a successful sync before the next review."
-    },
-    {
-      "dept": "hiring",
-      "owner": "Satwik",
-      "ownerTeam": [
-        "Satwik",
-        "Omer",
-        "Rishi"
-      ],
-      "raisedBy": "engine",
-      "raisedAt": "2026-10-26T15:49:48.259Z",
-      "resolvedAt": null,
-      "metricIds": [
-        "hiring_joined"
-      ],
-      "id": "missing_data:hiring_joined",
-      "kind": "missing_data",
-      "title": "Joined is missing",
-      "body": "Hiring tracker did not return a value for \"Joined\". Error: Hiring tracker: not connected yet - the id is still a placeholder in sources.json. Satwik owns this source - it needs a successful sync before the next review."
-    },
-    {
-      "dept": "hiring",
-      "owner": "Satwik",
-      "ownerTeam": [
-        "Satwik",
-        "Omer",
-        "Rishi"
-      ],
-      "raisedBy": "engine",
-      "raisedAt": "2026-10-26T15:49:48.259Z",
-      "resolvedAt": null,
-      "metricIds": [
-        "hiring_offers_out"
-      ],
-      "id": "missing_data:hiring_offers_out",
-      "kind": "missing_data",
-      "title": "Offers out is missing",
-      "body": "Hiring tracker did not return a value for \"Offers out\". Error: Hiring tracker: not connected yet - the id is still a placeholder in sources.json. Satwik owns this source - it needs a successful sync before the next review."
-    },
-    {
-      "dept": "hiring",
-      "owner": "Satwik",
-      "ownerTeam": [
-        "Satwik",
-        "Omer",
-        "Rishi"
-      ],
-      "raisedBy": "engine",
-      "raisedAt": "2026-10-26T15:49:48.259Z",
-      "resolvedAt": null,
-      "metricIds": [
-        "hiring_open_roles"
-      ],
-      "id": "missing_data:hiring_open_roles",
-      "kind": "missing_data",
-      "title": "Open roles is missing",
-      "body": "Hiring tracker did not return a value for \"Open roles\". Error: Hiring tracker: not connected yet - the id is still a placeholder in sources.json. Satwik owns this source - it needs a successful sync before the next review."
-    },
-    {
-      "dept": "hiring",
-      "owner": "Satwik",
-      "ownerTeam": [
-        "Satwik",
-        "Omer",
-        "Rishi"
-      ],
-      "raisedBy": "engine",
-      "raisedAt": "2026-10-26T15:49:48.259Z",
+      "raisedAt": "2026-10-26T18:27:56.945Z",
       "resolvedAt": null,
       "metricIds": [
         "hiring_time_to_close"
@@ -254,7 +165,7 @@
       "id": "missing_data:hiring_time_to_close",
       "kind": "missing_data",
       "title": "Time to close is missing",
-      "body": "Hiring tracker did not return a value for \"Time to close\". Error: Hiring tracker: not connected yet - the id is still a placeholder in sources.json. Satwik owns this source - it needs a successful sync before the next review."
+      "body": "Hiring tracker did not return a value for \"Time to close\". Error: column \"days_to_close\" is not in the source at all - 113 rows skipped, not counted as 0. Satwik owns this source - it needs a successful sync before the next review."
     },
     {
       "dept": "hiring",
@@ -265,7 +176,7 @@
         "Rishi"
       ],
       "raisedBy": "engine",
-      "raisedAt": "2026-10-26T15:49:48.259Z",
+      "raisedAt": "2026-10-26T18:27:56.945Z",
       "resolvedAt": null,
       "metricIds": [
         "hiring_accepted"
@@ -284,7 +195,7 @@
         "Rishi"
       ],
       "raisedBy": "engine",
-      "raisedAt": "2026-10-26T15:49:48.259Z",
+      "raisedAt": "2026-10-26T18:27:56.945Z",
       "resolvedAt": null,
       "metricIds": [
         "hiring_in_process"
@@ -303,7 +214,7 @@
         "Rishi"
       ],
       "raisedBy": "engine",
-      "raisedAt": "2026-10-26T15:49:48.259Z",
+      "raisedAt": "2026-10-26T18:27:56.945Z",
       "resolvedAt": null,
       "metricIds": [
         "hiring_joined"
@@ -322,7 +233,7 @@
         "Rishi"
       ],
       "raisedBy": "engine",
-      "raisedAt": "2026-10-26T15:49:48.259Z",
+      "raisedAt": "2026-10-26T18:27:56.945Z",
       "resolvedAt": null,
       "metricIds": [
         "hiring_offers_out"
@@ -341,7 +252,7 @@
         "Rishi"
       ],
       "raisedBy": "engine",
-      "raisedAt": "2026-10-26T15:49:48.259Z",
+      "raisedAt": "2026-10-26T18:27:56.945Z",
       "resolvedAt": null,
       "metricIds": [
         "hiring_open_roles"
@@ -360,7 +271,26 @@
         "Rishi"
       ],
       "raisedBy": "engine",
-      "raisedAt": "2026-10-26T15:49:48.259Z",
+      "raisedAt": "2026-10-26T18:27:56.945Z",
+      "resolvedAt": null,
+      "metricIds": [
+        "hiring_plan"
+      ],
+      "id": "no_target:hiring_plan",
+      "kind": "no_target",
+      "title": "Openings in plan has no target",
+      "body": "\"Openings in plan\" is being reported with no target, so it can be read but not judged. Satwik sets this one: what does a good week look like, in whole numbers? Until it is set this metric cannot appear on the scoreboard."
+    },
+    {
+      "dept": "hiring",
+      "owner": "Satwik",
+      "ownerTeam": [
+        "Satwik",
+        "Omer",
+        "Rishi"
+      ],
+      "raisedBy": "engine",
+      "raisedAt": "2026-10-26T18:27:56.945Z",
       "resolvedAt": null,
       "metricIds": [
         "hiring_time_to_close"
@@ -379,7 +309,7 @@
         "Rishi"
       ],
       "raisedBy": "engine",
-      "raisedAt": "2026-10-26T15:49:48.259Z",
+      "raisedAt": "2026-10-26T18:27:56.945Z",
       "resolvedAt": null,
       "metricIds": [
         "hiring_accepted"
@@ -398,7 +328,7 @@
         "Rishi"
       ],
       "raisedBy": "engine",
-      "raisedAt": "2026-10-26T15:49:48.259Z",
+      "raisedAt": "2026-10-26T18:27:56.945Z",
       "resolvedAt": null,
       "metricIds": [
         "hiring_in_process"
@@ -417,7 +347,7 @@
         "Rishi"
       ],
       "raisedBy": "engine",
-      "raisedAt": "2026-10-26T15:49:48.259Z",
+      "raisedAt": "2026-10-26T18:27:56.945Z",
       "resolvedAt": null,
       "metricIds": [
         "hiring_joined"
@@ -436,7 +366,7 @@
         "Rishi"
       ],
       "raisedBy": "engine",
-      "raisedAt": "2026-10-26T15:49:48.259Z",
+      "raisedAt": "2026-10-26T18:27:56.945Z",
       "resolvedAt": null,
       "metricIds": [
         "hiring_offers_out"
@@ -455,7 +385,7 @@
         "Rishi"
       ],
       "raisedBy": "engine",
-      "raisedAt": "2026-10-26T15:49:48.259Z",
+      "raisedAt": "2026-10-26T18:27:56.945Z",
       "resolvedAt": null,
       "metricIds": [
         "hiring_open_roles"
@@ -474,7 +404,26 @@
         "Rishi"
       ],
       "raisedBy": "engine",
-      "raisedAt": "2026-10-26T15:49:48.259Z",
+      "raisedAt": "2026-10-26T18:27:56.945Z",
+      "resolvedAt": null,
+      "metricIds": [
+        "hiring_plan"
+      ],
+      "id": "no_owner:hiring_plan",
+      "kind": "no_owner",
+      "title": "Openings in plan has no single accountable owner",
+      "body": "Satwik, Omer and Rishi own Hiring between them, and nobody has been named on \"Openings in plan\". A flag addressed to 3 people is addressed to nobody - each assumes one of the others has it. One of you takes this metric: set \"owner\" on hiring_plan in catalog.json. Until then it falls to Satwik."
+    },
+    {
+      "dept": "hiring",
+      "owner": "Satwik, Omer and Rishi",
+      "ownerTeam": [
+        "Satwik",
+        "Omer",
+        "Rishi"
+      ],
+      "raisedBy": "engine",
+      "raisedAt": "2026-10-26T18:27:56.945Z",
       "resolvedAt": null,
       "metricIds": [
         "hiring_time_to_close"

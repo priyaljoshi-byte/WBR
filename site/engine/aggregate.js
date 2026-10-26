@@ -243,6 +243,12 @@ function unresolvedTemplates(where) {
 /** Collect the parseable numbers in one column, reporting every cell that is not one. */
 function numericColumn(matched, column, warnings, tag = '') {
   const numbers = [];
+  // A column absent from every row is one fact, not one per row. A hundred
+  // identical lines bury the warnings that matter under the one that does not.
+  if (matched.length && matched.every((r) => readCell(r, column) === undefined)) {
+    warnings.push(`column "${column}"${tag} is not in the source at all - ${matched.length} row${matched.length === 1 ? '' : 's'} skipped, not counted as 0`);
+    return numbers;
+  }
   for (let i = 0; i < matched.length; i++) {
     const cell = readCell(matched[i], column);
     const n = parseValue(cell);

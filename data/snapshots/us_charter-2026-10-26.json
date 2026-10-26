@@ -3,8 +3,8 @@
     "id": "run-2026-10-26",
     "periodStart": "2026-10-26",
     "periodEnd": "2026-11-01",
-    "startedAt": "2026-10-26T15:49:48.285Z",
-    "finishedAt": "2026-10-26T15:49:48.285Z",
+    "startedAt": "2026-10-26T18:27:58.234Z",
+    "finishedAt": "2026-10-26T18:27:58.234Z",
     "status": "failed",
     "triggeredBy": "cron",
     "meetingId": "us_charter"
@@ -26,9 +26,9 @@
       "unit": "currency_usd",
       "caption": "— open",
       "rowCount": 0,
-      "computedAt": "2026-10-26T15:49:48.285Z",
+      "computedAt": "2026-10-26T18:27:58.234Z",
       "warnings": [
-        "source \"us_crm\" errored: US pipeline: not connected yet - the id is still a placeholder in sources.json"
+        "source \"us_crm\" errored: US pipeline: not connected yet - paste the link or upload a CSV on the Sources page"
       ]
     },
     {
@@ -47,9 +47,9 @@
       "unit": "currency_usd",
       "caption": "— of — target",
       "rowCount": 0,
-      "computedAt": "2026-10-26T15:49:48.285Z",
+      "computedAt": "2026-10-26T18:27:58.234Z",
       "warnings": [
-        "source \"us_crm\" errored: US pipeline: not connected yet - the id is still a placeholder in sources.json",
+        "source \"us_crm\" errored: US pipeline: not connected yet - paste the link or upload a CSV on the Sources page",
         "denominator for \"us_closed_won\" is static but has no usable value"
       ]
     },
@@ -69,9 +69,9 @@
       "unit": "currency_usd",
       "caption": "— of — open",
       "rowCount": 0,
-      "computedAt": "2026-10-26T15:49:48.285Z",
+      "computedAt": "2026-10-26T18:27:58.234Z",
       "warnings": [
-        "source \"us_crm\" errored: US pipeline: not connected yet - the id is still a placeholder in sources.json",
+        "source \"us_crm\" errored: US pipeline: not connected yet - paste the link or upload a CSV on the Sources page",
         "denominator metric \"in_pipeline_us\" for \"us_in_poc\" has no value"
       ]
     },
@@ -91,9 +91,9 @@
       "unit": "currency_usd",
       "caption": "—",
       "rowCount": 0,
-      "computedAt": "2026-10-26T15:49:48.285Z",
+      "computedAt": "2026-10-26T18:27:58.234Z",
       "warnings": [
-        "source \"us_crm\" errored: US pipeline: not connected yet - the id is still a placeholder in sources.json",
+        "source \"us_crm\" errored: US pipeline: not connected yet - paste the link or upload a CSV on the Sources page",
         "denominator metric \"in_pipeline_us\" for \"us_proposal\" has no value"
       ]
     },
@@ -113,9 +113,9 @@
       "unit": "currency_usd",
       "caption": "— created",
       "rowCount": 0,
-      "computedAt": "2026-10-26T15:49:48.285Z",
+      "computedAt": "2026-10-26T18:27:58.234Z",
       "warnings": [
-        "source \"us_crm_created\" errored: US pipeline created: not connected yet - the id is still a placeholder in sources.json"
+        "source \"us_crm_created\" errored: US pipeline created: not connected yet - paste the link or upload a CSV on the Sources page"
       ]
     },
     {
@@ -134,9 +134,9 @@
       "unit": "percent",
       "caption": "—",
       "rowCount": 0,
-      "computedAt": "2026-10-26T15:49:48.285Z",
+      "computedAt": "2026-10-26T18:27:58.234Z",
       "warnings": [
-        "source \"us_crm\" errored: US pipeline: not connected yet - the id is still a placeholder in sources.json"
+        "source \"us_crm\" errored: US pipeline: not connected yet - paste the link or upload a CSV on the Sources page"
       ]
     },
     {
@@ -155,9 +155,9 @@
       "unit": "count",
       "caption": "— of — target",
       "rowCount": 0,
-      "computedAt": "2026-10-26T15:49:48.285Z",
+      "computedAt": "2026-10-26T18:27:58.234Z",
       "warnings": [
-        "source \"us_crm\" errored: US pipeline: not connected yet - the id is still a placeholder in sources.json",
+        "source \"us_crm\" errored: US pipeline: not connected yet - paste the link or upload a CSV on the Sources page",
         "denominator for \"us_meetings_held\" is static but has no usable value"
       ]
     },
@@ -177,9 +177,9 @@
       "unit": "count",
       "caption": "— of — target",
       "rowCount": 0,
-      "computedAt": "2026-10-26T15:49:48.285Z",
+      "computedAt": "2026-10-26T18:27:58.234Z",
       "warnings": [
-        "source \"us_crm\" errored: US pipeline: not connected yet - the id is still a placeholder in sources.json",
+        "source \"us_crm\" errored: US pipeline: not connected yet - paste the link or upload a CSV on the Sources page",
         "denominator for \"us_opps_created\" is static but has no usable value"
       ]
     },
@@ -199,9 +199,9 @@
       "unit": "count",
       "caption": "— of — target",
       "rowCount": 0,
-      "computedAt": "2026-10-26T15:49:48.285Z",
+      "computedAt": "2026-10-26T18:27:58.234Z",
       "warnings": [
-        "source \"us_crm\" errored: US pipeline: not connected yet - the id is still a placeholder in sources.json",
+        "source \"us_crm\" errored: US pipeline: not connected yet - paste the link or upload a CSV on the Sources page",
         "denominator for \"us_accounts_worked\" is static but has no usable value"
       ]
     },
@@ -221,9 +221,9 @@
       "unit": "currency_usd",
       "caption": "— of — budget",
       "rowCount": 0,
-      "computedAt": "2026-10-26T15:49:48.285Z",
+      "computedAt": "2026-10-26T18:27:58.234Z",
       "warnings": [
-        "source \"ads_us\" errored: Paid media - US: not connected yet - the id is still a placeholder in sources.json",
+        "source \"ads_us\" errored: Paid media - US: not connected yet - paste the link or upload a CSV on the Sources page",
         "denominator for \"pm_us_spend\" is static but has no usable value"
       ],
       "segment": "us",
@@ -245,9 +245,9 @@
       "unit": "count",
       "caption": "— of — target",
       "rowCount": 0,
-      "computedAt": "2026-10-26T15:49:48.285Z",
+      "computedAt": "2026-10-26T18:27:58.234Z",
       "warnings": [
-        "source \"ads_us\" errored: Paid media - US: not connected yet - the id is still a placeholder in sources.json",
+        "source \"ads_us\" errored: Paid media - US: not connected yet - paste the link or upload a CSV on the Sources page",
         "denominator for \"pm_us_leads\" is static but has no usable value"
       ],
       "segment": "us",
@@ -269,9 +269,9 @@
       "unit": "count",
       "caption": "— of — leads",
       "rowCount": 0,
-      "computedAt": "2026-10-26T15:49:48.285Z",
+      "computedAt": "2026-10-26T18:27:58.234Z",
       "warnings": [
-        "source \"ads_us\" errored: Paid media - US: not connected yet - the id is still a placeholder in sources.json",
+        "source \"ads_us\" errored: Paid media - US: not connected yet - paste the link or upload a CSV on the Sources page",
         "denominator metric \"pm_us_leads\" for \"pm_us_qualified\" has no value"
       ],
       "segment": "us",
@@ -293,9 +293,9 @@
       "unit": "currency_usd",
       "caption": "—",
       "rowCount": 0,
-      "computedAt": "2026-10-26T15:49:48.285Z",
+      "computedAt": "2026-10-26T18:27:58.234Z",
       "warnings": [
-        "source \"ads_us\" errored: Paid media - US: not connected yet - the id is still a placeholder in sources.json"
+        "source \"ads_us\" errored: Paid media - US: not connected yet - paste the link or upload a CSV on the Sources page"
       ],
       "segment": "us",
       "family": "pm_cpl"
@@ -316,9 +316,9 @@
       "unit": "currency_usd",
       "caption": "—",
       "rowCount": 0,
-      "computedAt": "2026-10-26T15:49:48.285Z",
+      "computedAt": "2026-10-26T18:27:58.234Z",
       "warnings": [
-        "source \"ads_us\" errored: Paid media - US: not connected yet - the id is still a placeholder in sources.json"
+        "source \"ads_us\" errored: Paid media - US: not connected yet - paste the link or upload a CSV on the Sources page"
       ],
       "segment": "us",
       "family": "pm_cac"
@@ -339,9 +339,9 @@
       "unit": "currency_usd",
       "caption": "— sourced",
       "rowCount": 0,
-      "computedAt": "2026-10-26T15:49:48.285Z",
+      "computedAt": "2026-10-26T18:27:58.234Z",
       "warnings": [
-        "source \"us_crm\" errored: US pipeline: not connected yet - the id is still a placeholder in sources.json"
+        "source \"us_crm\" errored: US pipeline: not connected yet - paste the link or upload a CSV on the Sources page"
       ],
       "segment": "us",
       "family": "pm_sourced"
@@ -357,7 +357,7 @@
         "Raghav"
       ],
       "raisedBy": "engine",
-      "raisedAt": "2026-10-26T15:49:48.285Z",
+      "raisedAt": "2026-10-26T18:27:58.234Z",
       "resolvedAt": null,
       "metricIds": [
         "in_pipeline_us"
@@ -365,7 +365,7 @@
       "id": "missing_data:in_pipeline_us",
       "kind": "missing_data",
       "title": "Pipeline open is missing",
-      "body": "US pipeline did not return a value for \"Pipeline open\". Error: US pipeline: not connected yet - the id is still a placeholder in sources.json. Anupreet owns this source - it needs a successful sync before the next review."
+      "body": "US pipeline did not return a value for \"Pipeline open\". Error: US pipeline: not connected yet - paste the link or upload a CSV on the Sources page. Anupreet owns this source - it needs a successful sync before the next review."
     },
     {
       "dept": "perf_marketing",
@@ -375,7 +375,7 @@
         "Imran"
       ],
       "raisedBy": "engine",
-      "raisedAt": "2026-10-26T15:49:48.285Z",
+      "raisedAt": "2026-10-26T18:27:58.234Z",
       "resolvedAt": null,
       "metricIds": [
         "pm_us_cac"
@@ -383,7 +383,7 @@
       "id": "missing_data:pm_us_cac",
       "kind": "missing_data",
       "title": "CAC (paid) is missing",
-      "body": "Paid media - US did not return a value for \"CAC (paid)\". Error: Paid media - US: not connected yet - the id is still a placeholder in sources.json. Raghav owns this source - it needs a successful sync before the next review."
+      "body": "Paid media - US did not return a value for \"CAC (paid)\". Error: Paid media - US: not connected yet - paste the link or upload a CSV on the Sources page. Raghav owns this source - it needs a successful sync before the next review."
     },
     {
       "dept": "perf_marketing",
@@ -393,7 +393,7 @@
         "Imran"
       ],
       "raisedBy": "engine",
-      "raisedAt": "2026-10-26T15:49:48.285Z",
+      "raisedAt": "2026-10-26T18:27:58.234Z",
       "resolvedAt": null,
       "metricIds": [
         "pm_us_cpl"
@@ -401,7 +401,7 @@
       "id": "missing_data:pm_us_cpl",
       "kind": "missing_data",
       "title": "Cost per lead is missing",
-      "body": "Paid media - US did not return a value for \"Cost per lead\". Error: Paid media - US: not connected yet - the id is still a placeholder in sources.json. Raghav owns this source - it needs a successful sync before the next review."
+      "body": "Paid media - US did not return a value for \"Cost per lead\". Error: Paid media - US: not connected yet - paste the link or upload a CSV on the Sources page. Raghav owns this source - it needs a successful sync before the next review."
     },
     {
       "dept": "perf_marketing",
@@ -411,7 +411,7 @@
         "Imran"
       ],
       "raisedBy": "engine",
-      "raisedAt": "2026-10-26T15:49:48.285Z",
+      "raisedAt": "2026-10-26T18:27:58.234Z",
       "resolvedAt": null,
       "metricIds": [
         "pm_us_leads"
@@ -419,7 +419,7 @@
       "id": "missing_data:pm_us_leads",
       "kind": "missing_data",
       "title": "Leads is missing",
-      "body": "Paid media - US did not return a value for \"Leads\". Error: Paid media - US: not connected yet - the id is still a placeholder in sources.json. Raghav owns this source - it needs a successful sync before the next review."
+      "body": "Paid media - US did not return a value for \"Leads\". Error: Paid media - US: not connected yet - paste the link or upload a CSV on the Sources page. Raghav owns this source - it needs a successful sync before the next review."
     },
     {
       "dept": "perf_marketing",
@@ -429,7 +429,7 @@
         "Imran"
       ],
       "raisedBy": "engine",
-      "raisedAt": "2026-10-26T15:49:48.285Z",
+      "raisedAt": "2026-10-26T18:27:58.234Z",
       "resolvedAt": null,
       "metricIds": [
         "pm_us_pipeline_sourced"
@@ -437,7 +437,7 @@
       "id": "missing_data:pm_us_pipeline_sourced",
       "kind": "missing_data",
       "title": "Pipeline sourced is missing",
-      "body": "US pipeline did not return a value for \"Pipeline sourced\". Error: US pipeline: not connected yet - the id is still a placeholder in sources.json. Raghav owns this source - it needs a successful sync before the next review."
+      "body": "US pipeline did not return a value for \"Pipeline sourced\". Error: US pipeline: not connected yet - paste the link or upload a CSV on the Sources page. Raghav owns this source - it needs a successful sync before the next review."
     },
     {
       "dept": "perf_marketing",
@@ -447,7 +447,7 @@
         "Imran"
       ],
       "raisedBy": "engine",
-      "raisedAt": "2026-10-26T15:49:48.285Z",
+      "raisedAt": "2026-10-26T18:27:58.234Z",
       "resolvedAt": null,
       "metricIds": [
         "pm_us_qualified"
@@ -455,7 +455,7 @@
       "id": "missing_data:pm_us_qualified",
       "kind": "missing_data",
       "title": "Qualified is missing",
-      "body": "Paid media - US did not return a value for \"Qualified\". Error: Paid media - US: not connected yet - the id is still a placeholder in sources.json. Raghav owns this source - it needs a successful sync before the next review."
+      "body": "Paid media - US did not return a value for \"Qualified\". Error: Paid media - US: not connected yet - paste the link or upload a CSV on the Sources page. Raghav owns this source - it needs a successful sync before the next review."
     },
     {
       "dept": "perf_marketing",
@@ -465,7 +465,7 @@
         "Imran"
       ],
       "raisedBy": "engine",
-      "raisedAt": "2026-10-26T15:49:48.285Z",
+      "raisedAt": "2026-10-26T18:27:58.234Z",
       "resolvedAt": null,
       "metricIds": [
         "pm_us_spend"
@@ -473,7 +473,7 @@
       "id": "missing_data:pm_us_spend",
       "kind": "missing_data",
       "title": "Spend is missing",
-      "body": "Paid media - US did not return a value for \"Spend\". Error: Paid media - US: not connected yet - the id is still a placeholder in sources.json. Raghav owns this source - it needs a successful sync before the next review."
+      "body": "Paid media - US did not return a value for \"Spend\". Error: Paid media - US: not connected yet - paste the link or upload a CSV on the Sources page. Raghav owns this source - it needs a successful sync before the next review."
     },
     {
       "dept": "us_sales",
@@ -484,7 +484,7 @@
         "Raghav"
       ],
       "raisedBy": "engine",
-      "raisedAt": "2026-10-26T15:49:48.285Z",
+      "raisedAt": "2026-10-26T18:27:58.234Z",
       "resolvedAt": null,
       "metricIds": [
         "us_accounts_worked"
@@ -492,7 +492,7 @@
       "id": "missing_data:us_accounts_worked",
       "kind": "missing_data",
       "title": "Accounts worked is missing",
-      "body": "US pipeline did not return a value for \"Accounts worked\". Error: US pipeline: not connected yet - the id is still a placeholder in sources.json. Anupreet owns this source - it needs a successful sync before the next review."
+      "body": "US pipeline did not return a value for \"Accounts worked\". Error: US pipeline: not connected yet - paste the link or upload a CSV on the Sources page. Anupreet owns this source - it needs a successful sync before the next review."
     },
     {
       "dept": "us_sales",
@@ -503,7 +503,7 @@
         "Raghav"
       ],
       "raisedBy": "engine",
-      "raisedAt": "2026-10-26T15:49:48.285Z",
+      "raisedAt": "2026-10-26T18:27:58.234Z",
       "resolvedAt": null,
       "metricIds": [
         "us_closed_won"
@@ -511,7 +511,7 @@
       "id": "missing_data:us_closed_won",
       "kind": "missing_data",
       "title": "Closed won is missing",
-      "body": "US pipeline did not return a value for \"Closed won\". Error: US pipeline: not connected yet - the id is still a placeholder in sources.json. Anupreet owns this source - it needs a successful sync before the next review."
+      "body": "US pipeline did not return a value for \"Closed won\". Error: US pipeline: not connected yet - paste the link or upload a CSV on the Sources page. Anupreet owns this source - it needs a successful sync before the next review."
     },
     {
       "dept": "us_sales",
@@ -522,7 +522,7 @@
         "Raghav"
       ],
       "raisedBy": "engine",
-      "raisedAt": "2026-10-26T15:49:48.285Z",
+      "raisedAt": "2026-10-26T18:27:58.234Z",
       "resolvedAt": null,
       "metricIds": [
         "us_created_wk"
@@ -530,7 +530,7 @@
       "id": "missing_data:us_created_wk",
       "kind": "missing_data",
       "title": "Pipeline created is missing",
-      "body": "US pipeline created did not return a value for \"Pipeline created\". Error: US pipeline created: not connected yet - the id is still a placeholder in sources.json. Anupreet owns this source - it needs a successful sync before the next review."
+      "body": "US pipeline created did not return a value for \"Pipeline created\". Error: US pipeline created: not connected yet - paste the link or upload a CSV on the Sources page. Anupreet owns this source - it needs a successful sync before the next review."
     },
     {
       "dept": "us_sales",
@@ -541,7 +541,7 @@
         "Raghav"
       ],
       "raisedBy": "engine",
-      "raisedAt": "2026-10-26T15:49:48.285Z",
+      "raisedAt": "2026-10-26T18:27:58.234Z",
       "resolvedAt": null,
       "metricIds": [
         "us_in_poc"
@@ -549,7 +549,7 @@
       "id": "missing_data:us_in_poc",
       "kind": "missing_data",
       "title": "In POC is missing",
-      "body": "US pipeline did not return a value for \"In POC\". Error: US pipeline: not connected yet - the id is still a placeholder in sources.json. Anupreet owns this source - it needs a successful sync before the next review."
+      "body": "US pipeline did not return a value for \"In POC\". Error: US pipeline: not connected yet - paste the link or upload a CSV on the Sources page. Anupreet owns this source - it needs a successful sync before the next review."
     },
     {
       "dept": "us_sales",
@@ -560,7 +560,7 @@
         "Raghav"
       ],
       "raisedBy": "engine",
-      "raisedAt": "2026-10-26T15:49:48.285Z",
+      "raisedAt": "2026-10-26T18:27:58.234Z",
       "resolvedAt": null,
       "metricIds": [
         "us_meetings_held"
@@ -568,7 +568,7 @@
       "id": "missing_data:us_meetings_held",
       "kind": "missing_data",
       "title": "Meetings held is missing",
-      "body": "US pipeline did not return a value for \"Meetings held\". Error: US pipeline: not connected yet - the id is still a placeholder in sources.json. Anupreet owns this source - it needs a successful sync before the next review."
+      "body": "US pipeline did not return a value for \"Meetings held\". Error: US pipeline: not connected yet - paste the link or upload a CSV on the Sources page. Anupreet owns this source - it needs a successful sync before the next review."
     },
     {
       "dept": "us_sales",
@@ -579,7 +579,7 @@
         "Raghav"
       ],
       "raisedBy": "engine",
-      "raisedAt": "2026-10-26T15:49:48.285Z",
+      "raisedAt": "2026-10-26T18:27:58.234Z",
       "resolvedAt": null,
       "metricIds": [
         "us_opps_created"
@@ -587,7 +587,7 @@
       "id": "missing_data:us_opps_created",
       "kind": "missing_data",
       "title": "Opportunities created is missing",
-      "body": "US pipeline did not return a value for \"Opportunities created\". Error: US pipeline: not connected yet - the id is still a placeholder in sources.json. Anupreet owns this source - it needs a successful sync before the next review."
+      "body": "US pipeline did not return a value for \"Opportunities created\". Error: US pipeline: not connected yet - paste the link or upload a CSV on the Sources page. Anupreet owns this source - it needs a successful sync before the next review."
     },
     {
       "dept": "us_sales",
@@ -598,7 +598,7 @@
         "Raghav"
       ],
       "raisedBy": "engine",
-      "raisedAt": "2026-10-26T15:49:48.285Z",
+      "raisedAt": "2026-10-26T18:27:58.234Z",
       "resolvedAt": null,
       "metricIds": [
         "us_proposal"
@@ -606,7 +606,7 @@
       "id": "missing_data:us_proposal",
       "kind": "missing_data",
       "title": "Proposal stage is missing",
-      "body": "US pipeline did not return a value for \"Proposal stage\". Error: US pipeline: not connected yet - the id is still a placeholder in sources.json. Anupreet owns this source - it needs a successful sync before the next review."
+      "body": "US pipeline did not return a value for \"Proposal stage\". Error: US pipeline: not connected yet - paste the link or upload a CSV on the Sources page. Anupreet owns this source - it needs a successful sync before the next review."
     },
     {
       "dept": "us_sales",
@@ -617,7 +617,7 @@
         "Raghav"
       ],
       "raisedBy": "engine",
-      "raisedAt": "2026-10-26T15:49:48.285Z",
+      "raisedAt": "2026-10-26T18:27:58.234Z",
       "resolvedAt": null,
       "metricIds": [
         "us_win_rate"
@@ -625,7 +625,7 @@
       "id": "missing_data:us_win_rate",
       "kind": "missing_data",
       "title": "Win rate is missing",
-      "body": "US pipeline did not return a value for \"Win rate\". Error: US pipeline: not connected yet - the id is still a placeholder in sources.json. Anupreet owns this source - it needs a successful sync before the next review."
+      "body": "US pipeline did not return a value for \"Win rate\". Error: US pipeline: not connected yet - paste the link or upload a CSV on the Sources page. Anupreet owns this source - it needs a successful sync before the next review."
     },
     {
       "dept": "us_sales",
@@ -636,7 +636,7 @@
         "Raghav"
       ],
       "raisedBy": "engine",
-      "raisedAt": "2026-10-26T15:49:48.285Z",
+      "raisedAt": "2026-10-26T18:27:58.234Z",
       "resolvedAt": null,
       "metricIds": [
         "in_pipeline_us"
@@ -654,7 +654,7 @@
         "Imran"
       ],
       "raisedBy": "engine",
-      "raisedAt": "2026-10-26T15:49:48.285Z",
+      "raisedAt": "2026-10-26T18:27:58.234Z",
       "resolvedAt": null,
       "metricIds": [
         "pm_us_cac"
@@ -672,7 +672,7 @@
         "Imran"
       ],
       "raisedBy": "engine",
-      "raisedAt": "2026-10-26T15:49:48.285Z",
+      "raisedAt": "2026-10-26T18:27:58.234Z",
       "resolvedAt": null,
       "metricIds": [
         "pm_us_cpl"
@@ -690,7 +690,7 @@
         "Imran"
       ],
       "raisedBy": "engine",
-      "raisedAt": "2026-10-26T15:49:48.285Z",
+      "raisedAt": "2026-10-26T18:27:58.234Z",
       "resolvedAt": null,
       "metricIds": [
         "pm_us_leads"
@@ -708,7 +708,7 @@
         "Imran"
       ],
       "raisedBy": "engine",
-      "raisedAt": "2026-10-26T15:49:48.285Z",
+      "raisedAt": "2026-10-26T18:27:58.234Z",
       "resolvedAt": null,
       "metricIds": [
         "pm_us_pipeline_sourced"
@@ -726,7 +726,7 @@
         "Imran"
       ],
       "raisedBy": "engine",
-      "raisedAt": "2026-10-26T15:49:48.285Z",
+      "raisedAt": "2026-10-26T18:27:58.234Z",
       "resolvedAt": null,
       "metricIds": [
         "pm_us_qualified"
@@ -744,7 +744,7 @@
         "Imran"
       ],
       "raisedBy": "engine",
-      "raisedAt": "2026-10-26T15:49:48.285Z",
+      "raisedAt": "2026-10-26T18:27:58.234Z",
       "resolvedAt": null,
       "metricIds": [
         "pm_us_spend"
@@ -763,7 +763,7 @@
         "Raghav"
       ],
       "raisedBy": "engine",
-      "raisedAt": "2026-10-26T15:49:48.285Z",
+      "raisedAt": "2026-10-26T18:27:58.234Z",
       "resolvedAt": null,
       "metricIds": [
         "us_accounts_worked"
@@ -782,7 +782,7 @@
         "Raghav"
       ],
       "raisedBy": "engine",
-      "raisedAt": "2026-10-26T15:49:48.285Z",
+      "raisedAt": "2026-10-26T18:27:58.234Z",
       "resolvedAt": null,
       "metricIds": [
         "us_closed_won"
@@ -801,7 +801,7 @@
         "Raghav"
       ],
       "raisedBy": "engine",
-      "raisedAt": "2026-10-26T15:49:48.285Z",
+      "raisedAt": "2026-10-26T18:27:58.234Z",
       "resolvedAt": null,
       "metricIds": [
         "us_created_wk"
@@ -820,7 +820,7 @@
         "Raghav"
       ],
       "raisedBy": "engine",
-      "raisedAt": "2026-10-26T15:49:48.285Z",
+      "raisedAt": "2026-10-26T18:27:58.234Z",
       "resolvedAt": null,
       "metricIds": [
         "us_in_poc"
@@ -839,7 +839,7 @@
         "Raghav"
       ],
       "raisedBy": "engine",
-      "raisedAt": "2026-10-26T15:49:48.285Z",
+      "raisedAt": "2026-10-26T18:27:58.234Z",
       "resolvedAt": null,
       "metricIds": [
         "us_meetings_held"
@@ -858,7 +858,7 @@
         "Raghav"
       ],
       "raisedBy": "engine",
-      "raisedAt": "2026-10-26T15:49:48.285Z",
+      "raisedAt": "2026-10-26T18:27:58.234Z",
       "resolvedAt": null,
       "metricIds": [
         "us_opps_created"
@@ -877,7 +877,7 @@
         "Raghav"
       ],
       "raisedBy": "engine",
-      "raisedAt": "2026-10-26T15:49:48.285Z",
+      "raisedAt": "2026-10-26T18:27:58.234Z",
       "resolvedAt": null,
       "metricIds": [
         "us_proposal"
@@ -896,7 +896,7 @@
         "Raghav"
       ],
       "raisedBy": "engine",
-      "raisedAt": "2026-10-26T15:49:48.285Z",
+      "raisedAt": "2026-10-26T18:27:58.234Z",
       "resolvedAt": null,
       "metricIds": [
         "us_win_rate"
@@ -915,7 +915,7 @@
         "Raghav"
       ],
       "raisedBy": "engine",
-      "raisedAt": "2026-10-26T15:49:48.285Z",
+      "raisedAt": "2026-10-26T18:27:58.234Z",
       "resolvedAt": null,
       "metricIds": [
         "in_pipeline_us"
@@ -933,7 +933,7 @@
         "Imran"
       ],
       "raisedBy": "engine",
-      "raisedAt": "2026-10-26T15:49:48.285Z",
+      "raisedAt": "2026-10-26T18:27:58.234Z",
       "resolvedAt": null,
       "metricIds": [
         "pm_us_cac"
@@ -951,7 +951,7 @@
         "Imran"
       ],
       "raisedBy": "engine",
-      "raisedAt": "2026-10-26T15:49:48.285Z",
+      "raisedAt": "2026-10-26T18:27:58.234Z",
       "resolvedAt": null,
       "metricIds": [
         "pm_us_cpl"
@@ -969,7 +969,7 @@
         "Imran"
       ],
       "raisedBy": "engine",
-      "raisedAt": "2026-10-26T15:49:48.285Z",
+      "raisedAt": "2026-10-26T18:27:58.234Z",
       "resolvedAt": null,
       "metricIds": [
         "pm_us_leads"
@@ -987,7 +987,7 @@
         "Imran"
       ],
       "raisedBy": "engine",
-      "raisedAt": "2026-10-26T15:49:48.285Z",
+      "raisedAt": "2026-10-26T18:27:58.234Z",
       "resolvedAt": null,
       "metricIds": [
         "pm_us_pipeline_sourced"
@@ -1005,7 +1005,7 @@
         "Imran"
       ],
       "raisedBy": "engine",
-      "raisedAt": "2026-10-26T15:49:48.285Z",
+      "raisedAt": "2026-10-26T18:27:58.234Z",
       "resolvedAt": null,
       "metricIds": [
         "pm_us_qualified"
@@ -1023,7 +1023,7 @@
         "Imran"
       ],
       "raisedBy": "engine",
-      "raisedAt": "2026-10-26T15:49:48.285Z",
+      "raisedAt": "2026-10-26T18:27:58.234Z",
       "resolvedAt": null,
       "metricIds": [
         "pm_us_spend"
@@ -1042,7 +1042,7 @@
         "Raghav"
       ],
       "raisedBy": "engine",
-      "raisedAt": "2026-10-26T15:49:48.285Z",
+      "raisedAt": "2026-10-26T18:27:58.234Z",
       "resolvedAt": null,
       "metricIds": [
         "us_accounts_worked"
@@ -1061,7 +1061,7 @@
         "Raghav"
       ],
       "raisedBy": "engine",
-      "raisedAt": "2026-10-26T15:49:48.285Z",
+      "raisedAt": "2026-10-26T18:27:58.234Z",
       "resolvedAt": null,
       "metricIds": [
         "us_closed_won"
@@ -1080,7 +1080,7 @@
         "Raghav"
       ],
       "raisedBy": "engine",
-      "raisedAt": "2026-10-26T15:49:48.285Z",
+      "raisedAt": "2026-10-26T18:27:58.234Z",
       "resolvedAt": null,
       "metricIds": [
         "us_created_wk"
@@ -1099,7 +1099,7 @@
         "Raghav"
       ],
       "raisedBy": "engine",
-      "raisedAt": "2026-10-26T15:49:48.285Z",
+      "raisedAt": "2026-10-26T18:27:58.234Z",
       "resolvedAt": null,
       "metricIds": [
         "us_in_poc"
@@ -1118,7 +1118,7 @@
         "Raghav"
       ],
       "raisedBy": "engine",
-      "raisedAt": "2026-10-26T15:49:48.285Z",
+      "raisedAt": "2026-10-26T18:27:58.234Z",
       "resolvedAt": null,
       "metricIds": [
         "us_meetings_held"
@@ -1137,7 +1137,7 @@
         "Raghav"
       ],
       "raisedBy": "engine",
-      "raisedAt": "2026-10-26T15:49:48.285Z",
+      "raisedAt": "2026-10-26T18:27:58.234Z",
       "resolvedAt": null,
       "metricIds": [
         "us_opps_created"
@@ -1156,7 +1156,7 @@
         "Raghav"
       ],
       "raisedBy": "engine",
-      "raisedAt": "2026-10-26T15:49:48.285Z",
+      "raisedAt": "2026-10-26T18:27:58.234Z",
       "resolvedAt": null,
       "metricIds": [
         "us_proposal"
@@ -1175,7 +1175,7 @@
         "Raghav"
       ],
       "raisedBy": "engine",
-      "raisedAt": "2026-10-26T15:49:48.285Z",
+      "raisedAt": "2026-10-26T18:27:58.234Z",
       "resolvedAt": null,
       "metricIds": [
         "us_win_rate"

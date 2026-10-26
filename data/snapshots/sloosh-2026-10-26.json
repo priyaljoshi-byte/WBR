@@ -3,8 +3,8 @@
     "id": "run-2026-10-26",
     "periodStart": "2026-10-26",
     "periodEnd": "2026-11-01",
-    "startedAt": "2026-10-26T15:49:48.291Z",
-    "finishedAt": "2026-10-26T15:49:48.291Z",
+    "startedAt": "2026-10-26T18:27:58.239Z",
+    "finishedAt": "2026-10-26T18:27:58.239Z",
     "status": "failed",
     "triggeredBy": "cron",
     "meetingId": "sloosh"
@@ -26,7 +26,7 @@
       "unit": "count",
       "caption": "— signups",
       "rowCount": 0,
-      "computedAt": "2026-10-26T15:49:48.291Z",
+      "computedAt": "2026-10-26T18:27:58.239Z",
       "warnings": [
         "source \"sloosh_db\" errored: Sloosh product data: no connection configured. Set SLOOSH_DB_URL_REST_URL and SLOOSH_DB_URL_REST_KEY, or PULSE_ALLOW_PSQL=1 for local runs. See .env.example."
       ]
@@ -47,7 +47,7 @@
       "unit": "count",
       "caption": "— of — signups",
       "rowCount": 0,
-      "computedAt": "2026-10-26T15:49:48.291Z",
+      "computedAt": "2026-10-26T18:27:58.239Z",
       "warnings": [
         "source \"sloosh_db\" errored: Sloosh product data: no connection configured. Set SLOOSH_DB_URL_REST_URL and SLOOSH_DB_URL_REST_KEY, or PULSE_ALLOW_PSQL=1 for local runs. See .env.example.",
         "denominator metric \"sloosh_signups\" for \"sloosh_activated\" has no value"
@@ -69,7 +69,7 @@
       "unit": "count",
       "caption": "— of —",
       "rowCount": 0,
-      "computedAt": "2026-10-26T15:49:48.291Z",
+      "computedAt": "2026-10-26T18:27:58.239Z",
       "warnings": [
         "source \"sloosh_db\" errored: Sloosh product data: no connection configured. Set SLOOSH_DB_URL_REST_URL and SLOOSH_DB_URL_REST_KEY, or PULSE_ALLOW_PSQL=1 for local runs. See .env.example.",
         "denominator metric \"sloosh_signups\" for \"sloosh_returned\" has no value"
@@ -91,7 +91,7 @@
       "unit": "count",
       "caption": "— of —",
       "rowCount": 0,
-      "computedAt": "2026-10-26T15:49:48.291Z",
+      "computedAt": "2026-10-26T18:27:58.239Z",
       "warnings": [
         "source \"sloosh_db\" errored: Sloosh product data: no connection configured. Set SLOOSH_DB_URL_REST_URL and SLOOSH_DB_URL_REST_KEY, or PULSE_ALLOW_PSQL=1 for local runs. See .env.example.",
         "denominator metric \"sloosh_signups\" for \"sloosh_paid\" has no value"
@@ -113,7 +113,7 @@
       "unit": "count",
       "caption": "— active",
       "rowCount": 0,
-      "computedAt": "2026-10-26T15:49:48.291Z",
+      "computedAt": "2026-10-26T18:27:58.239Z",
       "warnings": [
         "source \"sloosh_db\" errored: Sloosh product data: no connection configured. Set SLOOSH_DB_URL_REST_URL and SLOOSH_DB_URL_REST_KEY, or PULSE_ALLOW_PSQL=1 for local runs. See .env.example."
       ]
@@ -134,7 +134,7 @@
       "unit": "currency_inr",
       "caption": "— of — target",
       "rowCount": 0,
-      "computedAt": "2026-10-26T15:49:48.291Z",
+      "computedAt": "2026-10-26T18:27:58.239Z",
       "warnings": [
         "source \"sloosh_db\" errored: Sloosh product data: no connection configured. Set SLOOSH_DB_URL_REST_URL and SLOOSH_DB_URL_REST_KEY, or PULSE_ALLOW_PSQL=1 for local runs. See .env.example.",
         "denominator for \"sloosh_revenue\" is static but has no usable value"
@@ -156,9 +156,9 @@
       "unit": "count",
       "caption": "— of — committed",
       "rowCount": 0,
-      "computedAt": "2026-10-26T15:49:48.291Z",
+      "computedAt": "2026-10-26T18:27:58.239Z",
       "warnings": [
-        "source \"sloosh_board\" errored: Sloosh delivery board: not connected yet - the id is still a placeholder in sources.json",
+        "source \"sloosh_board\" errored: Sloosh delivery board: not connected yet - paste the link or upload a CSV on the Sources page",
         "denominator for \"sloosh_shipped\" is static but has no usable value"
       ]
     },
@@ -178,9 +178,9 @@
       "unit": "count",
       "caption": "— of — wip limit",
       "rowCount": 0,
-      "computedAt": "2026-10-26T15:49:48.291Z",
+      "computedAt": "2026-10-26T18:27:58.239Z",
       "warnings": [
-        "source \"sloosh_board\" errored: Sloosh delivery board: not connected yet - the id is still a placeholder in sources.json",
+        "source \"sloosh_board\" errored: Sloosh delivery board: not connected yet - paste the link or upload a CSV on the Sources page",
         "denominator for \"sloosh_in_progress\" is static but has no usable value"
       ]
     },
@@ -200,9 +200,9 @@
       "unit": "count",
       "caption": "— releases",
       "rowCount": 0,
-      "computedAt": "2026-10-26T15:49:48.291Z",
+      "computedAt": "2026-10-26T18:27:58.239Z",
       "warnings": [
-        "source \"sloosh_board\" errored: Sloosh delivery board: not connected yet - the id is still a placeholder in sources.json"
+        "source \"sloosh_board\" errored: Sloosh delivery board: not connected yet - paste the link or upload a CSV on the Sources page"
       ]
     },
     {
@@ -221,9 +221,9 @@
       "unit": "duration_days",
       "caption": "—",
       "rowCount": 0,
-      "computedAt": "2026-10-26T15:49:48.291Z",
+      "computedAt": "2026-10-26T18:27:58.239Z",
       "warnings": [
-        "source \"sloosh_board\" errored: Sloosh delivery board: not connected yet - the id is still a placeholder in sources.json"
+        "source \"sloosh_board\" errored: Sloosh delivery board: not connected yet - paste the link or upload a CSV on the Sources page"
       ]
     },
     {
@@ -242,9 +242,9 @@
       "unit": "count",
       "caption": "— landed",
       "rowCount": 0,
-      "computedAt": "2026-10-26T15:49:48.291Z",
+      "computedAt": "2026-10-26T18:27:58.239Z",
       "warnings": [
-        "source \"sloosh_web\" errored: Sloosh marketing funnel: not connected yet - the id is still a placeholder in sources.json"
+        "source \"sloosh_web\" errored: Sloosh marketing funnel: not connected yet - paste the link or upload a CSV on the Sources page"
       ]
     },
     {
@@ -263,9 +263,9 @@
       "unit": "count",
       "caption": "— of — landed",
       "rowCount": 0,
-      "computedAt": "2026-10-26T15:49:48.291Z",
+      "computedAt": "2026-10-26T18:27:58.239Z",
       "warnings": [
-        "source \"sloosh_web\" errored: Sloosh marketing funnel: not connected yet - the id is still a placeholder in sources.json",
+        "source \"sloosh_web\" errored: Sloosh marketing funnel: not connected yet - paste the link or upload a CSV on the Sources page",
         "denominator metric \"sloosh_web_landed\" for \"sloosh_web_signup\" has no value"
       ]
     },
@@ -285,9 +285,9 @@
       "unit": "count",
       "caption": "— of — signups",
       "rowCount": 0,
-      "computedAt": "2026-10-26T15:49:48.291Z",
+      "computedAt": "2026-10-26T18:27:58.239Z",
       "warnings": [
-        "source \"sloosh_web\" errored: Sloosh marketing funnel: not connected yet - the id is still a placeholder in sources.json",
+        "source \"sloosh_web\" errored: Sloosh marketing funnel: not connected yet - paste the link or upload a CSV on the Sources page",
         "denominator metric \"sloosh_web_signup\" for \"sloosh_web_paid\" has no value"
       ]
     },
@@ -307,9 +307,9 @@
       "unit": "count",
       "caption": "— of 0 total",
       "rowCount": 0,
-      "computedAt": "2026-10-26T15:49:48.291Z",
+      "computedAt": "2026-10-26T18:27:58.239Z",
       "warnings": [
-        "source \"sloosh_social\" errored: Sloosh social followers: not connected yet - the id is still a placeholder in sources.json"
+        "source \"sloosh_social\" errored: Sloosh social followers: not connected yet - paste the link or upload a CSV on the Sources page"
       ],
       "family": "sloosh_followers"
     },
@@ -329,9 +329,9 @@
       "unit": "count",
       "caption": "— of 0 total",
       "rowCount": 0,
-      "computedAt": "2026-10-26T15:49:48.291Z",
+      "computedAt": "2026-10-26T18:27:58.239Z",
       "warnings": [
-        "source \"sloosh_social\" errored: Sloosh social followers: not connected yet - the id is still a placeholder in sources.json"
+        "source \"sloosh_social\" errored: Sloosh social followers: not connected yet - paste the link or upload a CSV on the Sources page"
       ],
       "family": "sloosh_followers"
     },
@@ -351,9 +351,9 @@
       "unit": "count",
       "caption": "— of 0 total",
       "rowCount": 0,
-      "computedAt": "2026-10-26T15:49:48.291Z",
+      "computedAt": "2026-10-26T18:27:58.239Z",
       "warnings": [
-        "source \"sloosh_social\" errored: Sloosh social followers: not connected yet - the id is still a placeholder in sources.json"
+        "source \"sloosh_social\" errored: Sloosh social followers: not connected yet - paste the link or upload a CSV on the Sources page"
       ],
       "family": "sloosh_followers"
     },
@@ -373,9 +373,9 @@
       "unit": "count",
       "caption": "— of 0 total",
       "rowCount": 0,
-      "computedAt": "2026-10-26T15:49:48.291Z",
+      "computedAt": "2026-10-26T18:27:58.239Z",
       "warnings": [
-        "source \"sloosh_social\" errored: Sloosh social followers: not connected yet - the id is still a placeholder in sources.json"
+        "source \"sloosh_social\" errored: Sloosh social followers: not connected yet - paste the link or upload a CSV on the Sources page"
       ],
       "family": "sloosh_followers"
     }
@@ -390,7 +390,7 @@
         "Priyal"
       ],
       "raisedBy": "engine",
-      "raisedAt": "2026-10-26T15:49:48.291Z",
+      "raisedAt": "2026-10-26T18:27:58.239Z",
       "resolvedAt": null,
       "metricIds": [
         "sloosh_activated"
@@ -409,7 +409,7 @@
         "Priyal"
       ],
       "raisedBy": "engine",
-      "raisedAt": "2026-10-26T15:49:48.291Z",
+      "raisedAt": "2026-10-26T18:27:58.239Z",
       "resolvedAt": null,
       "metricIds": [
         "sloosh_cycle_time"
@@ -417,7 +417,7 @@
       "id": "missing_data:sloosh_cycle_time",
       "kind": "missing_data",
       "title": "Cycle time is missing",
-      "body": "Sloosh delivery board did not return a value for \"Cycle time\". Error: Sloosh delivery board: not connected yet - the id is still a placeholder in sources.json. Bharat owns this source - it needs a successful sync before the next review."
+      "body": "Sloosh delivery board did not return a value for \"Cycle time\". Error: Sloosh delivery board: not connected yet - paste the link or upload a CSV on the Sources page. Bharat owns this source - it needs a successful sync before the next review."
     },
     {
       "dept": "sloosh",
@@ -428,7 +428,7 @@
         "Priyal"
       ],
       "raisedBy": "engine",
-      "raisedAt": "2026-10-26T15:49:48.291Z",
+      "raisedAt": "2026-10-26T18:27:58.239Z",
       "resolvedAt": null,
       "metricIds": [
         "sloosh_followers_instagram"
@@ -436,7 +436,7 @@
       "id": "missing_data:sloosh_followers_instagram",
       "kind": "missing_data",
       "title": "Instagram is missing",
-      "body": "Sloosh social followers did not return a value for \"Instagram\". Error: Sloosh social followers: not connected yet - the id is still a placeholder in sources.json. Bharat owns this source - it needs a successful sync before the next review."
+      "body": "Sloosh social followers did not return a value for \"Instagram\". Error: Sloosh social followers: not connected yet - paste the link or upload a CSV on the Sources page. Bharat owns this source - it needs a successful sync before the next review."
     },
     {
       "dept": "sloosh",
@@ -447,7 +447,7 @@
         "Priyal"
       ],
       "raisedBy": "engine",
-      "raisedAt": "2026-10-26T15:49:48.291Z",
+      "raisedAt": "2026-10-26T18:27:58.239Z",
       "resolvedAt": null,
       "metricIds": [
         "sloosh_followers_linkedin"
@@ -455,7 +455,7 @@
       "id": "missing_data:sloosh_followers_linkedin",
       "kind": "missing_data",
       "title": "LinkedIn is missing",
-      "body": "Sloosh social followers did not return a value for \"LinkedIn\". Error: Sloosh social followers: not connected yet - the id is still a placeholder in sources.json. Bharat owns this source - it needs a successful sync before the next review."
+      "body": "Sloosh social followers did not return a value for \"LinkedIn\". Error: Sloosh social followers: not connected yet - paste the link or upload a CSV on the Sources page. Bharat owns this source - it needs a successful sync before the next review."
     },
     {
       "dept": "sloosh",
@@ -466,7 +466,7 @@
         "Priyal"
       ],
       "raisedBy": "engine",
-      "raisedAt": "2026-10-26T15:49:48.291Z",
+      "raisedAt": "2026-10-26T18:27:58.239Z",
       "resolvedAt": null,
       "metricIds": [
         "sloosh_followers_x"
@@ -474,7 +474,7 @@
       "id": "missing_data:sloosh_followers_x",
       "kind": "missing_data",
       "title": "X is missing",
-      "body": "Sloosh social followers did not return a value for \"X\". Error: Sloosh social followers: not connected yet - the id is still a placeholder in sources.json. Bharat owns this source - it needs a successful sync before the next review."
+      "body": "Sloosh social followers did not return a value for \"X\". Error: Sloosh social followers: not connected yet - paste the link or upload a CSV on the Sources page. Bharat owns this source - it needs a successful sync before the next review."
     },
     {
       "dept": "sloosh",
@@ -485,7 +485,7 @@
         "Priyal"
       ],
       "raisedBy": "engine",
-      "raisedAt": "2026-10-26T15:49:48.291Z",
+      "raisedAt": "2026-10-26T18:27:58.239Z",
       "resolvedAt": null,
       "metricIds": [
         "sloosh_followers_youtube"
@@ -493,7 +493,7 @@
       "id": "missing_data:sloosh_followers_youtube",
       "kind": "missing_data",
       "title": "YouTube is missing",
-      "body": "Sloosh social followers did not return a value for \"YouTube\". Error: Sloosh social followers: not connected yet - the id is still a placeholder in sources.json. Bharat owns this source - it needs a successful sync before the next review."
+      "body": "Sloosh social followers did not return a value for \"YouTube\". Error: Sloosh social followers: not connected yet - paste the link or upload a CSV on the Sources page. Bharat owns this source - it needs a successful sync before the next review."
     },
     {
       "dept": "sloosh",
@@ -504,7 +504,7 @@
         "Priyal"
       ],
       "raisedBy": "engine",
-      "raisedAt": "2026-10-26T15:49:48.291Z",
+      "raisedAt": "2026-10-26T18:27:58.239Z",
       "resolvedAt": null,
       "metricIds": [
         "sloosh_in_progress"
@@ -512,7 +512,7 @@
       "id": "missing_data:sloosh_in_progress",
       "kind": "missing_data",
       "title": "In progress is missing",
-      "body": "Sloosh delivery board did not return a value for \"In progress\". Error: Sloosh delivery board: not connected yet - the id is still a placeholder in sources.json. Bharat owns this source - it needs a successful sync before the next review."
+      "body": "Sloosh delivery board did not return a value for \"In progress\". Error: Sloosh delivery board: not connected yet - paste the link or upload a CSV on the Sources page. Bharat owns this source - it needs a successful sync before the next review."
     },
     {
       "dept": "sloosh",
@@ -523,7 +523,7 @@
         "Priyal"
       ],
       "raisedBy": "engine",
-      "raisedAt": "2026-10-26T15:49:48.291Z",
+      "raisedAt": "2026-10-26T18:27:58.239Z",
       "resolvedAt": null,
       "metricIds": [
         "sloosh_paid"
@@ -542,7 +542,7 @@
         "Priyal"
       ],
       "raisedBy": "engine",
-      "raisedAt": "2026-10-26T15:49:48.291Z",
+      "raisedAt": "2026-10-26T18:27:58.239Z",
       "resolvedAt": null,
       "metricIds": [
         "sloosh_releases"
@@ -550,7 +550,7 @@
       "id": "missing_data:sloosh_releases",
       "kind": "missing_data",
       "title": "Releases is missing",
-      "body": "Sloosh delivery board did not return a value for \"Releases\". Error: Sloosh delivery board: not connected yet - the id is still a placeholder in sources.json. Bharat owns this source - it needs a successful sync before the next review."
+      "body": "Sloosh delivery board did not return a value for \"Releases\". Error: Sloosh delivery board: not connected yet - paste the link or upload a CSV on the Sources page. Bharat owns this source - it needs a successful sync before the next review."
     },
     {
       "dept": "sloosh",
@@ -561,7 +561,7 @@
         "Priyal"
       ],
       "raisedBy": "engine",
-      "raisedAt": "2026-10-26T15:49:48.291Z",
+      "raisedAt": "2026-10-26T18:27:58.239Z",
       "resolvedAt": null,
       "metricIds": [
         "sloosh_returned"
@@ -580,7 +580,7 @@
         "Priyal"
       ],
       "raisedBy": "engine",
-      "raisedAt": "2026-10-26T15:49:48.291Z",
+      "raisedAt": "2026-10-26T18:27:58.239Z",
       "resolvedAt": null,
       "metricIds": [
         "sloosh_revenue"
@@ -599,7 +599,7 @@
         "Priyal"
       ],
       "raisedBy": "engine",
-      "raisedAt": "2026-10-26T15:49:48.291Z",
+      "raisedAt": "2026-10-26T18:27:58.239Z",
       "resolvedAt": null,
       "metricIds": [
         "sloosh_shipped"
@@ -607,7 +607,7 @@
       "id": "missing_data:sloosh_shipped",
       "kind": "missing_data",
       "title": "Shipped is missing",
-      "body": "Sloosh delivery board did not return a value for \"Shipped\". Error: Sloosh delivery board: not connected yet - the id is still a placeholder in sources.json. Bharat owns this source - it needs a successful sync before the next review."
+      "body": "Sloosh delivery board did not return a value for \"Shipped\". Error: Sloosh delivery board: not connected yet - paste the link or upload a CSV on the Sources page. Bharat owns this source - it needs a successful sync before the next review."
     },
     {
       "dept": "sloosh",
@@ -618,7 +618,7 @@
         "Priyal"
       ],
       "raisedBy": "engine",
-      "raisedAt": "2026-10-26T15:49:48.291Z",
+      "raisedAt": "2026-10-26T18:27:58.239Z",
       "resolvedAt": null,
       "metricIds": [
         "sloosh_signups"
@@ -637,7 +637,7 @@
         "Priyal"
       ],
       "raisedBy": "engine",
-      "raisedAt": "2026-10-26T15:49:48.291Z",
+      "raisedAt": "2026-10-26T18:27:58.239Z",
       "resolvedAt": null,
       "metricIds": [
         "sloosh_wau"
@@ -656,7 +656,7 @@
         "Priyal"
       ],
       "raisedBy": "engine",
-      "raisedAt": "2026-10-26T15:49:48.291Z",
+      "raisedAt": "2026-10-26T18:27:58.239Z",
       "resolvedAt": null,
       "metricIds": [
         "sloosh_web_landed"
@@ -664,7 +664,7 @@
       "id": "missing_data:sloosh_web_landed",
       "kind": "missing_data",
       "title": "Landed is missing",
-      "body": "Sloosh marketing funnel did not return a value for \"Landed\". Error: Sloosh marketing funnel: not connected yet - the id is still a placeholder in sources.json. Bharat owns this source - it needs a successful sync before the next review."
+      "body": "Sloosh marketing funnel did not return a value for \"Landed\". Error: Sloosh marketing funnel: not connected yet - paste the link or upload a CSV on the Sources page. Bharat owns this source - it needs a successful sync before the next review."
     },
     {
       "dept": "sloosh",
@@ -675,7 +675,7 @@
         "Priyal"
       ],
       "raisedBy": "engine",
-      "raisedAt": "2026-10-26T15:49:48.291Z",
+      "raisedAt": "2026-10-26T18:27:58.239Z",
       "resolvedAt": null,
       "metricIds": [
         "sloosh_web_paid"
@@ -683,7 +683,7 @@
       "id": "missing_data:sloosh_web_paid",
       "kind": "missing_data",
       "title": "Paid is missing",
-      "body": "Sloosh marketing funnel did not return a value for \"Paid\". Error: Sloosh marketing funnel: not connected yet - the id is still a placeholder in sources.json. Bharat owns this source - it needs a successful sync before the next review."
+      "body": "Sloosh marketing funnel did not return a value for \"Paid\". Error: Sloosh marketing funnel: not connected yet - paste the link or upload a CSV on the Sources page. Bharat owns this source - it needs a successful sync before the next review."
     },
     {
       "dept": "sloosh",
@@ -694,7 +694,7 @@
         "Priyal"
       ],
       "raisedBy": "engine",
-      "raisedAt": "2026-10-26T15:49:48.291Z",
+      "raisedAt": "2026-10-26T18:27:58.239Z",
       "resolvedAt": null,
       "metricIds": [
         "sloosh_web_signup"
@@ -702,7 +702,7 @@
       "id": "missing_data:sloosh_web_signup",
       "kind": "missing_data",
       "title": "Signed up is missing",
-      "body": "Sloosh marketing funnel did not return a value for \"Signed up\". Error: Sloosh marketing funnel: not connected yet - the id is still a placeholder in sources.json. Bharat owns this source - it needs a successful sync before the next review."
+      "body": "Sloosh marketing funnel did not return a value for \"Signed up\". Error: Sloosh marketing funnel: not connected yet - paste the link or upload a CSV on the Sources page. Bharat owns this source - it needs a successful sync before the next review."
     },
     {
       "dept": "sloosh",
@@ -713,7 +713,7 @@
         "Priyal"
       ],
       "raisedBy": "engine",
-      "raisedAt": "2026-10-26T15:49:48.291Z",
+      "raisedAt": "2026-10-26T18:27:58.239Z",
       "resolvedAt": null,
       "metricIds": [
         "sloosh_activated"
@@ -732,7 +732,7 @@
         "Priyal"
       ],
       "raisedBy": "engine",
-      "raisedAt": "2026-10-26T15:49:48.291Z",
+      "raisedAt": "2026-10-26T18:27:58.239Z",
       "resolvedAt": null,
       "metricIds": [
         "sloosh_cycle_time"
@@ -751,7 +751,7 @@
         "Priyal"
       ],
       "raisedBy": "engine",
-      "raisedAt": "2026-10-26T15:49:48.291Z",
+      "raisedAt": "2026-10-26T18:27:58.239Z",
       "resolvedAt": null,
       "metricIds": [
         "sloosh_followers_instagram"
@@ -770,7 +770,7 @@
         "Priyal"
       ],
       "raisedBy": "engine",
-      "raisedAt": "2026-10-26T15:49:48.291Z",
+      "raisedAt": "2026-10-26T18:27:58.239Z",
       "resolvedAt": null,
       "metricIds": [
         "sloosh_followers_linkedin"
@@ -789,7 +789,7 @@
         "Priyal"
       ],
       "raisedBy": "engine",
-      "raisedAt": "2026-10-26T15:49:48.291Z",
+      "raisedAt": "2026-10-26T18:27:58.239Z",
       "resolvedAt": null,
       "metricIds": [
         "sloosh_followers_x"
@@ -808,7 +808,7 @@
         "Priyal"
       ],
       "raisedBy": "engine",
-      "raisedAt": "2026-10-26T15:49:48.291Z",
+      "raisedAt": "2026-10-26T18:27:58.239Z",
       "resolvedAt": null,
       "metricIds": [
         "sloosh_followers_youtube"
@@ -827,7 +827,7 @@
         "Priyal"
       ],
       "raisedBy": "engine",
-      "raisedAt": "2026-10-26T15:49:48.291Z",
+      "raisedAt": "2026-10-26T18:27:58.239Z",
       "resolvedAt": null,
       "metricIds": [
         "sloosh_in_progress"
@@ -846,7 +846,7 @@
         "Priyal"
       ],
       "raisedBy": "engine",
-      "raisedAt": "2026-10-26T15:49:48.291Z",
+      "raisedAt": "2026-10-26T18:27:58.239Z",
       "resolvedAt": null,
       "metricIds": [
         "sloosh_paid"
@@ -865,7 +865,7 @@
         "Priyal"
       ],
       "raisedBy": "engine",
-      "raisedAt": "2026-10-26T15:49:48.291Z",
+      "raisedAt": "2026-10-26T18:27:58.239Z",
       "resolvedAt": null,
       "metricIds": [
         "sloosh_releases"
@@ -884,7 +884,7 @@
         "Priyal"
       ],
       "raisedBy": "engine",
-      "raisedAt": "2026-10-26T15:49:48.291Z",
+      "raisedAt": "2026-10-26T18:27:58.239Z",
       "resolvedAt": null,
       "metricIds": [
         "sloosh_returned"
@@ -903,7 +903,7 @@
         "Priyal"
       ],
       "raisedBy": "engine",
-      "raisedAt": "2026-10-26T15:49:48.291Z",
+      "raisedAt": "2026-10-26T18:27:58.239Z",
       "resolvedAt": null,
       "metricIds": [
         "sloosh_revenue"
@@ -922,7 +922,7 @@
         "Priyal"
       ],
       "raisedBy": "engine",
-      "raisedAt": "2026-10-26T15:49:48.291Z",
+      "raisedAt": "2026-10-26T18:27:58.239Z",
       "resolvedAt": null,
       "metricIds": [
         "sloosh_shipped"
@@ -941,7 +941,7 @@
         "Priyal"
       ],
       "raisedBy": "engine",
-      "raisedAt": "2026-10-26T15:49:48.291Z",
+      "raisedAt": "2026-10-26T18:27:58.239Z",
       "resolvedAt": null,
       "metricIds": [
         "sloosh_signups"
@@ -960,7 +960,7 @@
         "Priyal"
       ],
       "raisedBy": "engine",
-      "raisedAt": "2026-10-26T15:49:48.291Z",
+      "raisedAt": "2026-10-26T18:27:58.239Z",
       "resolvedAt": null,
       "metricIds": [
         "sloosh_wau"
@@ -979,7 +979,7 @@
         "Priyal"
       ],
       "raisedBy": "engine",
-      "raisedAt": "2026-10-26T15:49:48.291Z",
+      "raisedAt": "2026-10-26T18:27:58.239Z",
       "resolvedAt": null,
       "metricIds": [
         "sloosh_web_landed"
@@ -998,7 +998,7 @@
         "Priyal"
       ],
       "raisedBy": "engine",
-      "raisedAt": "2026-10-26T15:49:48.291Z",
+      "raisedAt": "2026-10-26T18:27:58.239Z",
       "resolvedAt": null,
       "metricIds": [
         "sloosh_web_paid"
@@ -1017,7 +1017,7 @@
         "Priyal"
       ],
       "raisedBy": "engine",
-      "raisedAt": "2026-10-26T15:49:48.291Z",
+      "raisedAt": "2026-10-26T18:27:58.239Z",
       "resolvedAt": null,
       "metricIds": [
         "sloosh_web_signup"
@@ -1036,7 +1036,7 @@
         "Priyal"
       ],
       "raisedBy": "engine",
-      "raisedAt": "2026-10-26T15:49:48.291Z",
+      "raisedAt": "2026-10-26T18:27:58.239Z",
       "resolvedAt": null,
       "metricIds": [
         "sloosh_activated"
@@ -1055,7 +1055,7 @@
         "Priyal"
       ],
       "raisedBy": "engine",
-      "raisedAt": "2026-10-26T15:49:48.291Z",
+      "raisedAt": "2026-10-26T18:27:58.239Z",
       "resolvedAt": null,
       "metricIds": [
         "sloosh_cycle_time"
@@ -1074,7 +1074,7 @@
         "Priyal"
       ],
       "raisedBy": "engine",
-      "raisedAt": "2026-10-26T15:49:48.291Z",
+      "raisedAt": "2026-10-26T18:27:58.239Z",
       "resolvedAt": null,
       "metricIds": [
         "sloosh_followers_instagram"
@@ -1093,7 +1093,7 @@
         "Priyal"
       ],
       "raisedBy": "engine",
-      "raisedAt": "2026-10-26T15:49:48.291Z",
+      "raisedAt": "2026-10-26T18:27:58.239Z",
       "resolvedAt": null,
       "metricIds": [
         "sloosh_followers_linkedin"
@@ -1112,7 +1112,7 @@
         "Priyal"
       ],
       "raisedBy": "engine",
-      "raisedAt": "2026-10-26T15:49:48.291Z",
+      "raisedAt": "2026-10-26T18:27:58.239Z",
       "resolvedAt": null,
       "metricIds": [
         "sloosh_followers_x"
@@ -1131,7 +1131,7 @@
         "Priyal"
       ],
       "raisedBy": "engine",
-      "raisedAt": "2026-10-26T15:49:48.291Z",
+      "raisedAt": "2026-10-26T18:27:58.239Z",
       "resolvedAt": null,
       "metricIds": [
         "sloosh_followers_youtube"
@@ -1150,7 +1150,7 @@
         "Priyal"
       ],
       "raisedBy": "engine",
-      "raisedAt": "2026-10-26T15:49:48.291Z",
+      "raisedAt": "2026-10-26T18:27:58.239Z",
       "resolvedAt": null,
       "metricIds": [
         "sloosh_in_progress"
@@ -1169,7 +1169,7 @@
         "Priyal"
       ],
       "raisedBy": "engine",
-      "raisedAt": "2026-10-26T15:49:48.291Z",
+      "raisedAt": "2026-10-26T18:27:58.239Z",
       "resolvedAt": null,
       "metricIds": [
         "sloosh_paid"
@@ -1188,7 +1188,7 @@
         "Priyal"
       ],
       "raisedBy": "engine",
-      "raisedAt": "2026-10-26T15:49:48.291Z",
+      "raisedAt": "2026-10-26T18:27:58.239Z",
       "resolvedAt": null,
       "metricIds": [
         "sloosh_releases"
@@ -1207,7 +1207,7 @@
         "Priyal"
       ],
       "raisedBy": "engine",
-      "raisedAt": "2026-10-26T15:49:48.291Z",
+      "raisedAt": "2026-10-26T18:27:58.239Z",
       "resolvedAt": null,
       "metricIds": [
         "sloosh_returned"
@@ -1226,7 +1226,7 @@
         "Priyal"
       ],
       "raisedBy": "engine",
-      "raisedAt": "2026-10-26T15:49:48.291Z",
+      "raisedAt": "2026-10-26T18:27:58.239Z",
       "resolvedAt": null,
       "metricIds": [
         "sloosh_revenue"
@@ -1245,7 +1245,7 @@
         "Priyal"
       ],
       "raisedBy": "engine",
-      "raisedAt": "2026-10-26T15:49:48.291Z",
+      "raisedAt": "2026-10-26T18:27:58.239Z",
       "resolvedAt": null,
       "metricIds": [
         "sloosh_shipped"
@@ -1264,7 +1264,7 @@
         "Priyal"
       ],
       "raisedBy": "engine",
-      "raisedAt": "2026-10-26T15:49:48.291Z",
+      "raisedAt": "2026-10-26T18:27:58.239Z",
       "resolvedAt": null,
       "metricIds": [
         "sloosh_signups"
@@ -1283,7 +1283,7 @@
         "Priyal"
       ],
       "raisedBy": "engine",
-      "raisedAt": "2026-10-26T15:49:48.291Z",
+      "raisedAt": "2026-10-26T18:27:58.239Z",
       "resolvedAt": null,
       "metricIds": [
         "sloosh_wau"
@@ -1302,7 +1302,7 @@
         "Priyal"
       ],
       "raisedBy": "engine",
-      "raisedAt": "2026-10-26T15:49:48.291Z",
+      "raisedAt": "2026-10-26T18:27:58.239Z",
       "resolvedAt": null,
       "metricIds": [
         "sloosh_web_landed"
@@ -1321,7 +1321,7 @@
         "Priyal"
       ],
       "raisedBy": "engine",
-      "raisedAt": "2026-10-26T15:49:48.291Z",
+      "raisedAt": "2026-10-26T18:27:58.239Z",
       "resolvedAt": null,
       "metricIds": [
         "sloosh_web_paid"
@@ -1340,7 +1340,7 @@
         "Priyal"
       ],
       "raisedBy": "engine",
-      "raisedAt": "2026-10-26T15:49:48.291Z",
+      "raisedAt": "2026-10-26T18:27:58.239Z",
       "resolvedAt": null,
       "metricIds": [
         "sloosh_web_signup"

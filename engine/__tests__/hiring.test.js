@@ -1,7 +1,7 @@
 import { test } from 'node:test';
 import assert from 'node:assert/strict';
 import { readFileSync } from 'node:fs';
-import { buildFunnels, classify, parseRoles, normRole, parseHeadcount } from '../hiring.js';
+import { buildFunnels, funnelTables, classify, parseRoles, normRole, parseHeadcount } from '../hiring.js';
 
 const config = JSON.parse(readFileSync(new URL('../../config/hiring.json', import.meta.url), 'utf8'));
 
@@ -79,5 +79,28 @@ test('the page never carries contact or pay fields through', () => {
     ] }]
   }, config);
   const cand = out.funnels[0].candidates[0];
-  assert.deepEqual(Object.keys(cand).sort(), ['name', 'reached', 'reachedLabel', 'recruiter', 'roleText', 'stageText', 'status']);
+  assert.deepEqual(Object.keys(cand).sort(), ['name', 'offerOut', 'reached', 'reachedLabel', 'recruiter', 'roleText', 'stageText', 'status']);
+});
+
+test('weekly-run tables use the catalogue status words', () => {
+  const out = buildFunnels({
+    roleRows,
+    candidateTabs: [{ recruiter: 'Rishi', rows: [
+      { 'Candidate Name': 'A', Role: 'CSM', 'Current Stage': 'TA Explore Call' },
+      { 'Candidate Name': 'B', Role: 'CSM', 'Current Stage': 'R2' },
+      { 'Candidate Name': 'C', Role: 'CSM', 'Current Stage': "Founder's Round" },
+      { 'Candidate Name': 'D', Role: 'CSM', 'Current Stage': 'Documents yet to be received' },
+      { 'Candidate Name': 'E', Role: 'CSM', 'Current Stage': 'Withdrawn' },
+      { 'Candidate Name': 'F', Role: 'CSM', 'Current Stage': 'R1' }
+    ] }],
+    offerRows: [
+      { 'Candidate Name': 'C', 'Offer Status': 'Offer Intent Shared', 'Joining Status': '' },
+      { 'Candidate Name': 'F', 'Offer Status': '', 'Joining Status': 'Joined' }
+    ]
+  }, config);
+  const t = funnelTables(out, config);
+  const by = Object.fromEntries(t.candidates.map((c) => [c.candidate, c.status]));
+  assert.deepEqual(by, { A: 'screening', B: 'interviewing', C: 'offer_out', D: 'accepted', E: 'dropped', F: 'joined' });
+  assert.equal(t.roles.find((r) => r.role === 'Customer Success Manager').status, 'open');
+  assert.ok(!('phone_number' in t.candidates[0]));
 });

@@ -14,6 +14,8 @@
 import { createSign } from 'node:crypto';
 import { parseDate, parseDateColumn } from '../engine/dates.js';
 import { normalizeRows } from './index.js';
+import { fetchSheetCsv } from '../app/sheets.js';
+import { parseCSV } from '../app/csv.js';
 
 const SCOPE = 'https://www.googleapis.com/auth/spreadsheets.readonly';
 const TOKEN_URL = 'https://oauth2.googleapis.com/token';
@@ -69,6 +71,11 @@ export async function getAccessToken(env) {
  * @param {object} period  {start, end}
  */
 export async function fetchGsheet(source, period, env) {
+  // No service account yet: read the sheet the way the browser does, through
+  // its link sharing. Same rows, no credentials - it only needs the sheet set
+  // to "Anyone with the link can view".
+  if (!env.GOOGLE_SA_EMAIL || !env.GOOGLE_SA_PRIVATE_KEY) return fetchGsheetPublic(source, period);
+
   const token = await getAccessToken(env);
   const gid = source.gid ?? source.config?.gid ?? null;
   let tab = source.tab ?? source._tab ?? null;
@@ -121,6 +128,38 @@ export async function fetchGsheet(source, period, env) {
     ...(filtered.droppedAll
       ? { warning: `every row fell outside ${period.start} to ${period.end}` }
       : {})
+  };
+}
+
+/**
+ * The no-credentials read, through app/sheets.js - the exact module the
+ * Sources screen uses, so the run and the browser read the same cells.
+ */
+export async function fetchGsheetPublic(source, period, opts = {}) {
+  const gid = source.gid ?? source.config?.gid ?? null;
+  const tab = gid ? null : (source.tab ?? source._tab ?? null);
+  let res;
+  try {
+    res = await fetchSheetCsv(source.ref, { gid, tab, fetchImpl: opts.fetchImpl });
+  } catch (err) {
+    throw new Error(`${err.message}${err.fix ? ` ${err.fix}` : ''}`);
+  }
+  const parsed = parseCSV(res.text, { headerRow: source.header_row > 1 ? source.header_row : 'auto' });
+  const { columns, rows } = normalizeRows(parsed.columns, parsed.rows);
+  const filtered = filterToPeriod(rows, source.date_column, period, {
+    dateOrder: source.date_order,
+    defaultDateOrder: source.default_date_order,
+    sourceLabel: source.label || source.id
+  });
+  return {
+    columns,
+    rows: filtered.rows,
+    asOf: filtered.latestDate,
+    warnings: [
+      ...(gid || !tab ? [] : [`read tab "${tab}" by name - if that name is wrong, Google returns the first tab instead`]),
+      ...filtered.warnings
+    ],
+    ...(filtered.droppedAll ? { warning: `every row fell outside ${period.start} to ${period.end}` } : {})
   };
 }
 
