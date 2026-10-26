@@ -68,6 +68,39 @@ export function gvizUrl(id, opts = {}) {
   return `${GVIZ_BASE}/${encodeURIComponent(String(id))}/gviz/tq?${params.toString()}`;
 }
 
+/**
+ * The exact read, used whenever the tab id (gid) is known - which it is for any
+ * link copied while looking at the tab. Preferred over gviz for three reasons,
+ * all checked against a real sheet:
+ *   - it returns the cells as displayed, where gviz guesses a type per column
+ *     and blanks every cell that does not fit the guess (a "Status" column with
+ *     one number in it loses all its text);
+ *   - an unknown gid is an HTTP 400, not a silent first tab;
+ *   - it is CORS-open through Google's redirect, same as gviz.
+ */
+export function exportUrl(id, gid) {
+  return `${GVIZ_BASE}/${encodeURIComponent(String(id))}/export?format=csv&gid=${encodeURIComponent(String(gid))}`;
+}
+
+/** Tabs nobody asked Pulse to read. Matched by name in the link title or by
+ *  gid; the Hiring sheet's private tab is the reason this exists. */
+export const BLOCKED_TABS = [
+  { id: '1UtmLeUllhYW-cVs_6uAVIlQpwIsSbjz6W2WRglibzVU', gid: '1725023938', name: "Roles of Omer - Please don't access" }
+];
+
+export function isBlockedTab(id, gid) {
+  return BLOCKED_TABS.some((b) => b.id === String(id) && b.gid === String(gid));
+}
+
+/** Export pads a sheet's empty leading rows as ",,,,". The header is the first
+ *  row with something in it, so drop those before anyone counts rows. */
+export function dropLeadingBlankRows(text) {
+  const lines = String(text).split(/\r?\n/);
+  let i = 0;
+  while (i < lines.length - 1 && /^[,\s"]*$/.test(lines[i])) i += 1;
+  return lines.slice(i).join('\n');
+}
+
 /** The share link a person can open to check they pasted the right document. */
 export function sheetUrl(id, gid) {
   const base = `${GVIZ_BASE}/${encodeURIComponent(String(id))}/edit`;
@@ -78,7 +111,7 @@ export class SheetFetchError extends Error {
   constructor(message, { kind, status, url, fix } = {}) {
     super(message);
     this.name = 'SheetFetchError';
-    /** 'not_shared' | 'not_found' | 'offline' | 'not_csv' | 'empty' | 'http' */
+    /** 'not_shared' | 'not_found' | 'offline' | 'not_csv' | 'empty' | 'http' | 'blocked' */
     this.kind = kind || 'http';
     this.status = status ?? null;
     this.url = url || null;
@@ -119,7 +152,12 @@ function looksLikeHtml(text) {
 export async function fetchSheetCsv(id, opts = {}) {
   if (!id) throw new SheetFetchError('No spreadsheet id to read.', { kind: 'not_found' });
 
-  const url = gvizUrl(id, opts);
+  const hasGid = opts.gid !== undefined && opts.gid !== null && String(opts.gid) !== '';
+  if (hasGid && isBlockedTab(id, opts.gid)) {
+    throw new SheetFetchError('That tab is marked private, so Pulse will not read it.',
+      { kind: 'blocked', fix: 'Open a different tab in the sheet and copy the link from there.' });
+  }
+  const url = hasGid ? exportUrl(id, opts.gid) : gvizUrl(id, opts);
   const doFetch = opts.fetchImpl || ((...a) => fetch(...a));
 
   // AbortController is in every browser this app supports; guarded anyway so a
@@ -155,6 +193,12 @@ export async function fetchSheetCsv(id, opts = {}) {
   if (timer) clearTimeout(timer);
 
   if (!res.ok) {
+    if (res.status === 400 && hasGid) {
+      throw new SheetFetchError(
+        'Google says that sheet has no tab with that id.',
+        { kind: 'not_found', status: 400, url, fix: 'Open the tab you want, then copy the link from the address bar again.' }
+      );
+    }
     if (res.status === 404) {
       throw new SheetFetchError(
         'Google says there is no spreadsheet with that id.',
@@ -173,7 +217,8 @@ export async function fetchSheetCsv(id, opts = {}) {
     );
   }
 
-  const text = await res.text();
+  const raw = await res.text();
+  const text = hasGid ? dropLeadingBlankRows(raw) : raw;
 
   if (looksLikeHtml(text)) {
     throw new SheetFetchError(
@@ -189,7 +234,8 @@ export async function fetchSheetCsv(id, opts = {}) {
   }
 
   const named = !!(opts.tab || (opts.gid !== undefined && opts.gid !== null && String(opts.gid) !== ''));
-  const fellBack = !!(named && opts.compareWith && opts.compareWith === text);
+  // An exact gid read cannot fall back - Google errors instead.
+  const fellBack = !!(named && !hasGid && opts.compareWith && opts.compareWith === text);
 
   return {
     text,

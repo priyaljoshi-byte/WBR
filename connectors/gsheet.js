@@ -70,7 +70,18 @@ export async function getAccessToken(env) {
  */
 export async function fetchGsheet(source, period, env) {
   const token = await getAccessToken(env);
-  const tab = source.tab ?? source._tab ?? null;
+  const gid = source.gid ?? source.config?.gid ?? null;
+  let tab = source.tab ?? source._tab ?? null;
+  // The Sources screen stores the tab the link was copied from as a gid, which
+  // is exact; the API wants the title, so look it up. A gid wins over a name.
+  if (gid !== null && gid !== undefined && gid !== '') {
+    const meta = await fetch(`https://sheets.googleapis.com/v4/spreadsheets/${source.ref}?fields=sheets.properties(sheetId,title)`,
+      { headers: { authorization: `Bearer ${token}` } });
+    if (!meta.ok) throw new Error(`could not list tabs (Sheets API ${meta.status}).`);
+    const hit = ((await meta.json()).sheets || []).find((sh) => String(sh.properties.sheetId) === String(gid));
+    if (!hit) throw new Error(`no tab with id ${gid} in sheet ${source.ref}.`);
+    tab = `'${hit.properties.title.replace(/'/g, "''")}'`;
+  }
 
   // A1 range. Unqualified means "the whole first tab", which is the common case
   // for a single-purpose tracker sheet.
@@ -88,7 +99,10 @@ export async function fetchGsheet(source, period, env) {
   if (!res.ok) throw new Error(`Sheets API ${res.status}`);
 
   const { values = [] } = await res.json();
-  const headerIndex = Math.max(0, (source.header_row ?? 1) - 1);
+  let headerIndex = Math.max(0, (source.header_row ?? 1) - 1);
+  // A sheet with empty rows above its header: the header is the first row with
+  // anything in it, same as the browser read.
+  while (headerIndex < values.length - 1 && !(values[headerIndex] || []).some((c) => c !== '' && c != null)) headerIndex += 1;
   const headers = values[headerIndex] ?? [];
   const body = values.slice(headerIndex + 1).filter((r) => r.some((c) => c !== '' && c != null));
 
