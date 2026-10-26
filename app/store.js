@@ -364,8 +364,36 @@ export function supabaseBackend() {
  * =========================================================================
  * Supabase, so every department sees the same data and history builds up
  * week on week. localBackend() is kept for tests and offline use.
+ *
+ * `?store=local` forces the local backend. It exists for two honest reasons -
+ * working with no connection, and exercising these screens without writing
+ * into the shared database - and it is NEVER selected automatically.
+ *
+ * That last part is the important one. A silent fall back to localStorage when
+ * Supabase is unreachable would be the worst behaviour this file could have:
+ * the page would say "saved", the person would believe their team could see
+ * it, and nobody would find out until the dashboard came up empty. A failed
+ * write must surface as a failed write. So the only way into local mode is to
+ * ask for it, and shell.js prints which store is live on every screen.
  */
-export const backend = supabaseBackend();
+function chooseBackend() {
+  let mode = null;
+  try {
+    const asked = new URLSearchParams(location.search).get('store');
+    if (asked === 'local' || asked === 'supabase') {
+      mode = asked;
+      // Remembered for this tab only, so following a link to another screen
+      // does not switch stores underneath you half way through setup.
+      sessionStorage.setItem('pulse-store-mode', asked);
+    } else {
+      mode = sessionStorage.getItem('pulse-store-mode');
+    }
+  } catch { /* no location or no sessionStorage - take the default */ }
+
+  return mode === 'local' ? localBackend() : supabaseBackend();
+}
+
+export const backend = chooseBackend();
 
 /* ===========================================================================
  * What the screens actually import

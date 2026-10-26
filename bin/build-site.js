@@ -35,7 +35,13 @@ const COPY = [
   { from: 'out',    to: '.',       exts: ['.html', '.txt'] },
   { from: 'app',    to: 'app',     exts: ['.html', '.js', '.css'], skipDirs: ['__tests__'] },
   { from: 'engine', to: 'engine',  exts: ['.js'],                  skipDirs: ['__tests__'] },
-  { from: 'config', to: 'config',  exts: ['.json'] }
+  { from: 'config', to: 'config',  exts: ['.json'] },
+  // The Sources screen draws real ring cards from an uploaded file, using the
+  // SAME renderer the dashboard uses rather than a second copy of it. Only the
+  // three modules that are pure ship: render/sample.js imports node:fs and
+  // would 404 at best, so this rule names files instead of taking the folder.
+  // Adding one here is a deliberate act - check it imports nothing Node-only.
+  { from: 'render', to: 'render',  exts: ['.js'], files: ['rings.js', 'card.js', 'util.js'] }
 ];
 
 /** Anything matching these never ships, whatever the allowlist says. */
@@ -80,6 +86,9 @@ async function main() {
 
     for (const file of await walk(src, rule.skipDirs ?? [])) {
       if (!rule.exts.includes(extname(file))) continue;
+      // An allowlist of filenames, where taking a whole folder would ship a
+      // module that cannot run in a browser.
+      if (rule.files && !rule.files.includes(relative(src, file))) continue;
 
       const text = await readFile(file, 'utf8').catch(() => '');
       const hit = SECRET_SHAPES.find((re) => re.test(text));

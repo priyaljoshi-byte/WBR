@@ -16,7 +16,8 @@
 
 import { PULSE_CONFIG } from './config.js';
 import { db, signInWithGoogleIdToken, signOut as sbSignOut, clearToken, hasToken } from './supabase.js';
-import { esc, el, emptyState, toast } from './ui.js';
+import { exportAll, importAll, countRecords, isLocal } from './store.js';
+import { esc, el, emptyState, toast, readFileAsText } from './ui.js';
 
 const SESSION_KEY = 'pulse-session';
 const OPEN_NAME_KEY = 'pulse-open-name';
@@ -99,14 +100,42 @@ function setOpenName(name) {
   try { localStorage.setItem(OPEN_NAME_KEY, String(name || '').trim()); } catch { /* private mode */ }
 }
 
+/**
+ * THE HONESTY BANNER.
+ *
+ * It names the store that is ACTUALLY in use, every time, on every screen.
+ * Getting this wrong is worse than having no banner at all: somebody who
+ * spends an hour entering targets believing their team can see them, and finds
+ * out afterwards that it was this browser only, will not trust anything else
+ * the tool says. So the sentence is derived from the live backend rather than
+ * written once and assumed.
+ */
 function openModeBanner() {
   const name = getOpenName();
-  const node = banner('preview', `<b>Open mode.</b> No sign-in yet - everything you save goes to the shared team database, and anyone with this link can edit it.
+  const local = isLocal();
+
+  const where = local
+    ? `<b>Saving to this browser only.</b> Nothing you enter here is shared with the team or
+       visible on the dashboard, and clearing your browser data deletes it. You are in local
+       mode because the address says <code>?store=local</code>.
+       <a href="${location.pathname}?store=supabase">Switch to the shared database</a>.
+       Use <b>Export</b> below before you leave, or the work is trapped in this browser.`
+    : `<b>Open mode.</b> No sign-in yet - everything you save goes to the shared team database,
+       and anyone with this link can edit it.`;
+
+  const node = banner(local ? 'warn' : 'preview', `${where}
     <span id="pulse-openname">${name
     ? `Saving as <b>${esc(name)}</b>. <a href="#" id="pulse-rename">Change</a>`
     : `<label for="pulse-namein">Your name, so entries say who made them:</label>
        <input id="pulse-namein" type="text" autocomplete="name" placeholder="e.g. Subham" style="margin:0 6px;max-width:180px">
-       <button type="button" class="btn btn-sm" id="pulse-nameok">Save</button>`}</span>`);
+       <button type="button" class="btn btn-sm" id="pulse-nameok">Save</button>`}</span>
+    <span class="dataio">
+      <button type="button" class="btn btn-sm btn-quiet" id="pulse-export">Export everything</button>
+      <button type="button" class="btn btn-sm btn-quiet" id="pulse-import">Import a file</button>
+      <input type="file" id="pulse-importfile" accept="application/json,.json" hidden>
+    </span>`);
+
+  wireDataIo(node);
   const ok = node.querySelector('#pulse-nameok');
   if (ok) {
     const input = node.querySelector('#pulse-namein');
@@ -120,6 +149,70 @@ function openModeBanner() {
   }
   const again = node.querySelector('#pulse-rename');
   if (again) again.addEventListener('click', (e) => { e.preventDefault(); setOpenName(''); location.reload(); });
+}
+
+/**
+ * Export and Import - the escape hatch.
+ *
+ * Export writes one JSON file holding every row this app has saved. It is the
+ * answer to "what happens to my afternoon's work if this breaks", and it is
+ * also the bridge to the repo: bin/import-selections.js reads the same file
+ * and turns it into data/selections.json.
+ *
+ * Import MERGES by default. Replacing would be the easier code and the worse
+ * behaviour - loading a colleague's export should not silently delete your own
+ * targets, so a key that exists on both sides is overwritten and everything
+ * else is left alone.
+ */
+function wireDataIo(node) {
+  const exportBtn = node.querySelector('#pulse-export');
+  const importBtn = node.querySelector('#pulse-import');
+  const file = node.querySelector('#pulse-importfile');
+  if (!exportBtn || !importBtn || !file) return;
+
+  exportBtn.addEventListener('click', async () => {
+    exportBtn.disabled = true;
+    const was = exportBtn.textContent;
+    exportBtn.textContent = 'Collecting...';
+    try {
+      const payload = await exportAll();
+      const n = countRecords(payload);
+      const blob = new Blob([JSON.stringify(payload, null, 2)], { type: 'application/json' });
+      const url = URL.createObjectURL(blob);
+      const a = document.createElement('a');
+      a.href = url;
+      a.download = `pulse-export-${new Date().toISOString().slice(0, 10)}.json`;
+      document.body.appendChild(a);
+      a.click();
+      a.remove();
+      setTimeout(() => URL.revokeObjectURL(url), 1000);
+      toast(n ? `Exported ${n} saved record${n === 1 ? '' : 's'}` : 'Nothing has been saved yet - the file is empty');
+    } catch (err) {
+      toast(err.message, 'warn');
+    } finally {
+      exportBtn.disabled = false;
+      exportBtn.textContent = was;
+    }
+  });
+
+  importBtn.addEventListener('click', () => file.click());
+
+  file.addEventListener('change', async () => {
+    const f = file.files && file.files[0];
+    if (!f) return;
+    try {
+      // The file is DATA. It is parsed, validated by shape, and written as
+      // rows. Nothing in it is executed or trusted as markup.
+      const text = await readFileAsText(f);
+      const result = await importAll(text, { merge: true });
+      toast(`Loaded ${result.records} record${result.records === 1 ? '' : 's'} from ${f.name}`);
+      setTimeout(() => location.reload(), 900);
+    } catch (err) {
+      toast(err.message, 'warn');
+    } finally {
+      file.value = '';
+    }
+  });
 }
 
 /* --------------------------------- role ----------------------------------- */

@@ -30,8 +30,24 @@ import {
 } from '../owners.js';
 
 const run = promisify(execFile);
+
 const HERE = path.dirname(fileURLToPath(import.meta.url));
 const ROOT = path.join(HERE, '..', '..');
+
+/**
+ * `pulse check` is asserted against config/ ALONE.
+ *
+ * Without this, the test reads whatever data/ happens to hold - and once a
+ * department exports its metric choices and someone runs
+ * bin/import-selections.js, data/selections.json filters the catalogue and
+ * these counts change. The run would be correct and the test would fail,
+ * which is the worst kind of failure: it teaches people that importing their
+ * own selections "breaks the build".
+ *
+ * bin/pulse.js already honours PULSE_DATA_DIR, so pointing it at an empty
+ * directory is all it takes to pin this to config.
+ */
+const CHECK_ENV = { ...process.env, PULSE_DATA_DIR: path.join(ROOT, 'node_modules', '.pulse-empty-data') };
 const readJson = async (name) =>
   JSON.parse(await readFile(path.join(ROOT, 'config', name), 'utf8'));
 
@@ -282,7 +298,7 @@ test('pulse check addresses every blank to the people who must fill it', async (
   // Exit code 1: there is setup outstanding. `pulse check` answers one question
   // during setup - whose turn is it to do something - so a non-zero exit is the
   // expected state until that list is empty.
-  const { stdout } = await run('node', [path.join(ROOT, 'bin', 'pulse.js'), 'check'], { cwd: ROOT })
+  const { stdout } = await run('node', [path.join(ROOT, 'bin', 'pulse.js'), 'check'], { cwd: ROOT, env: CHECK_ENV })
     .catch((err) => {
       assert.equal(err.code, 1, 'things are still unset, so check exits 1');
       return err;
@@ -297,7 +313,6 @@ test('pulse check addresses every blank to the people who must fill it', async (
 
   // The per-department heading carries the TRIO, and the unowned one carries
   // the placeholder rather than the department name standing in for a person.
-
 
   // Metrics with no single accountable owner, reported PER DEPARTMENT - so the
   // ask lands with the three people who have to settle it between them.
@@ -323,7 +338,7 @@ test('pulse check addresses every blank to the people who must fill it', async (
 });
 
 test('pulse check prints the four reviews and what each one reads', async () => {
-  const { stdout } = await run('node', [path.join(ROOT, 'bin', 'pulse.js'), 'check'], { cwd: ROOT })
+  const { stdout } = await run('node', [path.join(ROOT, 'bin', 'pulse.js'), 'check'], { cwd: ROOT, env: CHECK_ENV })
     .catch((err) => err);
 
   assert.match(stdout, /4 weekly reviews configured/);

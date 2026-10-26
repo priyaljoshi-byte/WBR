@@ -136,6 +136,10 @@ li{padding:11px 0;border-bottom:1px solid var(--soft);font-size:13.5px;color:var
 li .w{font-family:var(--mono);font-size:11.5px;color:var(--fg3);margin-right:14px}
 li a{color:var(--fg2);text-decoration:none;border-bottom:1px solid transparent}
 li a:hover{color:var(--fg);border-bottom-color:var(--lime)}
+.appblurb{margin:0 0 18px;font-size:13.5px;color:var(--fg2);line-height:1.6;max-width:68ch}
+.grid.apps{margin-top:0}
+.card.app:hover{border-color:rgba(61,219,255,.42)}
+.card.app .day{color:#3ddbff}
 footer{margin-top:50px;padding-top:20px;border-top:1px solid var(--soft);font-size:12px;color:var(--fg3);line-height:1.8}
 </style></head><body><div class="wrap">
 
@@ -156,6 +160,26 @@ ${missing.map((m) => `  <div class="gap">
 </section>
 
 ${past ? `<h3>Earlier weeks</h3><ul>\n${past}\n</ul>` : ''}
+
+<h3>Set it up</h3>
+<p class="appblurb">These dashboards are built from what each team connects here. A page nobody can
+find is a page nobody uses, so: this is where you point Pulse at your sheet, choose which numbers
+matter to you, and set what you are committing to.</p>
+<section class="grid apps">
+${[
+    ['app/index.html', 'Setup', 'What your department still owes - unconnected sources, untargeted metrics, unnamed owners.'],
+    ['app/sources.html', 'Sources', 'Paste a sheet link or drop a CSV, map the columns, and see the rings it produces.'],
+    ['app/metrics.html', 'Metrics', 'Which numbers matter to you. Three to five, not everything measurable.'],
+    ['app/targets.html', 'Targets', 'The number each metric is committing to, and what counts as off track.'],
+    ['app/rag.html', 'Brand status', 'The daily red/amber/green call per brand or track, with the reason beside it.'],
+    ['app/transcripts.html', 'Add a meeting', 'Turn a transcript into decisions, blockers and notes - reviewed before anything is written.']
+  ].map(([href, name, blurb]) => `
+  <a class="card app" href="${esc(href)}">
+    <span class="day">OPEN</span>
+    <h2>${esc(name)}</h2>
+    <p class="who">${esc(blurb)}</p>
+  </a>`).join('\n')}
+</section>
 
 <footer>
   Each ring is a number against its own denominator, normalised to 100.<br>

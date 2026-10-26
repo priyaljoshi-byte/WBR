@@ -21,6 +21,7 @@ import { parseRef, isPlaceholderRef, shareInstruction } from './refs.js';
 import { parseCSV, dateColumnReport, dateHealth } from './csv.js';
 import { suggestMapping, requiredColumnsForSource } from './mapping.js';
 import { fetchSheetCsv, SHARE_FIX, fallbackWarning } from './sheets.js';
+import { renderPreviewRings } from './compute-preview.js';
 import { db, canSave } from './store.js';
 import { PULSE_CONFIG } from './config.js';
 import {
@@ -255,10 +256,52 @@ function renderLinkTab(pane, source, canWrite, mapHost, required, saved) {
           // gid 0 IS the first tab, so there is nothing to compare against.
           const first = tab || (gid && gid !== '0') ? await fetchSheetCsv(parsed.id) : null;
           const res = await fetchSheetCsv(parsed.id, { tab, gid, compareWith: first ? first.text : null });
-          const note = res.fellBack
-            ? `<div class="banner banner-warn" style="margin-top:12px">${esc(fallbackWarning(tab || `tab ${gid}`))}</div>` : '';
-          showRows(rowsOut, `${uid}-sheet`, source, `Google Sheet${tab ? ` - ${tab}` : ''}`, res.text,
+          const label = `Google Sheet${tab ? ` - ${tab}` : ''}`;
+          const proceed = (note) => showRows(rowsOut, `${uid}-sheet`, source, label, res.text,
             { canWrite, mapHost, required, saved, note, onCancel: () => {} });
+
+          /**
+           * THE SILENT WRONG TAB.
+           *
+           * Google does not fail on a tab name it does not recognise - it
+           * returns the FIRST tab, with HTTP 200, looking exactly like a
+           * success. A typo therefore yields a full table of entirely
+           * plausible rows from the wrong part of the spreadsheet, and every
+           * number computed from them is confidently wrong.
+           *
+           * A warning banner is not enough for that, because the rows below it
+           * look fine and people map what is in front of them. So this stops
+           * here: no preview, no column map, no rings, until somebody has
+           * looked at the column names and said which of the two it is.
+           */
+          if (res.fellBack) {
+            const ack = `ack-${source.id}`;
+            rowsOut.innerHTML = `
+              <div class="banner banner-err" style="margin-top:12px">
+                <b>This may not be the tab you asked for.</b>
+                <p style="margin:8px 0 0;font-size:13px;line-height:1.6">${esc(fallbackWarning(tab || `gid ${gid}`))}</p>
+                <p style="margin:10px 0 0;font-size:13px;line-height:1.6">The first row of what Google
+                actually sent is:</p>
+                <div class="copyrow" style="margin-top:8px"><code>${esc(firstLineOf(res.text))}</code></div>
+                <div class="btnrow" style="margin-top:14px">
+                  <button class="btn btn-sm" type="button" id="${CSS.escape(ack)}-yes">Those are the right columns - carry on</button>
+                  <button class="btn btn-quiet btn-sm" type="button" id="${CSS.escape(ack)}-no">That is the wrong tab - stop</button>
+                </div>
+              </div>`;
+            rowsOut.querySelector(`#${CSS.escape(ack)}-yes`).addEventListener('click', () => {
+              proceed(`<div class="banner banner-warn" style="margin-top:12px"><b>Tab confirmed by hand.</b>
+                Google could not tell us whether "${esc(tab || `gid ${gid}`)}" matched, and you confirmed
+                these columns are right.</div>`);
+            });
+            rowsOut.querySelector(`#${CSS.escape(ack)}-no`).addEventListener('click', () => {
+              rowsOut.innerHTML = `<p class="hint hint-bad">Stopped. Check how the tab is spelled on the
+                tab itself - spaces and "&amp;" included - then read it again.</p>`;
+              mapHost.innerHTML = '';
+            });
+            return;
+          }
+
+          proceed('');
         } catch (err) {
           rowsOut.innerHTML = errorState(new Error(`${err.message}${err.fix ? ` ${err.fix}` : ''}`), 'Could not read that sheet');
         } finally {
@@ -431,8 +474,16 @@ function showRows(out, uid, source, name, text, { canWrite, mapHost, required, s
   renderMapping(mapHost, source, required, parsed.columns,
     Object.fromEntries(suggestMapping(required.map((r) => r.column), parsed.columns)
       .map((r) => [r.required, r.detected])),
-    canWrite, saved && saved.date_order);
+    canWrite, saved && saved.date_order,
+    // The rows themselves, so the map can draw the numbers it produces.
+    { parsed });
   mapHost.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+}
+
+/** The header row Google actually sent, for the "is this your tab" question. */
+function firstLineOf(text) {
+  const line = String(text || '').split(/\r?\n/)[0] || '';
+  return line.length > 180 ? `${line.slice(0, 180)}...` : line;
 }
 
 /* --------------------------- the date moment ------------------------------ */
@@ -845,14 +896,46 @@ function renderMapping(host, source, required, detected, current, canWrite, date
       <button class="btn btn-go" id="${CSS.escape(uid)}-save" type="button"${canWrite ? '' : ' disabled'}>Save the map</button>
       ${detected.length ? `<button class="btn btn-quiet" id="${CSS.escape(uid)}-auto" type="button">Re-suggest</button>` : ''}
       ${canWrite ? '' : '<span class="hint">Read only - ask your department owner or an admin.</span>'}
-    </div>`;
+    </div>
+    <div id="${CSS.escape(uid)}-rings"></div>`;
 
   const selects = [...host.querySelectorAll('select[data-need]')];
+
+  /**
+   * THE LOOP CLOSING.
+   *
+   * With a file in hand, the rings it produces are drawn right here and
+   * redrawn on every change to the map. Changing a dropdown and watching a
+   * ring go from empty to 4.47 Cr is the entire feedback loop this screen was
+   * missing - and watching it stay empty is how somebody finds out their map
+   * is wrong while they can still fix it.
+   */
+  const ringsHost = host.querySelector(`#${CSS.escape(uid)}-rings`);
+  const drawRings = () => {
+    if (!ringsHost || !opts.parsed) return;
+    const mapping = {};
+    selects.forEach((s) => { mapping[s.dataset.need] = s.value || null; });
+    try {
+      renderPreviewRings(ringsHost, {
+        source,
+        parsed: opts.parsed,
+        mapping,
+        catalogMetrics: data.catalog.metrics,
+        org: data.org
+      });
+    } catch (err) {
+      ringsHost.innerHTML = errorState(err, 'The engine could not compute these rows');
+    }
+  };
+
   selects.forEach((s) => s.addEventListener('change', () => {
     s.closest('.map-row').classList.toggle('unmapped', !s.value);
     const chipSpan = s.closest('.map-row').querySelector('.map-why');
     chipSpan.innerHTML = s.value ? `<span class="chip chip-info">chosen</span>` : `<span class="chip chip-warn">none</span>`;
+    drawRings();
   }));
+
+  drawRings();
 
   const pasteBtn = host.querySelector(`#${CSS.escape(uid)}-pastebtn`);
   if (pasteBtn) {
@@ -863,7 +946,7 @@ function renderMapping(host, source, required, detected, current, canWrite, date
       const suggested = Object.fromEntries(
         suggestMapping(required.map((r) => r.column), cols).map((r) => [r.required, r.detected])
       );
-      renderMapping(host, source, required, cols, suggested, canWrite, host.querySelector(`#${CSS.escape(uid)}-dates`).value);
+      renderMapping(host, source, required, cols, suggested, canWrite, host.querySelector(`#${CSS.escape(uid)}-dates`).value, opts);
     });
   }
 

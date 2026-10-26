@@ -182,10 +182,13 @@ export async function loadAll() {
         if (team.length) {
           merged.org.owners[id] = { ...owner, team, lead: row.owner_lead || owner.lead || null };
         } else if (row.owner_name) {
+          // The seed writes the trio as "Subham, Arfin, Raghav" - a list, not
+          // one person, so it must not become a single dropdown option.
+          const names = parseTeam(row.owner_name);
           merged.org.owners[id] = {
             ...owner,
-            team: [row.owner_name],
-            lead: row.owner_name,
+            team: names,
+            lead: names.length === 1 ? names[0] : (owner.lead || null),
             email: row.owner_email || owner.email
           };
         }

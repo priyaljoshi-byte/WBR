@@ -31,13 +31,41 @@ const readJson = async (p) => JSON.parse(await readFile(p, 'utf8'));
 const readJsonOr = async (p, fallback) => {
   try { return await readJson(p); } catch { return fallback; }
 };
-const loadConfig = async () => ({
-  org: await readJson(join(ROOT, 'config/org.json')),
-  catalog: await readJson(join(ROOT, 'config/catalog.json')),
-  sources: await readJson(join(ROOT, 'config/sources.json')),
-  // Optional. A repo with no meetings.json has one room and one dashboard.
-  meetings: await readJsonOr(join(ROOT, 'config/meetings.json'), null)
-});
+/**
+ * The catalogue, cut to what each department actually chose on the Metrics
+ * screen.
+ *
+ * data/selections.json is optional and absent by default, so a repo that has
+ * never opened the app behaves exactly as it always did. When it is there, it
+ * filters which metrics exist and overrides their target and owner - and the
+ * run says so out loud, because a dashboard that is quietly showing six of a
+ * department's nine numbers should never be mistaken for one showing all nine.
+ */
+const loadConfig = async () => {
+  const catalog = await readJson(join(ROOT, 'config/catalog.json'));
+  const selections = await readJsonOr(join(DATA, 'selections.json'), null);
+
+  let applied = catalog;
+  if (selections) {
+    const { applySelections, describeSelections } = await import('../engine/selections.js');
+    const result = applySelections(catalog, selections);
+    applied = result.catalog;
+    if (result.applied) {
+      console.log(`Selections: ${describeSelections(result.stats)}`);
+      for (const dept of result.stats.emptiedDepartments) {
+        console.warn(`   ${dept} has every metric turned off, so its section will be empty.`);
+      }
+    }
+  }
+
+  return {
+    org: await readJson(join(ROOT, 'config/org.json')),
+    catalog: applied,
+    sources: await readJson(join(ROOT, 'config/sources.json')),
+    // Optional. A repo with no meetings.json has one room and one dashboard.
+    meetings: await readJsonOr(join(ROOT, 'config/meetings.json'), null)
+  };
+};
 
 /**
  * Which meetings this invocation covers.
