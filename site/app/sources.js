@@ -410,7 +410,12 @@ function renderCsvTab(pane, source, canWrite, mapHost, required, saved) {
  */
 function showRows(out, uid, source, name, text, { canWrite, mapHost, required, saved, onCancel, note }) {
   const f = { name }; // the preview below labels rows by "file"
-  const parsed = parseCSV(text, { headerRow: source.header_row || 1 });
+  // A header_row set by hand wins; the default 1 means "nobody said", so find it.
+  const parsed = parseCSV(text, { headerRow: source.header_row > 1 ? source.header_row : 'auto' });
+  if (parsed.headerRow > 1) {
+    note = `${note || ''}<div class="banner" style="margin-top:12px"><b>Column names found on row ${parsed.headerRow}.</b>
+      The ${parsed.headerRow - 1} row${parsed.headerRow === 2 ? '' : 's'} above ${parsed.headerRow === 2 ? 'it was' : 'them were'} blank or a title, so Pulse skipped ${parsed.headerRow === 2 ? 'it' : 'them'}.</div>`;
+  }
   if (!parsed.columns.length) {
     out.innerHTML = errorState(new Error('No header row was found. The first line should be the column names.'), `${name} did not parse`);
     return;

@@ -130,9 +130,28 @@ function dedupeHeaders(names) {
  * @param {{delimiter?: string, headerRow?: number}} [opts]
  * @returns {ParsedCSV}
  */
+/**
+ * Which row holds the column names. Real sheets often carry a blank row, a
+ * title ("2026 HIRING METRICS") or a section label above the header, and
+ * taking row 1 blindly turns every column into column_1, column_2... so
+ * nothing can be mapped. The header is the first row, within the first 15,
+ * that is filled at least half as wide as the widest row there.
+ * @returns {number} 1-based row number
+ */
+export function detectHeaderRow(grid) {
+  const filled = (r) => (r || []).filter((v) => String(v).trim() !== '').length;
+  const scan = grid.slice(0, 15);
+  const widest = Math.max(0, ...scan.map(filled));
+  const need = Math.max(2, Math.ceil(widest / 2));
+  const i = scan.findIndex((r) => filled(r) >= need);
+  return i < 0 ? 1 : i + 1;
+}
+
 export function parseCSV(text, opts = {}) {
-  const headerRow = Number.isInteger(opts.headerRow) ? opts.headerRow : 1;
   const grid = parseCSVRows(text, opts);
+  const headerRow = opts.headerRow === 'auto'
+    ? detectHeaderRow(grid)
+    : (Number.isInteger(opts.headerRow) ? opts.headerRow : 1);
   const warnings = [];
 
   if (!grid.length) {
@@ -163,6 +182,7 @@ export function parseCSV(text, opts = {}) {
     lowerColumns: columns.map((c) => c.toLowerCase()),
     rows,
     rowCount: rows.length,
+    headerRow,
     grid,
     warnings: warnings.slice(0, 8)
   };
