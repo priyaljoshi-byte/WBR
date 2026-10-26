@@ -1,0 +1,1190 @@
+{
+  "run": {
+    "id": "run-2026-10-26",
+    "periodStart": "2026-10-26",
+    "periodEnd": "2026-11-01",
+    "startedAt": "2026-10-26T15:49:48.285Z",
+    "finishedAt": "2026-10-26T15:49:48.285Z",
+    "status": "failed",
+    "triggeredBy": "cron",
+    "meetingId": "us_charter"
+  },
+  "snapshots": [
+    {
+      "runId": "run-2026-10-26",
+      "metricId": "in_pipeline_us",
+      "periodStart": "2026-10-26",
+      "periodEnd": "2026-11-01",
+      "raw": null,
+      "denominator": null,
+      "normalized": null,
+      "priorRaw": null,
+      "priorNormalized": null,
+      "delta": null,
+      "health": "missing",
+      "freshness": "unknown",
+      "unit": "currency_usd",
+      "caption": "— open",
+      "rowCount": 0,
+      "computedAt": "2026-10-26T15:49:48.285Z",
+      "warnings": [
+        "source \"us_crm\" errored: US pipeline: not connected yet - the id is still a placeholder in sources.json"
+      ]
+    },
+    {
+      "runId": "run-2026-10-26",
+      "metricId": "us_closed_won",
+      "periodStart": "2026-10-26",
+      "periodEnd": "2026-11-01",
+      "raw": null,
+      "denominator": null,
+      "normalized": null,
+      "priorRaw": null,
+      "priorNormalized": null,
+      "delta": null,
+      "health": "missing",
+      "freshness": "unknown",
+      "unit": "currency_usd",
+      "caption": "— of — target",
+      "rowCount": 0,
+      "computedAt": "2026-10-26T15:49:48.285Z",
+      "warnings": [
+        "source \"us_crm\" errored: US pipeline: not connected yet - the id is still a placeholder in sources.json",
+        "denominator for \"us_closed_won\" is static but has no usable value"
+      ]
+    },
+    {
+      "runId": "run-2026-10-26",
+      "metricId": "us_in_poc",
+      "periodStart": "2026-10-26",
+      "periodEnd": "2026-11-01",
+      "raw": null,
+      "denominator": null,
+      "normalized": null,
+      "priorRaw": null,
+      "priorNormalized": null,
+      "delta": null,
+      "health": "missing",
+      "freshness": "unknown",
+      "unit": "currency_usd",
+      "caption": "— of — open",
+      "rowCount": 0,
+      "computedAt": "2026-10-26T15:49:48.285Z",
+      "warnings": [
+        "source \"us_crm\" errored: US pipeline: not connected yet - the id is still a placeholder in sources.json",
+        "denominator metric \"in_pipeline_us\" for \"us_in_poc\" has no value"
+      ]
+    },
+    {
+      "runId": "run-2026-10-26",
+      "metricId": "us_proposal",
+      "periodStart": "2026-10-26",
+      "periodEnd": "2026-11-01",
+      "raw": null,
+      "denominator": null,
+      "normalized": null,
+      "priorRaw": null,
+      "priorNormalized": null,
+      "delta": null,
+      "health": "missing",
+      "freshness": "unknown",
+      "unit": "currency_usd",
+      "caption": "—",
+      "rowCount": 0,
+      "computedAt": "2026-10-26T15:49:48.285Z",
+      "warnings": [
+        "source \"us_crm\" errored: US pipeline: not connected yet - the id is still a placeholder in sources.json",
+        "denominator metric \"in_pipeline_us\" for \"us_proposal\" has no value"
+      ]
+    },
+    {
+      "runId": "run-2026-10-26",
+      "metricId": "us_created_wk",
+      "periodStart": "2026-10-26",
+      "periodEnd": "2026-11-01",
+      "raw": null,
+      "denominator": null,
+      "normalized": null,
+      "priorRaw": null,
+      "priorNormalized": null,
+      "delta": null,
+      "health": "missing",
+      "freshness": "unknown",
+      "unit": "currency_usd",
+      "caption": "— created",
+      "rowCount": 0,
+      "computedAt": "2026-10-26T15:49:48.285Z",
+      "warnings": [
+        "source \"us_crm_created\" errored: US pipeline created: not connected yet - the id is still a placeholder in sources.json"
+      ]
+    },
+    {
+      "runId": "run-2026-10-26",
+      "metricId": "us_win_rate",
+      "periodStart": "2026-10-26",
+      "periodEnd": "2026-11-01",
+      "raw": null,
+      "denominator": null,
+      "normalized": null,
+      "priorRaw": null,
+      "priorNormalized": null,
+      "delta": null,
+      "health": "missing",
+      "freshness": "unknown",
+      "unit": "percent",
+      "caption": "—",
+      "rowCount": 0,
+      "computedAt": "2026-10-26T15:49:48.285Z",
+      "warnings": [
+        "source \"us_crm\" errored: US pipeline: not connected yet - the id is still a placeholder in sources.json"
+      ]
+    },
+    {
+      "runId": "run-2026-10-26",
+      "metricId": "us_meetings_held",
+      "periodStart": "2026-10-26",
+      "periodEnd": "2026-11-01",
+      "raw": null,
+      "denominator": null,
+      "normalized": null,
+      "priorRaw": null,
+      "priorNormalized": null,
+      "delta": null,
+      "health": "missing",
+      "freshness": "unknown",
+      "unit": "count",
+      "caption": "— of — target",
+      "rowCount": 0,
+      "computedAt": "2026-10-26T15:49:48.285Z",
+      "warnings": [
+        "source \"us_crm\" errored: US pipeline: not connected yet - the id is still a placeholder in sources.json",
+        "denominator for \"us_meetings_held\" is static but has no usable value"
+      ]
+    },
+    {
+      "runId": "run-2026-10-26",
+      "metricId": "us_opps_created",
+      "periodStart": "2026-10-26",
+      "periodEnd": "2026-11-01",
+      "raw": null,
+      "denominator": null,
+      "normalized": null,
+      "priorRaw": null,
+      "priorNormalized": null,
+      "delta": null,
+      "health": "missing",
+      "freshness": "unknown",
+      "unit": "count",
+      "caption": "— of — target",
+      "rowCount": 0,
+      "computedAt": "2026-10-26T15:49:48.285Z",
+      "warnings": [
+        "source \"us_crm\" errored: US pipeline: not connected yet - the id is still a placeholder in sources.json",
+        "denominator for \"us_opps_created\" is static but has no usable value"
+      ]
+    },
+    {
+      "runId": "run-2026-10-26",
+      "metricId": "us_accounts_worked",
+      "periodStart": "2026-10-26",
+      "periodEnd": "2026-11-01",
+      "raw": null,
+      "denominator": null,
+      "normalized": null,
+      "priorRaw": null,
+      "priorNormalized": null,
+      "delta": null,
+      "health": "missing",
+      "freshness": "unknown",
+      "unit": "count",
+      "caption": "— of — target",
+      "rowCount": 0,
+      "computedAt": "2026-10-26T15:49:48.285Z",
+      "warnings": [
+        "source \"us_crm\" errored: US pipeline: not connected yet - the id is still a placeholder in sources.json",
+        "denominator for \"us_accounts_worked\" is static but has no usable value"
+      ]
+    },
+    {
+      "runId": "run-2026-10-26",
+      "metricId": "pm_us_spend",
+      "periodStart": "2026-10-26",
+      "periodEnd": "2026-11-01",
+      "raw": null,
+      "denominator": null,
+      "normalized": null,
+      "priorRaw": null,
+      "priorNormalized": null,
+      "delta": null,
+      "health": "missing",
+      "freshness": "unknown",
+      "unit": "currency_usd",
+      "caption": "— of — budget",
+      "rowCount": 0,
+      "computedAt": "2026-10-26T15:49:48.285Z",
+      "warnings": [
+        "source \"ads_us\" errored: Paid media - US: not connected yet - the id is still a placeholder in sources.json",
+        "denominator for \"pm_us_spend\" is static but has no usable value"
+      ],
+      "segment": "us",
+      "family": "pm_spend"
+    },
+    {
+      "runId": "run-2026-10-26",
+      "metricId": "pm_us_leads",
+      "periodStart": "2026-10-26",
+      "periodEnd": "2026-11-01",
+      "raw": null,
+      "denominator": null,
+      "normalized": null,
+      "priorRaw": null,
+      "priorNormalized": null,
+      "delta": null,
+      "health": "missing",
+      "freshness": "unknown",
+      "unit": "count",
+      "caption": "— of — target",
+      "rowCount": 0,
+      "computedAt": "2026-10-26T15:49:48.285Z",
+      "warnings": [
+        "source \"ads_us\" errored: Paid media - US: not connected yet - the id is still a placeholder in sources.json",
+        "denominator for \"pm_us_leads\" is static but has no usable value"
+      ],
+      "segment": "us",
+      "family": "pm_leads"
+    },
+    {
+      "runId": "run-2026-10-26",
+      "metricId": "pm_us_qualified",
+      "periodStart": "2026-10-26",
+      "periodEnd": "2026-11-01",
+      "raw": null,
+      "denominator": null,
+      "normalized": null,
+      "priorRaw": null,
+      "priorNormalized": null,
+      "delta": null,
+      "health": "missing",
+      "freshness": "unknown",
+      "unit": "count",
+      "caption": "— of — leads",
+      "rowCount": 0,
+      "computedAt": "2026-10-26T15:49:48.285Z",
+      "warnings": [
+        "source \"ads_us\" errored: Paid media - US: not connected yet - the id is still a placeholder in sources.json",
+        "denominator metric \"pm_us_leads\" for \"pm_us_qualified\" has no value"
+      ],
+      "segment": "us",
+      "family": "pm_qualified"
+    },
+    {
+      "runId": "run-2026-10-26",
+      "metricId": "pm_us_cpl",
+      "periodStart": "2026-10-26",
+      "periodEnd": "2026-11-01",
+      "raw": null,
+      "denominator": null,
+      "normalized": null,
+      "priorRaw": null,
+      "priorNormalized": null,
+      "delta": null,
+      "health": "missing",
+      "freshness": "unknown",
+      "unit": "currency_usd",
+      "caption": "—",
+      "rowCount": 0,
+      "computedAt": "2026-10-26T15:49:48.285Z",
+      "warnings": [
+        "source \"ads_us\" errored: Paid media - US: not connected yet - the id is still a placeholder in sources.json"
+      ],
+      "segment": "us",
+      "family": "pm_cpl"
+    },
+    {
+      "runId": "run-2026-10-26",
+      "metricId": "pm_us_cac",
+      "periodStart": "2026-10-26",
+      "periodEnd": "2026-11-01",
+      "raw": null,
+      "denominator": null,
+      "normalized": null,
+      "priorRaw": null,
+      "priorNormalized": null,
+      "delta": null,
+      "health": "missing",
+      "freshness": "unknown",
+      "unit": "currency_usd",
+      "caption": "—",
+      "rowCount": 0,
+      "computedAt": "2026-10-26T15:49:48.285Z",
+      "warnings": [
+        "source \"ads_us\" errored: Paid media - US: not connected yet - the id is still a placeholder in sources.json"
+      ],
+      "segment": "us",
+      "family": "pm_cac"
+    },
+    {
+      "runId": "run-2026-10-26",
+      "metricId": "pm_us_pipeline_sourced",
+      "periodStart": "2026-10-26",
+      "periodEnd": "2026-11-01",
+      "raw": null,
+      "denominator": null,
+      "normalized": null,
+      "priorRaw": null,
+      "priorNormalized": null,
+      "delta": null,
+      "health": "missing",
+      "freshness": "unknown",
+      "unit": "currency_usd",
+      "caption": "— sourced",
+      "rowCount": 0,
+      "computedAt": "2026-10-26T15:49:48.285Z",
+      "warnings": [
+        "source \"us_crm\" errored: US pipeline: not connected yet - the id is still a placeholder in sources.json"
+      ],
+      "segment": "us",
+      "family": "pm_sourced"
+    }
+  ],
+  "flags": [
+    {
+      "dept": "us_sales",
+      "owner": "Anupreet",
+      "ownerTeam": [
+        "Anupreet",
+        "Karan",
+        "Raghav"
+      ],
+      "raisedBy": "engine",
+      "raisedAt": "2026-10-26T15:49:48.285Z",
+      "resolvedAt": null,
+      "metricIds": [
+        "in_pipeline_us"
+      ],
+      "id": "missing_data:in_pipeline_us",
+      "kind": "missing_data",
+      "title": "Pipeline open is missing",
+      "body": "US pipeline did not return a value for \"Pipeline open\". Error: US pipeline: not connected yet - the id is still a placeholder in sources.json. Anupreet owns this source - it needs a successful sync before the next review."
+    },
+    {
+      "dept": "perf_marketing",
+      "owner": "Raghav",
+      "ownerTeam": [
+        "Raghav",
+        "Imran"
+      ],
+      "raisedBy": "engine",
+      "raisedAt": "2026-10-26T15:49:48.285Z",
+      "resolvedAt": null,
+      "metricIds": [
+        "pm_us_cac"
+      ],
+      "id": "missing_data:pm_us_cac",
+      "kind": "missing_data",
+      "title": "CAC (paid) is missing",
+      "body": "Paid media - US did not return a value for \"CAC (paid)\". Error: Paid media - US: not connected yet - the id is still a placeholder in sources.json. Raghav owns this source - it needs a successful sync before the next review."
+    },
+    {
+      "dept": "perf_marketing",
+      "owner": "Raghav",
+      "ownerTeam": [
+        "Raghav",
+        "Imran"
+      ],
+      "raisedBy": "engine",
+      "raisedAt": "2026-10-26T15:49:48.285Z",
+      "resolvedAt": null,
+      "metricIds": [
+        "pm_us_cpl"
+      ],
+      "id": "missing_data:pm_us_cpl",
+      "kind": "missing_data",
+      "title": "Cost per lead is missing",
+      "body": "Paid media - US did not return a value for \"Cost per lead\". Error: Paid media - US: not connected yet - the id is still a placeholder in sources.json. Raghav owns this source - it needs a successful sync before the next review."
+    },
+    {
+      "dept": "perf_marketing",
+      "owner": "Raghav",
+      "ownerTeam": [
+        "Raghav",
+        "Imran"
+      ],
+      "raisedBy": "engine",
+      "raisedAt": "2026-10-26T15:49:48.285Z",
+      "resolvedAt": null,
+      "metricIds": [
+        "pm_us_leads"
+      ],
+      "id": "missing_data:pm_us_leads",
+      "kind": "missing_data",
+      "title": "Leads is missing",
+      "body": "Paid media - US did not return a value for \"Leads\". Error: Paid media - US: not connected yet - the id is still a placeholder in sources.json. Raghav owns this source - it needs a successful sync before the next review."
+    },
+    {
+      "dept": "perf_marketing",
+      "owner": "Raghav",
+      "ownerTeam": [
+        "Raghav",
+        "Imran"
+      ],
+      "raisedBy": "engine",
+      "raisedAt": "2026-10-26T15:49:48.285Z",
+      "resolvedAt": null,
+      "metricIds": [
+        "pm_us_pipeline_sourced"
+      ],
+      "id": "missing_data:pm_us_pipeline_sourced",
+      "kind": "missing_data",
+      "title": "Pipeline sourced is missing",
+      "body": "US pipeline did not return a value for \"Pipeline sourced\". Error: US pipeline: not connected yet - the id is still a placeholder in sources.json. Raghav owns this source - it needs a successful sync before the next review."
+    },
+    {
+      "dept": "perf_marketing",
+      "owner": "Raghav",
+      "ownerTeam": [
+        "Raghav",
+        "Imran"
+      ],
+      "raisedBy": "engine",
+      "raisedAt": "2026-10-26T15:49:48.285Z",
+      "resolvedAt": null,
+      "metricIds": [
+        "pm_us_qualified"
+      ],
+      "id": "missing_data:pm_us_qualified",
+      "kind": "missing_data",
+      "title": "Qualified is missing",
+      "body": "Paid media - US did not return a value for \"Qualified\". Error: Paid media - US: not connected yet - the id is still a placeholder in sources.json. Raghav owns this source - it needs a successful sync before the next review."
+    },
+    {
+      "dept": "perf_marketing",
+      "owner": "Raghav",
+      "ownerTeam": [
+        "Raghav",
+        "Imran"
+      ],
+      "raisedBy": "engine",
+      "raisedAt": "2026-10-26T15:49:48.285Z",
+      "resolvedAt": null,
+      "metricIds": [
+        "pm_us_spend"
+      ],
+      "id": "missing_data:pm_us_spend",
+      "kind": "missing_data",
+      "title": "Spend is missing",
+      "body": "Paid media - US did not return a value for \"Spend\". Error: Paid media - US: not connected yet - the id is still a placeholder in sources.json. Raghav owns this source - it needs a successful sync before the next review."
+    },
+    {
+      "dept": "us_sales",
+      "owner": "Anupreet",
+      "ownerTeam": [
+        "Anupreet",
+        "Karan",
+        "Raghav"
+      ],
+      "raisedBy": "engine",
+      "raisedAt": "2026-10-26T15:49:48.285Z",
+      "resolvedAt": null,
+      "metricIds": [
+        "us_accounts_worked"
+      ],
+      "id": "missing_data:us_accounts_worked",
+      "kind": "missing_data",
+      "title": "Accounts worked is missing",
+      "body": "US pipeline did not return a value for \"Accounts worked\". Error: US pipeline: not connected yet - the id is still a placeholder in sources.json. Anupreet owns this source - it needs a successful sync before the next review."
+    },
+    {
+      "dept": "us_sales",
+      "owner": "Anupreet",
+      "ownerTeam": [
+        "Anupreet",
+        "Karan",
+        "Raghav"
+      ],
+      "raisedBy": "engine",
+      "raisedAt": "2026-10-26T15:49:48.285Z",
+      "resolvedAt": null,
+      "metricIds": [
+        "us_closed_won"
+      ],
+      "id": "missing_data:us_closed_won",
+      "kind": "missing_data",
+      "title": "Closed won is missing",
+      "body": "US pipeline did not return a value for \"Closed won\". Error: US pipeline: not connected yet - the id is still a placeholder in sources.json. Anupreet owns this source - it needs a successful sync before the next review."
+    },
+    {
+      "dept": "us_sales",
+      "owner": "Anupreet",
+      "ownerTeam": [
+        "Anupreet",
+        "Karan",
+        "Raghav"
+      ],
+      "raisedBy": "engine",
+      "raisedAt": "2026-10-26T15:49:48.285Z",
+      "resolvedAt": null,
+      "metricIds": [
+        "us_created_wk"
+      ],
+      "id": "missing_data:us_created_wk",
+      "kind": "missing_data",
+      "title": "Pipeline created is missing",
+      "body": "US pipeline created did not return a value for \"Pipeline created\". Error: US pipeline created: not connected yet - the id is still a placeholder in sources.json. Anupreet owns this source - it needs a successful sync before the next review."
+    },
+    {
+      "dept": "us_sales",
+      "owner": "Anupreet",
+      "ownerTeam": [
+        "Anupreet",
+        "Karan",
+        "Raghav"
+      ],
+      "raisedBy": "engine",
+      "raisedAt": "2026-10-26T15:49:48.285Z",
+      "resolvedAt": null,
+      "metricIds": [
+        "us_in_poc"
+      ],
+      "id": "missing_data:us_in_poc",
+      "kind": "missing_data",
+      "title": "In POC is missing",
+      "body": "US pipeline did not return a value for \"In POC\". Error: US pipeline: not connected yet - the id is still a placeholder in sources.json. Anupreet owns this source - it needs a successful sync before the next review."
+    },
+    {
+      "dept": "us_sales",
+      "owner": "Anupreet",
+      "ownerTeam": [
+        "Anupreet",
+        "Karan",
+        "Raghav"
+      ],
+      "raisedBy": "engine",
+      "raisedAt": "2026-10-26T15:49:48.285Z",
+      "resolvedAt": null,
+      "metricIds": [
+        "us_meetings_held"
+      ],
+      "id": "missing_data:us_meetings_held",
+      "kind": "missing_data",
+      "title": "Meetings held is missing",
+      "body": "US pipeline did not return a value for \"Meetings held\". Error: US pipeline: not connected yet - the id is still a placeholder in sources.json. Anupreet owns this source - it needs a successful sync before the next review."
+    },
+    {
+      "dept": "us_sales",
+      "owner": "Anupreet",
+      "ownerTeam": [
+        "Anupreet",
+        "Karan",
+        "Raghav"
+      ],
+      "raisedBy": "engine",
+      "raisedAt": "2026-10-26T15:49:48.285Z",
+      "resolvedAt": null,
+      "metricIds": [
+        "us_opps_created"
+      ],
+      "id": "missing_data:us_opps_created",
+      "kind": "missing_data",
+      "title": "Opportunities created is missing",
+      "body": "US pipeline did not return a value for \"Opportunities created\". Error: US pipeline: not connected yet - the id is still a placeholder in sources.json. Anupreet owns this source - it needs a successful sync before the next review."
+    },
+    {
+      "dept": "us_sales",
+      "owner": "Anupreet",
+      "ownerTeam": [
+        "Anupreet",
+        "Karan",
+        "Raghav"
+      ],
+      "raisedBy": "engine",
+      "raisedAt": "2026-10-26T15:49:48.285Z",
+      "resolvedAt": null,
+      "metricIds": [
+        "us_proposal"
+      ],
+      "id": "missing_data:us_proposal",
+      "kind": "missing_data",
+      "title": "Proposal stage is missing",
+      "body": "US pipeline did not return a value for \"Proposal stage\". Error: US pipeline: not connected yet - the id is still a placeholder in sources.json. Anupreet owns this source - it needs a successful sync before the next review."
+    },
+    {
+      "dept": "us_sales",
+      "owner": "Anupreet",
+      "ownerTeam": [
+        "Anupreet",
+        "Karan",
+        "Raghav"
+      ],
+      "raisedBy": "engine",
+      "raisedAt": "2026-10-26T15:49:48.285Z",
+      "resolvedAt": null,
+      "metricIds": [
+        "us_win_rate"
+      ],
+      "id": "missing_data:us_win_rate",
+      "kind": "missing_data",
+      "title": "Win rate is missing",
+      "body": "US pipeline did not return a value for \"Win rate\". Error: US pipeline: not connected yet - the id is still a placeholder in sources.json. Anupreet owns this source - it needs a successful sync before the next review."
+    },
+    {
+      "dept": "us_sales",
+      "owner": "Anupreet",
+      "ownerTeam": [
+        "Anupreet",
+        "Karan",
+        "Raghav"
+      ],
+      "raisedBy": "engine",
+      "raisedAt": "2026-10-26T15:49:48.285Z",
+      "resolvedAt": null,
+      "metricIds": [
+        "in_pipeline_us"
+      ],
+      "id": "no_target:in_pipeline_us",
+      "kind": "no_target",
+      "title": "Pipeline open has no target",
+      "body": "\"Pipeline open\" is being reported with no target, so it can be read but not judged. Anupreet sets this one: what does a good week look like, in dollars? Until it is set this metric cannot appear on the scoreboard."
+    },
+    {
+      "dept": "perf_marketing",
+      "owner": "Raghav",
+      "ownerTeam": [
+        "Raghav",
+        "Imran"
+      ],
+      "raisedBy": "engine",
+      "raisedAt": "2026-10-26T15:49:48.285Z",
+      "resolvedAt": null,
+      "metricIds": [
+        "pm_us_cac"
+      ],
+      "id": "no_target:pm_us_cac",
+      "kind": "no_target",
+      "title": "CAC (paid) has no target",
+      "body": "\"CAC (paid)\" is being reported with no target, so it can be read but not judged. Raghav sets this one: what does a good week look like, in dollars? Until it is set this metric cannot appear on the scoreboard."
+    },
+    {
+      "dept": "perf_marketing",
+      "owner": "Raghav",
+      "ownerTeam": [
+        "Raghav",
+        "Imran"
+      ],
+      "raisedBy": "engine",
+      "raisedAt": "2026-10-26T15:49:48.285Z",
+      "resolvedAt": null,
+      "metricIds": [
+        "pm_us_cpl"
+      ],
+      "id": "no_target:pm_us_cpl",
+      "kind": "no_target",
+      "title": "Cost per lead has no target",
+      "body": "\"Cost per lead\" is being reported with no target, so it can be read but not judged. Raghav sets this one: what does a good week look like, in dollars? Until it is set this metric cannot appear on the scoreboard."
+    },
+    {
+      "dept": "perf_marketing",
+      "owner": "Raghav",
+      "ownerTeam": [
+        "Raghav",
+        "Imran"
+      ],
+      "raisedBy": "engine",
+      "raisedAt": "2026-10-26T15:49:48.285Z",
+      "resolvedAt": null,
+      "metricIds": [
+        "pm_us_leads"
+      ],
+      "id": "no_target:pm_us_leads",
+      "kind": "no_target",
+      "title": "Leads has no target",
+      "body": "\"Leads\" is being reported with no target, so it can be read but not judged. Raghav sets this one: what does a good week look like, in whole numbers? Until it is set this metric cannot appear on the scoreboard."
+    },
+    {
+      "dept": "perf_marketing",
+      "owner": "Raghav",
+      "ownerTeam": [
+        "Raghav",
+        "Imran"
+      ],
+      "raisedBy": "engine",
+      "raisedAt": "2026-10-26T15:49:48.285Z",
+      "resolvedAt": null,
+      "metricIds": [
+        "pm_us_pipeline_sourced"
+      ],
+      "id": "no_target:pm_us_pipeline_sourced",
+      "kind": "no_target",
+      "title": "Pipeline sourced has no target",
+      "body": "\"Pipeline sourced\" is being reported with no target, so it can be read but not judged. Raghav sets this one: what does a good week look like, in dollars? Until it is set this metric cannot appear on the scoreboard."
+    },
+    {
+      "dept": "perf_marketing",
+      "owner": "Raghav",
+      "ownerTeam": [
+        "Raghav",
+        "Imran"
+      ],
+      "raisedBy": "engine",
+      "raisedAt": "2026-10-26T15:49:48.285Z",
+      "resolvedAt": null,
+      "metricIds": [
+        "pm_us_qualified"
+      ],
+      "id": "no_target:pm_us_qualified",
+      "kind": "no_target",
+      "title": "Qualified has no target",
+      "body": "\"Qualified\" is being reported with no target, so it can be read but not judged. Raghav sets this one: what does a good week look like, in whole numbers? Until it is set this metric cannot appear on the scoreboard."
+    },
+    {
+      "dept": "perf_marketing",
+      "owner": "Raghav",
+      "ownerTeam": [
+        "Raghav",
+        "Imran"
+      ],
+      "raisedBy": "engine",
+      "raisedAt": "2026-10-26T15:49:48.285Z",
+      "resolvedAt": null,
+      "metricIds": [
+        "pm_us_spend"
+      ],
+      "id": "no_target:pm_us_spend",
+      "kind": "no_target",
+      "title": "Spend has no target",
+      "body": "\"Spend\" is being reported with no target, so it can be read but not judged. Raghav sets this one: what does a good week look like, in dollars? Until it is set this metric cannot appear on the scoreboard."
+    },
+    {
+      "dept": "us_sales",
+      "owner": "Anupreet",
+      "ownerTeam": [
+        "Anupreet",
+        "Karan",
+        "Raghav"
+      ],
+      "raisedBy": "engine",
+      "raisedAt": "2026-10-26T15:49:48.285Z",
+      "resolvedAt": null,
+      "metricIds": [
+        "us_accounts_worked"
+      ],
+      "id": "no_target:us_accounts_worked",
+      "kind": "no_target",
+      "title": "Accounts worked has no target",
+      "body": "\"Accounts worked\" is being reported with no target, so it can be read but not judged. Anupreet sets this one: what does a good week look like, in whole numbers? Until it is set this metric cannot appear on the scoreboard."
+    },
+    {
+      "dept": "us_sales",
+      "owner": "Anupreet",
+      "ownerTeam": [
+        "Anupreet",
+        "Karan",
+        "Raghav"
+      ],
+      "raisedBy": "engine",
+      "raisedAt": "2026-10-26T15:49:48.285Z",
+      "resolvedAt": null,
+      "metricIds": [
+        "us_closed_won"
+      ],
+      "id": "no_target:us_closed_won",
+      "kind": "no_target",
+      "title": "Closed won has no target",
+      "body": "\"Closed won\" is being reported with no target, so it can be read but not judged. Anupreet sets this one: what does a good week look like, in dollars? Until it is set this metric cannot appear on the scoreboard."
+    },
+    {
+      "dept": "us_sales",
+      "owner": "Anupreet",
+      "ownerTeam": [
+        "Anupreet",
+        "Karan",
+        "Raghav"
+      ],
+      "raisedBy": "engine",
+      "raisedAt": "2026-10-26T15:49:48.285Z",
+      "resolvedAt": null,
+      "metricIds": [
+        "us_created_wk"
+      ],
+      "id": "no_target:us_created_wk",
+      "kind": "no_target",
+      "title": "Pipeline created has no target",
+      "body": "\"Pipeline created\" is being reported with no target, so it can be read but not judged. Anupreet sets this one: what does a good week look like, in dollars? Until it is set this metric cannot appear on the scoreboard."
+    },
+    {
+      "dept": "us_sales",
+      "owner": "Anupreet",
+      "ownerTeam": [
+        "Anupreet",
+        "Karan",
+        "Raghav"
+      ],
+      "raisedBy": "engine",
+      "raisedAt": "2026-10-26T15:49:48.285Z",
+      "resolvedAt": null,
+      "metricIds": [
+        "us_in_poc"
+      ],
+      "id": "no_target:us_in_poc",
+      "kind": "no_target",
+      "title": "In POC has no target",
+      "body": "\"In POC\" is being reported with no target, so it can be read but not judged. Anupreet sets this one: what does a good week look like, in dollars? Until it is set this metric cannot appear on the scoreboard."
+    },
+    {
+      "dept": "us_sales",
+      "owner": "Anupreet",
+      "ownerTeam": [
+        "Anupreet",
+        "Karan",
+        "Raghav"
+      ],
+      "raisedBy": "engine",
+      "raisedAt": "2026-10-26T15:49:48.285Z",
+      "resolvedAt": null,
+      "metricIds": [
+        "us_meetings_held"
+      ],
+      "id": "no_target:us_meetings_held",
+      "kind": "no_target",
+      "title": "Meetings held has no target",
+      "body": "\"Meetings held\" is being reported with no target, so it can be read but not judged. Anupreet sets this one: what does a good week look like, in whole numbers? Until it is set this metric cannot appear on the scoreboard."
+    },
+    {
+      "dept": "us_sales",
+      "owner": "Anupreet",
+      "ownerTeam": [
+        "Anupreet",
+        "Karan",
+        "Raghav"
+      ],
+      "raisedBy": "engine",
+      "raisedAt": "2026-10-26T15:49:48.285Z",
+      "resolvedAt": null,
+      "metricIds": [
+        "us_opps_created"
+      ],
+      "id": "no_target:us_opps_created",
+      "kind": "no_target",
+      "title": "Opportunities created has no target",
+      "body": "\"Opportunities created\" is being reported with no target, so it can be read but not judged. Anupreet sets this one: what does a good week look like, in whole numbers? Until it is set this metric cannot appear on the scoreboard."
+    },
+    {
+      "dept": "us_sales",
+      "owner": "Anupreet",
+      "ownerTeam": [
+        "Anupreet",
+        "Karan",
+        "Raghav"
+      ],
+      "raisedBy": "engine",
+      "raisedAt": "2026-10-26T15:49:48.285Z",
+      "resolvedAt": null,
+      "metricIds": [
+        "us_proposal"
+      ],
+      "id": "no_target:us_proposal",
+      "kind": "no_target",
+      "title": "Proposal stage has no target",
+      "body": "\"Proposal stage\" is being reported with no target, so it can be read but not judged. Anupreet sets this one: what does a good week look like, in dollars? Until it is set this metric cannot appear on the scoreboard."
+    },
+    {
+      "dept": "us_sales",
+      "owner": "Anupreet",
+      "ownerTeam": [
+        "Anupreet",
+        "Karan",
+        "Raghav"
+      ],
+      "raisedBy": "engine",
+      "raisedAt": "2026-10-26T15:49:48.285Z",
+      "resolvedAt": null,
+      "metricIds": [
+        "us_win_rate"
+      ],
+      "id": "no_target:us_win_rate",
+      "kind": "no_target",
+      "title": "Win rate has no target",
+      "body": "\"Win rate\" is being reported with no target, so it can be read but not judged. Anupreet sets this one: what does a good week look like, in percent? Until it is set this metric cannot appear on the scoreboard."
+    },
+    {
+      "dept": "us_sales",
+      "owner": "Anupreet, Karan and Raghav",
+      "ownerTeam": [
+        "Anupreet",
+        "Karan",
+        "Raghav"
+      ],
+      "raisedBy": "engine",
+      "raisedAt": "2026-10-26T15:49:48.285Z",
+      "resolvedAt": null,
+      "metricIds": [
+        "in_pipeline_us"
+      ],
+      "id": "no_owner:in_pipeline_us",
+      "kind": "no_owner",
+      "title": "Pipeline open has no single accountable owner",
+      "body": "Anupreet, Karan and Raghav own US Sales between them, and nobody has been named on \"Pipeline open\". A flag addressed to 3 people is addressed to nobody - each assumes one of the others has it. One of you takes this metric: set \"owner\" on in_pipeline_us in catalog.json. Until then it falls to Anupreet."
+    },
+    {
+      "dept": "perf_marketing",
+      "owner": "Raghav and Imran",
+      "ownerTeam": [
+        "Raghav",
+        "Imran"
+      ],
+      "raisedBy": "engine",
+      "raisedAt": "2026-10-26T15:49:48.285Z",
+      "resolvedAt": null,
+      "metricIds": [
+        "pm_us_cac"
+      ],
+      "id": "no_owner:pm_us_cac",
+      "kind": "no_owner",
+      "title": "CAC (paid) has no single accountable owner",
+      "body": "Raghav and Imran own Performance Marketing between them, and nobody has been named on \"CAC (paid)\". A flag addressed to 2 people is addressed to nobody - each assumes one of the others has it. One of you takes this metric: set \"owner\" on pm_us_cac in catalog.json. Until then it falls to Raghav."
+    },
+    {
+      "dept": "perf_marketing",
+      "owner": "Raghav and Imran",
+      "ownerTeam": [
+        "Raghav",
+        "Imran"
+      ],
+      "raisedBy": "engine",
+      "raisedAt": "2026-10-26T15:49:48.285Z",
+      "resolvedAt": null,
+      "metricIds": [
+        "pm_us_cpl"
+      ],
+      "id": "no_owner:pm_us_cpl",
+      "kind": "no_owner",
+      "title": "Cost per lead has no single accountable owner",
+      "body": "Raghav and Imran own Performance Marketing between them, and nobody has been named on \"Cost per lead\". A flag addressed to 2 people is addressed to nobody - each assumes one of the others has it. One of you takes this metric: set \"owner\" on pm_us_cpl in catalog.json. Until then it falls to Raghav."
+    },
+    {
+      "dept": "perf_marketing",
+      "owner": "Raghav and Imran",
+      "ownerTeam": [
+        "Raghav",
+        "Imran"
+      ],
+      "raisedBy": "engine",
+      "raisedAt": "2026-10-26T15:49:48.285Z",
+      "resolvedAt": null,
+      "metricIds": [
+        "pm_us_leads"
+      ],
+      "id": "no_owner:pm_us_leads",
+      "kind": "no_owner",
+      "title": "Leads has no single accountable owner",
+      "body": "Raghav and Imran own Performance Marketing between them, and nobody has been named on \"Leads\". A flag addressed to 2 people is addressed to nobody - each assumes one of the others has it. One of you takes this metric: set \"owner\" on pm_us_leads in catalog.json. Until then it falls to Raghav."
+    },
+    {
+      "dept": "perf_marketing",
+      "owner": "Raghav and Imran",
+      "ownerTeam": [
+        "Raghav",
+        "Imran"
+      ],
+      "raisedBy": "engine",
+      "raisedAt": "2026-10-26T15:49:48.285Z",
+      "resolvedAt": null,
+      "metricIds": [
+        "pm_us_pipeline_sourced"
+      ],
+      "id": "no_owner:pm_us_pipeline_sourced",
+      "kind": "no_owner",
+      "title": "Pipeline sourced has no single accountable owner",
+      "body": "Raghav and Imran own Performance Marketing between them, and nobody has been named on \"Pipeline sourced\". A flag addressed to 2 people is addressed to nobody - each assumes one of the others has it. One of you takes this metric: set \"owner\" on pm_us_pipeline_sourced in catalog.json. Until then it falls to Raghav."
+    },
+    {
+      "dept": "perf_marketing",
+      "owner": "Raghav and Imran",
+      "ownerTeam": [
+        "Raghav",
+        "Imran"
+      ],
+      "raisedBy": "engine",
+      "raisedAt": "2026-10-26T15:49:48.285Z",
+      "resolvedAt": null,
+      "metricIds": [
+        "pm_us_qualified"
+      ],
+      "id": "no_owner:pm_us_qualified",
+      "kind": "no_owner",
+      "title": "Qualified has no single accountable owner",
+      "body": "Raghav and Imran own Performance Marketing between them, and nobody has been named on \"Qualified\". A flag addressed to 2 people is addressed to nobody - each assumes one of the others has it. One of you takes this metric: set \"owner\" on pm_us_qualified in catalog.json. Until then it falls to Raghav."
+    },
+    {
+      "dept": "perf_marketing",
+      "owner": "Raghav and Imran",
+      "ownerTeam": [
+        "Raghav",
+        "Imran"
+      ],
+      "raisedBy": "engine",
+      "raisedAt": "2026-10-26T15:49:48.285Z",
+      "resolvedAt": null,
+      "metricIds": [
+        "pm_us_spend"
+      ],
+      "id": "no_owner:pm_us_spend",
+      "kind": "no_owner",
+      "title": "Spend has no single accountable owner",
+      "body": "Raghav and Imran own Performance Marketing between them, and nobody has been named on \"Spend\". A flag addressed to 2 people is addressed to nobody - each assumes one of the others has it. One of you takes this metric: set \"owner\" on pm_us_spend in catalog.json. Until then it falls to Raghav."
+    },
+    {
+      "dept": "us_sales",
+      "owner": "Anupreet, Karan and Raghav",
+      "ownerTeam": [
+        "Anupreet",
+        "Karan",
+        "Raghav"
+      ],
+      "raisedBy": "engine",
+      "raisedAt": "2026-10-26T15:49:48.285Z",
+      "resolvedAt": null,
+      "metricIds": [
+        "us_accounts_worked"
+      ],
+      "id": "no_owner:us_accounts_worked",
+      "kind": "no_owner",
+      "title": "Accounts worked has no single accountable owner",
+      "body": "Anupreet, Karan and Raghav own US Sales between them, and nobody has been named on \"Accounts worked\". A flag addressed to 3 people is addressed to nobody - each assumes one of the others has it. One of you takes this metric: set \"owner\" on us_accounts_worked in catalog.json. Until then it falls to Anupreet."
+    },
+    {
+      "dept": "us_sales",
+      "owner": "Anupreet, Karan and Raghav",
+      "ownerTeam": [
+        "Anupreet",
+        "Karan",
+        "Raghav"
+      ],
+      "raisedBy": "engine",
+      "raisedAt": "2026-10-26T15:49:48.285Z",
+      "resolvedAt": null,
+      "metricIds": [
+        "us_closed_won"
+      ],
+      "id": "no_owner:us_closed_won",
+      "kind": "no_owner",
+      "title": "Closed won has no single accountable owner",
+      "body": "Anupreet, Karan and Raghav own US Sales between them, and nobody has been named on \"Closed won\". A flag addressed to 3 people is addressed to nobody - each assumes one of the others has it. One of you takes this metric: set \"owner\" on us_closed_won in catalog.json. Until then it falls to Anupreet."
+    },
+    {
+      "dept": "us_sales",
+      "owner": "Anupreet, Karan and Raghav",
+      "ownerTeam": [
+        "Anupreet",
+        "Karan",
+        "Raghav"
+      ],
+      "raisedBy": "engine",
+      "raisedAt": "2026-10-26T15:49:48.285Z",
+      "resolvedAt": null,
+      "metricIds": [
+        "us_created_wk"
+      ],
+      "id": "no_owner:us_created_wk",
+      "kind": "no_owner",
+      "title": "Pipeline created has no single accountable owner",
+      "body": "Anupreet, Karan and Raghav own US Sales between them, and nobody has been named on \"Pipeline created\". A flag addressed to 3 people is addressed to nobody - each assumes one of the others has it. One of you takes this metric: set \"owner\" on us_created_wk in catalog.json. Until then it falls to Anupreet."
+    },
+    {
+      "dept": "us_sales",
+      "owner": "Anupreet, Karan and Raghav",
+      "ownerTeam": [
+        "Anupreet",
+        "Karan",
+        "Raghav"
+      ],
+      "raisedBy": "engine",
+      "raisedAt": "2026-10-26T15:49:48.285Z",
+      "resolvedAt": null,
+      "metricIds": [
+        "us_in_poc"
+      ],
+      "id": "no_owner:us_in_poc",
+      "kind": "no_owner",
+      "title": "In POC has no single accountable owner",
+      "body": "Anupreet, Karan and Raghav own US Sales between them, and nobody has been named on \"In POC\". A flag addressed to 3 people is addressed to nobody - each assumes one of the others has it. One of you takes this metric: set \"owner\" on us_in_poc in catalog.json. Until then it falls to Anupreet."
+    },
+    {
+      "dept": "us_sales",
+      "owner": "Anupreet, Karan and Raghav",
+      "ownerTeam": [
+        "Anupreet",
+        "Karan",
+        "Raghav"
+      ],
+      "raisedBy": "engine",
+      "raisedAt": "2026-10-26T15:49:48.285Z",
+      "resolvedAt": null,
+      "metricIds": [
+        "us_meetings_held"
+      ],
+      "id": "no_owner:us_meetings_held",
+      "kind": "no_owner",
+      "title": "Meetings held has no single accountable owner",
+      "body": "Anupreet, Karan and Raghav own US Sales between them, and nobody has been named on \"Meetings held\". A flag addressed to 3 people is addressed to nobody - each assumes one of the others has it. One of you takes this metric: set \"owner\" on us_meetings_held in catalog.json. Until then it falls to Anupreet."
+    },
+    {
+      "dept": "us_sales",
+      "owner": "Anupreet, Karan and Raghav",
+      "ownerTeam": [
+        "Anupreet",
+        "Karan",
+        "Raghav"
+      ],
+      "raisedBy": "engine",
+      "raisedAt": "2026-10-26T15:49:48.285Z",
+      "resolvedAt": null,
+      "metricIds": [
+        "us_opps_created"
+      ],
+      "id": "no_owner:us_opps_created",
+      "kind": "no_owner",
+      "title": "Opportunities created has no single accountable owner",
+      "body": "Anupreet, Karan and Raghav own US Sales between them, and nobody has been named on \"Opportunities created\". A flag addressed to 3 people is addressed to nobody - each assumes one of the others has it. One of you takes this metric: set \"owner\" on us_opps_created in catalog.json. Until then it falls to Anupreet."
+    },
+    {
+      "dept": "us_sales",
+      "owner": "Anupreet, Karan and Raghav",
+      "ownerTeam": [
+        "Anupreet",
+        "Karan",
+        "Raghav"
+      ],
+      "raisedBy": "engine",
+      "raisedAt": "2026-10-26T15:49:48.285Z",
+      "resolvedAt": null,
+      "metricIds": [
+        "us_proposal"
+      ],
+      "id": "no_owner:us_proposal",
+      "kind": "no_owner",
+      "title": "Proposal stage has no single accountable owner",
+      "body": "Anupreet, Karan and Raghav own US Sales between them, and nobody has been named on \"Proposal stage\". A flag addressed to 3 people is addressed to nobody - each assumes one of the others has it. One of you takes this metric: set \"owner\" on us_proposal in catalog.json. Until then it falls to Anupreet."
+    },
+    {
+      "dept": "us_sales",
+      "owner": "Anupreet, Karan and Raghav",
+      "ownerTeam": [
+        "Anupreet",
+        "Karan",
+        "Raghav"
+      ],
+      "raisedBy": "engine",
+      "raisedAt": "2026-10-26T15:49:48.285Z",
+      "resolvedAt": null,
+      "metricIds": [
+        "us_win_rate"
+      ],
+      "id": "no_owner:us_win_rate",
+      "kind": "no_owner",
+      "title": "Win rate has no single accountable owner",
+      "body": "Anupreet, Karan and Raghav own US Sales between them, and nobody has been named on \"Win rate\". A flag addressed to 3 people is addressed to nobody - each assumes one of the others has it. One of you takes this metric: set \"owner\" on us_win_rate in catalog.json. Until then it falls to Anupreet."
+    }
+  ],
+  "meetingId": "us_charter"
+}

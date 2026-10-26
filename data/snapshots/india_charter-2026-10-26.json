@@ -1,0 +1,1190 @@
+{
+  "run": {
+    "id": "run-2026-10-26",
+    "periodStart": "2026-10-26",
+    "periodEnd": "2026-11-01",
+    "startedAt": "2026-10-26T15:49:48.279Z",
+    "finishedAt": "2026-10-26T15:49:48.279Z",
+    "status": "failed",
+    "triggeredBy": "cron",
+    "meetingId": "india_charter"
+  },
+  "snapshots": [
+    {
+      "runId": "run-2026-10-26",
+      "metricId": "in_pipeline_india",
+      "periodStart": "2026-10-26",
+      "periodEnd": "2026-11-01",
+      "raw": null,
+      "denominator": null,
+      "normalized": null,
+      "priorRaw": null,
+      "priorNormalized": null,
+      "delta": null,
+      "health": "missing",
+      "freshness": "unknown",
+      "unit": "currency_inr",
+      "caption": "— open",
+      "rowCount": 0,
+      "computedAt": "2026-10-26T15:49:48.279Z",
+      "warnings": [
+        "source \"india_crm\" errored: India pipeline: not connected yet - the id is still a placeholder in sources.json"
+      ]
+    },
+    {
+      "runId": "run-2026-10-26",
+      "metricId": "india_closed_won",
+      "periodStart": "2026-10-26",
+      "periodEnd": "2026-11-01",
+      "raw": null,
+      "denominator": null,
+      "normalized": null,
+      "priorRaw": null,
+      "priorNormalized": null,
+      "delta": null,
+      "health": "missing",
+      "freshness": "unknown",
+      "unit": "currency_inr",
+      "caption": "— of — target",
+      "rowCount": 0,
+      "computedAt": "2026-10-26T15:49:48.279Z",
+      "warnings": [
+        "source \"india_crm\" errored: India pipeline: not connected yet - the id is still a placeholder in sources.json",
+        "denominator for \"india_closed_won\" is static but has no usable value"
+      ]
+    },
+    {
+      "runId": "run-2026-10-26",
+      "metricId": "india_in_poc",
+      "periodStart": "2026-10-26",
+      "periodEnd": "2026-11-01",
+      "raw": null,
+      "denominator": null,
+      "normalized": null,
+      "priorRaw": null,
+      "priorNormalized": null,
+      "delta": null,
+      "health": "missing",
+      "freshness": "unknown",
+      "unit": "currency_inr",
+      "caption": "— of — open",
+      "rowCount": 0,
+      "computedAt": "2026-10-26T15:49:48.279Z",
+      "warnings": [
+        "source \"india_crm\" errored: India pipeline: not connected yet - the id is still a placeholder in sources.json",
+        "denominator metric \"in_pipeline_india\" for \"india_in_poc\" has no value"
+      ]
+    },
+    {
+      "runId": "run-2026-10-26",
+      "metricId": "india_proposal",
+      "periodStart": "2026-10-26",
+      "periodEnd": "2026-11-01",
+      "raw": null,
+      "denominator": null,
+      "normalized": null,
+      "priorRaw": null,
+      "priorNormalized": null,
+      "delta": null,
+      "health": "missing",
+      "freshness": "unknown",
+      "unit": "currency_inr",
+      "caption": "—",
+      "rowCount": 0,
+      "computedAt": "2026-10-26T15:49:48.279Z",
+      "warnings": [
+        "source \"india_crm\" errored: India pipeline: not connected yet - the id is still a placeholder in sources.json",
+        "denominator metric \"in_pipeline_india\" for \"india_proposal\" has no value"
+      ]
+    },
+    {
+      "runId": "run-2026-10-26",
+      "metricId": "india_created_wk",
+      "periodStart": "2026-10-26",
+      "periodEnd": "2026-11-01",
+      "raw": null,
+      "denominator": null,
+      "normalized": null,
+      "priorRaw": null,
+      "priorNormalized": null,
+      "delta": null,
+      "health": "missing",
+      "freshness": "unknown",
+      "unit": "currency_inr",
+      "caption": "— created",
+      "rowCount": 0,
+      "computedAt": "2026-10-26T15:49:48.279Z",
+      "warnings": [
+        "source \"india_crm_created\" errored: India pipeline created: not connected yet - the id is still a placeholder in sources.json"
+      ]
+    },
+    {
+      "runId": "run-2026-10-26",
+      "metricId": "india_win_rate",
+      "periodStart": "2026-10-26",
+      "periodEnd": "2026-11-01",
+      "raw": null,
+      "denominator": null,
+      "normalized": null,
+      "priorRaw": null,
+      "priorNormalized": null,
+      "delta": null,
+      "health": "missing",
+      "freshness": "unknown",
+      "unit": "percent",
+      "caption": "—",
+      "rowCount": 0,
+      "computedAt": "2026-10-26T15:49:48.279Z",
+      "warnings": [
+        "source \"india_crm\" errored: India pipeline: not connected yet - the id is still a placeholder in sources.json"
+      ]
+    },
+    {
+      "runId": "run-2026-10-26",
+      "metricId": "india_meetings_held",
+      "periodStart": "2026-10-26",
+      "periodEnd": "2026-11-01",
+      "raw": null,
+      "denominator": null,
+      "normalized": null,
+      "priorRaw": null,
+      "priorNormalized": null,
+      "delta": null,
+      "health": "missing",
+      "freshness": "unknown",
+      "unit": "count",
+      "caption": "— of — target",
+      "rowCount": 0,
+      "computedAt": "2026-10-26T15:49:48.279Z",
+      "warnings": [
+        "source \"india_crm\" errored: India pipeline: not connected yet - the id is still a placeholder in sources.json",
+        "denominator for \"india_meetings_held\" is static but has no usable value"
+      ]
+    },
+    {
+      "runId": "run-2026-10-26",
+      "metricId": "india_opps_created",
+      "periodStart": "2026-10-26",
+      "periodEnd": "2026-11-01",
+      "raw": null,
+      "denominator": null,
+      "normalized": null,
+      "priorRaw": null,
+      "priorNormalized": null,
+      "delta": null,
+      "health": "missing",
+      "freshness": "unknown",
+      "unit": "count",
+      "caption": "— of — target",
+      "rowCount": 0,
+      "computedAt": "2026-10-26T15:49:48.279Z",
+      "warnings": [
+        "source \"india_crm\" errored: India pipeline: not connected yet - the id is still a placeholder in sources.json",
+        "denominator for \"india_opps_created\" is static but has no usable value"
+      ]
+    },
+    {
+      "runId": "run-2026-10-26",
+      "metricId": "india_accounts_worked",
+      "periodStart": "2026-10-26",
+      "periodEnd": "2026-11-01",
+      "raw": null,
+      "denominator": null,
+      "normalized": null,
+      "priorRaw": null,
+      "priorNormalized": null,
+      "delta": null,
+      "health": "missing",
+      "freshness": "unknown",
+      "unit": "count",
+      "caption": "— of — target",
+      "rowCount": 0,
+      "computedAt": "2026-10-26T15:49:48.279Z",
+      "warnings": [
+        "source \"india_crm\" errored: India pipeline: not connected yet - the id is still a placeholder in sources.json",
+        "denominator for \"india_accounts_worked\" is static but has no usable value"
+      ]
+    },
+    {
+      "runId": "run-2026-10-26",
+      "metricId": "pm_india_spend",
+      "periodStart": "2026-10-26",
+      "periodEnd": "2026-11-01",
+      "raw": null,
+      "denominator": null,
+      "normalized": null,
+      "priorRaw": null,
+      "priorNormalized": null,
+      "delta": null,
+      "health": "missing",
+      "freshness": "unknown",
+      "unit": "currency_inr",
+      "caption": "— of — budget",
+      "rowCount": 0,
+      "computedAt": "2026-10-26T15:49:48.279Z",
+      "warnings": [
+        "source \"ads_india\" errored: Paid media - India: not connected yet - the id is still a placeholder in sources.json",
+        "denominator for \"pm_india_spend\" is static but has no usable value"
+      ],
+      "segment": "india",
+      "family": "pm_spend"
+    },
+    {
+      "runId": "run-2026-10-26",
+      "metricId": "pm_india_leads",
+      "periodStart": "2026-10-26",
+      "periodEnd": "2026-11-01",
+      "raw": null,
+      "denominator": null,
+      "normalized": null,
+      "priorRaw": null,
+      "priorNormalized": null,
+      "delta": null,
+      "health": "missing",
+      "freshness": "unknown",
+      "unit": "count",
+      "caption": "— of — target",
+      "rowCount": 0,
+      "computedAt": "2026-10-26T15:49:48.279Z",
+      "warnings": [
+        "source \"ads_india\" errored: Paid media - India: not connected yet - the id is still a placeholder in sources.json",
+        "denominator for \"pm_india_leads\" is static but has no usable value"
+      ],
+      "segment": "india",
+      "family": "pm_leads"
+    },
+    {
+      "runId": "run-2026-10-26",
+      "metricId": "pm_india_qualified",
+      "periodStart": "2026-10-26",
+      "periodEnd": "2026-11-01",
+      "raw": null,
+      "denominator": null,
+      "normalized": null,
+      "priorRaw": null,
+      "priorNormalized": null,
+      "delta": null,
+      "health": "missing",
+      "freshness": "unknown",
+      "unit": "count",
+      "caption": "— of — leads",
+      "rowCount": 0,
+      "computedAt": "2026-10-26T15:49:48.279Z",
+      "warnings": [
+        "source \"ads_india\" errored: Paid media - India: not connected yet - the id is still a placeholder in sources.json",
+        "denominator metric \"pm_india_leads\" for \"pm_india_qualified\" has no value"
+      ],
+      "segment": "india",
+      "family": "pm_qualified"
+    },
+    {
+      "runId": "run-2026-10-26",
+      "metricId": "pm_india_cpl",
+      "periodStart": "2026-10-26",
+      "periodEnd": "2026-11-01",
+      "raw": null,
+      "denominator": null,
+      "normalized": null,
+      "priorRaw": null,
+      "priorNormalized": null,
+      "delta": null,
+      "health": "missing",
+      "freshness": "unknown",
+      "unit": "currency_inr",
+      "caption": "—",
+      "rowCount": 0,
+      "computedAt": "2026-10-26T15:49:48.279Z",
+      "warnings": [
+        "source \"ads_india\" errored: Paid media - India: not connected yet - the id is still a placeholder in sources.json"
+      ],
+      "segment": "india",
+      "family": "pm_cpl"
+    },
+    {
+      "runId": "run-2026-10-26",
+      "metricId": "pm_india_cac",
+      "periodStart": "2026-10-26",
+      "periodEnd": "2026-11-01",
+      "raw": null,
+      "denominator": null,
+      "normalized": null,
+      "priorRaw": null,
+      "priorNormalized": null,
+      "delta": null,
+      "health": "missing",
+      "freshness": "unknown",
+      "unit": "currency_inr",
+      "caption": "—",
+      "rowCount": 0,
+      "computedAt": "2026-10-26T15:49:48.279Z",
+      "warnings": [
+        "source \"ads_india\" errored: Paid media - India: not connected yet - the id is still a placeholder in sources.json"
+      ],
+      "segment": "india",
+      "family": "pm_cac"
+    },
+    {
+      "runId": "run-2026-10-26",
+      "metricId": "pm_india_pipeline_sourced",
+      "periodStart": "2026-10-26",
+      "periodEnd": "2026-11-01",
+      "raw": null,
+      "denominator": null,
+      "normalized": null,
+      "priorRaw": null,
+      "priorNormalized": null,
+      "delta": null,
+      "health": "missing",
+      "freshness": "unknown",
+      "unit": "currency_inr",
+      "caption": "— sourced",
+      "rowCount": 0,
+      "computedAt": "2026-10-26T15:49:48.279Z",
+      "warnings": [
+        "source \"india_crm\" errored: India pipeline: not connected yet - the id is still a placeholder in sources.json"
+      ],
+      "segment": "india",
+      "family": "pm_sourced"
+    }
+  ],
+  "flags": [
+    {
+      "dept": "india_sales",
+      "owner": "Subham",
+      "ownerTeam": [
+        "Subham",
+        "Arfin",
+        "Raghav"
+      ],
+      "raisedBy": "engine",
+      "raisedAt": "2026-10-26T15:49:48.279Z",
+      "resolvedAt": null,
+      "metricIds": [
+        "in_pipeline_india"
+      ],
+      "id": "missing_data:in_pipeline_india",
+      "kind": "missing_data",
+      "title": "Pipeline open is missing",
+      "body": "India pipeline did not return a value for \"Pipeline open\". Error: India pipeline: not connected yet - the id is still a placeholder in sources.json. Subham owns this source - it needs a successful sync before the next review."
+    },
+    {
+      "dept": "india_sales",
+      "owner": "Subham",
+      "ownerTeam": [
+        "Subham",
+        "Arfin",
+        "Raghav"
+      ],
+      "raisedBy": "engine",
+      "raisedAt": "2026-10-26T15:49:48.279Z",
+      "resolvedAt": null,
+      "metricIds": [
+        "india_accounts_worked"
+      ],
+      "id": "missing_data:india_accounts_worked",
+      "kind": "missing_data",
+      "title": "Accounts worked is missing",
+      "body": "India pipeline did not return a value for \"Accounts worked\". Error: India pipeline: not connected yet - the id is still a placeholder in sources.json. Subham owns this source - it needs a successful sync before the next review."
+    },
+    {
+      "dept": "india_sales",
+      "owner": "Subham",
+      "ownerTeam": [
+        "Subham",
+        "Arfin",
+        "Raghav"
+      ],
+      "raisedBy": "engine",
+      "raisedAt": "2026-10-26T15:49:48.279Z",
+      "resolvedAt": null,
+      "metricIds": [
+        "india_closed_won"
+      ],
+      "id": "missing_data:india_closed_won",
+      "kind": "missing_data",
+      "title": "Closed won is missing",
+      "body": "India pipeline did not return a value for \"Closed won\". Error: India pipeline: not connected yet - the id is still a placeholder in sources.json. Subham owns this source - it needs a successful sync before the next review."
+    },
+    {
+      "dept": "india_sales",
+      "owner": "Subham",
+      "ownerTeam": [
+        "Subham",
+        "Arfin",
+        "Raghav"
+      ],
+      "raisedBy": "engine",
+      "raisedAt": "2026-10-26T15:49:48.279Z",
+      "resolvedAt": null,
+      "metricIds": [
+        "india_created_wk"
+      ],
+      "id": "missing_data:india_created_wk",
+      "kind": "missing_data",
+      "title": "Pipeline created is missing",
+      "body": "India pipeline created did not return a value for \"Pipeline created\". Error: India pipeline created: not connected yet - the id is still a placeholder in sources.json. Subham owns this source - it needs a successful sync before the next review."
+    },
+    {
+      "dept": "india_sales",
+      "owner": "Subham",
+      "ownerTeam": [
+        "Subham",
+        "Arfin",
+        "Raghav"
+      ],
+      "raisedBy": "engine",
+      "raisedAt": "2026-10-26T15:49:48.279Z",
+      "resolvedAt": null,
+      "metricIds": [
+        "india_in_poc"
+      ],
+      "id": "missing_data:india_in_poc",
+      "kind": "missing_data",
+      "title": "In POC is missing",
+      "body": "India pipeline did not return a value for \"In POC\". Error: India pipeline: not connected yet - the id is still a placeholder in sources.json. Subham owns this source - it needs a successful sync before the next review."
+    },
+    {
+      "dept": "india_sales",
+      "owner": "Subham",
+      "ownerTeam": [
+        "Subham",
+        "Arfin",
+        "Raghav"
+      ],
+      "raisedBy": "engine",
+      "raisedAt": "2026-10-26T15:49:48.279Z",
+      "resolvedAt": null,
+      "metricIds": [
+        "india_meetings_held"
+      ],
+      "id": "missing_data:india_meetings_held",
+      "kind": "missing_data",
+      "title": "Meetings held is missing",
+      "body": "India pipeline did not return a value for \"Meetings held\". Error: India pipeline: not connected yet - the id is still a placeholder in sources.json. Subham owns this source - it needs a successful sync before the next review."
+    },
+    {
+      "dept": "india_sales",
+      "owner": "Subham",
+      "ownerTeam": [
+        "Subham",
+        "Arfin",
+        "Raghav"
+      ],
+      "raisedBy": "engine",
+      "raisedAt": "2026-10-26T15:49:48.279Z",
+      "resolvedAt": null,
+      "metricIds": [
+        "india_opps_created"
+      ],
+      "id": "missing_data:india_opps_created",
+      "kind": "missing_data",
+      "title": "Opportunities created is missing",
+      "body": "India pipeline did not return a value for \"Opportunities created\". Error: India pipeline: not connected yet - the id is still a placeholder in sources.json. Subham owns this source - it needs a successful sync before the next review."
+    },
+    {
+      "dept": "india_sales",
+      "owner": "Subham",
+      "ownerTeam": [
+        "Subham",
+        "Arfin",
+        "Raghav"
+      ],
+      "raisedBy": "engine",
+      "raisedAt": "2026-10-26T15:49:48.279Z",
+      "resolvedAt": null,
+      "metricIds": [
+        "india_proposal"
+      ],
+      "id": "missing_data:india_proposal",
+      "kind": "missing_data",
+      "title": "Proposal stage is missing",
+      "body": "India pipeline did not return a value for \"Proposal stage\". Error: India pipeline: not connected yet - the id is still a placeholder in sources.json. Subham owns this source - it needs a successful sync before the next review."
+    },
+    {
+      "dept": "india_sales",
+      "owner": "Subham",
+      "ownerTeam": [
+        "Subham",
+        "Arfin",
+        "Raghav"
+      ],
+      "raisedBy": "engine",
+      "raisedAt": "2026-10-26T15:49:48.279Z",
+      "resolvedAt": null,
+      "metricIds": [
+        "india_win_rate"
+      ],
+      "id": "missing_data:india_win_rate",
+      "kind": "missing_data",
+      "title": "Win rate is missing",
+      "body": "India pipeline did not return a value for \"Win rate\". Error: India pipeline: not connected yet - the id is still a placeholder in sources.json. Subham owns this source - it needs a successful sync before the next review."
+    },
+    {
+      "dept": "perf_marketing",
+      "owner": "Raghav",
+      "ownerTeam": [
+        "Raghav",
+        "Imran"
+      ],
+      "raisedBy": "engine",
+      "raisedAt": "2026-10-26T15:49:48.279Z",
+      "resolvedAt": null,
+      "metricIds": [
+        "pm_india_cac"
+      ],
+      "id": "missing_data:pm_india_cac",
+      "kind": "missing_data",
+      "title": "CAC (paid) is missing",
+      "body": "Paid media - India did not return a value for \"CAC (paid)\". Error: Paid media - India: not connected yet - the id is still a placeholder in sources.json. Raghav owns this source - it needs a successful sync before the next review."
+    },
+    {
+      "dept": "perf_marketing",
+      "owner": "Raghav",
+      "ownerTeam": [
+        "Raghav",
+        "Imran"
+      ],
+      "raisedBy": "engine",
+      "raisedAt": "2026-10-26T15:49:48.279Z",
+      "resolvedAt": null,
+      "metricIds": [
+        "pm_india_cpl"
+      ],
+      "id": "missing_data:pm_india_cpl",
+      "kind": "missing_data",
+      "title": "Cost per lead is missing",
+      "body": "Paid media - India did not return a value for \"Cost per lead\". Error: Paid media - India: not connected yet - the id is still a placeholder in sources.json. Raghav owns this source - it needs a successful sync before the next review."
+    },
+    {
+      "dept": "perf_marketing",
+      "owner": "Raghav",
+      "ownerTeam": [
+        "Raghav",
+        "Imran"
+      ],
+      "raisedBy": "engine",
+      "raisedAt": "2026-10-26T15:49:48.279Z",
+      "resolvedAt": null,
+      "metricIds": [
+        "pm_india_leads"
+      ],
+      "id": "missing_data:pm_india_leads",
+      "kind": "missing_data",
+      "title": "Leads is missing",
+      "body": "Paid media - India did not return a value for \"Leads\". Error: Paid media - India: not connected yet - the id is still a placeholder in sources.json. Raghav owns this source - it needs a successful sync before the next review."
+    },
+    {
+      "dept": "perf_marketing",
+      "owner": "Raghav",
+      "ownerTeam": [
+        "Raghav",
+        "Imran"
+      ],
+      "raisedBy": "engine",
+      "raisedAt": "2026-10-26T15:49:48.279Z",
+      "resolvedAt": null,
+      "metricIds": [
+        "pm_india_pipeline_sourced"
+      ],
+      "id": "missing_data:pm_india_pipeline_sourced",
+      "kind": "missing_data",
+      "title": "Pipeline sourced is missing",
+      "body": "India pipeline did not return a value for \"Pipeline sourced\". Error: India pipeline: not connected yet - the id is still a placeholder in sources.json. Raghav owns this source - it needs a successful sync before the next review."
+    },
+    {
+      "dept": "perf_marketing",
+      "owner": "Raghav",
+      "ownerTeam": [
+        "Raghav",
+        "Imran"
+      ],
+      "raisedBy": "engine",
+      "raisedAt": "2026-10-26T15:49:48.279Z",
+      "resolvedAt": null,
+      "metricIds": [
+        "pm_india_qualified"
+      ],
+      "id": "missing_data:pm_india_qualified",
+      "kind": "missing_data",
+      "title": "Qualified is missing",
+      "body": "Paid media - India did not return a value for \"Qualified\". Error: Paid media - India: not connected yet - the id is still a placeholder in sources.json. Raghav owns this source - it needs a successful sync before the next review."
+    },
+    {
+      "dept": "perf_marketing",
+      "owner": "Raghav",
+      "ownerTeam": [
+        "Raghav",
+        "Imran"
+      ],
+      "raisedBy": "engine",
+      "raisedAt": "2026-10-26T15:49:48.279Z",
+      "resolvedAt": null,
+      "metricIds": [
+        "pm_india_spend"
+      ],
+      "id": "missing_data:pm_india_spend",
+      "kind": "missing_data",
+      "title": "Spend is missing",
+      "body": "Paid media - India did not return a value for \"Spend\". Error: Paid media - India: not connected yet - the id is still a placeholder in sources.json. Raghav owns this source - it needs a successful sync before the next review."
+    },
+    {
+      "dept": "india_sales",
+      "owner": "Subham",
+      "ownerTeam": [
+        "Subham",
+        "Arfin",
+        "Raghav"
+      ],
+      "raisedBy": "engine",
+      "raisedAt": "2026-10-26T15:49:48.279Z",
+      "resolvedAt": null,
+      "metricIds": [
+        "in_pipeline_india"
+      ],
+      "id": "no_target:in_pipeline_india",
+      "kind": "no_target",
+      "title": "Pipeline open has no target",
+      "body": "\"Pipeline open\" is being reported with no target, so it can be read but not judged. Subham sets this one: what does a good week look like, in rupees? Until it is set this metric cannot appear on the scoreboard."
+    },
+    {
+      "dept": "india_sales",
+      "owner": "Subham",
+      "ownerTeam": [
+        "Subham",
+        "Arfin",
+        "Raghav"
+      ],
+      "raisedBy": "engine",
+      "raisedAt": "2026-10-26T15:49:48.279Z",
+      "resolvedAt": null,
+      "metricIds": [
+        "india_accounts_worked"
+      ],
+      "id": "no_target:india_accounts_worked",
+      "kind": "no_target",
+      "title": "Accounts worked has no target",
+      "body": "\"Accounts worked\" is being reported with no target, so it can be read but not judged. Subham sets this one: what does a good week look like, in whole numbers? Until it is set this metric cannot appear on the scoreboard."
+    },
+    {
+      "dept": "india_sales",
+      "owner": "Subham",
+      "ownerTeam": [
+        "Subham",
+        "Arfin",
+        "Raghav"
+      ],
+      "raisedBy": "engine",
+      "raisedAt": "2026-10-26T15:49:48.279Z",
+      "resolvedAt": null,
+      "metricIds": [
+        "india_closed_won"
+      ],
+      "id": "no_target:india_closed_won",
+      "kind": "no_target",
+      "title": "Closed won has no target",
+      "body": "\"Closed won\" is being reported with no target, so it can be read but not judged. Subham sets this one: what does a good week look like, in rupees? Until it is set this metric cannot appear on the scoreboard."
+    },
+    {
+      "dept": "india_sales",
+      "owner": "Subham",
+      "ownerTeam": [
+        "Subham",
+        "Arfin",
+        "Raghav"
+      ],
+      "raisedBy": "engine",
+      "raisedAt": "2026-10-26T15:49:48.279Z",
+      "resolvedAt": null,
+      "metricIds": [
+        "india_created_wk"
+      ],
+      "id": "no_target:india_created_wk",
+      "kind": "no_target",
+      "title": "Pipeline created has no target",
+      "body": "\"Pipeline created\" is being reported with no target, so it can be read but not judged. Subham sets this one: what does a good week look like, in rupees? Until it is set this metric cannot appear on the scoreboard."
+    },
+    {
+      "dept": "india_sales",
+      "owner": "Subham",
+      "ownerTeam": [
+        "Subham",
+        "Arfin",
+        "Raghav"
+      ],
+      "raisedBy": "engine",
+      "raisedAt": "2026-10-26T15:49:48.279Z",
+      "resolvedAt": null,
+      "metricIds": [
+        "india_in_poc"
+      ],
+      "id": "no_target:india_in_poc",
+      "kind": "no_target",
+      "title": "In POC has no target",
+      "body": "\"In POC\" is being reported with no target, so it can be read but not judged. Subham sets this one: what does a good week look like, in rupees? Until it is set this metric cannot appear on the scoreboard."
+    },
+    {
+      "dept": "india_sales",
+      "owner": "Subham",
+      "ownerTeam": [
+        "Subham",
+        "Arfin",
+        "Raghav"
+      ],
+      "raisedBy": "engine",
+      "raisedAt": "2026-10-26T15:49:48.279Z",
+      "resolvedAt": null,
+      "metricIds": [
+        "india_meetings_held"
+      ],
+      "id": "no_target:india_meetings_held",
+      "kind": "no_target",
+      "title": "Meetings held has no target",
+      "body": "\"Meetings held\" is being reported with no target, so it can be read but not judged. Subham sets this one: what does a good week look like, in whole numbers? Until it is set this metric cannot appear on the scoreboard."
+    },
+    {
+      "dept": "india_sales",
+      "owner": "Subham",
+      "ownerTeam": [
+        "Subham",
+        "Arfin",
+        "Raghav"
+      ],
+      "raisedBy": "engine",
+      "raisedAt": "2026-10-26T15:49:48.279Z",
+      "resolvedAt": null,
+      "metricIds": [
+        "india_opps_created"
+      ],
+      "id": "no_target:india_opps_created",
+      "kind": "no_target",
+      "title": "Opportunities created has no target",
+      "body": "\"Opportunities created\" is being reported with no target, so it can be read but not judged. Subham sets this one: what does a good week look like, in whole numbers? Until it is set this metric cannot appear on the scoreboard."
+    },
+    {
+      "dept": "india_sales",
+      "owner": "Subham",
+      "ownerTeam": [
+        "Subham",
+        "Arfin",
+        "Raghav"
+      ],
+      "raisedBy": "engine",
+      "raisedAt": "2026-10-26T15:49:48.279Z",
+      "resolvedAt": null,
+      "metricIds": [
+        "india_proposal"
+      ],
+      "id": "no_target:india_proposal",
+      "kind": "no_target",
+      "title": "Proposal stage has no target",
+      "body": "\"Proposal stage\" is being reported with no target, so it can be read but not judged. Subham sets this one: what does a good week look like, in rupees? Until it is set this metric cannot appear on the scoreboard."
+    },
+    {
+      "dept": "india_sales",
+      "owner": "Subham",
+      "ownerTeam": [
+        "Subham",
+        "Arfin",
+        "Raghav"
+      ],
+      "raisedBy": "engine",
+      "raisedAt": "2026-10-26T15:49:48.279Z",
+      "resolvedAt": null,
+      "metricIds": [
+        "india_win_rate"
+      ],
+      "id": "no_target:india_win_rate",
+      "kind": "no_target",
+      "title": "Win rate has no target",
+      "body": "\"Win rate\" is being reported with no target, so it can be read but not judged. Subham sets this one: what does a good week look like, in percent? Until it is set this metric cannot appear on the scoreboard."
+    },
+    {
+      "dept": "perf_marketing",
+      "owner": "Raghav",
+      "ownerTeam": [
+        "Raghav",
+        "Imran"
+      ],
+      "raisedBy": "engine",
+      "raisedAt": "2026-10-26T15:49:48.279Z",
+      "resolvedAt": null,
+      "metricIds": [
+        "pm_india_cac"
+      ],
+      "id": "no_target:pm_india_cac",
+      "kind": "no_target",
+      "title": "CAC (paid) has no target",
+      "body": "\"CAC (paid)\" is being reported with no target, so it can be read but not judged. Raghav sets this one: what does a good week look like, in rupees? Until it is set this metric cannot appear on the scoreboard."
+    },
+    {
+      "dept": "perf_marketing",
+      "owner": "Raghav",
+      "ownerTeam": [
+        "Raghav",
+        "Imran"
+      ],
+      "raisedBy": "engine",
+      "raisedAt": "2026-10-26T15:49:48.279Z",
+      "resolvedAt": null,
+      "metricIds": [
+        "pm_india_cpl"
+      ],
+      "id": "no_target:pm_india_cpl",
+      "kind": "no_target",
+      "title": "Cost per lead has no target",
+      "body": "\"Cost per lead\" is being reported with no target, so it can be read but not judged. Raghav sets this one: what does a good week look like, in rupees? Until it is set this metric cannot appear on the scoreboard."
+    },
+    {
+      "dept": "perf_marketing",
+      "owner": "Raghav",
+      "ownerTeam": [
+        "Raghav",
+        "Imran"
+      ],
+      "raisedBy": "engine",
+      "raisedAt": "2026-10-26T15:49:48.279Z",
+      "resolvedAt": null,
+      "metricIds": [
+        "pm_india_leads"
+      ],
+      "id": "no_target:pm_india_leads",
+      "kind": "no_target",
+      "title": "Leads has no target",
+      "body": "\"Leads\" is being reported with no target, so it can be read but not judged. Raghav sets this one: what does a good week look like, in whole numbers? Until it is set this metric cannot appear on the scoreboard."
+    },
+    {
+      "dept": "perf_marketing",
+      "owner": "Raghav",
+      "ownerTeam": [
+        "Raghav",
+        "Imran"
+      ],
+      "raisedBy": "engine",
+      "raisedAt": "2026-10-26T15:49:48.279Z",
+      "resolvedAt": null,
+      "metricIds": [
+        "pm_india_pipeline_sourced"
+      ],
+      "id": "no_target:pm_india_pipeline_sourced",
+      "kind": "no_target",
+      "title": "Pipeline sourced has no target",
+      "body": "\"Pipeline sourced\" is being reported with no target, so it can be read but not judged. Raghav sets this one: what does a good week look like, in rupees? Until it is set this metric cannot appear on the scoreboard."
+    },
+    {
+      "dept": "perf_marketing",
+      "owner": "Raghav",
+      "ownerTeam": [
+        "Raghav",
+        "Imran"
+      ],
+      "raisedBy": "engine",
+      "raisedAt": "2026-10-26T15:49:48.279Z",
+      "resolvedAt": null,
+      "metricIds": [
+        "pm_india_qualified"
+      ],
+      "id": "no_target:pm_india_qualified",
+      "kind": "no_target",
+      "title": "Qualified has no target",
+      "body": "\"Qualified\" is being reported with no target, so it can be read but not judged. Raghav sets this one: what does a good week look like, in whole numbers? Until it is set this metric cannot appear on the scoreboard."
+    },
+    {
+      "dept": "perf_marketing",
+      "owner": "Raghav",
+      "ownerTeam": [
+        "Raghav",
+        "Imran"
+      ],
+      "raisedBy": "engine",
+      "raisedAt": "2026-10-26T15:49:48.279Z",
+      "resolvedAt": null,
+      "metricIds": [
+        "pm_india_spend"
+      ],
+      "id": "no_target:pm_india_spend",
+      "kind": "no_target",
+      "title": "Spend has no target",
+      "body": "\"Spend\" is being reported with no target, so it can be read but not judged. Raghav sets this one: what does a good week look like, in rupees? Until it is set this metric cannot appear on the scoreboard."
+    },
+    {
+      "dept": "india_sales",
+      "owner": "Subham, Arfin and Raghav",
+      "ownerTeam": [
+        "Subham",
+        "Arfin",
+        "Raghav"
+      ],
+      "raisedBy": "engine",
+      "raisedAt": "2026-10-26T15:49:48.279Z",
+      "resolvedAt": null,
+      "metricIds": [
+        "in_pipeline_india"
+      ],
+      "id": "no_owner:in_pipeline_india",
+      "kind": "no_owner",
+      "title": "Pipeline open has no single accountable owner",
+      "body": "Subham, Arfin and Raghav own India Sales between them, and nobody has been named on \"Pipeline open\". A flag addressed to 3 people is addressed to nobody - each assumes one of the others has it. One of you takes this metric: set \"owner\" on in_pipeline_india in catalog.json. Until then it falls to Subham."
+    },
+    {
+      "dept": "india_sales",
+      "owner": "Subham, Arfin and Raghav",
+      "ownerTeam": [
+        "Subham",
+        "Arfin",
+        "Raghav"
+      ],
+      "raisedBy": "engine",
+      "raisedAt": "2026-10-26T15:49:48.279Z",
+      "resolvedAt": null,
+      "metricIds": [
+        "india_accounts_worked"
+      ],
+      "id": "no_owner:india_accounts_worked",
+      "kind": "no_owner",
+      "title": "Accounts worked has no single accountable owner",
+      "body": "Subham, Arfin and Raghav own India Sales between them, and nobody has been named on \"Accounts worked\". A flag addressed to 3 people is addressed to nobody - each assumes one of the others has it. One of you takes this metric: set \"owner\" on india_accounts_worked in catalog.json. Until then it falls to Subham."
+    },
+    {
+      "dept": "india_sales",
+      "owner": "Subham, Arfin and Raghav",
+      "ownerTeam": [
+        "Subham",
+        "Arfin",
+        "Raghav"
+      ],
+      "raisedBy": "engine",
+      "raisedAt": "2026-10-26T15:49:48.279Z",
+      "resolvedAt": null,
+      "metricIds": [
+        "india_closed_won"
+      ],
+      "id": "no_owner:india_closed_won",
+      "kind": "no_owner",
+      "title": "Closed won has no single accountable owner",
+      "body": "Subham, Arfin and Raghav own India Sales between them, and nobody has been named on \"Closed won\". A flag addressed to 3 people is addressed to nobody - each assumes one of the others has it. One of you takes this metric: set \"owner\" on india_closed_won in catalog.json. Until then it falls to Subham."
+    },
+    {
+      "dept": "india_sales",
+      "owner": "Subham, Arfin and Raghav",
+      "ownerTeam": [
+        "Subham",
+        "Arfin",
+        "Raghav"
+      ],
+      "raisedBy": "engine",
+      "raisedAt": "2026-10-26T15:49:48.279Z",
+      "resolvedAt": null,
+      "metricIds": [
+        "india_created_wk"
+      ],
+      "id": "no_owner:india_created_wk",
+      "kind": "no_owner",
+      "title": "Pipeline created has no single accountable owner",
+      "body": "Subham, Arfin and Raghav own India Sales between them, and nobody has been named on \"Pipeline created\". A flag addressed to 3 people is addressed to nobody - each assumes one of the others has it. One of you takes this metric: set \"owner\" on india_created_wk in catalog.json. Until then it falls to Subham."
+    },
+    {
+      "dept": "india_sales",
+      "owner": "Subham, Arfin and Raghav",
+      "ownerTeam": [
+        "Subham",
+        "Arfin",
+        "Raghav"
+      ],
+      "raisedBy": "engine",
+      "raisedAt": "2026-10-26T15:49:48.279Z",
+      "resolvedAt": null,
+      "metricIds": [
+        "india_in_poc"
+      ],
+      "id": "no_owner:india_in_poc",
+      "kind": "no_owner",
+      "title": "In POC has no single accountable owner",
+      "body": "Subham, Arfin and Raghav own India Sales between them, and nobody has been named on \"In POC\". A flag addressed to 3 people is addressed to nobody - each assumes one of the others has it. One of you takes this metric: set \"owner\" on india_in_poc in catalog.json. Until then it falls to Subham."
+    },
+    {
+      "dept": "india_sales",
+      "owner": "Subham, Arfin and Raghav",
+      "ownerTeam": [
+        "Subham",
+        "Arfin",
+        "Raghav"
+      ],
+      "raisedBy": "engine",
+      "raisedAt": "2026-10-26T15:49:48.279Z",
+      "resolvedAt": null,
+      "metricIds": [
+        "india_meetings_held"
+      ],
+      "id": "no_owner:india_meetings_held",
+      "kind": "no_owner",
+      "title": "Meetings held has no single accountable owner",
+      "body": "Subham, Arfin and Raghav own India Sales between them, and nobody has been named on \"Meetings held\". A flag addressed to 3 people is addressed to nobody - each assumes one of the others has it. One of you takes this metric: set \"owner\" on india_meetings_held in catalog.json. Until then it falls to Subham."
+    },
+    {
+      "dept": "india_sales",
+      "owner": "Subham, Arfin and Raghav",
+      "ownerTeam": [
+        "Subham",
+        "Arfin",
+        "Raghav"
+      ],
+      "raisedBy": "engine",
+      "raisedAt": "2026-10-26T15:49:48.279Z",
+      "resolvedAt": null,
+      "metricIds": [
+        "india_opps_created"
+      ],
+      "id": "no_owner:india_opps_created",
+      "kind": "no_owner",
+      "title": "Opportunities created has no single accountable owner",
+      "body": "Subham, Arfin and Raghav own India Sales between them, and nobody has been named on \"Opportunities created\". A flag addressed to 3 people is addressed to nobody - each assumes one of the others has it. One of you takes this metric: set \"owner\" on india_opps_created in catalog.json. Until then it falls to Subham."
+    },
+    {
+      "dept": "india_sales",
+      "owner": "Subham, Arfin and Raghav",
+      "ownerTeam": [
+        "Subham",
+        "Arfin",
+        "Raghav"
+      ],
+      "raisedBy": "engine",
+      "raisedAt": "2026-10-26T15:49:48.279Z",
+      "resolvedAt": null,
+      "metricIds": [
+        "india_proposal"
+      ],
+      "id": "no_owner:india_proposal",
+      "kind": "no_owner",
+      "title": "Proposal stage has no single accountable owner",
+      "body": "Subham, Arfin and Raghav own India Sales between them, and nobody has been named on \"Proposal stage\". A flag addressed to 3 people is addressed to nobody - each assumes one of the others has it. One of you takes this metric: set \"owner\" on india_proposal in catalog.json. Until then it falls to Subham."
+    },
+    {
+      "dept": "india_sales",
+      "owner": "Subham, Arfin and Raghav",
+      "ownerTeam": [
+        "Subham",
+        "Arfin",
+        "Raghav"
+      ],
+      "raisedBy": "engine",
+      "raisedAt": "2026-10-26T15:49:48.279Z",
+      "resolvedAt": null,
+      "metricIds": [
+        "india_win_rate"
+      ],
+      "id": "no_owner:india_win_rate",
+      "kind": "no_owner",
+      "title": "Win rate has no single accountable owner",
+      "body": "Subham, Arfin and Raghav own India Sales between them, and nobody has been named on \"Win rate\". A flag addressed to 3 people is addressed to nobody - each assumes one of the others has it. One of you takes this metric: set \"owner\" on india_win_rate in catalog.json. Until then it falls to Subham."
+    },
+    {
+      "dept": "perf_marketing",
+      "owner": "Raghav and Imran",
+      "ownerTeam": [
+        "Raghav",
+        "Imran"
+      ],
+      "raisedBy": "engine",
+      "raisedAt": "2026-10-26T15:49:48.279Z",
+      "resolvedAt": null,
+      "metricIds": [
+        "pm_india_cac"
+      ],
+      "id": "no_owner:pm_india_cac",
+      "kind": "no_owner",
+      "title": "CAC (paid) has no single accountable owner",
+      "body": "Raghav and Imran own Performance Marketing between them, and nobody has been named on \"CAC (paid)\". A flag addressed to 2 people is addressed to nobody - each assumes one of the others has it. One of you takes this metric: set \"owner\" on pm_india_cac in catalog.json. Until then it falls to Raghav."
+    },
+    {
+      "dept": "perf_marketing",
+      "owner": "Raghav and Imran",
+      "ownerTeam": [
+        "Raghav",
+        "Imran"
+      ],
+      "raisedBy": "engine",
+      "raisedAt": "2026-10-26T15:49:48.279Z",
+      "resolvedAt": null,
+      "metricIds": [
+        "pm_india_cpl"
+      ],
+      "id": "no_owner:pm_india_cpl",
+      "kind": "no_owner",
+      "title": "Cost per lead has no single accountable owner",
+      "body": "Raghav and Imran own Performance Marketing between them, and nobody has been named on \"Cost per lead\". A flag addressed to 2 people is addressed to nobody - each assumes one of the others has it. One of you takes this metric: set \"owner\" on pm_india_cpl in catalog.json. Until then it falls to Raghav."
+    },
+    {
+      "dept": "perf_marketing",
+      "owner": "Raghav and Imran",
+      "ownerTeam": [
+        "Raghav",
+        "Imran"
+      ],
+      "raisedBy": "engine",
+      "raisedAt": "2026-10-26T15:49:48.279Z",
+      "resolvedAt": null,
+      "metricIds": [
+        "pm_india_leads"
+      ],
+      "id": "no_owner:pm_india_leads",
+      "kind": "no_owner",
+      "title": "Leads has no single accountable owner",
+      "body": "Raghav and Imran own Performance Marketing between them, and nobody has been named on \"Leads\". A flag addressed to 2 people is addressed to nobody - each assumes one of the others has it. One of you takes this metric: set \"owner\" on pm_india_leads in catalog.json. Until then it falls to Raghav."
+    },
+    {
+      "dept": "perf_marketing",
+      "owner": "Raghav and Imran",
+      "ownerTeam": [
+        "Raghav",
+        "Imran"
+      ],
+      "raisedBy": "engine",
+      "raisedAt": "2026-10-26T15:49:48.279Z",
+      "resolvedAt": null,
+      "metricIds": [
+        "pm_india_pipeline_sourced"
+      ],
+      "id": "no_owner:pm_india_pipeline_sourced",
+      "kind": "no_owner",
+      "title": "Pipeline sourced has no single accountable owner",
+      "body": "Raghav and Imran own Performance Marketing between them, and nobody has been named on \"Pipeline sourced\". A flag addressed to 2 people is addressed to nobody - each assumes one of the others has it. One of you takes this metric: set \"owner\" on pm_india_pipeline_sourced in catalog.json. Until then it falls to Raghav."
+    },
+    {
+      "dept": "perf_marketing",
+      "owner": "Raghav and Imran",
+      "ownerTeam": [
+        "Raghav",
+        "Imran"
+      ],
+      "raisedBy": "engine",
+      "raisedAt": "2026-10-26T15:49:48.279Z",
+      "resolvedAt": null,
+      "metricIds": [
+        "pm_india_qualified"
+      ],
+      "id": "no_owner:pm_india_qualified",
+      "kind": "no_owner",
+      "title": "Qualified has no single accountable owner",
+      "body": "Raghav and Imran own Performance Marketing between them, and nobody has been named on \"Qualified\". A flag addressed to 2 people is addressed to nobody - each assumes one of the others has it. One of you takes this metric: set \"owner\" on pm_india_qualified in catalog.json. Until then it falls to Raghav."
+    },
+    {
+      "dept": "perf_marketing",
+      "owner": "Raghav and Imran",
+      "ownerTeam": [
+        "Raghav",
+        "Imran"
+      ],
+      "raisedBy": "engine",
+      "raisedAt": "2026-10-26T15:49:48.279Z",
+      "resolvedAt": null,
+      "metricIds": [
+        "pm_india_spend"
+      ],
+      "id": "no_owner:pm_india_spend",
+      "kind": "no_owner",
+      "title": "Spend has no single accountable owner",
+      "body": "Raghav and Imran own Performance Marketing between them, and nobody has been named on \"Spend\". A flag addressed to 2 people is addressed to nobody - each assumes one of the others has it. One of you takes this metric: set \"owner\" on pm_india_spend in catalog.json. Until then it falls to Raghav."
+    }
+  ],
+  "meetingId": "india_charter"
+}

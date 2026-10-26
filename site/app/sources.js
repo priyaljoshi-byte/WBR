@@ -20,7 +20,7 @@ import { loadAll } from './configload.js';
 import { parseRef, isPlaceholderRef, shareInstruction } from './refs.js';
 import { parseCSV, dateColumnReport, dateHealth } from './csv.js';
 import { suggestMapping, requiredColumnsForSource } from './mapping.js';
-import { fetchSheetCsv, SHARE_FIX, fallbackWarning } from './sheets.js';
+import { fetchSheetCsv, SHARE_FIX, fallbackWarning, isBlockedTab } from './sheets.js';
 import { renderPreviewRings } from './compute-preview.js';
 import { db, canSave } from './store.js';
 import { PULSE_CONFIG } from './config.js';
@@ -225,7 +225,7 @@ function renderLinkTab(pane, source, canWrite, mapHost, required, saved) {
       </div>
       ${parsed.titleSlug ? `<p class="hint">The link called it <b>${esc(parsed.titleSlug)}</b>. If that is not the right database, the link is wrong.</p>` : ''}
       ${parsed.viewIdIgnored ? `<p class="hint">That link also carried a saved-view id. Pulse ignored it on purpose - connecting to a view means reading a filtered subset forever without noticing.</p>` : ''}
-      ${parsed.gid ? `<p class="hint">Tab id <code>${esc(parsed.gid)}</code> was in the link. Pulse reads the tab named in the metric definition (<b>${esc(source.tab || 'the first tab')}</b>), not the one you happened to be looking at.</p>` : ''}
+      ${parsed.gid ? `<p class="hint">Pulse will read the tab you copied this link from (tab id <code>${esc(parsed.gid)}</code>).</p>` : `<p class="hint hint-bad">This link has no tab in it, so Pulse would guess${source.tab ? ` a tab called <b>${esc(source.tab)}</b>` : ' the first tab'}. Open the exact tab you want, then copy the link from the address bar - it ends in <code>#gid=</code>.</p>`}
       <div class="card" style="margin-top:14px;background:#131313;box-shadow:none">
         <h3>${esc(share.heading)}</h3>
         <p class="hint" style="margin-top:7px">${esc(share.body)}</p>
@@ -248,15 +248,21 @@ function renderLinkTab(pane, source, canWrite, mapHost, required, saved) {
         readBtn.disabled = true;
         rowsOut.innerHTML = '<p class="hint">Reading the sheet from Google...</p>';
         try {
-          if (!(await connect(source, parsed.id))) { rowsOut.innerHTML = ''; return; }
-          const tab = source.tab || null;
-          const gid = tab ? null : (parsed.gid || null);
-          // Google answers an unknown tab with the first tab, so read the first
-          // tab too and compare (see sheets.js).
-          // gid 0 IS the first tab, so there is nothing to compare against.
-          const first = tab || (gid && gid !== '0') ? await fetchSheetCsv(parsed.id) : null;
+          if (parsed.gid && isBlockedTab(parsed.id, parsed.gid)) {
+            rowsOut.innerHTML = '<p class="hint hint-bad">That tab is marked private, so Pulse will not read or save it. Open a different tab and copy its link.</p>';
+            return;
+          }
+          if (!(await connect(source, parsed.id, parsed.gid))) { rowsOut.innerHTML = ''; return; }
+          // The tab in the pasted link wins: it is the tab the person was
+          // looking at. The configured tab name is only a fallback, and the
+          // defaults in config/sources.json are guesses that may not exist.
+          const gid = parsed.gid || null;
+          const tab = gid ? null : (source.tab || null);
+          // A gid read is exact (see sheets.js). Only a tab NAME can silently
+          // fall back to the first tab, so only then read the first tab to compare.
+          const first = tab ? await fetchSheetCsv(parsed.id) : null;
           const res = await fetchSheetCsv(parsed.id, { tab, gid, compareWith: first ? first.text : null });
-          const label = `Google Sheet${tab ? ` - ${tab}` : ''}`;
+          const label = `Google Sheet${tab ? ` - ${tab}` : gid ? ` - tab ${gid}` : ''}`;
           const proceed = (note) => showRows(rowsOut, `${uid}-sheet`, source, label, res.text,
             { canWrite, mapHost, required, saved, note, onCancel: () => {} });
 
@@ -314,7 +320,8 @@ function renderLinkTab(pane, source, canWrite, mapHost, required, saved) {
     if (copyBtn) copyBtn.addEventListener('click', () => copyToClipboard(share.copy, 'Service account address'));
 
     pane.querySelector(`#${CSS.escape(uid)}-save`).addEventListener('click', async () => {
-      await connect(source, parsed.id);
+      if (parsed.gid && isBlockedTab(parsed.id, parsed.gid)) { toast('That tab is marked private - pick another tab.', 'warn'); return; }
+      await connect(source, parsed.id, parsed.gid);
       // The columns are not known until the first sync, so the map opens on
       // what the metrics need with a way to supply the header row by hand.
       renderMapping(mapHost, source, required,
@@ -333,7 +340,7 @@ function renderLinkTab(pane, source, canWrite, mapHost, required, saved) {
   });
 }
 
-async function connect(source, ref) {
+async function connect(source, ref, gid = null) {
   if (!canSave()) { toast('Preview mode - nothing was saved.', 'warn'); return false; }
   try {
     await db.upsert('pulse_sources', [{
@@ -342,7 +349,10 @@ async function connect(source, ref) {
       kind: source.kind,
       label: source.label,
       ref,
-      tab: source.tab || null,
+      // A tab from the pasted link replaces the configured guess, for the
+      // weekly run too (connectors/gsheet.js resolves the gid to a title).
+      tab: gid ? null : (source.tab || null),
+      config: gid ? { ...(source.config || {}), gid: String(gid) } : (source.config || {}),
       header_row: source.header_row || 1,
       date_column: source.date_column || null,
       notes: source.notes || null,

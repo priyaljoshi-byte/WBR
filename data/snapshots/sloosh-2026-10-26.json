@@ -1,0 +1,1355 @@
+{
+  "run": {
+    "id": "run-2026-10-26",
+    "periodStart": "2026-10-26",
+    "periodEnd": "2026-11-01",
+    "startedAt": "2026-10-26T15:49:48.291Z",
+    "finishedAt": "2026-10-26T15:49:48.291Z",
+    "status": "failed",
+    "triggeredBy": "cron",
+    "meetingId": "sloosh"
+  },
+  "snapshots": [
+    {
+      "runId": "run-2026-10-26",
+      "metricId": "sloosh_signups",
+      "periodStart": "2026-10-26",
+      "periodEnd": "2026-11-01",
+      "raw": null,
+      "denominator": null,
+      "normalized": null,
+      "priorRaw": null,
+      "priorNormalized": null,
+      "delta": null,
+      "health": "missing",
+      "freshness": "unknown",
+      "unit": "count",
+      "caption": "— signups",
+      "rowCount": 0,
+      "computedAt": "2026-10-26T15:49:48.291Z",
+      "warnings": [
+        "source \"sloosh_db\" errored: Sloosh product data: no connection configured. Set SLOOSH_DB_URL_REST_URL and SLOOSH_DB_URL_REST_KEY, or PULSE_ALLOW_PSQL=1 for local runs. See .env.example."
+      ]
+    },
+    {
+      "runId": "run-2026-10-26",
+      "metricId": "sloosh_activated",
+      "periodStart": "2026-10-26",
+      "periodEnd": "2026-11-01",
+      "raw": null,
+      "denominator": null,
+      "normalized": null,
+      "priorRaw": null,
+      "priorNormalized": null,
+      "delta": null,
+      "health": "missing",
+      "freshness": "unknown",
+      "unit": "count",
+      "caption": "— of — signups",
+      "rowCount": 0,
+      "computedAt": "2026-10-26T15:49:48.291Z",
+      "warnings": [
+        "source \"sloosh_db\" errored: Sloosh product data: no connection configured. Set SLOOSH_DB_URL_REST_URL and SLOOSH_DB_URL_REST_KEY, or PULSE_ALLOW_PSQL=1 for local runs. See .env.example.",
+        "denominator metric \"sloosh_signups\" for \"sloosh_activated\" has no value"
+      ]
+    },
+    {
+      "runId": "run-2026-10-26",
+      "metricId": "sloosh_returned",
+      "periodStart": "2026-10-26",
+      "periodEnd": "2026-11-01",
+      "raw": null,
+      "denominator": null,
+      "normalized": null,
+      "priorRaw": null,
+      "priorNormalized": null,
+      "delta": null,
+      "health": "missing",
+      "freshness": "unknown",
+      "unit": "count",
+      "caption": "— of —",
+      "rowCount": 0,
+      "computedAt": "2026-10-26T15:49:48.291Z",
+      "warnings": [
+        "source \"sloosh_db\" errored: Sloosh product data: no connection configured. Set SLOOSH_DB_URL_REST_URL and SLOOSH_DB_URL_REST_KEY, or PULSE_ALLOW_PSQL=1 for local runs. See .env.example.",
+        "denominator metric \"sloosh_signups\" for \"sloosh_returned\" has no value"
+      ]
+    },
+    {
+      "runId": "run-2026-10-26",
+      "metricId": "sloosh_paid",
+      "periodStart": "2026-10-26",
+      "periodEnd": "2026-11-01",
+      "raw": null,
+      "denominator": null,
+      "normalized": null,
+      "priorRaw": null,
+      "priorNormalized": null,
+      "delta": null,
+      "health": "missing",
+      "freshness": "unknown",
+      "unit": "count",
+      "caption": "— of —",
+      "rowCount": 0,
+      "computedAt": "2026-10-26T15:49:48.291Z",
+      "warnings": [
+        "source \"sloosh_db\" errored: Sloosh product data: no connection configured. Set SLOOSH_DB_URL_REST_URL and SLOOSH_DB_URL_REST_KEY, or PULSE_ALLOW_PSQL=1 for local runs. See .env.example.",
+        "denominator metric \"sloosh_signups\" for \"sloosh_paid\" has no value"
+      ]
+    },
+    {
+      "runId": "run-2026-10-26",
+      "metricId": "sloosh_wau",
+      "periodStart": "2026-10-26",
+      "periodEnd": "2026-11-01",
+      "raw": null,
+      "denominator": null,
+      "normalized": null,
+      "priorRaw": null,
+      "priorNormalized": null,
+      "delta": null,
+      "health": "missing",
+      "freshness": "unknown",
+      "unit": "count",
+      "caption": "— active",
+      "rowCount": 0,
+      "computedAt": "2026-10-26T15:49:48.291Z",
+      "warnings": [
+        "source \"sloosh_db\" errored: Sloosh product data: no connection configured. Set SLOOSH_DB_URL_REST_URL and SLOOSH_DB_URL_REST_KEY, or PULSE_ALLOW_PSQL=1 for local runs. See .env.example."
+      ]
+    },
+    {
+      "runId": "run-2026-10-26",
+      "metricId": "sloosh_revenue",
+      "periodStart": "2026-10-26",
+      "periodEnd": "2026-11-01",
+      "raw": null,
+      "denominator": null,
+      "normalized": null,
+      "priorRaw": null,
+      "priorNormalized": null,
+      "delta": null,
+      "health": "missing",
+      "freshness": "unknown",
+      "unit": "currency_inr",
+      "caption": "— of — target",
+      "rowCount": 0,
+      "computedAt": "2026-10-26T15:49:48.291Z",
+      "warnings": [
+        "source \"sloosh_db\" errored: Sloosh product data: no connection configured. Set SLOOSH_DB_URL_REST_URL and SLOOSH_DB_URL_REST_KEY, or PULSE_ALLOW_PSQL=1 for local runs. See .env.example.",
+        "denominator for \"sloosh_revenue\" is static but has no usable value"
+      ]
+    },
+    {
+      "runId": "run-2026-10-26",
+      "metricId": "sloosh_shipped",
+      "periodStart": "2026-10-26",
+      "periodEnd": "2026-11-01",
+      "raw": null,
+      "denominator": null,
+      "normalized": null,
+      "priorRaw": null,
+      "priorNormalized": null,
+      "delta": null,
+      "health": "missing",
+      "freshness": "unknown",
+      "unit": "count",
+      "caption": "— of — committed",
+      "rowCount": 0,
+      "computedAt": "2026-10-26T15:49:48.291Z",
+      "warnings": [
+        "source \"sloosh_board\" errored: Sloosh delivery board: not connected yet - the id is still a placeholder in sources.json",
+        "denominator for \"sloosh_shipped\" is static but has no usable value"
+      ]
+    },
+    {
+      "runId": "run-2026-10-26",
+      "metricId": "sloosh_in_progress",
+      "periodStart": "2026-10-26",
+      "periodEnd": "2026-11-01",
+      "raw": null,
+      "denominator": null,
+      "normalized": null,
+      "priorRaw": null,
+      "priorNormalized": null,
+      "delta": null,
+      "health": "missing",
+      "freshness": "unknown",
+      "unit": "count",
+      "caption": "— of — wip limit",
+      "rowCount": 0,
+      "computedAt": "2026-10-26T15:49:48.291Z",
+      "warnings": [
+        "source \"sloosh_board\" errored: Sloosh delivery board: not connected yet - the id is still a placeholder in sources.json",
+        "denominator for \"sloosh_in_progress\" is static but has no usable value"
+      ]
+    },
+    {
+      "runId": "run-2026-10-26",
+      "metricId": "sloosh_releases",
+      "periodStart": "2026-10-26",
+      "periodEnd": "2026-11-01",
+      "raw": null,
+      "denominator": null,
+      "normalized": null,
+      "priorRaw": null,
+      "priorNormalized": null,
+      "delta": null,
+      "health": "missing",
+      "freshness": "unknown",
+      "unit": "count",
+      "caption": "— releases",
+      "rowCount": 0,
+      "computedAt": "2026-10-26T15:49:48.291Z",
+      "warnings": [
+        "source \"sloosh_board\" errored: Sloosh delivery board: not connected yet - the id is still a placeholder in sources.json"
+      ]
+    },
+    {
+      "runId": "run-2026-10-26",
+      "metricId": "sloosh_cycle_time",
+      "periodStart": "2026-10-26",
+      "periodEnd": "2026-11-01",
+      "raw": null,
+      "denominator": null,
+      "normalized": null,
+      "priorRaw": null,
+      "priorNormalized": null,
+      "delta": null,
+      "health": "missing",
+      "freshness": "unknown",
+      "unit": "duration_days",
+      "caption": "—",
+      "rowCount": 0,
+      "computedAt": "2026-10-26T15:49:48.291Z",
+      "warnings": [
+        "source \"sloosh_board\" errored: Sloosh delivery board: not connected yet - the id is still a placeholder in sources.json"
+      ]
+    },
+    {
+      "runId": "run-2026-10-26",
+      "metricId": "sloosh_web_landed",
+      "periodStart": "2026-10-26",
+      "periodEnd": "2026-11-01",
+      "raw": null,
+      "denominator": 0,
+      "normalized": null,
+      "priorRaw": null,
+      "priorNormalized": null,
+      "delta": null,
+      "health": "missing",
+      "freshness": "unknown",
+      "unit": "count",
+      "caption": "— landed",
+      "rowCount": 0,
+      "computedAt": "2026-10-26T15:49:48.291Z",
+      "warnings": [
+        "source \"sloosh_web\" errored: Sloosh marketing funnel: not connected yet - the id is still a placeholder in sources.json"
+      ]
+    },
+    {
+      "runId": "run-2026-10-26",
+      "metricId": "sloosh_web_signup",
+      "periodStart": "2026-10-26",
+      "periodEnd": "2026-11-01",
+      "raw": null,
+      "denominator": null,
+      "normalized": null,
+      "priorRaw": null,
+      "priorNormalized": null,
+      "delta": null,
+      "health": "missing",
+      "freshness": "unknown",
+      "unit": "count",
+      "caption": "— of — landed",
+      "rowCount": 0,
+      "computedAt": "2026-10-26T15:49:48.291Z",
+      "warnings": [
+        "source \"sloosh_web\" errored: Sloosh marketing funnel: not connected yet - the id is still a placeholder in sources.json",
+        "denominator metric \"sloosh_web_landed\" for \"sloosh_web_signup\" has no value"
+      ]
+    },
+    {
+      "runId": "run-2026-10-26",
+      "metricId": "sloosh_web_paid",
+      "periodStart": "2026-10-26",
+      "periodEnd": "2026-11-01",
+      "raw": null,
+      "denominator": null,
+      "normalized": null,
+      "priorRaw": null,
+      "priorNormalized": null,
+      "delta": null,
+      "health": "missing",
+      "freshness": "unknown",
+      "unit": "count",
+      "caption": "— of — signups",
+      "rowCount": 0,
+      "computedAt": "2026-10-26T15:49:48.291Z",
+      "warnings": [
+        "source \"sloosh_web\" errored: Sloosh marketing funnel: not connected yet - the id is still a placeholder in sources.json",
+        "denominator metric \"sloosh_web_signup\" for \"sloosh_web_paid\" has no value"
+      ]
+    },
+    {
+      "runId": "run-2026-10-26",
+      "metricId": "sloosh_followers_instagram",
+      "periodStart": "2026-10-26",
+      "periodEnd": "2026-11-01",
+      "raw": null,
+      "denominator": 0,
+      "normalized": null,
+      "priorRaw": null,
+      "priorNormalized": null,
+      "delta": null,
+      "health": "missing",
+      "freshness": "unknown",
+      "unit": "count",
+      "caption": "— of 0 total",
+      "rowCount": 0,
+      "computedAt": "2026-10-26T15:49:48.291Z",
+      "warnings": [
+        "source \"sloosh_social\" errored: Sloosh social followers: not connected yet - the id is still a placeholder in sources.json"
+      ],
+      "family": "sloosh_followers"
+    },
+    {
+      "runId": "run-2026-10-26",
+      "metricId": "sloosh_followers_linkedin",
+      "periodStart": "2026-10-26",
+      "periodEnd": "2026-11-01",
+      "raw": null,
+      "denominator": 0,
+      "normalized": null,
+      "priorRaw": null,
+      "priorNormalized": null,
+      "delta": null,
+      "health": "missing",
+      "freshness": "unknown",
+      "unit": "count",
+      "caption": "— of 0 total",
+      "rowCount": 0,
+      "computedAt": "2026-10-26T15:49:48.291Z",
+      "warnings": [
+        "source \"sloosh_social\" errored: Sloosh social followers: not connected yet - the id is still a placeholder in sources.json"
+      ],
+      "family": "sloosh_followers"
+    },
+    {
+      "runId": "run-2026-10-26",
+      "metricId": "sloosh_followers_x",
+      "periodStart": "2026-10-26",
+      "periodEnd": "2026-11-01",
+      "raw": null,
+      "denominator": 0,
+      "normalized": null,
+      "priorRaw": null,
+      "priorNormalized": null,
+      "delta": null,
+      "health": "missing",
+      "freshness": "unknown",
+      "unit": "count",
+      "caption": "— of 0 total",
+      "rowCount": 0,
+      "computedAt": "2026-10-26T15:49:48.291Z",
+      "warnings": [
+        "source \"sloosh_social\" errored: Sloosh social followers: not connected yet - the id is still a placeholder in sources.json"
+      ],
+      "family": "sloosh_followers"
+    },
+    {
+      "runId": "run-2026-10-26",
+      "metricId": "sloosh_followers_youtube",
+      "periodStart": "2026-10-26",
+      "periodEnd": "2026-11-01",
+      "raw": null,
+      "denominator": 0,
+      "normalized": null,
+      "priorRaw": null,
+      "priorNormalized": null,
+      "delta": null,
+      "health": "missing",
+      "freshness": "unknown",
+      "unit": "count",
+      "caption": "— of 0 total",
+      "rowCount": 0,
+      "computedAt": "2026-10-26T15:49:48.291Z",
+      "warnings": [
+        "source \"sloosh_social\" errored: Sloosh social followers: not connected yet - the id is still a placeholder in sources.json"
+      ],
+      "family": "sloosh_followers"
+    }
+  ],
+  "flags": [
+    {
+      "dept": "sloosh",
+      "owner": "Bharat",
+      "ownerTeam": [
+        "Bharat",
+        "Manish",
+        "Priyal"
+      ],
+      "raisedBy": "engine",
+      "raisedAt": "2026-10-26T15:49:48.291Z",
+      "resolvedAt": null,
+      "metricIds": [
+        "sloosh_activated"
+      ],
+      "id": "missing_data:sloosh_activated",
+      "kind": "missing_data",
+      "title": "Activated is missing",
+      "body": "Sloosh product data did not return a value for \"Activated\". Error: Sloosh product data: no connection configured. Set SLOOSH_DB_URL_REST_URL and SLOOSH_DB_URL_REST_KEY, or PULSE_ALLOW_PSQL=1 for local runs. See .env.example.. Bharat owns this source - it needs a successful sync before the next review."
+    },
+    {
+      "dept": "sloosh",
+      "owner": "Bharat",
+      "ownerTeam": [
+        "Bharat",
+        "Manish",
+        "Priyal"
+      ],
+      "raisedBy": "engine",
+      "raisedAt": "2026-10-26T15:49:48.291Z",
+      "resolvedAt": null,
+      "metricIds": [
+        "sloosh_cycle_time"
+      ],
+      "id": "missing_data:sloosh_cycle_time",
+      "kind": "missing_data",
+      "title": "Cycle time is missing",
+      "body": "Sloosh delivery board did not return a value for \"Cycle time\". Error: Sloosh delivery board: not connected yet - the id is still a placeholder in sources.json. Bharat owns this source - it needs a successful sync before the next review."
+    },
+    {
+      "dept": "sloosh",
+      "owner": "Bharat",
+      "ownerTeam": [
+        "Bharat",
+        "Manish",
+        "Priyal"
+      ],
+      "raisedBy": "engine",
+      "raisedAt": "2026-10-26T15:49:48.291Z",
+      "resolvedAt": null,
+      "metricIds": [
+        "sloosh_followers_instagram"
+      ],
+      "id": "missing_data:sloosh_followers_instagram",
+      "kind": "missing_data",
+      "title": "Instagram is missing",
+      "body": "Sloosh social followers did not return a value for \"Instagram\". Error: Sloosh social followers: not connected yet - the id is still a placeholder in sources.json. Bharat owns this source - it needs a successful sync before the next review."
+    },
+    {
+      "dept": "sloosh",
+      "owner": "Bharat",
+      "ownerTeam": [
+        "Bharat",
+        "Manish",
+        "Priyal"
+      ],
+      "raisedBy": "engine",
+      "raisedAt": "2026-10-26T15:49:48.291Z",
+      "resolvedAt": null,
+      "metricIds": [
+        "sloosh_followers_linkedin"
+      ],
+      "id": "missing_data:sloosh_followers_linkedin",
+      "kind": "missing_data",
+      "title": "LinkedIn is missing",
+      "body": "Sloosh social followers did not return a value for \"LinkedIn\". Error: Sloosh social followers: not connected yet - the id is still a placeholder in sources.json. Bharat owns this source - it needs a successful sync before the next review."
+    },
+    {
+      "dept": "sloosh",
+      "owner": "Bharat",
+      "ownerTeam": [
+        "Bharat",
+        "Manish",
+        "Priyal"
+      ],
+      "raisedBy": "engine",
+      "raisedAt": "2026-10-26T15:49:48.291Z",
+      "resolvedAt": null,
+      "metricIds": [
+        "sloosh_followers_x"
+      ],
+      "id": "missing_data:sloosh_followers_x",
+      "kind": "missing_data",
+      "title": "X is missing",
+      "body": "Sloosh social followers did not return a value for \"X\". Error: Sloosh social followers: not connected yet - the id is still a placeholder in sources.json. Bharat owns this source - it needs a successful sync before the next review."
+    },
+    {
+      "dept": "sloosh",
+      "owner": "Bharat",
+      "ownerTeam": [
+        "Bharat",
+        "Manish",
+        "Priyal"
+      ],
+      "raisedBy": "engine",
+      "raisedAt": "2026-10-26T15:49:48.291Z",
+      "resolvedAt": null,
+      "metricIds": [
+        "sloosh_followers_youtube"
+      ],
+      "id": "missing_data:sloosh_followers_youtube",
+      "kind": "missing_data",
+      "title": "YouTube is missing",
+      "body": "Sloosh social followers did not return a value for \"YouTube\". Error: Sloosh social followers: not connected yet - the id is still a placeholder in sources.json. Bharat owns this source - it needs a successful sync before the next review."
+    },
+    {
+      "dept": "sloosh",
+      "owner": "Bharat",
+      "ownerTeam": [
+        "Bharat",
+        "Manish",
+        "Priyal"
+      ],
+      "raisedBy": "engine",
+      "raisedAt": "2026-10-26T15:49:48.291Z",
+      "resolvedAt": null,
+      "metricIds": [
+        "sloosh_in_progress"
+      ],
+      "id": "missing_data:sloosh_in_progress",
+      "kind": "missing_data",
+      "title": "In progress is missing",
+      "body": "Sloosh delivery board did not return a value for \"In progress\". Error: Sloosh delivery board: not connected yet - the id is still a placeholder in sources.json. Bharat owns this source - it needs a successful sync before the next review."
+    },
+    {
+      "dept": "sloosh",
+      "owner": "Bharat",
+      "ownerTeam": [
+        "Bharat",
+        "Manish",
+        "Priyal"
+      ],
+      "raisedBy": "engine",
+      "raisedAt": "2026-10-26T15:49:48.291Z",
+      "resolvedAt": null,
+      "metricIds": [
+        "sloosh_paid"
+      ],
+      "id": "missing_data:sloosh_paid",
+      "kind": "missing_data",
+      "title": "Converted to paid is missing",
+      "body": "Sloosh product data did not return a value for \"Converted to paid\". Error: Sloosh product data: no connection configured. Set SLOOSH_DB_URL_REST_URL and SLOOSH_DB_URL_REST_KEY, or PULSE_ALLOW_PSQL=1 for local runs. See .env.example.. Bharat owns this source - it needs a successful sync before the next review."
+    },
+    {
+      "dept": "sloosh",
+      "owner": "Bharat",
+      "ownerTeam": [
+        "Bharat",
+        "Manish",
+        "Priyal"
+      ],
+      "raisedBy": "engine",
+      "raisedAt": "2026-10-26T15:49:48.291Z",
+      "resolvedAt": null,
+      "metricIds": [
+        "sloosh_releases"
+      ],
+      "id": "missing_data:sloosh_releases",
+      "kind": "missing_data",
+      "title": "Releases is missing",
+      "body": "Sloosh delivery board did not return a value for \"Releases\". Error: Sloosh delivery board: not connected yet - the id is still a placeholder in sources.json. Bharat owns this source - it needs a successful sync before the next review."
+    },
+    {
+      "dept": "sloosh",
+      "owner": "Bharat",
+      "ownerTeam": [
+        "Bharat",
+        "Manish",
+        "Priyal"
+      ],
+      "raisedBy": "engine",
+      "raisedAt": "2026-10-26T15:49:48.291Z",
+      "resolvedAt": null,
+      "metricIds": [
+        "sloosh_returned"
+      ],
+      "id": "missing_data:sloosh_returned",
+      "kind": "missing_data",
+      "title": "Came back is missing",
+      "body": "Sloosh product data did not return a value for \"Came back\". Error: Sloosh product data: no connection configured. Set SLOOSH_DB_URL_REST_URL and SLOOSH_DB_URL_REST_KEY, or PULSE_ALLOW_PSQL=1 for local runs. See .env.example.. Bharat owns this source - it needs a successful sync before the next review."
+    },
+    {
+      "dept": "sloosh",
+      "owner": "Bharat",
+      "ownerTeam": [
+        "Bharat",
+        "Manish",
+        "Priyal"
+      ],
+      "raisedBy": "engine",
+      "raisedAt": "2026-10-26T15:49:48.291Z",
+      "resolvedAt": null,
+      "metricIds": [
+        "sloosh_revenue"
+      ],
+      "id": "missing_data:sloosh_revenue",
+      "kind": "missing_data",
+      "title": "Revenue is missing",
+      "body": "Sloosh product data did not return a value for \"Revenue\". Error: Sloosh product data: no connection configured. Set SLOOSH_DB_URL_REST_URL and SLOOSH_DB_URL_REST_KEY, or PULSE_ALLOW_PSQL=1 for local runs. See .env.example.. Bharat owns this source - it needs a successful sync before the next review."
+    },
+    {
+      "dept": "sloosh",
+      "owner": "Bharat",
+      "ownerTeam": [
+        "Bharat",
+        "Manish",
+        "Priyal"
+      ],
+      "raisedBy": "engine",
+      "raisedAt": "2026-10-26T15:49:48.291Z",
+      "resolvedAt": null,
+      "metricIds": [
+        "sloosh_shipped"
+      ],
+      "id": "missing_data:sloosh_shipped",
+      "kind": "missing_data",
+      "title": "Shipped is missing",
+      "body": "Sloosh delivery board did not return a value for \"Shipped\". Error: Sloosh delivery board: not connected yet - the id is still a placeholder in sources.json. Bharat owns this source - it needs a successful sync before the next review."
+    },
+    {
+      "dept": "sloosh",
+      "owner": "Bharat",
+      "ownerTeam": [
+        "Bharat",
+        "Manish",
+        "Priyal"
+      ],
+      "raisedBy": "engine",
+      "raisedAt": "2026-10-26T15:49:48.291Z",
+      "resolvedAt": null,
+      "metricIds": [
+        "sloosh_signups"
+      ],
+      "id": "missing_data:sloosh_signups",
+      "kind": "missing_data",
+      "title": "Signups is missing",
+      "body": "Sloosh product data did not return a value for \"Signups\". Error: Sloosh product data: no connection configured. Set SLOOSH_DB_URL_REST_URL and SLOOSH_DB_URL_REST_KEY, or PULSE_ALLOW_PSQL=1 for local runs. See .env.example.. Bharat owns this source - it needs a successful sync before the next review."
+    },
+    {
+      "dept": "sloosh",
+      "owner": "Bharat",
+      "ownerTeam": [
+        "Bharat",
+        "Manish",
+        "Priyal"
+      ],
+      "raisedBy": "engine",
+      "raisedAt": "2026-10-26T15:49:48.291Z",
+      "resolvedAt": null,
+      "metricIds": [
+        "sloosh_wau"
+      ],
+      "id": "missing_data:sloosh_wau",
+      "kind": "missing_data",
+      "title": "Weekly active is missing",
+      "body": "Sloosh product data did not return a value for \"Weekly active\". Error: Sloosh product data: no connection configured. Set SLOOSH_DB_URL_REST_URL and SLOOSH_DB_URL_REST_KEY, or PULSE_ALLOW_PSQL=1 for local runs. See .env.example.. Bharat owns this source - it needs a successful sync before the next review."
+    },
+    {
+      "dept": "sloosh",
+      "owner": "Bharat",
+      "ownerTeam": [
+        "Bharat",
+        "Manish",
+        "Priyal"
+      ],
+      "raisedBy": "engine",
+      "raisedAt": "2026-10-26T15:49:48.291Z",
+      "resolvedAt": null,
+      "metricIds": [
+        "sloosh_web_landed"
+      ],
+      "id": "missing_data:sloosh_web_landed",
+      "kind": "missing_data",
+      "title": "Landed is missing",
+      "body": "Sloosh marketing funnel did not return a value for \"Landed\". Error: Sloosh marketing funnel: not connected yet - the id is still a placeholder in sources.json. Bharat owns this source - it needs a successful sync before the next review."
+    },
+    {
+      "dept": "sloosh",
+      "owner": "Bharat",
+      "ownerTeam": [
+        "Bharat",
+        "Manish",
+        "Priyal"
+      ],
+      "raisedBy": "engine",
+      "raisedAt": "2026-10-26T15:49:48.291Z",
+      "resolvedAt": null,
+      "metricIds": [
+        "sloosh_web_paid"
+      ],
+      "id": "missing_data:sloosh_web_paid",
+      "kind": "missing_data",
+      "title": "Paid is missing",
+      "body": "Sloosh marketing funnel did not return a value for \"Paid\". Error: Sloosh marketing funnel: not connected yet - the id is still a placeholder in sources.json. Bharat owns this source - it needs a successful sync before the next review."
+    },
+    {
+      "dept": "sloosh",
+      "owner": "Bharat",
+      "ownerTeam": [
+        "Bharat",
+        "Manish",
+        "Priyal"
+      ],
+      "raisedBy": "engine",
+      "raisedAt": "2026-10-26T15:49:48.291Z",
+      "resolvedAt": null,
+      "metricIds": [
+        "sloosh_web_signup"
+      ],
+      "id": "missing_data:sloosh_web_signup",
+      "kind": "missing_data",
+      "title": "Signed up is missing",
+      "body": "Sloosh marketing funnel did not return a value for \"Signed up\". Error: Sloosh marketing funnel: not connected yet - the id is still a placeholder in sources.json. Bharat owns this source - it needs a successful sync before the next review."
+    },
+    {
+      "dept": "sloosh",
+      "owner": "Bharat",
+      "ownerTeam": [
+        "Bharat",
+        "Manish",
+        "Priyal"
+      ],
+      "raisedBy": "engine",
+      "raisedAt": "2026-10-26T15:49:48.291Z",
+      "resolvedAt": null,
+      "metricIds": [
+        "sloosh_activated"
+      ],
+      "id": "no_target:sloosh_activated",
+      "kind": "no_target",
+      "title": "Activated has no target",
+      "body": "\"Activated\" is being reported with no target, so it can be read but not judged. Bharat sets this one: what does a good week look like, in whole numbers? Until it is set this metric cannot appear on the scoreboard."
+    },
+    {
+      "dept": "sloosh",
+      "owner": "Bharat",
+      "ownerTeam": [
+        "Bharat",
+        "Manish",
+        "Priyal"
+      ],
+      "raisedBy": "engine",
+      "raisedAt": "2026-10-26T15:49:48.291Z",
+      "resolvedAt": null,
+      "metricIds": [
+        "sloosh_cycle_time"
+      ],
+      "id": "no_target:sloosh_cycle_time",
+      "kind": "no_target",
+      "title": "Cycle time has no target",
+      "body": "\"Cycle time\" is being reported with no target, so it can be read but not judged. Bharat sets this one: what does a good week look like, in days? Until it is set this metric cannot appear on the scoreboard."
+    },
+    {
+      "dept": "sloosh",
+      "owner": "Bharat",
+      "ownerTeam": [
+        "Bharat",
+        "Manish",
+        "Priyal"
+      ],
+      "raisedBy": "engine",
+      "raisedAt": "2026-10-26T15:49:48.291Z",
+      "resolvedAt": null,
+      "metricIds": [
+        "sloosh_followers_instagram"
+      ],
+      "id": "no_target:sloosh_followers_instagram",
+      "kind": "no_target",
+      "title": "Instagram has no target",
+      "body": "\"Instagram\" is being reported with no target, so it can be read but not judged. Bharat sets this one: what does a good week look like, in whole numbers? Until it is set this metric cannot appear on the scoreboard."
+    },
+    {
+      "dept": "sloosh",
+      "owner": "Bharat",
+      "ownerTeam": [
+        "Bharat",
+        "Manish",
+        "Priyal"
+      ],
+      "raisedBy": "engine",
+      "raisedAt": "2026-10-26T15:49:48.291Z",
+      "resolvedAt": null,
+      "metricIds": [
+        "sloosh_followers_linkedin"
+      ],
+      "id": "no_target:sloosh_followers_linkedin",
+      "kind": "no_target",
+      "title": "LinkedIn has no target",
+      "body": "\"LinkedIn\" is being reported with no target, so it can be read but not judged. Bharat sets this one: what does a good week look like, in whole numbers? Until it is set this metric cannot appear on the scoreboard."
+    },
+    {
+      "dept": "sloosh",
+      "owner": "Bharat",
+      "ownerTeam": [
+        "Bharat",
+        "Manish",
+        "Priyal"
+      ],
+      "raisedBy": "engine",
+      "raisedAt": "2026-10-26T15:49:48.291Z",
+      "resolvedAt": null,
+      "metricIds": [
+        "sloosh_followers_x"
+      ],
+      "id": "no_target:sloosh_followers_x",
+      "kind": "no_target",
+      "title": "X has no target",
+      "body": "\"X\" is being reported with no target, so it can be read but not judged. Bharat sets this one: what does a good week look like, in whole numbers? Until it is set this metric cannot appear on the scoreboard."
+    },
+    {
+      "dept": "sloosh",
+      "owner": "Bharat",
+      "ownerTeam": [
+        "Bharat",
+        "Manish",
+        "Priyal"
+      ],
+      "raisedBy": "engine",
+      "raisedAt": "2026-10-26T15:49:48.291Z",
+      "resolvedAt": null,
+      "metricIds": [
+        "sloosh_followers_youtube"
+      ],
+      "id": "no_target:sloosh_followers_youtube",
+      "kind": "no_target",
+      "title": "YouTube has no target",
+      "body": "\"YouTube\" is being reported with no target, so it can be read but not judged. Bharat sets this one: what does a good week look like, in whole numbers? Until it is set this metric cannot appear on the scoreboard."
+    },
+    {
+      "dept": "sloosh",
+      "owner": "Bharat",
+      "ownerTeam": [
+        "Bharat",
+        "Manish",
+        "Priyal"
+      ],
+      "raisedBy": "engine",
+      "raisedAt": "2026-10-26T15:49:48.291Z",
+      "resolvedAt": null,
+      "metricIds": [
+        "sloosh_in_progress"
+      ],
+      "id": "no_target:sloosh_in_progress",
+      "kind": "no_target",
+      "title": "In progress has no target",
+      "body": "\"In progress\" is being reported with no target, so it can be read but not judged. Bharat sets this one: what does a good week look like, in whole numbers? Until it is set this metric cannot appear on the scoreboard."
+    },
+    {
+      "dept": "sloosh",
+      "owner": "Bharat",
+      "ownerTeam": [
+        "Bharat",
+        "Manish",
+        "Priyal"
+      ],
+      "raisedBy": "engine",
+      "raisedAt": "2026-10-26T15:49:48.291Z",
+      "resolvedAt": null,
+      "metricIds": [
+        "sloosh_paid"
+      ],
+      "id": "no_target:sloosh_paid",
+      "kind": "no_target",
+      "title": "Converted to paid has no target",
+      "body": "\"Converted to paid\" is being reported with no target, so it can be read but not judged. Bharat sets this one: what does a good week look like, in whole numbers? Until it is set this metric cannot appear on the scoreboard."
+    },
+    {
+      "dept": "sloosh",
+      "owner": "Bharat",
+      "ownerTeam": [
+        "Bharat",
+        "Manish",
+        "Priyal"
+      ],
+      "raisedBy": "engine",
+      "raisedAt": "2026-10-26T15:49:48.291Z",
+      "resolvedAt": null,
+      "metricIds": [
+        "sloosh_releases"
+      ],
+      "id": "no_target:sloosh_releases",
+      "kind": "no_target",
+      "title": "Releases has no target",
+      "body": "\"Releases\" is being reported with no target, so it can be read but not judged. Bharat sets this one: what does a good week look like, in whole numbers? Until it is set this metric cannot appear on the scoreboard."
+    },
+    {
+      "dept": "sloosh",
+      "owner": "Bharat",
+      "ownerTeam": [
+        "Bharat",
+        "Manish",
+        "Priyal"
+      ],
+      "raisedBy": "engine",
+      "raisedAt": "2026-10-26T15:49:48.291Z",
+      "resolvedAt": null,
+      "metricIds": [
+        "sloosh_returned"
+      ],
+      "id": "no_target:sloosh_returned",
+      "kind": "no_target",
+      "title": "Came back has no target",
+      "body": "\"Came back\" is being reported with no target, so it can be read but not judged. Bharat sets this one: what does a good week look like, in whole numbers? Until it is set this metric cannot appear on the scoreboard."
+    },
+    {
+      "dept": "sloosh",
+      "owner": "Bharat",
+      "ownerTeam": [
+        "Bharat",
+        "Manish",
+        "Priyal"
+      ],
+      "raisedBy": "engine",
+      "raisedAt": "2026-10-26T15:49:48.291Z",
+      "resolvedAt": null,
+      "metricIds": [
+        "sloosh_revenue"
+      ],
+      "id": "no_target:sloosh_revenue",
+      "kind": "no_target",
+      "title": "Revenue has no target",
+      "body": "\"Revenue\" is being reported with no target, so it can be read but not judged. Bharat sets this one: what does a good week look like, in rupees? Until it is set this metric cannot appear on the scoreboard."
+    },
+    {
+      "dept": "sloosh",
+      "owner": "Bharat",
+      "ownerTeam": [
+        "Bharat",
+        "Manish",
+        "Priyal"
+      ],
+      "raisedBy": "engine",
+      "raisedAt": "2026-10-26T15:49:48.291Z",
+      "resolvedAt": null,
+      "metricIds": [
+        "sloosh_shipped"
+      ],
+      "id": "no_target:sloosh_shipped",
+      "kind": "no_target",
+      "title": "Shipped has no target",
+      "body": "\"Shipped\" is being reported with no target, so it can be read but not judged. Bharat sets this one: what does a good week look like, in whole numbers? Until it is set this metric cannot appear on the scoreboard."
+    },
+    {
+      "dept": "sloosh",
+      "owner": "Bharat",
+      "ownerTeam": [
+        "Bharat",
+        "Manish",
+        "Priyal"
+      ],
+      "raisedBy": "engine",
+      "raisedAt": "2026-10-26T15:49:48.291Z",
+      "resolvedAt": null,
+      "metricIds": [
+        "sloosh_signups"
+      ],
+      "id": "no_target:sloosh_signups",
+      "kind": "no_target",
+      "title": "Signups has no target",
+      "body": "\"Signups\" is being reported with no target, so it can be read but not judged. Bharat sets this one: what does a good week look like, in whole numbers? Until it is set this metric cannot appear on the scoreboard."
+    },
+    {
+      "dept": "sloosh",
+      "owner": "Bharat",
+      "ownerTeam": [
+        "Bharat",
+        "Manish",
+        "Priyal"
+      ],
+      "raisedBy": "engine",
+      "raisedAt": "2026-10-26T15:49:48.291Z",
+      "resolvedAt": null,
+      "metricIds": [
+        "sloosh_wau"
+      ],
+      "id": "no_target:sloosh_wau",
+      "kind": "no_target",
+      "title": "Weekly active has no target",
+      "body": "\"Weekly active\" is being reported with no target, so it can be read but not judged. Bharat sets this one: what does a good week look like, in whole numbers? Until it is set this metric cannot appear on the scoreboard."
+    },
+    {
+      "dept": "sloosh",
+      "owner": "Bharat",
+      "ownerTeam": [
+        "Bharat",
+        "Manish",
+        "Priyal"
+      ],
+      "raisedBy": "engine",
+      "raisedAt": "2026-10-26T15:49:48.291Z",
+      "resolvedAt": null,
+      "metricIds": [
+        "sloosh_web_landed"
+      ],
+      "id": "no_target:sloosh_web_landed",
+      "kind": "no_target",
+      "title": "Landed has no target",
+      "body": "\"Landed\" is being reported with no target, so it can be read but not judged. Bharat sets this one: what does a good week look like, in whole numbers? Until it is set this metric cannot appear on the scoreboard."
+    },
+    {
+      "dept": "sloosh",
+      "owner": "Bharat",
+      "ownerTeam": [
+        "Bharat",
+        "Manish",
+        "Priyal"
+      ],
+      "raisedBy": "engine",
+      "raisedAt": "2026-10-26T15:49:48.291Z",
+      "resolvedAt": null,
+      "metricIds": [
+        "sloosh_web_paid"
+      ],
+      "id": "no_target:sloosh_web_paid",
+      "kind": "no_target",
+      "title": "Paid has no target",
+      "body": "\"Paid\" is being reported with no target, so it can be read but not judged. Bharat sets this one: what does a good week look like, in whole numbers? Until it is set this metric cannot appear on the scoreboard."
+    },
+    {
+      "dept": "sloosh",
+      "owner": "Bharat",
+      "ownerTeam": [
+        "Bharat",
+        "Manish",
+        "Priyal"
+      ],
+      "raisedBy": "engine",
+      "raisedAt": "2026-10-26T15:49:48.291Z",
+      "resolvedAt": null,
+      "metricIds": [
+        "sloosh_web_signup"
+      ],
+      "id": "no_target:sloosh_web_signup",
+      "kind": "no_target",
+      "title": "Signed up has no target",
+      "body": "\"Signed up\" is being reported with no target, so it can be read but not judged. Bharat sets this one: what does a good week look like, in whole numbers? Until it is set this metric cannot appear on the scoreboard."
+    },
+    {
+      "dept": "sloosh",
+      "owner": "Bharat, Manish and Priyal",
+      "ownerTeam": [
+        "Bharat",
+        "Manish",
+        "Priyal"
+      ],
+      "raisedBy": "engine",
+      "raisedAt": "2026-10-26T15:49:48.291Z",
+      "resolvedAt": null,
+      "metricIds": [
+        "sloosh_activated"
+      ],
+      "id": "no_owner:sloosh_activated",
+      "kind": "no_owner",
+      "title": "Activated has no single accountable owner",
+      "body": "Bharat, Manish and Priyal own Sloosh Product & Marketing between them, and nobody has been named on \"Activated\". A flag addressed to 3 people is addressed to nobody - each assumes one of the others has it. One of you takes this metric: set \"owner\" on sloosh_activated in catalog.json. Until then it falls to Bharat."
+    },
+    {
+      "dept": "sloosh",
+      "owner": "Bharat, Manish and Priyal",
+      "ownerTeam": [
+        "Bharat",
+        "Manish",
+        "Priyal"
+      ],
+      "raisedBy": "engine",
+      "raisedAt": "2026-10-26T15:49:48.291Z",
+      "resolvedAt": null,
+      "metricIds": [
+        "sloosh_cycle_time"
+      ],
+      "id": "no_owner:sloosh_cycle_time",
+      "kind": "no_owner",
+      "title": "Cycle time has no single accountable owner",
+      "body": "Bharat, Manish and Priyal own Sloosh Product & Marketing between them, and nobody has been named on \"Cycle time\". A flag addressed to 3 people is addressed to nobody - each assumes one of the others has it. One of you takes this metric: set \"owner\" on sloosh_cycle_time in catalog.json. Until then it falls to Bharat."
+    },
+    {
+      "dept": "sloosh",
+      "owner": "Bharat, Manish and Priyal",
+      "ownerTeam": [
+        "Bharat",
+        "Manish",
+        "Priyal"
+      ],
+      "raisedBy": "engine",
+      "raisedAt": "2026-10-26T15:49:48.291Z",
+      "resolvedAt": null,
+      "metricIds": [
+        "sloosh_followers_instagram"
+      ],
+      "id": "no_owner:sloosh_followers_instagram",
+      "kind": "no_owner",
+      "title": "Instagram has no single accountable owner",
+      "body": "Bharat, Manish and Priyal own Sloosh Product & Marketing between them, and nobody has been named on \"Instagram\". A flag addressed to 3 people is addressed to nobody - each assumes one of the others has it. One of you takes this metric: set \"owner\" on sloosh_followers_instagram in catalog.json. Until then it falls to Bharat."
+    },
+    {
+      "dept": "sloosh",
+      "owner": "Bharat, Manish and Priyal",
+      "ownerTeam": [
+        "Bharat",
+        "Manish",
+        "Priyal"
+      ],
+      "raisedBy": "engine",
+      "raisedAt": "2026-10-26T15:49:48.291Z",
+      "resolvedAt": null,
+      "metricIds": [
+        "sloosh_followers_linkedin"
+      ],
+      "id": "no_owner:sloosh_followers_linkedin",
+      "kind": "no_owner",
+      "title": "LinkedIn has no single accountable owner",
+      "body": "Bharat, Manish and Priyal own Sloosh Product & Marketing between them, and nobody has been named on \"LinkedIn\". A flag addressed to 3 people is addressed to nobody - each assumes one of the others has it. One of you takes this metric: set \"owner\" on sloosh_followers_linkedin in catalog.json. Until then it falls to Bharat."
+    },
+    {
+      "dept": "sloosh",
+      "owner": "Bharat, Manish and Priyal",
+      "ownerTeam": [
+        "Bharat",
+        "Manish",
+        "Priyal"
+      ],
+      "raisedBy": "engine",
+      "raisedAt": "2026-10-26T15:49:48.291Z",
+      "resolvedAt": null,
+      "metricIds": [
+        "sloosh_followers_x"
+      ],
+      "id": "no_owner:sloosh_followers_x",
+      "kind": "no_owner",
+      "title": "X has no single accountable owner",
+      "body": "Bharat, Manish and Priyal own Sloosh Product & Marketing between them, and nobody has been named on \"X\". A flag addressed to 3 people is addressed to nobody - each assumes one of the others has it. One of you takes this metric: set \"owner\" on sloosh_followers_x in catalog.json. Until then it falls to Bharat."
+    },
+    {
+      "dept": "sloosh",
+      "owner": "Bharat, Manish and Priyal",
+      "ownerTeam": [
+        "Bharat",
+        "Manish",
+        "Priyal"
+      ],
+      "raisedBy": "engine",
+      "raisedAt": "2026-10-26T15:49:48.291Z",
+      "resolvedAt": null,
+      "metricIds": [
+        "sloosh_followers_youtube"
+      ],
+      "id": "no_owner:sloosh_followers_youtube",
+      "kind": "no_owner",
+      "title": "YouTube has no single accountable owner",
+      "body": "Bharat, Manish and Priyal own Sloosh Product & Marketing between them, and nobody has been named on \"YouTube\". A flag addressed to 3 people is addressed to nobody - each assumes one of the others has it. One of you takes this metric: set \"owner\" on sloosh_followers_youtube in catalog.json. Until then it falls to Bharat."
+    },
+    {
+      "dept": "sloosh",
+      "owner": "Bharat, Manish and Priyal",
+      "ownerTeam": [
+        "Bharat",
+        "Manish",
+        "Priyal"
+      ],
+      "raisedBy": "engine",
+      "raisedAt": "2026-10-26T15:49:48.291Z",
+      "resolvedAt": null,
+      "metricIds": [
+        "sloosh_in_progress"
+      ],
+      "id": "no_owner:sloosh_in_progress",
+      "kind": "no_owner",
+      "title": "In progress has no single accountable owner",
+      "body": "Bharat, Manish and Priyal own Sloosh Product & Marketing between them, and nobody has been named on \"In progress\". A flag addressed to 3 people is addressed to nobody - each assumes one of the others has it. One of you takes this metric: set \"owner\" on sloosh_in_progress in catalog.json. Until then it falls to Bharat."
+    },
+    {
+      "dept": "sloosh",
+      "owner": "Bharat, Manish and Priyal",
+      "ownerTeam": [
+        "Bharat",
+        "Manish",
+        "Priyal"
+      ],
+      "raisedBy": "engine",
+      "raisedAt": "2026-10-26T15:49:48.291Z",
+      "resolvedAt": null,
+      "metricIds": [
+        "sloosh_paid"
+      ],
+      "id": "no_owner:sloosh_paid",
+      "kind": "no_owner",
+      "title": "Converted to paid has no single accountable owner",
+      "body": "Bharat, Manish and Priyal own Sloosh Product & Marketing between them, and nobody has been named on \"Converted to paid\". A flag addressed to 3 people is addressed to nobody - each assumes one of the others has it. One of you takes this metric: set \"owner\" on sloosh_paid in catalog.json. Until then it falls to Bharat."
+    },
+    {
+      "dept": "sloosh",
+      "owner": "Bharat, Manish and Priyal",
+      "ownerTeam": [
+        "Bharat",
+        "Manish",
+        "Priyal"
+      ],
+      "raisedBy": "engine",
+      "raisedAt": "2026-10-26T15:49:48.291Z",
+      "resolvedAt": null,
+      "metricIds": [
+        "sloosh_releases"
+      ],
+      "id": "no_owner:sloosh_releases",
+      "kind": "no_owner",
+      "title": "Releases has no single accountable owner",
+      "body": "Bharat, Manish and Priyal own Sloosh Product & Marketing between them, and nobody has been named on \"Releases\". A flag addressed to 3 people is addressed to nobody - each assumes one of the others has it. One of you takes this metric: set \"owner\" on sloosh_releases in catalog.json. Until then it falls to Bharat."
+    },
+    {
+      "dept": "sloosh",
+      "owner": "Bharat, Manish and Priyal",
+      "ownerTeam": [
+        "Bharat",
+        "Manish",
+        "Priyal"
+      ],
+      "raisedBy": "engine",
+      "raisedAt": "2026-10-26T15:49:48.291Z",
+      "resolvedAt": null,
+      "metricIds": [
+        "sloosh_returned"
+      ],
+      "id": "no_owner:sloosh_returned",
+      "kind": "no_owner",
+      "title": "Came back has no single accountable owner",
+      "body": "Bharat, Manish and Priyal own Sloosh Product & Marketing between them, and nobody has been named on \"Came back\". A flag addressed to 3 people is addressed to nobody - each assumes one of the others has it. One of you takes this metric: set \"owner\" on sloosh_returned in catalog.json. Until then it falls to Bharat."
+    },
+    {
+      "dept": "sloosh",
+      "owner": "Bharat, Manish and Priyal",
+      "ownerTeam": [
+        "Bharat",
+        "Manish",
+        "Priyal"
+      ],
+      "raisedBy": "engine",
+      "raisedAt": "2026-10-26T15:49:48.291Z",
+      "resolvedAt": null,
+      "metricIds": [
+        "sloosh_revenue"
+      ],
+      "id": "no_owner:sloosh_revenue",
+      "kind": "no_owner",
+      "title": "Revenue has no single accountable owner",
+      "body": "Bharat, Manish and Priyal own Sloosh Product & Marketing between them, and nobody has been named on \"Revenue\". A flag addressed to 3 people is addressed to nobody - each assumes one of the others has it. One of you takes this metric: set \"owner\" on sloosh_revenue in catalog.json. Until then it falls to Bharat."
+    },
+    {
+      "dept": "sloosh",
+      "owner": "Bharat, Manish and Priyal",
+      "ownerTeam": [
+        "Bharat",
+        "Manish",
+        "Priyal"
+      ],
+      "raisedBy": "engine",
+      "raisedAt": "2026-10-26T15:49:48.291Z",
+      "resolvedAt": null,
+      "metricIds": [
+        "sloosh_shipped"
+      ],
+      "id": "no_owner:sloosh_shipped",
+      "kind": "no_owner",
+      "title": "Shipped has no single accountable owner",
+      "body": "Bharat, Manish and Priyal own Sloosh Product & Marketing between them, and nobody has been named on \"Shipped\". A flag addressed to 3 people is addressed to nobody - each assumes one of the others has it. One of you takes this metric: set \"owner\" on sloosh_shipped in catalog.json. Until then it falls to Bharat."
+    },
+    {
+      "dept": "sloosh",
+      "owner": "Bharat, Manish and Priyal",
+      "ownerTeam": [
+        "Bharat",
+        "Manish",
+        "Priyal"
+      ],
+      "raisedBy": "engine",
+      "raisedAt": "2026-10-26T15:49:48.291Z",
+      "resolvedAt": null,
+      "metricIds": [
+        "sloosh_signups"
+      ],
+      "id": "no_owner:sloosh_signups",
+      "kind": "no_owner",
+      "title": "Signups has no single accountable owner",
+      "body": "Bharat, Manish and Priyal own Sloosh Product & Marketing between them, and nobody has been named on \"Signups\". A flag addressed to 3 people is addressed to nobody - each assumes one of the others has it. One of you takes this metric: set \"owner\" on sloosh_signups in catalog.json. Until then it falls to Bharat."
+    },
+    {
+      "dept": "sloosh",
+      "owner": "Bharat, Manish and Priyal",
+      "ownerTeam": [
+        "Bharat",
+        "Manish",
+        "Priyal"
+      ],
+      "raisedBy": "engine",
+      "raisedAt": "2026-10-26T15:49:48.291Z",
+      "resolvedAt": null,
+      "metricIds": [
+        "sloosh_wau"
+      ],
+      "id": "no_owner:sloosh_wau",
+      "kind": "no_owner",
+      "title": "Weekly active has no single accountable owner",
+      "body": "Bharat, Manish and Priyal own Sloosh Product & Marketing between them, and nobody has been named on \"Weekly active\". A flag addressed to 3 people is addressed to nobody - each assumes one of the others has it. One of you takes this metric: set \"owner\" on sloosh_wau in catalog.json. Until then it falls to Bharat."
+    },
+    {
+      "dept": "sloosh",
+      "owner": "Bharat, Manish and Priyal",
+      "ownerTeam": [
+        "Bharat",
+        "Manish",
+        "Priyal"
+      ],
+      "raisedBy": "engine",
+      "raisedAt": "2026-10-26T15:49:48.291Z",
+      "resolvedAt": null,
+      "metricIds": [
+        "sloosh_web_landed"
+      ],
+      "id": "no_owner:sloosh_web_landed",
+      "kind": "no_owner",
+      "title": "Landed has no single accountable owner",
+      "body": "Bharat, Manish and Priyal own Sloosh Product & Marketing between them, and nobody has been named on \"Landed\". A flag addressed to 3 people is addressed to nobody - each assumes one of the others has it. One of you takes this metric: set \"owner\" on sloosh_web_landed in catalog.json. Until then it falls to Bharat."
+    },
+    {
+      "dept": "sloosh",
+      "owner": "Bharat, Manish and Priyal",
+      "ownerTeam": [
+        "Bharat",
+        "Manish",
+        "Priyal"
+      ],
+      "raisedBy": "engine",
+      "raisedAt": "2026-10-26T15:49:48.291Z",
+      "resolvedAt": null,
+      "metricIds": [
+        "sloosh_web_paid"
+      ],
+      "id": "no_owner:sloosh_web_paid",
+      "kind": "no_owner",
+      "title": "Paid has no single accountable owner",
+      "body": "Bharat, Manish and Priyal own Sloosh Product & Marketing between them, and nobody has been named on \"Paid\". A flag addressed to 3 people is addressed to nobody - each assumes one of the others has it. One of you takes this metric: set \"owner\" on sloosh_web_paid in catalog.json. Until then it falls to Bharat."
+    },
+    {
+      "dept": "sloosh",
+      "owner": "Bharat, Manish and Priyal",
+      "ownerTeam": [
+        "Bharat",
+        "Manish",
+        "Priyal"
+      ],
+      "raisedBy": "engine",
+      "raisedAt": "2026-10-26T15:49:48.291Z",
+      "resolvedAt": null,
+      "metricIds": [
+        "sloosh_web_signup"
+      ],
+      "id": "no_owner:sloosh_web_signup",
+      "kind": "no_owner",
+      "title": "Signed up has no single accountable owner",
+      "body": "Bharat, Manish and Priyal own Sloosh Product & Marketing between them, and nobody has been named on \"Signed up\". A flag addressed to 3 people is addressed to nobody - each assumes one of the others has it. One of you takes this metric: set \"owner\" on sloosh_web_signup in catalog.json. Until then it falls to Bharat."
+    }
+  ],
+  "meetingId": "sloosh"
+}
