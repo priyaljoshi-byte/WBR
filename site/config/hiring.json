@@ -1,0 +1,85 @@
+{
+  "_about": "The role-wise hiring funnel. Read live from the hiring tracker sheet (source hiring_tracker) in the browser - the sheet id comes from the database, never from this file, because this file ships to the public site and the sheet holds candidates' phone numbers, emails and salaries. The page shows name, role and stage only.",
+
+  "tabs": {
+    "_note": "Tab ids (the #gid= in a tab's link). 'Roles of Omer - Please don't access' is deliberately absent and blocked in app/sheets.js.",
+    "roles": { "gid": "1136730156", "name": "Open Roles-Oct-Dec" },
+    "candidates": [
+      { "gid": "858370016", "name": "Satwik Roles", "recruiter": "Satwik" },
+      { "gid": "597167561", "name": "Rishi Roles", "recruiter": "Rishi" }
+    ],
+    "offers": { "gid": "1492061019", "name": "Offers & Joiners" }
+  },
+
+  "stages": [
+    { "id": "pipeline",   "label": "In pipeline" },
+    { "id": "ta",         "label": "TA screen" },
+    { "id": "r1",         "label": "Round 1" },
+    { "id": "assignment", "label": "Assignment" },
+    { "id": "r2",         "label": "Round 2" },
+    { "id": "founder",    "label": "Founder round" },
+    { "id": "offer",      "label": "Offer accepted" },
+    { "id": "joined",     "label": "Joined" }
+  ],
+
+  "_stage_words_note": "What each 'Current Stage' value means: the furthest stage it proves, and whether the person is still moving. status is one of active, dropped (rejected / withdrawn / backed out), hold, parked. Matching ignores case and punctuation. A value not listed here counts as 'In pipeline' and is listed under 'Stage words Pulse did not recognise' on the page, so a new word is visible rather than silently mis-filed.",
+  "stage_words": {
+    "linkedin reach out pending": { "stage": "pipeline", "status": "active" },
+    "ta explore call":           { "stage": "ta",         "status": "active" },
+    "screening reject":          { "stage": "ta",         "status": "dropped" },
+    "r1 interview":              { "stage": "r1",         "status": "active" },
+    "r1":                        { "stage": "r1",         "status": "active" },
+    "r1 reject":                 { "stage": "r1",         "status": "dropped" },
+    "assignent tbs":             { "stage": "assignment", "status": "active" },
+    "assignment tbs":            { "stage": "assignment", "status": "active" },
+    "assignment":                { "stage": "assignment", "status": "active" },
+    "assignment in review":      { "stage": "assignment", "status": "active" },
+    "assignment reject":         { "stage": "assignment", "status": "dropped" },
+    "r2":                        { "stage": "r2",         "status": "active" },
+    "r2 reject":                 { "stage": "r2",         "status": "dropped" },
+    "founders round":            { "stage": "founder",    "status": "active" },
+    "founder round":             { "stage": "founder",    "status": "active" },
+    "offered accepted":          { "stage": "offer",      "status": "active" },
+    "offer accepted":            { "stage": "offer",      "status": "active" },
+    "documents yet to be received": { "stage": "offer",   "status": "active" },
+    "joined":                    { "stage": "joined",     "status": "active" },
+    "rejected":                  { "stage": null,         "status": "dropped" },
+    "withdrawn":                 { "stage": null,         "status": "dropped" },
+    "backed out":                { "stage": null,         "status": "dropped" },
+    "hold":                      { "stage": null,         "status": "hold" },
+    "on hold":                   { "stage": null,         "status": "hold" },
+    "parked for future":         { "stage": null,         "status": "parked" }
+  },
+
+  "_evidence_note": "A stage word like 'Rejected' or 'Hold' does not say how far someone got. These columns do: a filled cell proves the candidate reached that stage. 'NA' and 'Pending' prove nothing.",
+  "evidence_columns": {
+    "Screening by TA": "ta",
+    "Round 1": "r1",
+    "Assignment Link (if applicable)": "assignment",
+    "Assignment Link\n(if applicable)": "assignment",
+    "Assignment Feedback": "assignment",
+    "Round 2": "r2",
+    "Round 3": "founder",
+    "Founder Round Status": "founder"
+  },
+
+  "_ring_note": "Pipeline health: active candidates at or past healthy_from_stage, against healthy_per_opening for each opening in the role's headcount. A role hiring 2 with a target of 3 per opening needs 6 live candidates at Round 1 or later for a full ring.",
+  "healthy_from_stage": "r1",
+  "healthy_per_opening": 3,
+
+  "_role_aliases_note": "Candidate tabs and the open-roles tab spell roles differently. Each key is the role as it appears on Open Roles-Oct-Dec; each value lists other spellings that mean the same role. Matching ignores case, punctuation and a trailing 's'. A candidate whose role matches nothing is listed under 'Candidates for roles not on the open list'.",
+  "role_aliases": {
+    "Creative Strategist socials": ["Creative Strategist (Socials)"],
+    "Creative Strategist performance": ["Creative Strategist (Perf)", "Creative Strategist perf"],
+    "Customer Success Manager": ["CSM", "CSM (India)", "CSM BLR"],
+    "Senior Account Executive": ["Account Executive", "Senior AE's BLR", "AE"],
+    "Sales Development Representative (US)": ["SDR (US)", "US SDR", "SDR US"],
+    "Human Resource Business Partner": ["HRBP"],
+    "Engineering QA": ["QA Engineer", "Engg QA"],
+    "Workflow Engineers": ["AI Workflow Engineer", "Workflow Engineer"],
+    "India Head Sales": ["India Head of Sales"],
+    "Video Editor": ["Video Editors"],
+    "Director - CS / DeliveryFounder": ["Director - CSM and Delivery", "Director - CS / Delivery"],
+    "Delivery Managers for Catalog": ["Delivery Manager"]
+  }
+}

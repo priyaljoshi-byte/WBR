@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Hiring funnel - Pulse</title>
+<meta name="description" content="Every open role, its pipeline health, and the waterfall from first call to joining.">
+<link rel="stylesheet" href="./theme.css">
+</head>
+<body>
+<div id="navmount"></div>
+<div class="wrap">
+  <div id="bannermount"></div>
+  <header class="mast">
+    <div>
+      <h1>Hiring funnel <span>- role by role</span></h1>
+      <p>Read live from the hiring tracker each time this page opens. The ring is <b>pipeline
+      health</b>: live candidates at Round 1 or later against what each opening needs. Click a role
+      to see its waterfall - how many reached each stage, and where people stopped.</p>
+    </div>
+    <div class="btnrow"><span class="hint" id="readat"></span>
+      <button class="btn btn-sm" type="button" id="refresh">Read the sheet again</button></div>
+  </header>
+  <main id="main"></main>
+  <footer>
+    <b>Names, roles and stages only.</b> The tracker also holds phone numbers, emails and pay;
+    this page never shows them. Stage words and role spellings are matched in
+    <code>config/hiring.json</code> - anything it does not recognise is listed at the bottom, not hidden.
+  </footer>
+</div>
+<script type="module" src="./hiring.js"></script>
+</body>
+</html>

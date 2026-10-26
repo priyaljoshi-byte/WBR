@@ -26,6 +26,7 @@ const PAGES = [
   { id: 'index', href: 'index.html', label: 'Setup' },
   { id: 'sources', href: 'sources.html', label: 'Sources' },
   { id: 'metrics', href: 'metrics.html', label: 'Metrics' },
+  { id: 'hiring', href: 'hiring.html', label: 'Hiring funnel' },
   { id: 'targets', href: 'targets.html', label: 'Targets' },
   { id: 'rag', href: 'rag.html', label: 'Brand status' },
   { id: 'transcripts', href: 'transcripts.html', label: 'Add a meeting' }
