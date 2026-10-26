@@ -1,0 +1,91 @@
+{
+  "_about": "The four weekly reviews, as the founder set them. Pulse runs once per meeting, against that meeting's lines only - so each room gets data cut to what it is there to decide, and nobody sits through three other teams' numbers.",
+
+  "_the_structural_point": "Performance Marketing does NOT get its own meeting. Perf India rides with India Sales on Tuesday; Perf US rides with US Sales on Wednesday. So a meeting's membership is a department AND a segment, not a department. That is why perf metrics carry a segment: the segment is what decides which room a number appears in. A department-only model would have put the whole of Perf Marketing in both meetings, and each room would have been reading half a number it could not act on.",
+
+  "meetings": [
+    {
+      "id": "hiring",
+      "name": "Hiring",
+      "day": "monday",
+      "time": null,
+      "members": [
+        { "dept": "hiring" }
+      ],
+      "sections": ["scoreboard", "lines", "blockers"],
+      "chair": null,
+      "_note": "No decisions section. Hiring decisions are headcount-and-capital tradeoffs that get made where the money is, not here. A hiring decision raised on Monday carries to whichever charter owns the budget."
+    },
+    {
+      "id": "india_charter",
+      "name": "India & Perf India Charter",
+      "day": "tuesday",
+      "time": null,
+      "members": [
+        { "dept": "india_sales" },
+        { "dept": "perf_marketing", "segment": "india" }
+      ],
+      "sections": ["scoreboard", "lines", "rag", "blockers", "decisions"],
+      "chair": null,
+      "_note": "Spend and the pipeline it feeds, read in one room. Perf India's CPL and the India pipeline sourced from paid are the same argument seen from two ends - splitting them across two meetings is what makes that argument impossible to have."
+    },
+    {
+      "id": "us_charter",
+      "name": "US & Perf US Charter",
+      "day": "wednesday",
+      "time": null,
+      "members": [
+        { "dept": "us_sales" },
+        { "dept": "perf_marketing", "segment": "us" }
+      ],
+      "sections": ["scoreboard", "lines", "rag", "blockers", "decisions"],
+      "chair": null,
+      "_note": "Same shape as Tuesday, in dollars."
+    },
+    {
+      "id": "sloosh",
+      "name": "Sloosh Product & Marketing",
+      "day": "thursday",
+      "time": null,
+      "members": [
+        { "dept": "sloosh" }
+      ],
+      "sections": ["scoreboard", "lines", "rag", "blockers", "decisions"],
+      "chair": null,
+      "_note": "Funnel, shipping and social. Weekly product numbers are noisy - a 4-week trailing view may read truer here than a week-on-week delta."
+    }
+  ],
+
+  "_no_overview_meeting": {
+    "_about": "There is no fifth leadership meeting. That is a deliberate consequence of the four above, and it creates one gap worth naming.",
+    "_the_gap": "Nobody is in all four rooms. India and US never meet. Hiring never meets the charters that are asking for the headcount. Sloosh sits alone on Thursday. So a dependency between two of these lines has NO room where both parties are present - which is precisely the 'left chasing things on their own' problem the founder named.",
+    "_how_pulse_covers_it": "Cross-meeting blockers are surfaced in BOTH rooms rather than waiting for a meeting that does not exist. See cross_meeting below. If that proves not to be enough, the answer is a short monthly all-four, not a longer weekly one."
+  },
+
+  "cross_meeting": {
+    "surface_in_both_rooms": true,
+    "escalate_immediately": true,
+    "_why_immediately": "Age is the wrong test when the two parties were never in the same room. A blocker whose raisedBy and needsFrom sit in different meetings is escalated on its FIRST appearance, not after two weeks of being raised to people who cannot act on it. Two weeks of a US Sales blocker being raised at the US charter, where Sloosh is not present, is two weeks of nothing happening and everybody feeling diligent.",
+    "notify_owner_of": "needsFrom",
+    "carry_to_next_meeting_of": "needsFrom",
+    "_carry": "A blocker needing something from Sloosh appears on Thursday's dashboard too, flagged as raised elsewhere, so the team that can unblock it sees it in their own room without anyone forwarding an email."
+  },
+
+  "escalate_blocker_after_weeks": 2,
+
+  "_north_star": {
+    "_about": "Quarterly, per the founder. NOT a weekly section - it appears only on the last review of a quarter, and on request.",
+    "cadence": "quarterly",
+    "shows": "target vs actual vs difference per revenue line, the way the existing WBR table does it, with the gap shown explicitly and coloured when negative",
+    "_why_not_weekly": "The North Star is monthly revenue against a quarterly plan. Putting it on a weekly dashboard invites reading noise as signal: a slow week in a month that lands fine looks like a miss, and four such readings train the room to discount it. Quarterly keeps it the thing it is - a scoreboard for the plan, not for the week.",
+    "_worth_knowing": "In Q3 every North Star line finished under target, and US widened each month: -$48,397 in July, -$74,981 in August, -$84,344 in September. A quarterly cadence is the right call for the metric, but a gap widening three months running is the kind of thing a quarterly review finds late. Consider a single monthly line on the charter dashboards - pace against the month, nothing more - so the trend is visible without the full table."
+  },
+
+  "_runs": {
+    "before_meeting_hours": 14,
+    "timezone": "Asia/Kolkata",
+    "period": "week",
+    "week_starts": "monday",
+    "_note": "Monday's hiring review runs against the week that just ended. Times are unset - add them and the run schedules itself."
+  }
+}

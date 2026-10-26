@@ -1,0 +1,438 @@
+{
+  "_about": "The metric library and the cards built from it. This is the only file that decides what the WBR shows. Adding a metric or a card is an edit here, never a code change.",
+
+  "_status": "STARTER CATALOGUE. The shapes are right, the numbers are not. Every target is null and every source ref is a placeholder, on purpose - see _targets below. Each department head corrects their own section once, and then stops touching it.",
+
+  "_targets": {
+    "require_targets": true,
+    "_why": "The founder asked for accountability against targets. So a metric with no target is not neutral here - it is a metric nobody has committed to. The engine raises a no_target flag for every one of these, naming the department owner. That list shrinking to zero IS the setup process. Set require_targets to false only if you want numbers reported without commitments attached, which defeats the second goal of the meeting."
+  },
+
+  "_segments": {
+    "_why": "Performance Marketing runs India and US. Rather than two departments, a metric carries a segment and a family. Members of a family roll up to a total, so 'what did we spend' has one answer and 'where' has two. Splitting it into two departments would have made the rollup a manual addition somebody gets wrong."
+  },
+
+  "cards": [
+    {
+      "id": "india-pipeline",
+      "title": "India pipeline",
+      "dept": "india_sales",
+      "section": "lines",
+      "order": 1,
+      "subtitle": "{{period.short}} · {{in_pipeline_india.caption}}",
+      "rings": ["india_closed_won", "india_in_poc", "india_proposal"],
+      "tiles": [
+        { "metric": "in_pipeline_india",  "label": "PIPELINE", "sublabel": "OPEN",      "format": "raw" },
+        { "metric": "india_created_wk",   "label": "CREATED",  "sublabel": "THIS WEEK", "format": "raw" },
+        { "metric": "india_win_rate",     "label": "WIN RATE", "sublabel": "TRAILING",  "format": "raw" }
+      ]
+    },
+    {
+      "id": "india-activity",
+      "title": "India activity",
+      "dept": "india_sales",
+      "section": "lines",
+      "order": 2,
+      "subtitle": "Against weekly target",
+      "rings": ["india_meetings_held", "india_opps_created", "india_accounts_worked"],
+      "tiles": []
+    },
+    {
+      "id": "us-pipeline",
+      "title": "US pipeline",
+      "dept": "us_sales",
+      "section": "lines",
+      "order": 3,
+      "subtitle": "{{period.short}} · {{in_pipeline_us.caption}}",
+      "rings": ["us_closed_won", "us_in_poc", "us_proposal"],
+      "tiles": [
+        { "metric": "in_pipeline_us",  "label": "PIPELINE", "sublabel": "OPEN",      "format": "raw" },
+        { "metric": "us_created_wk",   "label": "CREATED",  "sublabel": "THIS WEEK", "format": "raw" },
+        { "metric": "us_win_rate",     "label": "WIN RATE", "sublabel": "TRAILING",  "format": "raw" }
+      ]
+    },
+    {
+      "id": "us-activity",
+      "title": "US activity",
+      "dept": "us_sales",
+      "section": "lines",
+      "order": 4,
+      "subtitle": "Against weekly target",
+      "rings": ["us_meetings_held", "us_opps_created", "us_accounts_worked"],
+      "tiles": []
+    },
+    {
+      "id": "perf-india",
+      "title": "Performance marketing · India",
+      "dept": "perf_marketing",
+      "segment": "india",
+      "section": "lines",
+      "order": 5,
+      "subtitle": "Spend against budget",
+      "rings": ["pm_india_spend", "pm_india_qualified", "pm_india_leads"],
+      "tiles": [
+        { "metric": "pm_india_cpl",             "label": "CPL",      "sublabel": "BLENDED",  "format": "raw" },
+        { "metric": "pm_india_pipeline_sourced","label": "SOURCED",  "sublabel": "PIPELINE", "format": "raw" },
+        { "metric": "pm_india_cac",             "label": "CAC",      "sublabel": "PAID",     "format": "raw" }
+      ]
+    },
+    {
+      "id": "perf-us",
+      "title": "Performance marketing · US",
+      "dept": "perf_marketing",
+      "segment": "us",
+      "section": "lines",
+      "order": 6,
+      "subtitle": "Spend against budget",
+      "rings": ["pm_us_spend", "pm_us_qualified", "pm_us_leads"],
+      "tiles": [
+        { "metric": "pm_us_cpl",              "label": "CPL",     "sublabel": "BLENDED",  "format": "raw" },
+        { "metric": "pm_us_pipeline_sourced", "label": "SOURCED", "sublabel": "PIPELINE", "format": "raw" },
+        { "metric": "pm_us_cac",              "label": "CAC",     "sublabel": "PAID",     "format": "raw" }
+      ]
+    },
+    {
+      "id": "sloosh-funnel",
+      "title": "Sloosh funnel",
+      "dept": "sloosh",
+      "section": "lines",
+      "order": 7,
+      "subtitle": "{{period.range}}",
+      "rings": ["sloosh_activated", "sloosh_returned", "sloosh_paid"],
+      "tiles": [
+        { "metric": "sloosh_signups", "label": "SIGNUPS", "sublabel": "THIS WEEK", "format": "raw" },
+        { "metric": "sloosh_wau",     "label": "WAU",     "sublabel": "ACTIVE",    "format": "raw" },
+        { "metric": "sloosh_revenue", "label": "REVENUE", "sublabel": "THIS WEEK", "format": "raw" }
+      ]
+    },
+    {
+      "id": "sloosh-shipping",
+      "title": "Sloosh shipping",
+      "dept": "sloosh",
+      "section": "lines",
+      "order": 8,
+      "subtitle": "What actually went out",
+      "rings": ["sloosh_shipped", "sloosh_in_progress"],
+      "tiles": [
+        { "metric": "sloosh_releases",   "label": "RELEASES", "sublabel": "THIS WEEK", "format": "raw" },
+        { "metric": "sloosh_cycle_time", "label": "CYCLE",    "sublabel": "MEDIAN",    "format": "raw" }
+      ]
+    },
+    {
+      "id": "sloosh-funnel-web",
+      "title": "Sloosh marketing funnel",
+      "dept": "sloosh",
+      "section": "lines",
+      "order": 9,
+      "subtitle": "{{period.range}} · landed to paid",
+      "_note": "Read outside-in. The outer ring is everyone who landed and is always full - it is the mouth of the funnel. The two inner rings are each a fraction of the step ABOVE them, not of the total, so the gap between the arcs IS the drop-off. A funnel drawn against the total instead would make signup-to-paid look fine whenever landed was large.",
+      "rings": ["sloosh_web_landed", "sloosh_web_signup", "sloosh_web_paid"],
+      "tiles": [
+        { "metric": "sloosh_web_landed", "label": "LANDED",  "sublabel": "THIS WEEK", "format": "raw" },
+        { "metric": "sloosh_web_signup", "label": "SIGNUPS", "sublabel": "THIS WEEK", "format": "raw" },
+        { "metric": "sloosh_web_paid",   "label": "PAID",    "sublabel": "THIS WEEK", "format": "raw" }
+      ]
+    },
+    {
+      "id": "sloosh-social",
+      "title": "Sloosh social",
+      "dept": "sloosh",
+      "section": "lines",
+      "order": 10,
+      "subtitle": "Followers by platform",
+      "_note": "Four platforms, three ring slots. Instagram, LinkedIn and X take the rings because they are where Sloosh posts weekly; YouTube reads as a tile. Each ring is that platform's share of the total audience, which is the only honest arc for a follower count with no target - the alternative was a ring against an invented number. The real total is the sloosh_followers family rollup, not any one ring. CONFIRM which three platforms should hold the rings.",
+      "rings": ["sloosh_followers_instagram", "sloosh_followers_linkedin", "sloosh_followers_x"],
+      "tiles": [
+        { "metric": "sloosh_followers_youtube", "label": "YOUTUBE", "sublabel": "SUBSCRIBERS", "format": "raw" }
+      ]
+    },
+    {
+      "id": "hiring-funnel",
+      "title": "Hiring",
+      "dept": "hiring",
+      "section": "lines",
+      "order": 11,
+      "subtitle": "Against the plan",
+      "rings": ["hiring_joined", "hiring_accepted", "hiring_in_process"],
+      "tiles": [
+        { "metric": "hiring_open_roles",   "label": "OPEN",   "sublabel": "ROLES",     "format": "raw" },
+        { "metric": "hiring_offers_out",   "label": "OFFERS", "sublabel": "OUT",       "format": "raw" },
+        { "metric": "hiring_time_to_close","label": "TTC",    "sublabel": "MEDIAN DAYS","format": "raw" }
+      ]
+    }
+  ],
+
+  "_metric_note": "target is null everywhere on purpose. Each department head sets their own, once. Until then every one of these raises a no_target flag with their name on it.",
+
+  "metrics": [
+    { "id": "in_pipeline_india", "label": "Pipeline open", "dept": "india_sales", "unit": "currency_inr",
+      "source": { "ref": "india_crm", "tab": "Deals", "agg": "sum", "column": "value", "where": { "column": "stage", "in": ["POC", "Proposal", "Negotiation"] } },
+      "denominator": { "kind": "self" }, "direction": "up", "target": null, "warn_at": null, "crit_at": null,
+      "caption": "{{raw}} open" },
+
+    { "id": "india_closed_won", "label": "Closed won", "dept": "india_sales", "unit": "currency_inr",
+      "source": { "ref": "india_crm", "tab": "Deals", "agg": "sum", "column": "value", "where": { "column": "stage", "equals": "Closed Won" } },
+      "denominator": { "kind": "static", "value": null, "label": "target" }, "direction": "up", "target": null, "warn_at": 0.7, "crit_at": 0.4,
+      "caption": "{{raw}} of {{denominator}} {{denominator_label}}" },
+
+    { "id": "india_in_poc", "label": "In POC", "dept": "india_sales", "unit": "currency_inr",
+      "source": { "ref": "india_crm", "tab": "Deals", "agg": "sum", "column": "value", "where": { "column": "stage", "equals": "POC" } },
+      "denominator": { "kind": "metric", "metric": "in_pipeline_india", "label": "open" }, "direction": "up", "target": null, "warn_at": null, "crit_at": null,
+      "caption": "{{raw}} of {{denominator}} {{denominator_label}}" },
+
+    { "id": "india_proposal", "label": "Proposal stage", "dept": "india_sales", "unit": "currency_inr",
+      "source": { "ref": "india_crm", "tab": "Deals", "agg": "sum", "column": "value", "where": { "column": "stage", "equals": "Proposal" } },
+      "denominator": { "kind": "metric", "metric": "in_pipeline_india" }, "direction": "up", "target": null, "warn_at": null, "crit_at": null,
+      "caption": "{{raw}}" },
+
+    { "id": "india_created_wk", "label": "Pipeline created", "dept": "india_sales", "unit": "currency_inr",
+      "_note": "Reads a source whose date_column is created_on, so the connector's period filter already means 'created this week'. Do not reintroduce a {{period.start}} filter here - nothing substitutes it, and the metric silently reads zero.",
+      "source": { "ref": "india_crm_created", "tab": "Deals", "agg": "sum", "column": "value" },
+      "denominator": { "kind": "self" }, "direction": "up", "target": null, "warn_at": 0.7, "crit_at": 0.4,
+      "caption": "{{raw}} created" },
+
+    { "id": "india_win_rate", "label": "Win rate", "dept": "india_sales", "unit": "percent",
+      "source": { "ref": "india_crm", "tab": "Deals", "agg": "avg", "column": "won_flag" },
+      "denominator": { "kind": "self" }, "direction": "up", "target": null, "warn_at": 0.7, "crit_at": 0.4,
+      "caption": "{{raw}}" },
+
+    { "id": "india_meetings_held", "label": "Meetings held", "dept": "india_sales", "unit": "count",
+      "source": { "ref": "india_crm", "tab": "Activity", "agg": "count", "where": { "column": "type", "equals": "meeting_held" } },
+      "denominator": { "kind": "static", "value": null, "label": "target" }, "direction": "up", "target": null, "warn_at": 0.7, "crit_at": 0.4,
+      "caption": "{{raw}} of {{denominator}} {{denominator_label}}" },
+
+    { "id": "india_opps_created", "label": "Opportunities created", "dept": "india_sales", "unit": "count",
+      "source": { "ref": "india_crm", "tab": "Deals", "agg": "count", "where": { "column": "stage", "equals": "Opportunity" } },
+      "denominator": { "kind": "static", "value": null, "label": "target" }, "direction": "up", "target": null, "warn_at": 0.7, "crit_at": 0.4,
+      "caption": "{{raw}} of {{denominator}} {{denominator_label}}" },
+
+    { "id": "india_accounts_worked", "label": "Accounts worked", "dept": "india_sales", "unit": "count",
+      "source": { "ref": "india_crm", "tab": "Activity", "agg": "count_distinct", "column": "account_id" },
+      "denominator": { "kind": "static", "value": null, "label": "target" }, "direction": "up", "target": null, "warn_at": 0.6, "crit_at": 0.3,
+      "caption": "{{raw}} of {{denominator}} {{denominator_label}}" },
+
+    { "id": "in_pipeline_us", "label": "Pipeline open", "dept": "us_sales", "unit": "currency_usd",
+      "source": { "ref": "us_crm", "tab": "Deals", "agg": "sum", "column": "value", "where": { "column": "stage", "in": ["POC", "Proposal", "Negotiation"] } },
+      "denominator": { "kind": "self" }, "direction": "up", "target": null, "warn_at": null, "crit_at": null,
+      "caption": "{{raw}} open" },
+
+    { "id": "us_closed_won", "label": "Closed won", "dept": "us_sales", "unit": "currency_usd",
+      "source": { "ref": "us_crm", "tab": "Deals", "agg": "sum", "column": "value", "where": { "column": "stage", "equals": "Closed Won" } },
+      "denominator": { "kind": "static", "value": null, "label": "target" }, "direction": "up", "target": null, "warn_at": 0.7, "crit_at": 0.4,
+      "caption": "{{raw}} of {{denominator}} {{denominator_label}}" },
+
+    { "id": "us_in_poc", "label": "In POC", "dept": "us_sales", "unit": "currency_usd",
+      "source": { "ref": "us_crm", "tab": "Deals", "agg": "sum", "column": "value", "where": { "column": "stage", "equals": "POC" } },
+      "denominator": { "kind": "metric", "metric": "in_pipeline_us", "label": "open" }, "direction": "up", "target": null, "warn_at": null, "crit_at": null,
+      "caption": "{{raw}} of {{denominator}} {{denominator_label}}" },
+
+    { "id": "us_proposal", "label": "Proposal stage", "dept": "us_sales", "unit": "currency_usd",
+      "source": { "ref": "us_crm", "tab": "Deals", "agg": "sum", "column": "value", "where": { "column": "stage", "equals": "Proposal" } },
+      "denominator": { "kind": "metric", "metric": "in_pipeline_us" }, "direction": "up", "target": null, "warn_at": null, "crit_at": null,
+      "caption": "{{raw}}" },
+
+    { "id": "us_created_wk", "label": "Pipeline created", "dept": "us_sales", "unit": "currency_usd",
+      "_note": "See india_created_wk - reads the created_on-dated source so the period filter does the work.",
+      "source": { "ref": "us_crm_created", "tab": "Deals", "agg": "sum", "column": "value" },
+      "denominator": { "kind": "self" }, "direction": "up", "target": null, "warn_at": 0.7, "crit_at": 0.4,
+      "caption": "{{raw}} created" },
+
+    { "id": "us_win_rate", "label": "Win rate", "dept": "us_sales", "unit": "percent",
+      "source": { "ref": "us_crm", "tab": "Deals", "agg": "avg", "column": "won_flag" },
+      "denominator": { "kind": "self" }, "direction": "up", "target": null, "warn_at": 0.7, "crit_at": 0.4,
+      "caption": "{{raw}}" },
+
+    { "id": "us_meetings_held", "label": "Meetings held", "dept": "us_sales", "unit": "count",
+      "source": { "ref": "us_crm", "tab": "Activity", "agg": "count", "where": { "column": "type", "equals": "meeting_held" } },
+      "denominator": { "kind": "static", "value": null, "label": "target" }, "direction": "up", "target": null, "warn_at": 0.7, "crit_at": 0.4,
+      "caption": "{{raw}} of {{denominator}} {{denominator_label}}" },
+
+    { "id": "us_opps_created", "label": "Opportunities created", "dept": "us_sales", "unit": "count",
+      "source": { "ref": "us_crm", "tab": "Deals", "agg": "count", "where": { "column": "stage", "equals": "Opportunity" } },
+      "denominator": { "kind": "static", "value": null, "label": "target" }, "direction": "up", "target": null, "warn_at": 0.7, "crit_at": 0.4,
+      "caption": "{{raw}} of {{denominator}} {{denominator_label}}" },
+
+    { "id": "us_accounts_worked", "label": "Accounts worked", "dept": "us_sales", "unit": "count",
+      "source": { "ref": "us_crm", "tab": "Activity", "agg": "count_distinct", "column": "account_id" },
+      "denominator": { "kind": "static", "value": null, "label": "target" }, "direction": "up", "target": null, "warn_at": 0.6, "crit_at": 0.3,
+      "caption": "{{raw}} of {{denominator}} {{denominator_label}}" },
+
+    { "id": "pm_india_spend", "label": "Spend", "dept": "perf_marketing", "segment": "india", "family": "pm_spend", "unit": "currency_inr",
+      "source": { "ref": "ads_india", "agg": "sum", "column": "spend" },
+      "denominator": { "kind": "static", "value": null, "label": "budget" }, "direction": "up", "target": null, "warn_at": 0.7, "crit_at": 0.4,
+      "caption": "{{raw}} of {{denominator}} {{denominator_label}}" },
+
+    { "id": "pm_india_leads", "label": "Leads", "dept": "perf_marketing", "segment": "india", "family": "pm_leads", "unit": "count",
+      "source": { "ref": "ads_india", "agg": "sum", "column": "leads" },
+      "denominator": { "kind": "static", "value": null, "label": "target" }, "direction": "up", "target": null, "warn_at": 0.7, "crit_at": 0.4,
+      "caption": "{{raw}} of {{denominator}} {{denominator_label}}" },
+
+    { "id": "pm_india_qualified", "label": "Qualified", "dept": "perf_marketing", "segment": "india", "family": "pm_qualified", "unit": "count",
+      "source": { "ref": "ads_india", "agg": "sum", "column": "qualified" },
+      "denominator": { "kind": "metric", "metric": "pm_india_leads", "label": "leads" }, "direction": "up", "target": null, "warn_at": 0.6, "crit_at": 0.3,
+      "caption": "{{raw}} of {{denominator}} {{denominator_label}}" },
+
+    { "id": "pm_india_cpl", "label": "Cost per lead", "dept": "perf_marketing", "segment": "india", "family": "pm_cpl", "unit": "currency_inr",
+      "source": { "ref": "ads_india", "agg": "ratio", "numerator_column": "spend", "denominator_column": "leads" },
+      "denominator": { "kind": "self" }, "direction": "down", "target": null, "warn_at": 0.7, "crit_at": 0.4,
+      "caption": "{{raw}}" },
+
+    { "id": "pm_india_cac", "label": "CAC (paid)", "dept": "perf_marketing", "segment": "india", "family": "pm_cac", "unit": "currency_inr",
+      "source": { "ref": "ads_india", "agg": "ratio", "numerator_column": "spend", "denominator_column": "customers" },
+      "denominator": { "kind": "self" }, "direction": "down", "target": null, "warn_at": 0.7, "crit_at": 0.4,
+      "caption": "{{raw}}" },
+
+    { "id": "pm_india_pipeline_sourced", "label": "Pipeline sourced", "dept": "perf_marketing", "segment": "india", "family": "pm_sourced", "unit": "currency_inr",
+      "source": { "ref": "india_crm", "tab": "Deals", "agg": "sum", "column": "value", "where": { "column": "source", "equals": "paid" } },
+      "denominator": { "kind": "self" }, "direction": "up", "target": null, "warn_at": 0.7, "crit_at": 0.4,
+      "caption": "{{raw}} sourced" },
+
+    { "id": "pm_us_spend", "label": "Spend", "dept": "perf_marketing", "segment": "us", "family": "pm_spend", "unit": "currency_usd",
+      "source": { "ref": "ads_us", "agg": "sum", "column": "spend" },
+      "denominator": { "kind": "static", "value": null, "label": "budget" }, "direction": "up", "target": null, "warn_at": 0.7, "crit_at": 0.4,
+      "caption": "{{raw}} of {{denominator}} {{denominator_label}}" },
+
+    { "id": "pm_us_leads", "label": "Leads", "dept": "perf_marketing", "segment": "us", "family": "pm_leads", "unit": "count",
+      "source": { "ref": "ads_us", "agg": "sum", "column": "leads" },
+      "denominator": { "kind": "static", "value": null, "label": "target" }, "direction": "up", "target": null, "warn_at": 0.7, "crit_at": 0.4,
+      "caption": "{{raw}} of {{denominator}} {{denominator_label}}" },
+
+    { "id": "pm_us_qualified", "label": "Qualified", "dept": "perf_marketing", "segment": "us", "family": "pm_qualified", "unit": "count",
+      "source": { "ref": "ads_us", "agg": "sum", "column": "qualified" },
+      "denominator": { "kind": "metric", "metric": "pm_us_leads", "label": "leads" }, "direction": "up", "target": null, "warn_at": 0.6, "crit_at": 0.3,
+      "caption": "{{raw}} of {{denominator}} {{denominator_label}}" },
+
+    { "id": "pm_us_cpl", "label": "Cost per lead", "dept": "perf_marketing", "segment": "us", "family": "pm_cpl", "unit": "currency_usd",
+      "source": { "ref": "ads_us", "agg": "ratio", "numerator_column": "spend", "denominator_column": "leads" },
+      "denominator": { "kind": "self" }, "direction": "down", "target": null, "warn_at": 0.7, "crit_at": 0.4,
+      "caption": "{{raw}}" },
+
+    { "id": "pm_us_cac", "label": "CAC (paid)", "dept": "perf_marketing", "segment": "us", "family": "pm_cac", "unit": "currency_usd",
+      "source": { "ref": "ads_us", "agg": "ratio", "numerator_column": "spend", "denominator_column": "customers" },
+      "denominator": { "kind": "self" }, "direction": "down", "target": null, "warn_at": 0.7, "crit_at": 0.4,
+      "caption": "{{raw}}" },
+
+    { "id": "pm_us_pipeline_sourced", "label": "Pipeline sourced", "dept": "perf_marketing", "segment": "us", "family": "pm_sourced", "unit": "currency_usd",
+      "source": { "ref": "us_crm", "tab": "Deals", "agg": "sum", "column": "value", "where": { "column": "source", "equals": "paid" } },
+      "denominator": { "kind": "self" }, "direction": "up", "target": null, "warn_at": 0.7, "crit_at": 0.4,
+      "caption": "{{raw}} sourced" },
+
+    { "id": "sloosh_signups", "label": "Signups", "dept": "sloosh", "unit": "count",
+      "source": { "ref": "sloosh_db", "tab": "signups", "agg": "count" },
+      "denominator": { "kind": "self" }, "direction": "up", "target": null, "warn_at": 0.7, "crit_at": 0.4,
+      "caption": "{{raw}} signups" },
+
+    { "id": "sloosh_activated", "label": "Activated", "dept": "sloosh", "unit": "count",
+      "source": { "ref": "sloosh_db", "tab": "signups", "agg": "count", "where": { "column": "activated", "equals": true } },
+      "denominator": { "kind": "metric", "metric": "sloosh_signups", "label": "signups" }, "direction": "up", "target": null, "warn_at": 0.6, "crit_at": 0.3,
+      "caption": "{{raw}} of {{denominator}} {{denominator_label}}" },
+
+    { "id": "sloosh_returned", "label": "Came back", "dept": "sloosh", "unit": "count",
+      "source": { "ref": "sloosh_db", "tab": "signups", "agg": "count", "where": { "column": "returned_7d", "equals": true } },
+      "denominator": { "kind": "metric", "metric": "sloosh_signups" }, "direction": "up", "target": null, "warn_at": 0.5, "crit_at": 0.25,
+      "caption": "{{raw}} of {{denominator}}" },
+
+    { "id": "sloosh_paid", "label": "Converted to paid", "dept": "sloosh", "unit": "count",
+      "source": { "ref": "sloosh_db", "tab": "signups", "agg": "count", "where": { "column": "paid", "equals": true } },
+      "denominator": { "kind": "metric", "metric": "sloosh_signups" }, "direction": "up", "target": null, "warn_at": 0.4, "crit_at": 0.2,
+      "caption": "{{raw}} of {{denominator}}" },
+
+    { "id": "sloosh_wau", "label": "Weekly active", "dept": "sloosh", "unit": "count",
+      "source": { "ref": "sloosh_db", "tab": "active", "agg": "count_distinct", "column": "user_id" },
+      "denominator": { "kind": "self" }, "direction": "up", "target": null, "warn_at": 0.7, "crit_at": 0.4,
+      "caption": "{{raw}} active" },
+
+    { "id": "sloosh_revenue", "label": "Revenue", "dept": "sloosh", "unit": "currency_inr",
+      "source": { "ref": "sloosh_db", "tab": "revenue", "agg": "sum", "column": "amount" },
+      "denominator": { "kind": "static", "value": null, "label": "target" }, "direction": "up", "target": null, "warn_at": 0.7, "crit_at": 0.4,
+      "caption": "{{raw}} of {{denominator}} {{denominator_label}}" },
+
+    { "id": "sloosh_shipped", "label": "Shipped", "dept": "sloosh", "unit": "count",
+      "source": { "ref": "sloosh_board", "agg": "count", "where": { "column": "status", "equals": "Done" } },
+      "denominator": { "kind": "static", "value": null, "label": "committed" }, "direction": "up", "target": null, "warn_at": 0.7, "crit_at": 0.4,
+      "caption": "{{raw}} of {{denominator}} {{denominator_label}}" },
+
+    { "id": "sloosh_in_progress", "label": "In progress", "dept": "sloosh", "unit": "count",
+      "source": { "ref": "sloosh_board", "agg": "count", "where": { "column": "status", "equals": "In Progress" } },
+      "denominator": { "kind": "static", "value": null, "label": "wip limit" }, "direction": "down", "target": null, "warn_at": null, "crit_at": null,
+      "caption": "{{raw}} of {{denominator}} {{denominator_label}}" },
+
+    { "id": "sloosh_releases", "label": "Releases", "dept": "sloosh", "unit": "count",
+      "source": { "ref": "sloosh_board", "agg": "count", "where": { "column": "type", "equals": "release" } },
+      "denominator": { "kind": "self" }, "direction": "up", "target": null, "warn_at": 0.7, "crit_at": 0.4,
+      "caption": "{{raw}} releases" },
+
+    { "id": "sloosh_cycle_time", "label": "Cycle time", "dept": "sloosh", "unit": "duration_days",
+      "source": { "ref": "sloosh_board", "agg": "median", "column": "cycle_days" },
+      "denominator": { "kind": "self" }, "direction": "down", "target": null, "warn_at": 0.7, "crit_at": 0.4,
+      "caption": "{{raw}}" },
+
+    { "id": "sloosh_web_landed", "label": "Landed", "dept": "sloosh", "unit": "count",
+      "_note": "The mouth of the funnel, and the only one of the three denominated by its own column total. That is deliberate: it makes the outer ring read full, so the two inner arcs are visibly a fraction of it rather than three unrelated rings sharing a card. kind=self would have drawn no arc at all and the card would have looked broken.",
+      "source": { "ref": "sloosh_web", "agg": "sum", "column": "landed" },
+      "denominator": { "kind": "column_total", "column": "landed", "label": "landed" }, "direction": "up", "target": null, "warn_at": null, "crit_at": null,
+      "caption": "{{raw}} landed" },
+
+    { "id": "sloosh_web_signup", "label": "Signed up", "dept": "sloosh", "unit": "count",
+      "source": { "ref": "sloosh_web", "agg": "sum", "column": "signups" },
+      "denominator": { "kind": "metric", "metric": "sloosh_web_landed", "label": "landed" }, "direction": "up", "target": null, "warn_at": null, "crit_at": null,
+      "caption": "{{raw}} of {{denominator}} {{denominator_label}}" },
+
+    { "id": "sloosh_web_paid", "label": "Paid", "dept": "sloosh", "unit": "count",
+      "_note": "A fraction of SIGNUPS, not of landed. Chained the same way sloosh_activated chains off sloosh_signups, so the drop between the middle and inner ring is the signup-to-paid conversion and nothing else.",
+      "source": { "ref": "sloosh_web", "agg": "sum", "column": "paid" },
+      "denominator": { "kind": "metric", "metric": "sloosh_web_signup", "label": "signups" }, "direction": "up", "target": null, "warn_at": null, "crit_at": null,
+      "caption": "{{raw}} of {{denominator}} {{denominator_label}}" },
+
+    { "id": "sloosh_followers_instagram", "label": "Instagram", "dept": "sloosh", "family": "sloosh_followers", "unit": "count",
+      "_note": "All four platforms share family sloosh_followers, so rollupFamily() gives one audience total and nobody adds four numbers by hand in a slide. The denominator is the week's follower column total, so each ring is that platform's share of the audience.",
+      "source": { "ref": "sloosh_social", "agg": "sum", "column": "followers", "where": { "column": "platform", "equals": "instagram" } },
+      "denominator": { "kind": "column_total", "column": "followers", "label": "total" }, "direction": "up", "target": null, "warn_at": null, "crit_at": null,
+      "caption": "{{raw}} of {{denominator}} {{denominator_label}}" },
+
+    { "id": "sloosh_followers_linkedin", "label": "LinkedIn", "dept": "sloosh", "family": "sloosh_followers", "unit": "count",
+      "source": { "ref": "sloosh_social", "agg": "sum", "column": "followers", "where": { "column": "platform", "equals": "linkedin" } },
+      "denominator": { "kind": "column_total", "column": "followers", "label": "total" }, "direction": "up", "target": null, "warn_at": null, "crit_at": null,
+      "caption": "{{raw}} of {{denominator}} {{denominator_label}}" },
+
+    { "id": "sloosh_followers_x", "label": "X", "dept": "sloosh", "family": "sloosh_followers", "unit": "count",
+      "source": { "ref": "sloosh_social", "agg": "sum", "column": "followers", "where": { "column": "platform", "equals": "x" } },
+      "denominator": { "kind": "column_total", "column": "followers", "label": "total" }, "direction": "up", "target": null, "warn_at": null, "crit_at": null,
+      "caption": "{{raw}} of {{denominator}} {{denominator_label}}" },
+
+    { "id": "sloosh_followers_youtube", "label": "YouTube", "dept": "sloosh", "family": "sloosh_followers", "unit": "count",
+      "source": { "ref": "sloosh_social", "agg": "sum", "column": "followers", "where": { "column": "platform", "equals": "youtube" } },
+      "denominator": { "kind": "column_total", "column": "followers", "label": "total" }, "direction": "up", "target": null, "warn_at": null, "crit_at": null,
+      "caption": "{{raw}} of {{denominator}} {{denominator_label}}" },
+
+    { "id": "hiring_open_roles", "label": "Open roles", "dept": "hiring", "unit": "count",
+      "source": { "ref": "hiring_tracker", "tab": "Roles", "agg": "count", "where": { "column": "status", "equals": "open" } },
+      "denominator": { "kind": "static", "value": null, "label": "in plan" }, "direction": "up", "target": null, "warn_at": null, "crit_at": null,
+      "caption": "{{raw}} of {{denominator}} {{denominator_label}}" },
+
+    { "id": "hiring_in_process", "label": "In process", "dept": "hiring", "unit": "count",
+      "source": { "ref": "hiring_tracker", "tab": "Candidates", "agg": "count", "where": { "column": "status", "in": ["screening", "interviewing"] } },
+      "denominator": { "kind": "metric", "metric": "hiring_open_roles" }, "direction": "up", "target": null, "warn_at": 0.6, "crit_at": 0.3,
+      "caption": "{{raw}} candidates" },
+
+    { "id": "hiring_offers_out", "label": "Offers out", "dept": "hiring", "unit": "count",
+      "source": { "ref": "hiring_tracker", "tab": "Candidates", "agg": "count", "where": { "column": "status", "equals": "offer_out" } },
+      "denominator": { "kind": "self" }, "direction": "up", "target": null, "warn_at": null, "crit_at": null,
+      "caption": "{{raw}} out" },
+
+    { "id": "hiring_accepted", "label": "Offer accepted", "dept": "hiring", "unit": "count",
+      "source": { "ref": "hiring_tracker", "tab": "Candidates", "agg": "count", "where": { "column": "status", "equals": "accepted" } },
+      "denominator": { "kind": "static", "value": null, "label": "in plan" }, "direction": "up", "target": null, "warn_at": 0.7, "crit_at": 0.4,
+      "caption": "{{raw}} of {{denominator}} {{denominator_label}}" },
+
+    { "id": "hiring_joined", "label": "Joined", "dept": "hiring", "unit": "count",
+      "source": { "ref": "hiring_tracker", "tab": "Candidates", "agg": "count", "where": { "column": "status", "equals": "joined" } },
+      "denominator": { "kind": "static", "value": null, "label": "in plan" }, "direction": "up", "target": null, "warn_at": 0.7, "crit_at": 0.4,
+      "caption": "{{raw}} of {{denominator}} {{denominator_label}}" },
+
+    { "id": "hiring_time_to_close", "label": "Time to close", "dept": "hiring", "unit": "duration_days",
+      "source": { "ref": "hiring_tracker", "tab": "Candidates", "agg": "median", "column": "days_to_close" },
+      "denominator": { "kind": "self" }, "direction": "down", "target": null, "warn_at": 0.7, "crit_at": 0.4,
+      "caption": "{{raw}}" }
+  ]
+}

@@ -1,0 +1,170 @@
+{
+  "_about": "Where each line of business already keeps its data. NO SECRETS IN THIS FILE - it only names which sheet or database to open. Every credential lives in .env on the server.",
+  "_principle": "The founder's constraint, and the one that decides this whole file: 'If you're running your business, you already need this data daily. You don't need it for me, you need it to run your function.' So Pulse connects to the system a team ALREADY uses every day. It never asks anyone to maintain a second copy for reporting. If a department's only answer here is a manual entry, that is a finding about how that function is run, not a configuration detail - and the freshness label on the card will say so.",
+  "_two_date_columns": "Several sources need TWO dates and they do different jobs. date_column decides which rows belong to this period. row_timestamp_column records when a row was last EDITED, which is the only honest way to tell data that is maintained daily from data assembled the night before. A business date (when a deal closed, when a signup happened) cannot answer the second question - set row_timestamp_column explicitly wherever the system exposes a last-edited time, or the freshness label is guesswork.",
+
+  "_date_order": {
+    "_about": "date_order tells the engine how THIS source writes a bare slash date: \"DMY\" for 05/10/2026 meaning 5 October, \"MDY\" for 05/10/2026 meaning 10 May. Set it on any gsheet whose date column uses slashes. Leave it out and the engine works it out from the column itself.",
+    "_why_it_exists": "The real hiring tracker holds four date formats in one column - 17 Jun 2025, 4-Aug-2025, 01-Jun-2026 and 05/10/2026 - plus empty cells. Three of those are unambiguous. The fourth is not: JavaScript's own new Date(\"05/10/2026\") returns 10 MAY, because the language reads a bare slash date as American. Those rows are October. A row silently moved five months is a row in the wrong week, and a weekly dashboard built on wrongly-bucketed rows is worse than no dashboard, because it is confidently wrong and nothing on the page says so.",
+    "_how_it_is_decided": "In this order. (1) date_order on the source, if set - an explicit answer from the person who owns the sheet always wins. (2) Evidence from the column itself: if ANY row reads 21/09/2026 then 21 cannot be a month, so that column is DD/MM and every ambiguous row in it is DD/MM too. That is evidence, not a guess - a spreadsheet column is written by one convention. (3) Only if every slash date in the column reads both ways does the engine fall back to _date_order.default, and when it does it emits a warning naming the column, which surfaces in the dashboard footer.",
+    "_a_column_holding_both": "A column with evidence for BOTH orders - one row that can only be DD/MM and another that can only be MM/DD - is a data-quality fault, not something to average. The engine refuses to read the ambiguous rows in it, warns, and keeps them undated.",
+    "_values": ["DMY", "MDY", null],
+    "default": "DMY",
+    "_default_note": "ASSUMPTION - CONFIRM. Used only when a column is ambiguous from top to bottom, and it warns loudly every time it is used. Set to DMY because the sheets here are authored in India. The US sources (us_crm, us_crm_created, ads_us) may well be MDY: set date_order on each of them explicitly rather than relying on this."
+  },
+  "_kinds": {
+    "gsheet": "Google Sheet. 'ref' is the id in the URL between /d/ and /edit. Share the sheet with the service account email in .env, as a Viewer.",
+    "notion": "Notion database. 'ref' is the database id. Share it with the Pulse integration.",
+    "postgres": "Direct SQL through a read-only role.",
+    "manual": "Somebody types the number in each week. Deliberately does NOT carry forward - see connectors/manual.js."
+  },
+  "sources": [
+    {
+      "id": "india_crm",
+      "kind": "gsheet",
+      "dept": "india_sales",
+      "label": "India pipeline",
+      "ref": "REPLACE_WITH_SPREADSHEET_ID",
+      "header_row": 1,
+      "date_column": "updated_on",
+      "notes": "Tabs: Deals, Activity. Deals columns: deal, owner, stage, value, source, created_week, won_flag, updated_on. Activity columns: account_id, type, date. CONFIRM with the India Sales owner whether the live system is a sheet or a CRM - if it is a CRM, point this at the CRM instead.",
+      "row_timestamp_column": "updated_on"
+    },
+    {
+      "id": "us_crm",
+      "kind": "gsheet",
+      "dept": "us_sales",
+      "label": "US pipeline",
+      "ref": "REPLACE_WITH_SPREADSHEET_ID",
+      "header_row": 1,
+      "date_column": "updated_on",
+      "row_timestamp_column": "updated_on",
+      "notes": "Same shape as india_crm. Values in USD."
+    },
+    {
+      "id": "india_crm_created",
+      "kind": "gsheet",
+      "dept": "india_sales",
+      "label": "India pipeline created",
+      "ref": "REPLACE_WITH_SPREADSHEET_ID",
+      "header_row": 1,
+      "date_column": "created_on",
+      "row_timestamp_column": "updated_on",
+      "notes": "The SAME sheet and tab as india_crm, read with created_on as the period filter so 'pipeline created this week' means exactly that. Use the same spreadsheet id as india_crm."
+    },
+    {
+      "id": "us_crm_created",
+      "kind": "gsheet",
+      "dept": "us_sales",
+      "label": "US pipeline created",
+      "ref": "REPLACE_WITH_SPREADSHEET_ID",
+      "header_row": 1,
+      "date_column": "created_on",
+      "row_timestamp_column": "updated_on",
+      "notes": "Same sheet and tab as us_crm, filtered on created_on. Use the same spreadsheet id as us_crm."
+    },
+    {
+      "id": "ads_india",
+      "kind": "gsheet",
+      "dept": "perf_marketing",
+      "segment": "india",
+      "label": "Paid media - India",
+      "ref": "REPLACE_WITH_SPREADSHEET_ID",
+      "header_row": 1,
+      "date_column": "date",
+      "notes": "Columns: date, channel, spend, impressions, clicks, leads, qualified, customers. Ad platforms can be pulled directly later; a daily export is fine to start and is how most teams already work. No edit timestamp in a daily ad export - 'date' is the business day, not when the row was written. Freshness for this source will read unknown until the export adds a written_at column or it is pulled from the ad platform directly.",
+      "row_timestamp_column": null
+    },
+    {
+      "id": "ads_us",
+      "kind": "gsheet",
+      "dept": "perf_marketing",
+      "segment": "us",
+      "label": "Paid media - US",
+      "ref": "REPLACE_WITH_SPREADSHEET_ID",
+      "header_row": 1,
+      "date_column": "date",
+      "notes": "Same shape as ads_india, spend in USD. No edit timestamp in a daily ad export - 'date' is the business day, not when the row was written. Freshness reads unknown until the export adds a written_at column or it is pulled from the ad platform directly.",
+      "row_timestamp_column": null
+    },
+    {
+      "id": "sloosh_db",
+      "kind": "postgres",
+      "dept": "sloosh",
+      "label": "Sloosh product data",
+      "ref": "SLOOSH_DB_URL",
+      "query": "select id, created_at, updated_at, activated, returned_7d, paid from signups where created_at >= $1 and created_at < $2",
+      "date_column": "created_at",
+      "notes": "Read-only role. The product database is the right source here - it is already the daily truth and cannot be assembled the night before. created_at is when the signup happened, not when the row changed. Add an updated_at column, or freshness is guesswork.",
+      "row_timestamp_column": "updated_at"
+    },
+    {
+      "id": "sloosh_board",
+      "kind": "notion",
+      "dept": "sloosh",
+      "label": "Sloosh delivery board",
+      "ref": "REPLACE_WITH_DATABASE_ID",
+      "date_column": "Done on",
+      "notes": "Columns needed: status, type, cycle_days. If the team works in Linear rather than Notion, point this at Linear instead - a board that is already worked in daily is the whole point. Notion exposes last_edited_time on every page; the connector already reads it as _last_edited.",
+      "row_timestamp_column": "_last_edited"
+    },
+    {
+      "id": "sloosh_web",
+      "kind": "gsheet",
+      "dept": "sloosh",
+      "label": "Sloosh marketing funnel",
+      "ref": "REPLACE_WITH_SPREADSHEET_ID",
+      "header_row": 1,
+      "date_column": "date",
+      "date_order": null,
+      "notes": "Columns needed: date, landed, signups, paid, and an updated_at if the export can carry one. One row per day. landed is unique visitors on the marketing site, signups is accounts created, paid is accounts that paid - each counted on the day it happened, so the three columns chain into a funnel rather than three unrelated totals. If this already lives in GA4 or the product database, point it there instead: a weekly paste into a sheet is a second copy maintained for reporting, which is exactly what _principle above says not to do. CONFIRM with the Sloosh owner where landed is actually counted today.",
+      "row_timestamp_column": null
+    },
+    {
+      "id": "sloosh_social",
+      "kind": "gsheet",
+      "dept": "sloosh",
+      "label": "Sloosh social followers",
+      "ref": "REPLACE_WITH_SPREADSHEET_ID",
+      "header_row": 1,
+      "date_column": "date",
+      "date_order": null,
+      "notes": "Columns needed: date, platform, followers. ONE ROW PER PLATFORM PER WEEK - the per-platform rings are each a share of the week's total followers, and that total is the sum of the followers column across the rows in the period, so two rows for the same platform in one week would double-count it. platform values: instagram | linkedin | x | youtube. Follower counts are a level, not a flow: whoever fills this writes the number as it stands on the day, not the change.",
+      "row_timestamp_column": null
+    },
+    {
+      "id": "perf_rag",
+      "kind": "gsheet",
+      "dept": "perf_marketing",
+      "label": "Perf marketing RAG calls",
+      "ref": "REPLACE_WITH_SPREADSHEET_ID",
+      "header_row": 1,
+      "date_column": "period_start",
+      "date_order": null,
+      "notes": "NOT A METRIC SOURCE - no entry in catalog.json reads this. Columns: brand, dept, status, reason, set_by, set_at, period_start. One row per brand per day, written in the daily stand-up. status is red | amber | green and reason is REQUIRED - a colour with no reason is a judgement nobody can argue with, which is not a judgement, it is a mood. See engine/rag.js. If the stand-up already happens in Slack or Notion, point this there instead of asking anyone to keep a second copy.",
+      "row_timestamp_column": "set_at"
+    },
+    {
+      "id": "hiring_tracker",
+      "kind": "gsheet",
+      "dept": "hiring",
+      "label": "Hiring tracker",
+      "ref": "REPLACE_WITH_SPREADSHEET_ID",
+      "header_row": 1,
+      "date_column": "updated_on",
+      "date_order": "DMY",
+      "notes": "Tabs: Roles, Candidates. Roles: role, dept, status, in_plan. Candidates: candidate, role, status, days_to_close, updated_on. status: screening | interviewing | offer_out | accepted | joined | dropped. DATES: the live sheet's 'Date of Joining' column holds four formats at once - '17 Jun 2025', '4-Aug-2025', '01-Jun-2026' and '05/10/2026' - plus empty cells. date_order is DMY because the slash rows in that column are October 2026 and one of them reads 21/09/2026, which can only be DD/MM. Without it, JavaScript reads 05/10/2026 as 10 May and the row lands in the wrong week.",
+      "row_timestamp_column": "updated_on"
+    }
+  ],
+  "_staleness": {
+    "_about": "How long a source may go without a successful sync before its metrics are marked stale and a flag goes up naming the department owner.",
+    "default_hours": 192,
+    "by_kind": {
+      "manual": 240,
+      "gsheet": 192,
+      "notion": 192,
+      "postgres": 36
+    }
+  }
+}

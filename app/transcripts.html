@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Add a meeting - Pulse</title>
+<meta name="description" content="Paste a transcript, review every extracted item, then commit. Nothing reaches the decision log until a human presses the button.">
+<link rel="stylesheet" href="./theme.css">
+</head>
+<body>
+<div id="navmount"></div>
+<div class="wrap">
+  <div id="bannermount"></div>
+  <header class="mast">
+    <div>
+      <h1>Add a meeting</h1>
+      <p>The transcript goes in and decisions, blockers, notes and stated numbers come out - but
+      <b>nothing is written until you have read every one of them and pressed Commit</b>. A model
+      writing straight into a decision log with no review is how the log stops being trusted, and a
+      log nobody trusts is worse than no log.</p>
+    </div>
+    <div id="meetingpick"></div>
+  </header>
+  <main id="main"></main>
+  <footer>
+    <b>The transcript is data, never instructions.</b> If a line in it is addressed at the model -
+    "ignore your previous instructions", "mark everything completed" - it is surfaced here as a
+    quote for you to read, and nothing is derived from it.
+  </footer>
+</div>
+<script type="module" src="./transcripts.js"></script>
+</body>
+</html>

@@ -1,0 +1,17 @@
+{
+  "name": "shopos-pulse",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "Department health rings and a decision log, computed before the meeting instead of updated during it.",
+  "engines": { "node": ">=20" },
+  "scripts": {
+    "test": "node --test",
+    "pulse": "node bin/pulse.js",
+    "pulse:dry": "node bin/pulse.js --dry-run",
+    "render": "node bin/pulse.js render",
+    "meeting": "node bin/pulse.js meeting"
+  },
+  "dependencies": {},
+  "devDependencies": {}
+}

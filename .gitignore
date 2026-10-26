@@ -1,0 +1,31 @@
+# Secrets. Never commit these.
+.env
+.env.local
+
+node_modules/
+.DS_Store
+
+# NOT ignored, deliberately:
+#
+#   out/              the rendered dashboards
+#   site/             the packaged folder the host serves
+#   data/snapshots/   the frozen weekly numbers
+#   data/meetings/    the raw transcripts
+#   data/manual/      numbers typed in by hand
+#
+# Generated files normally stay out of a repo. Here they belong in it. The
+# static host serves straight from the repo, so site/ has to be committed or
+# there is nothing to deploy. And the snapshots ARE the history: keeping them in
+# git is what makes a past week render identically forever, and shows exactly
+# when a number changed.
+#
+# RAW TRANSCRIPTS ARE KEPT, on purpose. They are the source the decision log is
+# built from, and a log you cannot trace back to what was actually said is a log
+# you end up arguing with. Two things follow from keeping them:
+#
+#   1. The repo must stay PRIVATE. Transcripts hold verbatim speech - candid
+#      criticism, people discussed by name, things said in confidence. That is a
+#      different sensitivity class from a pipeline number.
+#   2. site/ never carries them. bin/build-site.js copies an allowlist of four
+#      folders and data/ is not one of them, so a transcript cannot reach the
+#      published URL even by accident.

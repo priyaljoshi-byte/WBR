@@ -1,0 +1,215 @@
+{
+  "_about": "The five lines of business the WBR covers, and the two things the meeting exists to do. Every design choice downstream traces back to one of those two goals - if it serves neither, it does not belong on the dashboard.",
+  "company": "ShopOS",
+  "review_group": "Leadership",
+  "_goals_note": "Stated by the founder. Written here because they are the acceptance test for every card, flag and section. A number that serves neither goal is noise competing for attention with one that does.",
+  "goals": [
+    {
+      "id": "visibility",
+      "label": "One team, full visibility",
+      "means": "Everyone understands what is happening in the other lines of business. Cross-functional dependencies and blockers get resolved in the room, not chased alone afterwards.",
+      "serves": [
+        "blockers",
+        "dependencies",
+        "decisions",
+        "all-departments-visible-to-all"
+      ]
+    },
+    {
+      "id": "accountability",
+      "label": "Accountability against targets",
+      "means": "Where do we stand against target, what is working, what is not. The founder carries this to the board, so the same standard applies in both directions.",
+      "serves": [
+        "targets-on-every-metric",
+        "named-owner-on-every-metric",
+        "on-off-target-scoreboard"
+      ]
+    }
+  ],
+  "_departments_note": "Five lines of business. Performance Marketing runs in two geographies, so its metrics carry a segment and roll up to a total - that is a dimension on the metric, not two separate departments, so the rollup stays honest.",
+  "departments": [
+    {
+      "id": "india_sales",
+      "label": "India Sales",
+      "short": "India",
+      "segments": null
+    },
+    {
+      "id": "us_sales",
+      "label": "US Sales",
+      "short": "US",
+      "segments": null
+    },
+    {
+      "id": "perf_marketing",
+      "label": "Performance Marketing",
+      "short": "Perf Mktg",
+      "segments": [
+        "india",
+        "us"
+      ],
+      "segment_labels": {
+        "india": "India",
+        "us": "US"
+      }
+    },
+    {
+      "id": "sloosh",
+      "label": "Sloosh Product & Marketing",
+      "short": "Sloosh",
+      "segments": null
+    },
+    {
+      "id": "hiring",
+      "label": "Hiring",
+      "short": "Hiring",
+      "segments": null
+    }
+  ],
+  "_owners_note": "Three names per line of business, as given. Pulse keeps the trio for visibility and notification, but every METRIC also names ONE accountable owner drawn from that trio - see _accountability below. Raghav sits on both India and US; Priyal sits on Sloosh and runs the review itself.",
+  "owners": {
+    "india_sales": {
+      "team": [
+        "Subham",
+        "Arfin",
+        "Raghav"
+      ],
+      "lead": null
+    },
+    "us_sales": {
+      "team": [
+        "Anupreet",
+        "Karan",
+        "Raghav"
+      ],
+      "lead": null
+    },
+    "perf_marketing": {
+      "team": [
+        "Raghav",
+        "Imran"
+      ],
+      "lead": null,
+      "by_segment": {
+        "india": {
+          "team": [],
+          "lead": null
+        },
+        "us": {
+          "team": [],
+          "lead": null
+        }
+      },
+      "_note": "Two names, not three - as given. Raghav also sits on both the India and US charters, which is consistent with Perf being read inside those two rooms rather than its own. by_segment is left empty, meaning both Raghav and Imran answer for India and US alike; fill it only if the two geographies split between them."
+    },
+    "sloosh": {
+      "team": [
+        "Bharat",
+        "Manish",
+        "Priyal"
+      ],
+      "lead": null
+    },
+    "hiring": {
+      "team": [
+        "Satwik",
+        "Omer",
+        "Rishi"
+      ],
+      "lead": null
+    }
+  },
+  "_sections_note": "Reading order on the dashboard, which is also the agenda order for the meeting. Scoreboard first so the target question is answered before anyone starts narrating. Blockers before decisions, because an unresolved blocker usually IS the next decision.",
+  "sections": [
+    {
+      "id": "scoreboard",
+      "label": "Scoreboard",
+      "blurb": "Against target, by line of business. Two minutes.",
+      "serves": "accountability",
+      "order": 1,
+      "kind": "scoreboard"
+    },
+    {
+      "id": "lines",
+      "label": "Lines of business",
+      "blurb": "Each team's rings. Read before the meeting, not presented in it.",
+      "serves": "visibility",
+      "order": 2,
+      "kind": "cards"
+    },
+    {
+      "id": "rag",
+      "label": "Status by track",
+      "blurb": "A human call per brand or track, made in the daily stand-up. Read the reason, not just the colour.",
+      "serves": "visibility",
+      "order": 3,
+      "kind": "rag"
+    },
+    {
+      "id": "blockers",
+      "label": "Blockers and dependencies",
+      "blurb": "Who is waiting on whom. This is the part the room is for.",
+      "serves": "visibility",
+      "order": 4,
+      "kind": "blockers"
+    },
+    {
+      "id": "decisions",
+      "label": "Decisions",
+      "blurb": "Carried forward, changed, closed.",
+      "serves": "accountability",
+      "order": 5,
+      "kind": "decisions"
+    }
+  ],
+  "_rag_note": "The red/amber/green call the WBR already runs as 'Status by track' - green, amber and white bullets over US Lead Gen, Marketing, SEO and the rest, each with a one line narrative. Pulse keeps it as a JUDGEMENT and never computes it: campaign scale and objectives differ too much between brands and tracks for one number to be comparable, so a human reads several numbers and makes the call. The reason field is required for exactly that reason - a colour with nobody's argument attached is not a judgement, it is a mood, and the dashboard drops it. The section is rendered unlike every ring card on the page on purpose, so a human call can never be read as a measured number.",
+  "rag": {
+    "stale_after_hours": 48,
+    "red_days_to_flag": 3,
+    "trend_days": 7,
+    "statuses": [
+      "red",
+      "amber",
+      "green",
+      "grey"
+    ],
+    "_grey": "The white bullet in the WBR. Not started, or no signal yet - which is NOT a quieter amber. Amber means somebody looked and is worried; grey means there is nothing to look at yet. Folding the two together would turn every unstarted track into a concern and bury the real ones.",
+    "_stale_after_hours": "This is a DAILY call, so two days without one means the colour on screen is an artefact of the last stand-up rather than a current read. It is shown dimmed and raises a rag_stale flag - a separate kind from stale_source, because the fix is a person spending thirty seconds, not an engineer fixing a connection.",
+    "_subjects": "Whatever a department runs on. Perf Marketing calls colours per brand; Marketing and SEO call them per track. The engine groups by a `subject` string and does not care which, so a department adopting this is a data change, never a code change."
+  },
+  "_cadence_note": "The run finishes before_meeting_hours ahead of the meeting, so there is time to chase a missing number BEFORE the room sits down rather than discovering the gap in it.",
+  "cadence": {
+    "period": "week",
+    "week_starts": "monday",
+    "timezone": "Asia/Kolkata",
+    "before_meeting_hours": 14,
+    "_note": "Four meetings now, each with its own day. See config/meetings.json - that file is the schedule, this is just the period."
+  },
+  "_freshness_note": "The founder's objection, turned into a measurement: 'I sometimes see last-minute Notion updates put together for the sake of it.' Pulse timestamps every source row and classifies how the data was maintained. A source whose rows were all written in the hours before the meeting gets labelled assembled-for-the-meeting on the card, in public. Not a punishment - a signal that this team is not using their own numbers to run the function, which is the actual problem.",
+  "freshness": {
+    "daily_if_updated_within_hours": 36,
+    "weekly_if_updated_within_hours": 192,
+    "last_minute_window_hours": 24,
+    "last_minute_row_share": 0.8,
+    "show_on_card": true
+  },
+  "_blockers_note": "A blocker is a first-class object, not a bullet in someone's update. It has a person on both ends and an age. Ageing is the point: a blocker in its third week is a different conversation from a new one, and that difference should be visible without anyone having to remember.",
+  "blockers": {
+    "escalate_after_weeks": 2,
+    "require_needs_from": true,
+    "resolutions": [
+      "resolved_in_room",
+      "owner_assigned",
+      "escalated",
+      "dropped",
+      "carried"
+    ]
+  },
+  "_accountability": {
+    "_the_problem": "A flag addressed to three people is a flag addressed to nobody. 'US pipeline is not connected' landing on Anupreet, Karan and Raghav at once is the oldest failure mode in shared ownership: each assumes one of the other two has it, and the founder's second goal - accountability against targets - quietly stops meaning anything.",
+    "_the_rule": "The trio owns the line of business. ONE of them owns each metric. The dashboard shows the trio; a flag names the single accountable person. Nobody loses visibility and no flag goes unanswered.",
+    "_how_to_set_it": "Add \"owner\" to a metric in catalog.json with one of the names below. Until then the metric falls back to the trio's first name and `pulse check` lists it as unassigned, so the gap is visible rather than silent.",
+    "require_metric_owner": true,
+    "_fill_in": "Targets and per-metric owners are deliberately left blank, to be filled by each line's owners. `pulse check` and the Targets screen present them as a fill-in list addressed to those people by name, not as errors. A blank is not a failure here - it is an unanswered question with somebody's name on it, which is the only form of to-do that actually gets done."
+  }
+}
