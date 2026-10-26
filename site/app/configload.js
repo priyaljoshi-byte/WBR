@@ -8,7 +8,7 @@
  */
 
 import { PULSE_CONFIG } from './config.js';
-import { db, hasToken } from './supabase.js';
+import { db, canSave } from './store.js';
 
 const cache = new Map();
 
@@ -84,7 +84,7 @@ export async function loadMeetings() {
 
   // A meeting kind is config, so the database may already carry more than the
   // seed does. Rows win when they exist.
-  if (hasToken()) {
+  if (canSave()) {
     try {
       const rows = await db.select('pulse_meeting_kinds', { order: 'ord.asc' });
       if (rows.length) {
@@ -125,7 +125,7 @@ export async function loadAll() {
     liveError: null
   };
 
-  if (!hasToken()) return merged;
+  if (!canSave()) return merged;
 
   try {
     const [dbSources, dbMetrics] = await Promise.all([

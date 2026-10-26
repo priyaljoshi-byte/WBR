@@ -20,7 +20,8 @@ import { loadAll } from './configload.js';
 import { parseRef, isPlaceholderRef, shareInstruction } from './refs.js';
 import { parseCSV, dateColumnReport, dateHealth } from './csv.js';
 import { suggestMapping, requiredColumnsForSource } from './mapping.js';
-import { db, hasToken } from './supabase.js';
+import { fetchSheetCsv, SHARE_FIX, fallbackWarning } from './sheets.js';
+import { db, canSave } from './store.js';
 import { PULSE_CONFIG } from './config.js';
 import {
   esc, el, $, emptyState, errorState, toast, copyToClipboard,
@@ -209,7 +210,13 @@ function renderLinkTab(pane, source, canWrite, mapHost, required, saved) {
     hint.className = 'hint hint-ok';
     hint.textContent = 'That parses. Check the id below is the right document before connecting.';
 
-    const share = shareInstruction(source.kind, PULSE_CONFIG.SERVICE_ACCOUNT_EMAIL);
+    // Today a sheet is read straight from the browser, which needs link
+    // sharing, not the service account (that is for the weekly server run).
+    const share = source.kind === 'gsheet'
+      ? { heading: 'Make sure the sheet is link-shared', body: SHARE_FIX, copy: null }
+      : source.kind === 'notion'
+        ? { ...shareInstruction('notion'), body: `${shareInstruction('notion').body} Pulse cannot read Notion from the browser yet, so until the weekly run is set up, use Export -> CSV in Notion and drop the file in the Upload a CSV tab.` }
+        : shareInstruction(source.kind, PULSE_CONFIG.SERVICE_ACCOUNT_EMAIL);
     found.innerHTML = `
       <div class="copyrow">
         <span class="kicker">id found</span>
@@ -225,9 +232,40 @@ function renderLinkTab(pane, source, canWrite, mapHost, required, saved) {
           <button class="btn btn-sm" type="button" id="${CSS.escape(uid)}-copy">Copy</button></div>` : ''}
       </div>
       <div class="btnrow" style="margin-top:16px">
-        <button class="btn btn-go" id="${CSS.escape(uid)}-save" type="button"${canWrite ? '' : ' disabled'}>Connect this source</button>
+        ${source.kind === 'gsheet'
+    ? `<button class="btn btn-go" id="${CSS.escape(uid)}-read" type="button"${canWrite ? '' : ' disabled'}>Connect and read the sheet now</button>
+       <button class="btn" id="${CSS.escape(uid)}-save" type="button"${canWrite ? '' : ' disabled'}>Just save the link</button>`
+    : `<button class="btn btn-go" id="${CSS.escape(uid)}-save" type="button"${canWrite ? '' : ' disabled'}>Connect this source</button>`}
         ${canWrite ? '' : '<span class="hint">You can read this department but not change it.</span>'}
-      </div>`;
+      </div>
+      <div id="${CSS.escape(uid)}-rows"></div>`;
+
+    const readBtn = pane.querySelector(`#${CSS.escape(uid)}-read`);
+    if (readBtn) {
+      readBtn.addEventListener('click', async () => {
+        const rowsOut = pane.querySelector(`#${CSS.escape(uid)}-rows`);
+        readBtn.disabled = true;
+        rowsOut.innerHTML = '<p class="hint">Reading the sheet from Google...</p>';
+        try {
+          if (!(await connect(source, parsed.id))) { rowsOut.innerHTML = ''; return; }
+          const tab = source.tab || null;
+          const gid = tab ? null : (parsed.gid || null);
+          // Google answers an unknown tab with the first tab, so read the first
+          // tab too and compare (see sheets.js).
+          // gid 0 IS the first tab, so there is nothing to compare against.
+          const first = tab || (gid && gid !== '0') ? await fetchSheetCsv(parsed.id) : null;
+          const res = await fetchSheetCsv(parsed.id, { tab, gid, compareWith: first ? first.text : null });
+          const note = res.fellBack
+            ? `<div class="banner banner-warn" style="margin-top:12px">${esc(fallbackWarning(tab || `tab ${gid}`))}</div>` : '';
+          showRows(rowsOut, `${uid}-sheet`, source, `Google Sheet${tab ? ` - ${tab}` : ''}`, res.text,
+            { canWrite, mapHost, required, saved, note, onCancel: () => {} });
+        } catch (err) {
+          rowsOut.innerHTML = errorState(new Error(`${err.message}${err.fix ? ` ${err.fix}` : ''}`), 'Could not read that sheet');
+        } finally {
+          readBtn.disabled = false;
+        }
+      });
+    }
 
     const copyBtn = pane.querySelector(`#${CSS.escape(uid)}-copy`);
     if (copyBtn) copyBtn.addEventListener('click', () => copyToClipboard(share.copy, 'Service account address'));
@@ -253,7 +291,7 @@ function renderLinkTab(pane, source, canWrite, mapHost, required, saved) {
 }
 
 async function connect(source, ref) {
-  if (!hasToken()) { toast('Preview mode - nothing was saved.', 'warn'); return false; }
+  if (!canSave()) { toast('Preview mode - nothing was saved.', 'warn'); return false; }
   try {
     await db.upsert('pulse_sources', [{
       id: source.id,
@@ -304,88 +342,97 @@ function renderCsvTab(pane, source, canWrite, mapHost, required, saved) {
     out.innerHTML = '<p class="hint">Reading...</p>';
     let text;
     try { text = await readFileAsText(f); } catch (err) { out.innerHTML = errorState(err, 'Could not read that file'); return; }
-
-    const parsed = parseCSV(text, { headerRow: source.header_row || 1 });
-    if (!parsed.columns.length) {
-      out.innerHTML = errorState(new Error('No header row was found. The first line of the file should be the column names.'), `${f.name} did not parse`);
-      return;
-    }
-
-    // Answers the person gives to "is 05/10/2026 October or May", per column.
-    const answers = {};
-    if (saved && saved.date_order && saved.date_order !== 'auto') {
-      for (const c of parsed.columns) answers[c] = saved.date_order;
-    }
-
-    const paint = () => {
-      const preview = parsed.rows.slice(0, 10);
-      const dates = dateColumnReport(parsed, { dateOrders: answers });
-      const health = dateHealth(dates);
-      const blocked = health.asking > 0;
-
-      out.innerHTML = `
-        <div class="kv" style="margin-top:16px">
-          <span>file <b>${esc(f.name)}</b></span>
-          <span>columns <b>${parsed.columns.length}</b></span>
-          <span>rows <b>${parsed.rowCount}</b></span>
-          <span>showing <b>first ${preview.length}</b></span>
-        </div>
-        ${parsed.warnings.length ? `<div class="banner banner-warn" style="margin-top:12px"><b>Worth a look.</b> ${esc(parsed.warnings.join('. '))}.</div>` : ''}
-
-        ${dateBlock(dates, health, uid)}
-
-        <div class="tablewrap">
-          <table class="prev">
-            <thead><tr><th class="rn">#</th>${parsed.columns.map((c) => {
-    const d = dates.find((x) => x.column === c);
-    return `<th>${esc(c)}${d ? `<br><span style="color:${d.needsAsk || d.basis === 'conflict' ? 'var(--amber)' : 'var(--fg-3)'};text-transform:none;letter-spacing:0">${esc(dateTag(d))}</span>` : ''}</th>`;
-  }).join('')}</tr></thead>
-            <tbody>${preview.map((r, i) => `<tr><td class="rn">${i + 1}</td>${parsed.columns.map((c) => `<td>${esc(r[c])}</td>`).join('')}</tr>`).join('')}</tbody>
-          </table>
-        </div>
-        ${parsed.rowCount === 0 ? `<div class="banner banner-warn" style="margin-top:12px"><b>Header only.</b> The file has column names but no data rows.</div>` : ''}
-        <div class="btnrow" style="margin-top:16px">
-          <button class="btn btn-go" id="${CSS.escape(uid)}-confirm" type="button"${canWrite && parsed.rowCount && !blocked ? '' : ' disabled'}>Confirm and send ${parsed.rowCount} rows</button>
-          <button class="btn btn-quiet" id="${CSS.escape(uid)}-cancel" type="button">Choose a different file</button>
-          ${blocked ? '<span class="hint hint-bad">Answer the date question above first.</span>' : ''}
-        </div>`;
-
-      // The two buttons that settle an ambiguous column.
-      out.querySelectorAll('[data-dateans]').forEach((btn) => btn.addEventListener('click', () => {
-        answers[btn.dataset.col] = btn.dataset.dateans;
-        paint();
-        toast(`${btn.dataset.col} read as ${btn.dataset.dateans === 'DMY' ? 'day first' : 'month first'}`);
-        // The answer belongs to the source, not to this one upload - the next
-        // export of the same sheet will have the same convention.
-        persistDateOrder(source, btn.dataset.dateans);
-      }));
-
-      out.querySelector(`#${CSS.escape(uid)}-cancel`).addEventListener('click', () => { out.innerHTML = ''; file.value = ''; });
-      const confirmBtn = out.querySelector(`#${CSS.escape(uid)}-confirm`);
-      if (confirmBtn) {
-        confirmBtn.addEventListener('click', async () => {
-          confirmBtn.disabled = true;
-          confirmBtn.textContent = 'Sending...';
-          const ok = await sendUpload(source, f.name, parsed, dates);
-          confirmBtn.textContent = ok ? 'Sent' : 'Try again';
-          confirmBtn.disabled = !!ok;
-        });
-      }
-    };
-
-    paint();
-
-    renderMapping(mapHost, source, required, parsed.columns,
-      Object.fromEntries(suggestMapping(required.map((r) => r.column), parsed.columns)
-        .map((r) => [r.required, r.detected])),
-      canWrite, saved && saved.date_order);
-    mapHost.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+    showRows(out, uid, source, f.name, text, { canWrite, mapHost, required, saved, onCancel: () => { file.value = ''; } });
   };
 
   drop.addEventListener('click', () => file.click());
   drop.addEventListener('keydown', (e) => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); file.click(); } });
   file.addEventListener('change', () => handle([...file.files]));
   dropZone(drop, handle);
+}
+
+/**
+ * Preview, date check, confirm-and-send - for rows from either a dropped CSV
+ * or a Google Sheet read through sheets.js. One path from "rows in hand" on.
+ */
+function showRows(out, uid, source, name, text, { canWrite, mapHost, required, saved, onCancel, note }) {
+  const f = { name }; // the preview below labels rows by "file"
+  const parsed = parseCSV(text, { headerRow: source.header_row || 1 });
+  if (!parsed.columns.length) {
+    out.innerHTML = errorState(new Error('No header row was found. The first line should be the column names.'), `${name} did not parse`);
+    return;
+  }
+
+  // Answers the person gives to "is 05/10/2026 October or May", per column.
+  const answers = {};
+  if (saved && saved.date_order && saved.date_order !== 'auto') {
+    for (const c of parsed.columns) answers[c] = saved.date_order;
+  }
+
+  const paint = () => {
+    const preview = parsed.rows.slice(0, 10);
+    const dates = dateColumnReport(parsed, { dateOrders: answers });
+    const health = dateHealth(dates);
+    const blocked = health.asking > 0;
+
+    out.innerHTML = `
+      ${note || ''}
+      <div class="kv" style="margin-top:16px">
+        <span>file <b>${esc(f.name)}</b></span>
+        <span>columns <b>${parsed.columns.length}</b></span>
+        <span>rows <b>${parsed.rowCount}</b></span>
+        <span>showing <b>first ${preview.length}</b></span>
+      </div>
+      ${parsed.warnings.length ? `<div class="banner banner-warn" style="margin-top:12px"><b>Worth a look.</b> ${esc(parsed.warnings.join('. '))}.</div>` : ''}
+
+      ${dateBlock(dates, health, uid)}
+
+      <div class="tablewrap">
+        <table class="prev">
+          <thead><tr><th class="rn">#</th>${parsed.columns.map((c) => {
+  const d = dates.find((x) => x.column === c);
+  return `<th>${esc(c)}${d ? `<br><span style="color:${d.needsAsk || d.basis === 'conflict' ? 'var(--amber)' : 'var(--fg-3)'};text-transform:none;letter-spacing:0">${esc(dateTag(d))}</span>` : ''}</th>`;
+}).join('')}</tr></thead>
+          <tbody>${preview.map((r, i) => `<tr><td class="rn">${i + 1}</td>${parsed.columns.map((c) => `<td>${esc(r[c])}</td>`).join('')}</tr>`).join('')}</tbody>
+        </table>
+      </div>
+      ${parsed.rowCount === 0 ? `<div class="banner banner-warn" style="margin-top:12px"><b>Header only.</b> The file has column names but no data rows.</div>` : ''}
+      <div class="btnrow" style="margin-top:16px">
+        <button class="btn btn-go" id="${CSS.escape(uid)}-confirm" type="button"${canWrite && parsed.rowCount && !blocked ? '' : ' disabled'}>Confirm and send ${parsed.rowCount} rows</button>
+        <button class="btn btn-quiet" id="${CSS.escape(uid)}-cancel" type="button">Start again</button>
+        ${blocked ? '<span class="hint hint-bad">Answer the date question above first.</span>' : ''}
+      </div>`;
+
+    // The two buttons that settle an ambiguous column.
+    out.querySelectorAll('[data-dateans]').forEach((btn) => btn.addEventListener('click', () => {
+      answers[btn.dataset.col] = btn.dataset.dateans;
+      paint();
+      toast(`${btn.dataset.col} read as ${btn.dataset.dateans === 'DMY' ? 'day first' : 'month first'}`);
+      // The answer belongs to the source, not to this one upload - the next
+      // export of the same sheet will have the same convention.
+      persistDateOrder(source, btn.dataset.dateans);
+    }));
+
+    out.querySelector(`#${CSS.escape(uid)}-cancel`).addEventListener('click', () => { out.innerHTML = ''; if (onCancel) onCancel(); });
+    const confirmBtn = out.querySelector(`#${CSS.escape(uid)}-confirm`);
+    if (confirmBtn) {
+      confirmBtn.addEventListener('click', async () => {
+        confirmBtn.disabled = true;
+        confirmBtn.textContent = 'Sending...';
+        const ok = await sendUpload(source, f.name, parsed, dates);
+        confirmBtn.textContent = ok ? 'Sent' : 'Try again';
+        confirmBtn.disabled = !!ok;
+      });
+    }
+  };
+
+  paint();
+
+  renderMapping(mapHost, source, required, parsed.columns,
+    Object.fromEntries(suggestMapping(required.map((r) => r.column), parsed.columns)
+      .map((r) => [r.required, r.detected])),
+    canWrite, saved && saved.date_order);
+  mapHost.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
 }
 
 /* --------------------------- the date moment ------------------------------ */
@@ -477,7 +524,7 @@ function dateBlock(dates, health, uid) {
 
 /** The answer belongs to the source. Stored in the same row the column map uses. */
 async function persistDateOrder(source, order) {
-  if (!hasToken()) return;
+  if (!canSave()) return;
   const existing = savedMappings.get(source.id) || {};
   try {
     await db.upsert('pulse_column_mappings', [{
@@ -494,7 +541,7 @@ async function persistDateOrder(source, order) {
 }
 
 async function sendUpload(source, filename, parsed, dates) {
-  if (!hasToken()) { toast('Preview mode - nothing was sent.', 'warn'); return false; }
+  if (!canSave()) { toast('Preview mode - nothing was sent.', 'warn'); return false; }
   try {
     await db.insert('pulse_uploads', [{
       source_id: source.id,
@@ -568,7 +615,7 @@ function renderManualTab(pane, source, canWrite, required) {
       payload[input.dataset.col] = Number.isFinite(n) && v !== '' ? n : v;
     });
     if (!any) { toast('Nothing typed in yet.', 'warn'); return; }
-    if (!hasToken()) { toast('Preview mode - nothing was saved.', 'warn'); return; }
+    if (!canSave()) { toast('Preview mode - nothing was saved.', 'warn'); return; }
     try {
       await db.upsert('pulse_manual_values', [{
         source_id: source.id,
@@ -694,7 +741,7 @@ function renderListTab(pane, source, canWrite) {
         msg.textContent = `${unownedNow.length} row${unownedNow.length === 1 ? '' : 's'} have no owner. Name somebody on each before saving.`;
         return;
       }
-      if (!hasToken()) { toast('Preview mode - nothing was saved.', 'warn'); return; }
+      if (!canSave()) { toast('Preview mode - nothing was saved.', 'warn'); return; }
       try {
         await db.upsert('pulse_lists', [{
           id: `${source.id}-list`,
@@ -712,7 +759,7 @@ function renderListTab(pane, source, canWrite) {
   };
 
   const prime = async () => {
-    if (hasToken()) {
+    if (canSave()) {
       try {
         const saved = await db.select('pulse_lists', { eq: { source_id: source.id }, limit: 1 });
         if (saved.length && Array.isArray(saved[0].rows) && saved[0].rows.length) {
@@ -834,7 +881,7 @@ function renderMapping(host, source, required, detected, current, canWrite, date
     const mapping = {};
     selects.forEach((s) => { mapping[s.dataset.need] = s.value || null; });
     const order = host.querySelector(`#${CSS.escape(uid)}-dates`).value;
-    if (!hasToken()) { toast('Preview mode - nothing was saved.', 'warn'); return; }
+    if (!canSave()) { toast('Preview mode - nothing was saved.', 'warn'); return; }
     try {
       await db.upsert('pulse_column_mappings', [{
         source_id: source.id,
@@ -882,7 +929,7 @@ async function render() {
     banner('warn', `<b>Showing the seed from config/.</b> Supabase did not answer: ${esc(data.liveError)}`);
   }
 
-  if (hasToken()) {
+  if (canSave()) {
     try {
       const rows = await db.select('pulse_column_mappings');
       savedMappings = new Map(rows.map((r) => [r.source_id, r]));

@@ -329,3 +329,5 @@ a{color:inherit}
   *{transition:none!important;animation:none!important}
   html{scroll-behavior:auto}
 }
+.card.muted{opacity:.62}
+.card.muted:hover,.card.muted:focus-within{opacity:1}

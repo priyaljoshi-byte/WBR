@@ -20,7 +20,7 @@
  * ============================================================================
  */
 
-import { db } from './supabase.js';
+import { db } from './store.js';
 import { PULSE_CONFIG } from './config.js';
 import { suspectInjection } from './transcript-text.js';
 

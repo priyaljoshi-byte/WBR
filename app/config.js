@@ -21,6 +21,15 @@ export const PULSE_CONFIG = {
   ALLOWED_EMAILS: [],
   SESSION_DAYS: 7,
 
+  /**
+   * OPEN MODE - no sign-in, everything saves straight to Supabase.
+   * Set true on setup day so departments can connect sources before Google
+   * sign-in is wired. It only works because supabase/schema-open-today.sql
+   * opened the intake tables to anonymous writes. Turn this off the same day
+   * you run the REVOKE block at the bottom of that file.
+   */
+  OPEN_MODE: true,
+
   SUPABASE_URL: 'https://ypuinaryddkudzrkfusm.supabase.co',
   SUPABASE_ANON_KEY: 'sb_publishable_EaE_VXFm2NnkdA06hsRZug_rjnvWUCN',
 

@@ -19,10 +19,12 @@ import { db, signInWithGoogleIdToken, signOut as sbSignOut, clearToken, hasToken
 import { esc, el, emptyState, toast } from './ui.js';
 
 const SESSION_KEY = 'pulse-session';
+const OPEN_NAME_KEY = 'pulse-open-name';
 
 const PAGES = [
   { id: 'index', href: 'index.html', label: 'Setup' },
   { id: 'sources', href: 'sources.html', label: 'Sources' },
+  { id: 'metrics', href: 'metrics.html', label: 'Metrics' },
   { id: 'targets', href: 'targets.html', label: 'Targets' },
   { id: 'rag', href: 'rag.html', label: 'Brand status' },
   { id: 'transcripts', href: 'transcripts.html', label: 'Add a meeting' }
@@ -81,6 +83,45 @@ export function signOut() {
   sbSignOut().finally(() => location.replace('index.html'));
 }
 
+/* ------------------------------- open mode -------------------------------- */
+
+/**
+ * With no sign-in there is no verified email, but several tables record who
+ * entered a number (entered_by is NOT NULL). So open mode asks for a name once
+ * and keeps it in this browser. It is a label, not an identity - anyone can
+ * type anything - which is exactly why open mode is for setup day only.
+ */
+export function getOpenName() {
+  try { return (localStorage.getItem(OPEN_NAME_KEY) || '').trim(); } catch { return ''; }
+}
+
+function setOpenName(name) {
+  try { localStorage.setItem(OPEN_NAME_KEY, String(name || '').trim()); } catch { /* private mode */ }
+}
+
+function openModeBanner() {
+  const name = getOpenName();
+  const node = banner('preview', `<b>Open mode.</b> No sign-in yet - everything you save goes to the shared team database, and anyone with this link can edit it.
+    <span id="pulse-openname">${name
+    ? `Saving as <b>${esc(name)}</b>. <a href="#" id="pulse-rename">Change</a>`
+    : `<label for="pulse-namein">Your name, so entries say who made them:</label>
+       <input id="pulse-namein" type="text" autocomplete="name" placeholder="e.g. Subham" style="margin:0 6px;max-width:180px">
+       <button type="button" class="btn btn-sm" id="pulse-nameok">Save</button>`}</span>`);
+  const ok = node.querySelector('#pulse-nameok');
+  if (ok) {
+    const input = node.querySelector('#pulse-namein');
+    const save = () => {
+      if (!input.value.trim()) { toast('Type a name first.', 'warn'); return; }
+      setOpenName(input.value);
+      location.reload();
+    };
+    ok.addEventListener('click', save);
+    input.addEventListener('keydown', (e) => { if (e.key === 'Enter') { e.preventDefault(); save(); } });
+  }
+  const again = node.querySelector('#pulse-rename');
+  if (again) again.addEventListener('click', (e) => { e.preventDefault(); setOpenName(''); location.reload(); });
+}
+
 /* --------------------------------- role ----------------------------------- */
 
 /**
@@ -122,7 +163,9 @@ function renderNav(active, ctx) {
     `<li><a href="${p.href}"${p.id === active ? ' aria-current="true"' : ''}>${esc(p.label)}</a></li>`
   )).join('');
 
-  const who = ctx.signedIn
+  const who = ctx.openMode
+    ? `<span class="when">${esc(ctx.session.name)} &middot; open mode</span>`
+    : ctx.signedIn
     ? `<div class="whochip" title="${esc(ctx.session.email)}">
          ${ctx.session.picture
            ? `<img src="${esc(ctx.session.picture)}" alt="" referrerpolicy="no-referrer">`
@@ -232,6 +275,7 @@ async function renderGate(mount, { title, blurb }) {
  * @returns {Promise<Ctx>}
  */
 export async function boot(opts) {
+  if (PULSE_CONFIG.OPEN_MODE) return bootOpen();
   const params = new URLSearchParams(location.search);
   const preview = params.get('preview') === '1';
   const session = getSession();
@@ -274,8 +318,37 @@ export async function boot(opts) {
   return ctx;
 }
 
+/**
+ * Open mode: everyone is treated as an admin, because the database (not this
+ * page) is what decides what an anonymous write may touch.
+ */
+function bootOpen() {
+  const name = getOpenName();
+  const who = name || 'unnamed (open mode)';
+  return {
+    session: { email: who, name: name || 'Guest', picture: '' },
+    signedIn: true,
+    openMode: true,
+    preview: false,
+    role: 'admin',
+    deptIds: [],
+    isAdmin: true,
+    roleSource: 'open',
+    roleError: null,
+    roleLine: 'open mode',
+    canWrite: () => true,
+    scope: (allDeptIds) => allDeptIds,
+    guard: () => true
+  };
+}
+
 /** Finishes the shell once the page knows which departments it is showing. */
 export function paintShell(ctx, { active, deptLabels }) {
+  if (ctx.openMode) {
+    renderNav(active, ctx);
+    openModeBanner();
+    return;
+  }
   if (ctx.signedIn) {
     const scope = ctx.isAdmin
       ? 'all departments'

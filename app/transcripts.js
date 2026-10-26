@@ -27,7 +27,7 @@ import { boot, paintShell, banner } from './shell.js';
 import { loadAll } from './configload.js';
 import { cleanTranscript, suspectInjection } from './transcript-text.js';
 import { extractTranscript, previewExtraction } from './api.js';
-import { db, hasToken } from './supabase.js';
+import { db, canSave } from './store.js';
 import {
   esc, el, emptyState, errorState, toast, readFileAsText, dropZone, today, progressBar
 } from './ui.js';
@@ -167,7 +167,7 @@ function wireInput() {
     const meetingId = `${meeting.kind || meeting.id}-${date}`;
     try {
       let result;
-      if (!hasToken()) {
+      if (!canSave()) {
         // Preview only. Clearly labelled sample data; it can never be committed
         // because preview has no session. This is not a fallback for a broken
         // function - with a real session you get the error, not this.
@@ -259,7 +259,7 @@ function repaintProgress() {
   const { decided, total, merges } = reviewProgress();
   const commit = document.getElementById('rev-commit');
   const blocked = decided < total || merges.length > 0;
-  if (commit) commit.disabled = blocked || !hasToken();
+  if (commit) commit.disabled = blocked || !canSave();
 
   host.innerHTML = `
     <header>
@@ -638,7 +638,7 @@ function renderReview() {
   });
   document.getElementById('rev-commit').addEventListener('click', commit);
 
-  if (!hasToken()) {
+  if (!canSave()) {
     document.getElementById('rev-note').textContent = 'Preview mode - commit is disabled.';
   } else if (!ctx.isAdmin) {
     document.getElementById('rev-note').textContent = 'The decision log is admin-write in the database. Your review is saved as a draft an admin can commit.';
@@ -847,11 +847,11 @@ function wireWeekNumbers() {
     const halves = filled.length - complete.length;
     state.textContent = `${complete.length} of 3`;
     state.className = `chip ${complete.length >= 3 ? 'chip-ok' : 'chip-warn'}`;
-    save.disabled = complete.length < 3 || !hasToken();
+    save.disabled = complete.length < 3 || !canSave();
     msg.className = 'hint';
     msg.textContent = halves
       ? `${halves} row${halves === 1 ? ' has' : 's have'} a count without a caption, or the other way round. A number nobody can read is not a headline.`
-      : (complete.length < 3 ? `${3 - complete.length} more to go.` : (hasToken() ? '' : 'Preview mode - cannot save.'));
+      : (complete.length < 3 ? `${3 - complete.length} more to go.` : (canSave() ? '' : 'Preview mode - cannot save.'));
     if (halves) msg.className = 'hint hint-bad';
   };
 
@@ -973,7 +973,7 @@ function wirePriorities() {
     msg.textContent = missing.length
       ? `Nothing yet from ${missing.join(', ')}.`
       : (full.length === all.length ? 'Everyone has three.' : 'Everyone has at least one.');
-    save.disabled = !done.length || !hasToken();
+    save.disabled = !done.length || !canSave();
   };
 
   blocks.forEach((b) => b.querySelectorAll('input[data-p]').forEach((i) => i.addEventListener('input', refresh)));

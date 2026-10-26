@@ -22,7 +22,7 @@
 
 import { boot, paintShell, banner } from './shell.js';
 import { loadAll } from './configload.js';
-import { db, hasToken } from './supabase.js';
+import { db, canSave } from './store.js';
 import { esc, el, emptyState, errorState, toast, daysBack, today, progressBar } from './ui.js';
 
 const main = document.getElementById('main');
@@ -147,7 +147,7 @@ function wireRow(row, subject) {
     clearError();
     buttons.forEach((b) => b.setAttribute('aria-pressed', String(b === btn)));
 
-    if (!hasToken()) {
+    if (!canSave()) {
       msg.className = 'hint';
       msg.textContent = 'Preview mode - nothing was saved.';
       return;
@@ -235,7 +235,7 @@ function datePicker() {
 }
 
 async function loadSubjects() {
-  if (!hasToken()) return PREVIEW_SUBJECTS;
+  if (!canSave()) return PREVIEW_SUBJECTS;
   try {
     const rows = await db.select('pulse_status_subjects', { eq: { active: true }, order: 'ord.asc' });
     return rows.map((r) => ({ id: r.id, label: r.label, kind: r.kind, dept_id: r.dept_id }));
@@ -246,7 +246,7 @@ async function loadSubjects() {
 
 async function loadCalls() {
   const map = new Map();
-  if (!hasToken()) return map;
+  if (!canSave()) return map;
   const days = daysBack(14);
   try {
     const rows = await db.select('pulse_status_calls', {
@@ -290,7 +290,7 @@ function draw() {
     completeHost.remove();
     main.innerHTML = emptyState({
       title: 'No brands or tracks are set up yet',
-      next: hasToken()
+      next: canSave()
         ? 'Add the first one below. Each becomes a row with four buttons and a reason box, called once a day in the stand-up.'
         : 'Sign in to add brands and tracks. In preview you can see the screen but not the real list.'
     }) + addSubjectForm(canWrite);
@@ -330,7 +330,7 @@ function wireAdd() {
     const kind = document.getElementById('newkind').value;
     const deptId = document.getElementById('newdept').value;
     if (!label) { toast('Give it a name first.', 'warn'); return; }
-    if (!hasToken()) { toast('Preview mode - nothing was saved.', 'warn'); return; }
+    if (!canSave()) { toast('Preview mode - nothing was saved.', 'warn'); return; }
     const id = label.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '').slice(0, 48);
     try {
       await db.upsert('pulse_status_subjects', [{
@@ -362,7 +362,7 @@ async function render() {
   const labels = data.org.departments.filter((d) => ctx.scope(allDeptIds).includes(d.id)).map((d) => d.short || d.label);
   paintShell(ctx, { active: 'rag', deptLabels: labels });
 
-  if (!hasToken()) {
+  if (!canSave()) {
     banner('preview', '<b>Preview.</b> The subjects below are examples so the screen can be seen. Nothing is read from or written to the database.');
   }
 

@@ -461,6 +461,32 @@ insert into pulse_sources (id, dept_id, kind, label, ref, tab, header_row, date_
 on conflict (id) do nothing;
 
 -- ===========================================================================
+-- 11b. Metric selections - which catalogue metrics a department tracks
+-- ===========================================================================
+-- Written by the Metrics screen (app/metrics.js). The target itself lives on
+-- pulse_metrics, so there is one target per metric whichever screen set it;
+-- this row is the department's choice and the one named owner.
+
+create table if not exists pulse_selections (
+  dept_id    text not null references pulse_departments(id),
+  metric_id  text not null,
+  enabled    boolean not null default true,
+  target     numeric,
+  owner      text,
+  direction  text not null default 'up' check (direction in ('up','down')),
+  created_at timestamptz not null default now(),
+  updated_at timestamptz not null default now(),
+  primary key (dept_id, metric_id)
+);
+alter table pulse_selections enable row level security;
+
+drop policy if exists pulse_selections_read on pulse_selections;
+create policy pulse_selections_read on pulse_selections for select using (pulse_is_signed_in());
+drop policy if exists pulse_selections_write on pulse_selections;
+create policy pulse_selections_write on pulse_selections for all
+  using (pulse_owns_dept(dept_id)) with check (pulse_owns_dept(dept_id));
+
+-- ===========================================================================
 -- 12. Read models for the setup screens
 -- ===========================================================================
 

@@ -15,7 +15,7 @@
 
 import { boot, paintShell, banner } from './shell.js';
 import { loadAll } from './configload.js';
-import { db, hasToken } from './supabase.js';
+import { db, canSave } from './store.js';
 import { esc, el, emptyState, errorState, toast, progressBar, UNIT_LABELS } from './ui.js';
 
 const main = document.getElementById('main');
@@ -128,7 +128,7 @@ function wire(card, m, deptId) {
       toast('Critical must be below warn - otherwise a metric goes critical before it ever warns.', 'warn');
       return;
     }
-    if (!hasToken()) { toast('Preview mode - nothing was saved.', 'warn'); return; }
+    if (!canSave()) { toast('Preview mode - nothing was saved.', 'warn'); return; }
 
     try {
       await db.upsert('pulse_metrics', [{
