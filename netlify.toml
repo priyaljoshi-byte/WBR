@@ -1,0 +1,56 @@
+# Netlify configuration.
+#
+# This file OVERRIDES whatever is set in the Netlify UI, and that is the point.
+# A setting clicked into a web form can be lost, forgotten, or never applied -
+# which is exactly what happened here: the UI said one thing, the deploy served
+# another, and the whole repository went public as a result.
+#
+# Version-controlled config cannot drift from the code it describes.
+
+[build]
+  # The ONLY folder that may ever be served.
+  #
+  # bin/build-site.js assembles site/ from an allowlist of four folders. Serving
+  # the repository root instead would publish config/, docs/, the workflow file
+  # and - once meetings start - data/, which holds RAW TRANSCRIPTS: verbatim
+  # speech, people discussed by name. That is the failure this line prevents.
+  publish = "site"
+
+  # Nothing to build. GitHub Actions already rendered the HTML and committed it;
+  # Netlify only serves the folder.
+  command = ""
+
+[build.environment]
+  # No Node build runs, but pin it so a future one cannot silently change engine.
+  NODE_VERSION = "24"
+
+# ---------------------------------------------------------------------------
+# Headers
+# ---------------------------------------------------------------------------
+# These are defence in depth, NOT access control. The password gate in the
+# Netlify UI is the actual boundary. Headers cannot keep anyone out - they only
+# reduce what leaks once someone is in, and keep the pages out of search.
+
+[[headers]]
+  for = "/*"
+  [headers.values]
+    # Internal numbers should never appear in a search result, and a WBR link
+    # pasted into a chat tool should not render a preview of the revenue.
+    X-Robots-Tag = "noindex, nofollow, noarchive, nosnippet"
+    Referrer-Policy = "no-referrer"
+    X-Content-Type-Options = "nosniff"
+    X-Frame-Options = "DENY"
+    Permissions-Policy = "geolocation=(), microphone=(), camera=()"
+
+[[headers]]
+  # Dashboards are rebuilt weekly and must never be served stale from a cache -
+  # a founder reading last week's numbers while believing they are this week's
+  # is worse than seeing no numbers at all.
+  for = "/*.html"
+  [headers.values]
+    Cache-Control = "no-store, must-revalidate"
+
+[[headers]]
+  for = "/config/*.json"
+  [headers.values]
+    Cache-Control = "no-store"

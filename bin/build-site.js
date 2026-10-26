@@ -32,7 +32,7 @@ const SITE = join(ROOT, 'site');
 
 /** Only these move. Adding a folder here is a deliberate act. */
 const COPY = [
-  { from: 'out',    to: '.',       exts: ['.html'] },
+  { from: 'out',    to: '.',       exts: ['.html', '.txt'] },
   { from: 'app',    to: 'app',     exts: ['.html', '.js', '.css'], skipDirs: ['__tests__'] },
   { from: 'engine', to: 'engine',  exts: ['.js'],                  skipDirs: ['__tests__'] },
   { from: 'config', to: 'config',  exts: ['.json'] }

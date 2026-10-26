@@ -1,0 +1,4 @@
+# Internal operating dashboards. Not for indexing.
+# This is a request, not a control - the password gate is the actual boundary.
+User-agent: *
+Disallow: /
