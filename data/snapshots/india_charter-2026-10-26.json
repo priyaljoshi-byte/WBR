@@ -3,8 +3,8 @@
     "id": "run-2026-10-26",
     "periodStart": "2026-10-26",
     "periodEnd": "2026-11-01",
-    "startedAt": "2026-10-26T18:27:57.828Z",
-    "finishedAt": "2026-10-26T18:27:57.828Z",
+    "startedAt": "2026-10-27T15:14:42.268Z",
+    "finishedAt": "2026-10-27T15:14:42.268Z",
     "status": "partial",
     "triggeredBy": "cron",
     "meetingId": "india_charter"
@@ -26,7 +26,7 @@
       "unit": "currency_inr",
       "caption": "₹0 open",
       "rowCount": 0,
-      "computedAt": "2026-10-26T18:27:57.828Z",
+      "computedAt": "2026-10-27T15:14:42.268Z",
       "warnings": [
         "the sheet could not be read (That sheet is private, so the browser is not allowed to read it. Open the sheet, press Share, and under \"General access\" choose \"Anyone with the link\" with the role Viewer. Nothing else needs changing, and view access does not let Pulse edit anything.), so the last upload was used",
         "read from the uploaded file \"SLG Pipeline  - July Sales Funnel.csv\" (Subham)"
@@ -48,7 +48,7 @@
       "unit": "currency_inr",
       "caption": "₹0 of — target",
       "rowCount": 0,
-      "computedAt": "2026-10-26T18:27:57.828Z",
+      "computedAt": "2026-10-27T15:14:42.268Z",
       "warnings": [
         "the sheet could not be read (That sheet is private, so the browser is not allowed to read it. Open the sheet, press Share, and under \"General access\" choose \"Anyone with the link\" with the role Viewer. Nothing else needs changing, and view access does not let Pulse edit anything.), so the last upload was used",
         "read from the uploaded file \"SLG Pipeline  - July Sales Funnel.csv\" (Subham)",
@@ -72,7 +72,7 @@
       "unit": "currency_inr",
       "caption": "₹0 of ₹0 open",
       "rowCount": 0,
-      "computedAt": "2026-10-26T18:27:57.828Z",
+      "computedAt": "2026-10-27T15:14:42.268Z",
       "warnings": [
         "the sheet could not be read (That sheet is private, so the browser is not allowed to read it. Open the sheet, press Share, and under \"General access\" choose \"Anyone with the link\" with the role Viewer. Nothing else needs changing, and view access does not let Pulse edit anything.), so the last upload was used",
         "read from the uploaded file \"SLG Pipeline  - July Sales Funnel.csv\" (Subham)",
@@ -95,7 +95,7 @@
       "unit": "currency_inr",
       "caption": "₹0",
       "rowCount": 0,
-      "computedAt": "2026-10-26T18:27:57.828Z",
+      "computedAt": "2026-10-27T15:14:42.268Z",
       "warnings": [
         "the sheet could not be read (That sheet is private, so the browser is not allowed to read it. Open the sheet, press Share, and under \"General access\" choose \"Anyone with the link\" with the role Viewer. Nothing else needs changing, and view access does not let Pulse edit anything.), so the last upload was used",
         "read from the uploaded file \"SLG Pipeline  - July Sales Funnel.csv\" (Subham)",
@@ -118,7 +118,7 @@
       "unit": "currency_inr",
       "caption": "— created",
       "rowCount": 0,
-      "computedAt": "2026-10-26T18:27:57.828Z",
+      "computedAt": "2026-10-27T15:14:42.268Z",
       "warnings": [
         "source \"india_crm_created\" errored: India pipeline created: not connected yet - paste the link or upload a CSV on the Sources page"
       ]
@@ -139,7 +139,7 @@
       "unit": "percent",
       "caption": "—",
       "rowCount": 16,
-      "computedAt": "2026-10-26T18:27:57.828Z",
+      "computedAt": "2026-10-27T15:14:42.268Z",
       "warnings": [
         "the sheet could not be read (That sheet is private, so the browser is not allowed to read it. Open the sheet, press Share, and under \"General access\" choose \"Anyone with the link\" with the role Viewer. Nothing else needs changing, and view access does not let Pulse edit anything.), so the last upload was used",
         "read from the uploaded file \"SLG Pipeline  - July Sales Funnel.csv\" (Subham)",
@@ -163,7 +163,7 @@
       "unit": "count",
       "caption": "0 of — target",
       "rowCount": 0,
-      "computedAt": "2026-10-26T18:27:57.828Z",
+      "computedAt": "2026-10-27T15:14:42.268Z",
       "warnings": [
         "the sheet could not be read (That sheet is private, so the browser is not allowed to read it. Open the sheet, press Share, and under \"General access\" choose \"Anyone with the link\" with the role Viewer. Nothing else needs changing, and view access does not let Pulse edit anything.), so the last upload was used",
         "read from the uploaded file \"SLG Pipeline  - July Sales Funnel.csv\" (Subham)",
@@ -187,7 +187,7 @@
       "unit": "count",
       "caption": "0 of — target",
       "rowCount": 0,
-      "computedAt": "2026-10-26T18:27:57.828Z",
+      "computedAt": "2026-10-27T15:14:42.268Z",
       "warnings": [
         "the sheet could not be read (That sheet is private, so the browser is not allowed to read it. Open the sheet, press Share, and under \"General access\" choose \"Anyone with the link\" with the role Viewer. Nothing else needs changing, and view access does not let Pulse edit anything.), so the last upload was used",
         "read from the uploaded file \"SLG Pipeline  - July Sales Funnel.csv\" (Subham)",
@@ -211,7 +211,7 @@
       "unit": "count",
       "caption": "0 of — target",
       "rowCount": 16,
-      "computedAt": "2026-10-26T18:27:57.828Z",
+      "computedAt": "2026-10-27T15:14:42.268Z",
       "warnings": [
         "the sheet could not be read (That sheet is private, so the browser is not allowed to read it. Open the sheet, press Share, and under \"General access\" choose \"Anyone with the link\" with the role Viewer. Nothing else needs changing, and view access does not let Pulse edit anything.), so the last upload was used",
         "read from the uploaded file \"SLG Pipeline  - July Sales Funnel.csv\" (Subham)",
@@ -235,7 +235,7 @@
       "unit": "currency_inr",
       "caption": "— of — budget",
       "rowCount": 0,
-      "computedAt": "2026-10-26T18:27:57.828Z",
+      "computedAt": "2026-10-27T15:14:42.268Z",
       "warnings": [
         "source \"ads_india\" errored: Paid media - India: not connected yet - paste the link or upload a CSV on the Sources page",
         "denominator for \"pm_india_spend\" is static but has no usable value"
@@ -259,7 +259,7 @@
       "unit": "count",
       "caption": "— of — target",
       "rowCount": 0,
-      "computedAt": "2026-10-26T18:27:57.828Z",
+      "computedAt": "2026-10-27T15:14:42.268Z",
       "warnings": [
         "source \"ads_india\" errored: Paid media - India: not connected yet - paste the link or upload a CSV on the Sources page",
         "denominator for \"pm_india_leads\" is static but has no usable value"
@@ -283,7 +283,7 @@
       "unit": "count",
       "caption": "— of — leads",
       "rowCount": 0,
-      "computedAt": "2026-10-26T18:27:57.828Z",
+      "computedAt": "2026-10-27T15:14:42.268Z",
       "warnings": [
         "source \"ads_india\" errored: Paid media - India: not connected yet - paste the link or upload a CSV on the Sources page",
         "denominator metric \"pm_india_leads\" for \"pm_india_qualified\" has no value"
@@ -307,7 +307,7 @@
       "unit": "currency_inr",
       "caption": "—",
       "rowCount": 0,
-      "computedAt": "2026-10-26T18:27:57.828Z",
+      "computedAt": "2026-10-27T15:14:42.268Z",
       "warnings": [
         "source \"ads_india\" errored: Paid media - India: not connected yet - paste the link or upload a CSV on the Sources page"
       ],
@@ -330,7 +330,7 @@
       "unit": "currency_inr",
       "caption": "—",
       "rowCount": 0,
-      "computedAt": "2026-10-26T18:27:57.828Z",
+      "computedAt": "2026-10-27T15:14:42.268Z",
       "warnings": [
         "source \"ads_india\" errored: Paid media - India: not connected yet - paste the link or upload a CSV on the Sources page"
       ],
@@ -353,7 +353,7 @@
       "unit": "currency_inr",
       "caption": "₹0 sourced",
       "rowCount": 0,
-      "computedAt": "2026-10-26T18:27:57.828Z",
+      "computedAt": "2026-10-27T15:14:42.268Z",
       "warnings": [
         "the sheet could not be read (That sheet is private, so the browser is not allowed to read it. Open the sheet, press Share, and under \"General access\" choose \"Anyone with the link\" with the role Viewer. Nothing else needs changing, and view access does not let Pulse edit anything.), so the last upload was used",
         "read from the uploaded file \"SLG Pipeline  - July Sales Funnel.csv\" (Subham)"
@@ -372,7 +372,7 @@
         "Raghav"
       ],
       "raisedBy": "engine",
-      "raisedAt": "2026-10-26T18:27:57.828Z",
+      "raisedAt": "2026-10-27T15:14:42.268Z",
       "resolvedAt": null,
       "metricIds": [
         "india_created_wk"
@@ -391,7 +391,7 @@
         "Raghav"
       ],
       "raisedBy": "engine",
-      "raisedAt": "2026-10-26T18:27:57.828Z",
+      "raisedAt": "2026-10-27T15:14:42.268Z",
       "resolvedAt": null,
       "metricIds": [
         "india_win_rate"
@@ -409,7 +409,7 @@
         "Imran"
       ],
       "raisedBy": "engine",
-      "raisedAt": "2026-10-26T18:27:57.828Z",
+      "raisedAt": "2026-10-27T15:14:42.268Z",
       "resolvedAt": null,
       "metricIds": [
         "pm_india_cac"
@@ -427,7 +427,7 @@
         "Imran"
       ],
       "raisedBy": "engine",
-      "raisedAt": "2026-10-26T18:27:57.828Z",
+      "raisedAt": "2026-10-27T15:14:42.268Z",
       "resolvedAt": null,
       "metricIds": [
         "pm_india_cpl"
@@ -445,7 +445,7 @@
         "Imran"
       ],
       "raisedBy": "engine",
-      "raisedAt": "2026-10-26T18:27:57.828Z",
+      "raisedAt": "2026-10-27T15:14:42.268Z",
       "resolvedAt": null,
       "metricIds": [
         "pm_india_leads"
@@ -463,7 +463,7 @@
         "Imran"
       ],
       "raisedBy": "engine",
-      "raisedAt": "2026-10-26T18:27:57.828Z",
+      "raisedAt": "2026-10-27T15:14:42.268Z",
       "resolvedAt": null,
       "metricIds": [
         "pm_india_qualified"
@@ -481,7 +481,7 @@
         "Imran"
       ],
       "raisedBy": "engine",
-      "raisedAt": "2026-10-26T18:27:57.828Z",
+      "raisedAt": "2026-10-27T15:14:42.268Z",
       "resolvedAt": null,
       "metricIds": [
         "pm_india_spend"
@@ -500,7 +500,7 @@
         "Raghav"
       ],
       "raisedBy": "engine",
-      "raisedAt": "2026-10-26T18:27:57.828Z",
+      "raisedAt": "2026-10-27T15:14:42.268Z",
       "resolvedAt": null,
       "metricIds": [
         "in_pipeline_india"
@@ -519,7 +519,7 @@
         "Raghav"
       ],
       "raisedBy": "engine",
-      "raisedAt": "2026-10-26T18:27:57.828Z",
+      "raisedAt": "2026-10-27T15:14:42.268Z",
       "resolvedAt": null,
       "metricIds": [
         "india_accounts_worked"
@@ -538,7 +538,7 @@
         "Raghav"
       ],
       "raisedBy": "engine",
-      "raisedAt": "2026-10-26T18:27:57.828Z",
+      "raisedAt": "2026-10-27T15:14:42.268Z",
       "resolvedAt": null,
       "metricIds": [
         "india_closed_won"
@@ -557,7 +557,7 @@
         "Raghav"
       ],
       "raisedBy": "engine",
-      "raisedAt": "2026-10-26T18:27:57.828Z",
+      "raisedAt": "2026-10-27T15:14:42.268Z",
       "resolvedAt": null,
       "metricIds": [
         "india_created_wk"
@@ -576,7 +576,7 @@
         "Raghav"
       ],
       "raisedBy": "engine",
-      "raisedAt": "2026-10-26T18:27:57.828Z",
+      "raisedAt": "2026-10-27T15:14:42.268Z",
       "resolvedAt": null,
       "metricIds": [
         "india_in_poc"
@@ -595,7 +595,7 @@
         "Raghav"
       ],
       "raisedBy": "engine",
-      "raisedAt": "2026-10-26T18:27:57.828Z",
+      "raisedAt": "2026-10-27T15:14:42.268Z",
       "resolvedAt": null,
       "metricIds": [
         "india_meetings_held"
@@ -614,7 +614,7 @@
         "Raghav"
       ],
       "raisedBy": "engine",
-      "raisedAt": "2026-10-26T18:27:57.828Z",
+      "raisedAt": "2026-10-27T15:14:42.268Z",
       "resolvedAt": null,
       "metricIds": [
         "india_opps_created"
@@ -633,7 +633,7 @@
         "Raghav"
       ],
       "raisedBy": "engine",
-      "raisedAt": "2026-10-26T18:27:57.828Z",
+      "raisedAt": "2026-10-27T15:14:42.268Z",
       "resolvedAt": null,
       "metricIds": [
         "india_proposal"
@@ -652,7 +652,7 @@
         "Raghav"
       ],
       "raisedBy": "engine",
-      "raisedAt": "2026-10-26T18:27:57.828Z",
+      "raisedAt": "2026-10-27T15:14:42.268Z",
       "resolvedAt": null,
       "metricIds": [
         "india_win_rate"
@@ -670,7 +670,7 @@
         "Imran"
       ],
       "raisedBy": "engine",
-      "raisedAt": "2026-10-26T18:27:57.828Z",
+      "raisedAt": "2026-10-27T15:14:42.268Z",
       "resolvedAt": null,
       "metricIds": [
         "pm_india_cac"
@@ -688,7 +688,7 @@
         "Imran"
       ],
       "raisedBy": "engine",
-      "raisedAt": "2026-10-26T18:27:57.828Z",
+      "raisedAt": "2026-10-27T15:14:42.268Z",
       "resolvedAt": null,
       "metricIds": [
         "pm_india_cpl"
@@ -706,7 +706,7 @@
         "Imran"
       ],
       "raisedBy": "engine",
-      "raisedAt": "2026-10-26T18:27:57.828Z",
+      "raisedAt": "2026-10-27T15:14:42.268Z",
       "resolvedAt": null,
       "metricIds": [
         "pm_india_leads"
@@ -724,7 +724,7 @@
         "Imran"
       ],
       "raisedBy": "engine",
-      "raisedAt": "2026-10-26T18:27:57.828Z",
+      "raisedAt": "2026-10-27T15:14:42.268Z",
       "resolvedAt": null,
       "metricIds": [
         "pm_india_pipeline_sourced"
@@ -742,7 +742,7 @@
         "Imran"
       ],
       "raisedBy": "engine",
-      "raisedAt": "2026-10-26T18:27:57.828Z",
+      "raisedAt": "2026-10-27T15:14:42.268Z",
       "resolvedAt": null,
       "metricIds": [
         "pm_india_qualified"
@@ -760,7 +760,7 @@
         "Imran"
       ],
       "raisedBy": "engine",
-      "raisedAt": "2026-10-26T18:27:57.828Z",
+      "raisedAt": "2026-10-27T15:14:42.268Z",
       "resolvedAt": null,
       "metricIds": [
         "pm_india_spend"
@@ -779,7 +779,7 @@
         "Raghav"
       ],
       "raisedBy": "engine",
-      "raisedAt": "2026-10-26T18:27:57.828Z",
+      "raisedAt": "2026-10-27T15:14:42.268Z",
       "resolvedAt": null,
       "metricIds": [
         "in_pipeline_india"
@@ -798,7 +798,7 @@
         "Raghav"
       ],
       "raisedBy": "engine",
-      "raisedAt": "2026-10-26T18:27:57.828Z",
+      "raisedAt": "2026-10-27T15:14:42.268Z",
       "resolvedAt": null,
       "metricIds": [
         "india_accounts_worked"
@@ -817,7 +817,7 @@
         "Raghav"
       ],
       "raisedBy": "engine",
-      "raisedAt": "2026-10-26T18:27:57.828Z",
+      "raisedAt": "2026-10-27T15:14:42.268Z",
       "resolvedAt": null,
       "metricIds": [
         "india_closed_won"
@@ -836,7 +836,7 @@
         "Raghav"
       ],
       "raisedBy": "engine",
-      "raisedAt": "2026-10-26T18:27:57.828Z",
+      "raisedAt": "2026-10-27T15:14:42.268Z",
       "resolvedAt": null,
       "metricIds": [
         "india_created_wk"
@@ -855,7 +855,7 @@
         "Raghav"
       ],
       "raisedBy": "engine",
-      "raisedAt": "2026-10-26T18:27:57.828Z",
+      "raisedAt": "2026-10-27T15:14:42.268Z",
       "resolvedAt": null,
       "metricIds": [
         "india_in_poc"
@@ -874,7 +874,7 @@
         "Raghav"
       ],
       "raisedBy": "engine",
-      "raisedAt": "2026-10-26T18:27:57.828Z",
+      "raisedAt": "2026-10-27T15:14:42.268Z",
       "resolvedAt": null,
       "metricIds": [
         "india_meetings_held"
@@ -893,7 +893,7 @@
         "Raghav"
       ],
       "raisedBy": "engine",
-      "raisedAt": "2026-10-26T18:27:57.828Z",
+      "raisedAt": "2026-10-27T15:14:42.268Z",
       "resolvedAt": null,
       "metricIds": [
         "india_opps_created"
@@ -912,7 +912,7 @@
         "Raghav"
       ],
       "raisedBy": "engine",
-      "raisedAt": "2026-10-26T18:27:57.828Z",
+      "raisedAt": "2026-10-27T15:14:42.268Z",
       "resolvedAt": null,
       "metricIds": [
         "india_proposal"
@@ -931,7 +931,7 @@
         "Raghav"
       ],
       "raisedBy": "engine",
-      "raisedAt": "2026-10-26T18:27:57.828Z",
+      "raisedAt": "2026-10-27T15:14:42.268Z",
       "resolvedAt": null,
       "metricIds": [
         "india_win_rate"
@@ -949,7 +949,7 @@
         "Imran"
       ],
       "raisedBy": "engine",
-      "raisedAt": "2026-10-26T18:27:57.828Z",
+      "raisedAt": "2026-10-27T15:14:42.268Z",
       "resolvedAt": null,
       "metricIds": [
         "pm_india_cac"
@@ -967,7 +967,7 @@
         "Imran"
       ],
       "raisedBy": "engine",
-      "raisedAt": "2026-10-26T18:27:57.828Z",
+      "raisedAt": "2026-10-27T15:14:42.268Z",
       "resolvedAt": null,
       "metricIds": [
         "pm_india_cpl"
@@ -985,7 +985,7 @@
         "Imran"
       ],
       "raisedBy": "engine",
-      "raisedAt": "2026-10-26T18:27:57.828Z",
+      "raisedAt": "2026-10-27T15:14:42.268Z",
       "resolvedAt": null,
       "metricIds": [
         "pm_india_leads"
@@ -1003,7 +1003,7 @@
         "Imran"
       ],
       "raisedBy": "engine",
-      "raisedAt": "2026-10-26T18:27:57.828Z",
+      "raisedAt": "2026-10-27T15:14:42.268Z",
       "resolvedAt": null,
       "metricIds": [
         "pm_india_pipeline_sourced"
@@ -1021,7 +1021,7 @@
         "Imran"
       ],
       "raisedBy": "engine",
-      "raisedAt": "2026-10-26T18:27:57.828Z",
+      "raisedAt": "2026-10-27T15:14:42.268Z",
       "resolvedAt": null,
       "metricIds": [
         "pm_india_qualified"
@@ -1039,7 +1039,7 @@
         "Imran"
       ],
       "raisedBy": "engine",
-      "raisedAt": "2026-10-26T18:27:57.828Z",
+      "raisedAt": "2026-10-27T15:14:42.268Z",
       "resolvedAt": null,
       "metricIds": [
         "pm_india_spend"

@@ -3,8 +3,8 @@
     "id": "run-2026-10-26",
     "periodStart": "2026-10-26",
     "periodEnd": "2026-11-01",
-    "startedAt": "2026-10-26T18:27:58.234Z",
-    "finishedAt": "2026-10-26T18:27:58.234Z",
+    "startedAt": "2026-10-27T15:14:42.766Z",
+    "finishedAt": "2026-10-27T15:14:42.766Z",
     "status": "failed",
     "triggeredBy": "cron",
     "meetingId": "us_charter"
@@ -26,7 +26,7 @@
       "unit": "currency_usd",
       "caption": "— open",
       "rowCount": 0,
-      "computedAt": "2026-10-26T18:27:58.234Z",
+      "computedAt": "2026-10-27T15:14:42.766Z",
       "warnings": [
         "source \"us_crm\" errored: US pipeline: not connected yet - paste the link or upload a CSV on the Sources page"
       ]
@@ -47,7 +47,7 @@
       "unit": "currency_usd",
       "caption": "— of — target",
       "rowCount": 0,
-      "computedAt": "2026-10-26T18:27:58.234Z",
+      "computedAt": "2026-10-27T15:14:42.766Z",
       "warnings": [
         "source \"us_crm\" errored: US pipeline: not connected yet - paste the link or upload a CSV on the Sources page",
         "denominator for \"us_closed_won\" is static but has no usable value"
@@ -69,7 +69,7 @@
       "unit": "currency_usd",
       "caption": "— of — open",
       "rowCount": 0,
-      "computedAt": "2026-10-26T18:27:58.234Z",
+      "computedAt": "2026-10-27T15:14:42.766Z",
       "warnings": [
         "source \"us_crm\" errored: US pipeline: not connected yet - paste the link or upload a CSV on the Sources page",
         "denominator metric \"in_pipeline_us\" for \"us_in_poc\" has no value"
@@ -91,7 +91,7 @@
       "unit": "currency_usd",
       "caption": "—",
       "rowCount": 0,
-      "computedAt": "2026-10-26T18:27:58.234Z",
+      "computedAt": "2026-10-27T15:14:42.766Z",
       "warnings": [
         "source \"us_crm\" errored: US pipeline: not connected yet - paste the link or upload a CSV on the Sources page",
         "denominator metric \"in_pipeline_us\" for \"us_proposal\" has no value"
@@ -113,7 +113,7 @@
       "unit": "currency_usd",
       "caption": "— created",
       "rowCount": 0,
-      "computedAt": "2026-10-26T18:27:58.234Z",
+      "computedAt": "2026-10-27T15:14:42.766Z",
       "warnings": [
         "source \"us_crm_created\" errored: US pipeline created: not connected yet - paste the link or upload a CSV on the Sources page"
       ]
@@ -134,7 +134,7 @@
       "unit": "percent",
       "caption": "—",
       "rowCount": 0,
-      "computedAt": "2026-10-26T18:27:58.234Z",
+      "computedAt": "2026-10-27T15:14:42.766Z",
       "warnings": [
         "source \"us_crm\" errored: US pipeline: not connected yet - paste the link or upload a CSV on the Sources page"
       ]
@@ -155,7 +155,7 @@
       "unit": "count",
       "caption": "— of — target",
       "rowCount": 0,
-      "computedAt": "2026-10-26T18:27:58.234Z",
+      "computedAt": "2026-10-27T15:14:42.766Z",
       "warnings": [
         "source \"us_crm\" errored: US pipeline: not connected yet - paste the link or upload a CSV on the Sources page",
         "denominator for \"us_meetings_held\" is static but has no usable value"
@@ -177,7 +177,7 @@
       "unit": "count",
       "caption": "— of — target",
       "rowCount": 0,
-      "computedAt": "2026-10-26T18:27:58.234Z",
+      "computedAt": "2026-10-27T15:14:42.766Z",
       "warnings": [
         "source \"us_crm\" errored: US pipeline: not connected yet - paste the link or upload a CSV on the Sources page",
         "denominator for \"us_opps_created\" is static but has no usable value"
@@ -199,7 +199,7 @@
       "unit": "count",
       "caption": "— of — target",
       "rowCount": 0,
-      "computedAt": "2026-10-26T18:27:58.234Z",
+      "computedAt": "2026-10-27T15:14:42.766Z",
       "warnings": [
         "source \"us_crm\" errored: US pipeline: not connected yet - paste the link or upload a CSV on the Sources page",
         "denominator for \"us_accounts_worked\" is static but has no usable value"
@@ -221,7 +221,7 @@
       "unit": "currency_usd",
       "caption": "— of — budget",
       "rowCount": 0,
-      "computedAt": "2026-10-26T18:27:58.234Z",
+      "computedAt": "2026-10-27T15:14:42.766Z",
       "warnings": [
         "source \"ads_us\" errored: Paid media - US: not connected yet - paste the link or upload a CSV on the Sources page",
         "denominator for \"pm_us_spend\" is static but has no usable value"
@@ -245,7 +245,7 @@
       "unit": "count",
       "caption": "— of — target",
       "rowCount": 0,
-      "computedAt": "2026-10-26T18:27:58.234Z",
+      "computedAt": "2026-10-27T15:14:42.766Z",
       "warnings": [
         "source \"ads_us\" errored: Paid media - US: not connected yet - paste the link or upload a CSV on the Sources page",
         "denominator for \"pm_us_leads\" is static but has no usable value"
@@ -269,7 +269,7 @@
       "unit": "count",
       "caption": "— of — leads",
       "rowCount": 0,
-      "computedAt": "2026-10-26T18:27:58.234Z",
+      "computedAt": "2026-10-27T15:14:42.766Z",
       "warnings": [
         "source \"ads_us\" errored: Paid media - US: not connected yet - paste the link or upload a CSV on the Sources page",
         "denominator metric \"pm_us_leads\" for \"pm_us_qualified\" has no value"
@@ -293,7 +293,7 @@
       "unit": "currency_usd",
       "caption": "—",
       "rowCount": 0,
-      "computedAt": "2026-10-26T18:27:58.234Z",
+      "computedAt": "2026-10-27T15:14:42.766Z",
       "warnings": [
         "source \"ads_us\" errored: Paid media - US: not connected yet - paste the link or upload a CSV on the Sources page"
       ],
@@ -316,7 +316,7 @@
       "unit": "currency_usd",
       "caption": "—",
       "rowCount": 0,
-      "computedAt": "2026-10-26T18:27:58.234Z",
+      "computedAt": "2026-10-27T15:14:42.766Z",
       "warnings": [
         "source \"ads_us\" errored: Paid media - US: not connected yet - paste the link or upload a CSV on the Sources page"
       ],
@@ -339,7 +339,7 @@
       "unit": "currency_usd",
       "caption": "— sourced",
       "rowCount": 0,
-      "computedAt": "2026-10-26T18:27:58.234Z",
+      "computedAt": "2026-10-27T15:14:42.766Z",
       "warnings": [
         "source \"us_crm\" errored: US pipeline: not connected yet - paste the link or upload a CSV on the Sources page"
       ],
@@ -357,7 +357,7 @@
         "Raghav"
       ],
       "raisedBy": "engine",
-      "raisedAt": "2026-10-26T18:27:58.234Z",
+      "raisedAt": "2026-10-27T15:14:42.766Z",
       "resolvedAt": null,
       "metricIds": [
         "in_pipeline_us"
@@ -375,7 +375,7 @@
         "Imran"
       ],
       "raisedBy": "engine",
-      "raisedAt": "2026-10-26T18:27:58.234Z",
+      "raisedAt": "2026-10-27T15:14:42.766Z",
       "resolvedAt": null,
       "metricIds": [
         "pm_us_cac"
@@ -393,7 +393,7 @@
         "Imran"
       ],
       "raisedBy": "engine",
-      "raisedAt": "2026-10-26T18:27:58.234Z",
+      "raisedAt": "2026-10-27T15:14:42.766Z",
       "resolvedAt": null,
       "metricIds": [
         "pm_us_cpl"
@@ -411,7 +411,7 @@
         "Imran"
       ],
       "raisedBy": "engine",
-      "raisedAt": "2026-10-26T18:27:58.234Z",
+      "raisedAt": "2026-10-27T15:14:42.766Z",
       "resolvedAt": null,
       "metricIds": [
         "pm_us_leads"
@@ -429,7 +429,7 @@
         "Imran"
       ],
       "raisedBy": "engine",
-      "raisedAt": "2026-10-26T18:27:58.234Z",
+      "raisedAt": "2026-10-27T15:14:42.766Z",
       "resolvedAt": null,
       "metricIds": [
         "pm_us_pipeline_sourced"
@@ -447,7 +447,7 @@
         "Imran"
       ],
       "raisedBy": "engine",
-      "raisedAt": "2026-10-26T18:27:58.234Z",
+      "raisedAt": "2026-10-27T15:14:42.766Z",
       "resolvedAt": null,
       "metricIds": [
         "pm_us_qualified"
@@ -465,7 +465,7 @@
         "Imran"
       ],
       "raisedBy": "engine",
-      "raisedAt": "2026-10-26T18:27:58.234Z",
+      "raisedAt": "2026-10-27T15:14:42.766Z",
       "resolvedAt": null,
       "metricIds": [
         "pm_us_spend"
@@ -484,7 +484,7 @@
         "Raghav"
       ],
       "raisedBy": "engine",
-      "raisedAt": "2026-10-26T18:27:58.234Z",
+      "raisedAt": "2026-10-27T15:14:42.766Z",
       "resolvedAt": null,
       "metricIds": [
         "us_accounts_worked"
@@ -503,7 +503,7 @@
         "Raghav"
       ],
       "raisedBy": "engine",
-      "raisedAt": "2026-10-26T18:27:58.234Z",
+      "raisedAt": "2026-10-27T15:14:42.766Z",
       "resolvedAt": null,
       "metricIds": [
         "us_closed_won"
@@ -522,7 +522,7 @@
         "Raghav"
       ],
       "raisedBy": "engine",
-      "raisedAt": "2026-10-26T18:27:58.234Z",
+      "raisedAt": "2026-10-27T15:14:42.766Z",
       "resolvedAt": null,
       "metricIds": [
         "us_created_wk"
@@ -541,7 +541,7 @@
         "Raghav"
       ],
       "raisedBy": "engine",
-      "raisedAt": "2026-10-26T18:27:58.234Z",
+      "raisedAt": "2026-10-27T15:14:42.766Z",
       "resolvedAt": null,
       "metricIds": [
         "us_in_poc"
@@ -560,7 +560,7 @@
         "Raghav"
       ],
       "raisedBy": "engine",
-      "raisedAt": "2026-10-26T18:27:58.234Z",
+      "raisedAt": "2026-10-27T15:14:42.766Z",
       "resolvedAt": null,
       "metricIds": [
         "us_meetings_held"
@@ -579,7 +579,7 @@
         "Raghav"
       ],
       "raisedBy": "engine",
-      "raisedAt": "2026-10-26T18:27:58.234Z",
+      "raisedAt": "2026-10-27T15:14:42.766Z",
       "resolvedAt": null,
       "metricIds": [
         "us_opps_created"
@@ -598,7 +598,7 @@
         "Raghav"
       ],
       "raisedBy": "engine",
-      "raisedAt": "2026-10-26T18:27:58.234Z",
+      "raisedAt": "2026-10-27T15:14:42.766Z",
       "resolvedAt": null,
       "metricIds": [
         "us_proposal"
@@ -617,7 +617,7 @@
         "Raghav"
       ],
       "raisedBy": "engine",
-      "raisedAt": "2026-10-26T18:27:58.234Z",
+      "raisedAt": "2026-10-27T15:14:42.766Z",
       "resolvedAt": null,
       "metricIds": [
         "us_win_rate"
@@ -636,7 +636,7 @@
         "Raghav"
       ],
       "raisedBy": "engine",
-      "raisedAt": "2026-10-26T18:27:58.234Z",
+      "raisedAt": "2026-10-27T15:14:42.766Z",
       "resolvedAt": null,
       "metricIds": [
         "in_pipeline_us"
@@ -654,7 +654,7 @@
         "Imran"
       ],
       "raisedBy": "engine",
-      "raisedAt": "2026-10-26T18:27:58.234Z",
+      "raisedAt": "2026-10-27T15:14:42.766Z",
       "resolvedAt": null,
       "metricIds": [
         "pm_us_cac"
@@ -672,7 +672,7 @@
         "Imran"
       ],
       "raisedBy": "engine",
-      "raisedAt": "2026-10-26T18:27:58.234Z",
+      "raisedAt": "2026-10-27T15:14:42.766Z",
       "resolvedAt": null,
       "metricIds": [
         "pm_us_cpl"
@@ -690,7 +690,7 @@
         "Imran"
       ],
       "raisedBy": "engine",
-      "raisedAt": "2026-10-26T18:27:58.234Z",
+      "raisedAt": "2026-10-27T15:14:42.766Z",
       "resolvedAt": null,
       "metricIds": [
         "pm_us_leads"
@@ -708,7 +708,7 @@
         "Imran"
       ],
       "raisedBy": "engine",
-      "raisedAt": "2026-10-26T18:27:58.234Z",
+      "raisedAt": "2026-10-27T15:14:42.766Z",
       "resolvedAt": null,
       "metricIds": [
         "pm_us_pipeline_sourced"
@@ -726,7 +726,7 @@
         "Imran"
       ],
       "raisedBy": "engine",
-      "raisedAt": "2026-10-26T18:27:58.234Z",
+      "raisedAt": "2026-10-27T15:14:42.766Z",
       "resolvedAt": null,
       "metricIds": [
         "pm_us_qualified"
@@ -744,7 +744,7 @@
         "Imran"
       ],
       "raisedBy": "engine",
-      "raisedAt": "2026-10-26T18:27:58.234Z",
+      "raisedAt": "2026-10-27T15:14:42.766Z",
       "resolvedAt": null,
       "metricIds": [
         "pm_us_spend"
@@ -763,7 +763,7 @@
         "Raghav"
       ],
       "raisedBy": "engine",
-      "raisedAt": "2026-10-26T18:27:58.234Z",
+      "raisedAt": "2026-10-27T15:14:42.766Z",
       "resolvedAt": null,
       "metricIds": [
         "us_accounts_worked"
@@ -782,7 +782,7 @@
         "Raghav"
       ],
       "raisedBy": "engine",
-      "raisedAt": "2026-10-26T18:27:58.234Z",
+      "raisedAt": "2026-10-27T15:14:42.766Z",
       "resolvedAt": null,
       "metricIds": [
         "us_closed_won"
@@ -801,7 +801,7 @@
         "Raghav"
       ],
       "raisedBy": "engine",
-      "raisedAt": "2026-10-26T18:27:58.234Z",
+      "raisedAt": "2026-10-27T15:14:42.766Z",
       "resolvedAt": null,
       "metricIds": [
         "us_created_wk"
@@ -820,7 +820,7 @@
         "Raghav"
       ],
       "raisedBy": "engine",
-      "raisedAt": "2026-10-26T18:27:58.234Z",
+      "raisedAt": "2026-10-27T15:14:42.766Z",
       "resolvedAt": null,
       "metricIds": [
         "us_in_poc"
@@ -839,7 +839,7 @@
         "Raghav"
       ],
       "raisedBy": "engine",
-      "raisedAt": "2026-10-26T18:27:58.234Z",
+      "raisedAt": "2026-10-27T15:14:42.766Z",
       "resolvedAt": null,
       "metricIds": [
         "us_meetings_held"
@@ -858,7 +858,7 @@
         "Raghav"
       ],
       "raisedBy": "engine",
-      "raisedAt": "2026-10-26T18:27:58.234Z",
+      "raisedAt": "2026-10-27T15:14:42.766Z",
       "resolvedAt": null,
       "metricIds": [
         "us_opps_created"
@@ -877,7 +877,7 @@
         "Raghav"
       ],
       "raisedBy": "engine",
-      "raisedAt": "2026-10-26T18:27:58.234Z",
+      "raisedAt": "2026-10-27T15:14:42.766Z",
       "resolvedAt": null,
       "metricIds": [
         "us_proposal"
@@ -896,7 +896,7 @@
         "Raghav"
       ],
       "raisedBy": "engine",
-      "raisedAt": "2026-10-26T18:27:58.234Z",
+      "raisedAt": "2026-10-27T15:14:42.766Z",
       "resolvedAt": null,
       "metricIds": [
         "us_win_rate"
@@ -915,7 +915,7 @@
         "Raghav"
       ],
       "raisedBy": "engine",
-      "raisedAt": "2026-10-26T18:27:58.234Z",
+      "raisedAt": "2026-10-27T15:14:42.766Z",
       "resolvedAt": null,
       "metricIds": [
         "in_pipeline_us"
@@ -933,7 +933,7 @@
         "Imran"
       ],
       "raisedBy": "engine",
-      "raisedAt": "2026-10-26T18:27:58.234Z",
+      "raisedAt": "2026-10-27T15:14:42.766Z",
       "resolvedAt": null,
       "metricIds": [
         "pm_us_cac"
@@ -951,7 +951,7 @@
         "Imran"
       ],
       "raisedBy": "engine",
-      "raisedAt": "2026-10-26T18:27:58.234Z",
+      "raisedAt": "2026-10-27T15:14:42.766Z",
       "resolvedAt": null,
       "metricIds": [
         "pm_us_cpl"
@@ -969,7 +969,7 @@
         "Imran"
       ],
       "raisedBy": "engine",
-      "raisedAt": "2026-10-26T18:27:58.234Z",
+      "raisedAt": "2026-10-27T15:14:42.766Z",
       "resolvedAt": null,
       "metricIds": [
         "pm_us_leads"
@@ -987,7 +987,7 @@
         "Imran"
       ],
       "raisedBy": "engine",
-      "raisedAt": "2026-10-26T18:27:58.234Z",
+      "raisedAt": "2026-10-27T15:14:42.766Z",
       "resolvedAt": null,
       "metricIds": [
         "pm_us_pipeline_sourced"
@@ -1005,7 +1005,7 @@
         "Imran"
       ],
       "raisedBy": "engine",
-      "raisedAt": "2026-10-26T18:27:58.234Z",
+      "raisedAt": "2026-10-27T15:14:42.766Z",
       "resolvedAt": null,
       "metricIds": [
         "pm_us_qualified"
@@ -1023,7 +1023,7 @@
         "Imran"
       ],
       "raisedBy": "engine",
-      "raisedAt": "2026-10-26T18:27:58.234Z",
+      "raisedAt": "2026-10-27T15:14:42.766Z",
       "resolvedAt": null,
       "metricIds": [
         "pm_us_spend"
@@ -1042,7 +1042,7 @@
         "Raghav"
       ],
       "raisedBy": "engine",
-      "raisedAt": "2026-10-26T18:27:58.234Z",
+      "raisedAt": "2026-10-27T15:14:42.766Z",
       "resolvedAt": null,
       "metricIds": [
         "us_accounts_worked"
@@ -1061,7 +1061,7 @@
         "Raghav"
       ],
       "raisedBy": "engine",
-      "raisedAt": "2026-10-26T18:27:58.234Z",
+      "raisedAt": "2026-10-27T15:14:42.766Z",
       "resolvedAt": null,
       "metricIds": [
         "us_closed_won"
@@ -1080,7 +1080,7 @@
         "Raghav"
       ],
       "raisedBy": "engine",
-      "raisedAt": "2026-10-26T18:27:58.234Z",
+      "raisedAt": "2026-10-27T15:14:42.766Z",
       "resolvedAt": null,
       "metricIds": [
         "us_created_wk"
@@ -1099,7 +1099,7 @@
         "Raghav"
       ],
       "raisedBy": "engine",
-      "raisedAt": "2026-10-26T18:27:58.234Z",
+      "raisedAt": "2026-10-27T15:14:42.766Z",
       "resolvedAt": null,
       "metricIds": [
         "us_in_poc"
@@ -1118,7 +1118,7 @@
         "Raghav"
       ],
       "raisedBy": "engine",
-      "raisedAt": "2026-10-26T18:27:58.234Z",
+      "raisedAt": "2026-10-27T15:14:42.766Z",
       "resolvedAt": null,
       "metricIds": [
         "us_meetings_held"
@@ -1137,7 +1137,7 @@
         "Raghav"
       ],
       "raisedBy": "engine",
-      "raisedAt": "2026-10-26T18:27:58.234Z",
+      "raisedAt": "2026-10-27T15:14:42.766Z",
       "resolvedAt": null,
       "metricIds": [
         "us_opps_created"
@@ -1156,7 +1156,7 @@
         "Raghav"
       ],
       "raisedBy": "engine",
-      "raisedAt": "2026-10-26T18:27:58.234Z",
+      "raisedAt": "2026-10-27T15:14:42.766Z",
       "resolvedAt": null,
       "metricIds": [
         "us_proposal"
@@ -1175,7 +1175,7 @@
         "Raghav"
       ],
       "raisedBy": "engine",
-      "raisedAt": "2026-10-26T18:27:58.234Z",
+      "raisedAt": "2026-10-27T15:14:42.766Z",
       "resolvedAt": null,
       "metricIds": [
         "us_win_rate"

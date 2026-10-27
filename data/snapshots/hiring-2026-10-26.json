@@ -3,8 +3,8 @@
     "id": "run-2026-10-26",
     "periodStart": "2026-10-26",
     "periodEnd": "2026-11-01",
-    "startedAt": "2026-10-26T18:27:56.945Z",
-    "finishedAt": "2026-10-26T18:27:56.945Z",
+    "startedAt": "2026-10-27T15:14:41.341Z",
+    "finishedAt": "2026-10-27T15:14:41.341Z",
     "status": "partial",
     "triggeredBy": "cron",
     "meetingId": "hiring"
@@ -26,7 +26,7 @@
       "unit": "count",
       "caption": "31 openings",
       "rowCount": 25,
-      "computedAt": "2026-10-26T18:27:56.945Z",
+      "computedAt": "2026-10-27T15:14:41.341Z",
       "warnings": []
     },
     {
@@ -45,7 +45,7 @@
       "unit": "count",
       "caption": "25 open",
       "rowCount": 25,
-      "computedAt": "2026-10-26T18:27:56.945Z",
+      "computedAt": "2026-10-27T15:14:41.341Z",
       "warnings": []
     },
     {
@@ -64,7 +64,7 @@
       "unit": "count",
       "caption": "50 candidates",
       "rowCount": 50,
-      "computedAt": "2026-10-26T18:27:56.945Z",
+      "computedAt": "2026-10-27T15:14:41.341Z",
       "warnings": []
     },
     {
@@ -83,7 +83,7 @@
       "unit": "count",
       "caption": "0 out",
       "rowCount": 0,
-      "computedAt": "2026-10-26T18:27:56.945Z",
+      "computedAt": "2026-10-27T15:14:41.341Z",
       "warnings": []
     },
     {
@@ -102,7 +102,7 @@
       "unit": "count",
       "caption": "2 of 31 in plan",
       "rowCount": 2,
-      "computedAt": "2026-10-26T18:27:56.945Z",
+      "computedAt": "2026-10-27T15:14:41.341Z",
       "warnings": []
     },
     {
@@ -121,7 +121,7 @@
       "unit": "count",
       "caption": "0 of 31 in plan",
       "rowCount": 0,
-      "computedAt": "2026-10-26T18:27:56.945Z",
+      "computedAt": "2026-10-27T15:14:41.341Z",
       "warnings": []
     },
     {
@@ -140,7 +140,7 @@
       "unit": "duration_days",
       "caption": "—",
       "rowCount": 113,
-      "computedAt": "2026-10-26T18:27:56.945Z",
+      "computedAt": "2026-10-27T15:14:41.341Z",
       "warnings": [
         "column \"days_to_close\" is not in the source at all - 113 rows skipped, not counted as 0",
         "113 row(s) matched but none held a usable number in \"days_to_close\" - value is unknown, not 0"
@@ -157,7 +157,7 @@
         "Rishi"
       ],
       "raisedBy": "engine",
-      "raisedAt": "2026-10-26T18:27:56.945Z",
+      "raisedAt": "2026-10-27T15:14:41.341Z",
       "resolvedAt": null,
       "metricIds": [
         "hiring_time_to_close"
@@ -176,7 +176,7 @@
         "Rishi"
       ],
       "raisedBy": "engine",
-      "raisedAt": "2026-10-26T18:27:56.945Z",
+      "raisedAt": "2026-10-27T15:14:41.341Z",
       "resolvedAt": null,
       "metricIds": [
         "hiring_accepted"
@@ -195,7 +195,7 @@
         "Rishi"
       ],
       "raisedBy": "engine",
-      "raisedAt": "2026-10-26T18:27:56.945Z",
+      "raisedAt": "2026-10-27T15:14:41.341Z",
       "resolvedAt": null,
       "metricIds": [
         "hiring_in_process"
@@ -214,7 +214,7 @@
         "Rishi"
       ],
       "raisedBy": "engine",
-      "raisedAt": "2026-10-26T18:27:56.945Z",
+      "raisedAt": "2026-10-27T15:14:41.341Z",
       "resolvedAt": null,
       "metricIds": [
         "hiring_joined"
@@ -233,7 +233,7 @@
         "Rishi"
       ],
       "raisedBy": "engine",
-      "raisedAt": "2026-10-26T18:27:56.945Z",
+      "raisedAt": "2026-10-27T15:14:41.341Z",
       "resolvedAt": null,
       "metricIds": [
         "hiring_offers_out"
@@ -252,7 +252,7 @@
         "Rishi"
       ],
       "raisedBy": "engine",
-      "raisedAt": "2026-10-26T18:27:56.945Z",
+      "raisedAt": "2026-10-27T15:14:41.341Z",
       "resolvedAt": null,
       "metricIds": [
         "hiring_open_roles"
@@ -271,7 +271,7 @@
         "Rishi"
       ],
       "raisedBy": "engine",
-      "raisedAt": "2026-10-26T18:27:56.945Z",
+      "raisedAt": "2026-10-27T15:14:41.341Z",
       "resolvedAt": null,
       "metricIds": [
         "hiring_plan"
@@ -290,7 +290,7 @@
         "Rishi"
       ],
       "raisedBy": "engine",
-      "raisedAt": "2026-10-26T18:27:56.945Z",
+      "raisedAt": "2026-10-27T15:14:41.341Z",
       "resolvedAt": null,
       "metricIds": [
         "hiring_time_to_close"
@@ -309,7 +309,7 @@
         "Rishi"
       ],
       "raisedBy": "engine",
-      "raisedAt": "2026-10-26T18:27:56.945Z",
+      "raisedAt": "2026-10-27T15:14:41.341Z",
       "resolvedAt": null,
       "metricIds": [
         "hiring_accepted"
@@ -328,7 +328,7 @@
         "Rishi"
       ],
       "raisedBy": "engine",
-      "raisedAt": "2026-10-26T18:27:56.945Z",
+      "raisedAt": "2026-10-27T15:14:41.341Z",
       "resolvedAt": null,
       "metricIds": [
         "hiring_in_process"
@@ -347,7 +347,7 @@
         "Rishi"
       ],
       "raisedBy": "engine",
-      "raisedAt": "2026-10-26T18:27:56.945Z",
+      "raisedAt": "2026-10-27T15:14:41.341Z",
       "resolvedAt": null,
       "metricIds": [
         "hiring_joined"
@@ -366,7 +366,7 @@
         "Rishi"
       ],
       "raisedBy": "engine",
-      "raisedAt": "2026-10-26T18:27:56.945Z",
+      "raisedAt": "2026-10-27T15:14:41.341Z",
       "resolvedAt": null,
       "metricIds": [
         "hiring_offers_out"
@@ -385,7 +385,7 @@
         "Rishi"
       ],
       "raisedBy": "engine",
-      "raisedAt": "2026-10-26T18:27:56.945Z",
+      "raisedAt": "2026-10-27T15:14:41.341Z",
       "resolvedAt": null,
       "metricIds": [
         "hiring_open_roles"
@@ -404,7 +404,7 @@
         "Rishi"
       ],
       "raisedBy": "engine",
-      "raisedAt": "2026-10-26T18:27:56.945Z",
+      "raisedAt": "2026-10-27T15:14:41.341Z",
       "resolvedAt": null,
       "metricIds": [
         "hiring_plan"
@@ -423,7 +423,7 @@
         "Rishi"
       ],
       "raisedBy": "engine",
-      "raisedAt": "2026-10-26T18:27:56.945Z",
+      "raisedAt": "2026-10-27T15:14:41.341Z",
       "resolvedAt": null,
       "metricIds": [
         "hiring_time_to_close"
