@@ -3,8 +3,8 @@
     "id": "run-2026-10-26",
     "periodStart": "2026-10-26",
     "periodEnd": "2026-11-01",
-    "startedAt": "2026-10-27T15:14:42.772Z",
-    "finishedAt": "2026-10-27T15:14:42.772Z",
+    "startedAt": "2026-10-28T15:19:56.345Z",
+    "finishedAt": "2026-10-28T15:19:56.345Z",
     "status": "failed",
     "triggeredBy": "cron",
     "meetingId": "sloosh"
@@ -26,7 +26,7 @@
       "unit": "count",
       "caption": "— signups",
       "rowCount": 0,
-      "computedAt": "2026-10-27T15:14:42.772Z",
+      "computedAt": "2026-10-28T15:19:56.345Z",
       "warnings": [
         "source \"sloosh_db\" errored: Sloosh product data: no connection configured. Set SLOOSH_DB_URL_REST_URL and SLOOSH_DB_URL_REST_KEY, or PULSE_ALLOW_PSQL=1 for local runs. See .env.example."
       ]
@@ -47,7 +47,7 @@
       "unit": "count",
       "caption": "— of — signups",
       "rowCount": 0,
-      "computedAt": "2026-10-27T15:14:42.772Z",
+      "computedAt": "2026-10-28T15:19:56.345Z",
       "warnings": [
         "source \"sloosh_db\" errored: Sloosh product data: no connection configured. Set SLOOSH_DB_URL_REST_URL and SLOOSH_DB_URL_REST_KEY, or PULSE_ALLOW_PSQL=1 for local runs. See .env.example.",
         "denominator metric \"sloosh_signups\" for \"sloosh_activated\" has no value"
@@ -69,7 +69,7 @@
       "unit": "count",
       "caption": "— of —",
       "rowCount": 0,
-      "computedAt": "2026-10-27T15:14:42.772Z",
+      "computedAt": "2026-10-28T15:19:56.345Z",
       "warnings": [
         "source \"sloosh_db\" errored: Sloosh product data: no connection configured. Set SLOOSH_DB_URL_REST_URL and SLOOSH_DB_URL_REST_KEY, or PULSE_ALLOW_PSQL=1 for local runs. See .env.example.",
         "denominator metric \"sloosh_signups\" for \"sloosh_returned\" has no value"
@@ -91,7 +91,7 @@
       "unit": "count",
       "caption": "— of —",
       "rowCount": 0,
-      "computedAt": "2026-10-27T15:14:42.772Z",
+      "computedAt": "2026-10-28T15:19:56.345Z",
       "warnings": [
         "source \"sloosh_db\" errored: Sloosh product data: no connection configured. Set SLOOSH_DB_URL_REST_URL and SLOOSH_DB_URL_REST_KEY, or PULSE_ALLOW_PSQL=1 for local runs. See .env.example.",
         "denominator metric \"sloosh_signups\" for \"sloosh_paid\" has no value"
@@ -113,7 +113,7 @@
       "unit": "count",
       "caption": "— active",
       "rowCount": 0,
-      "computedAt": "2026-10-27T15:14:42.772Z",
+      "computedAt": "2026-10-28T15:19:56.345Z",
       "warnings": [
         "source \"sloosh_db\" errored: Sloosh product data: no connection configured. Set SLOOSH_DB_URL_REST_URL and SLOOSH_DB_URL_REST_KEY, or PULSE_ALLOW_PSQL=1 for local runs. See .env.example."
       ]
@@ -134,7 +134,7 @@
       "unit": "currency_inr",
       "caption": "— of — target",
       "rowCount": 0,
-      "computedAt": "2026-10-27T15:14:42.772Z",
+      "computedAt": "2026-10-28T15:19:56.345Z",
       "warnings": [
         "source \"sloosh_db\" errored: Sloosh product data: no connection configured. Set SLOOSH_DB_URL_REST_URL and SLOOSH_DB_URL_REST_KEY, or PULSE_ALLOW_PSQL=1 for local runs. See .env.example.",
         "denominator for \"sloosh_revenue\" is static but has no usable value"
@@ -156,7 +156,7 @@
       "unit": "count",
       "caption": "— of — committed",
       "rowCount": 0,
-      "computedAt": "2026-10-27T15:14:42.772Z",
+      "computedAt": "2026-10-28T15:19:56.345Z",
       "warnings": [
         "source \"sloosh_board\" errored: Sloosh delivery board: not connected yet - paste the link or upload a CSV on the Sources page",
         "denominator for \"sloosh_shipped\" is static but has no usable value"
@@ -178,7 +178,7 @@
       "unit": "count",
       "caption": "— of — wip limit",
       "rowCount": 0,
-      "computedAt": "2026-10-27T15:14:42.772Z",
+      "computedAt": "2026-10-28T15:19:56.345Z",
       "warnings": [
         "source \"sloosh_board\" errored: Sloosh delivery board: not connected yet - paste the link or upload a CSV on the Sources page",
         "denominator for \"sloosh_in_progress\" is static but has no usable value"
@@ -200,7 +200,7 @@
       "unit": "count",
       "caption": "— releases",
       "rowCount": 0,
-      "computedAt": "2026-10-27T15:14:42.772Z",
+      "computedAt": "2026-10-28T15:19:56.345Z",
       "warnings": [
         "source \"sloosh_board\" errored: Sloosh delivery board: not connected yet - paste the link or upload a CSV on the Sources page"
       ]
@@ -221,7 +221,7 @@
       "unit": "duration_days",
       "caption": "—",
       "rowCount": 0,
-      "computedAt": "2026-10-27T15:14:42.772Z",
+      "computedAt": "2026-10-28T15:19:56.345Z",
       "warnings": [
         "source \"sloosh_board\" errored: Sloosh delivery board: not connected yet - paste the link or upload a CSV on the Sources page"
       ]
@@ -242,7 +242,7 @@
       "unit": "count",
       "caption": "— landed",
       "rowCount": 0,
-      "computedAt": "2026-10-27T15:14:42.772Z",
+      "computedAt": "2026-10-28T15:19:56.345Z",
       "warnings": [
         "source \"sloosh_web\" errored: Sloosh marketing funnel: not connected yet - paste the link or upload a CSV on the Sources page"
       ]
@@ -263,7 +263,7 @@
       "unit": "count",
       "caption": "— of — landed",
       "rowCount": 0,
-      "computedAt": "2026-10-27T15:14:42.772Z",
+      "computedAt": "2026-10-28T15:19:56.345Z",
       "warnings": [
         "source \"sloosh_web\" errored: Sloosh marketing funnel: not connected yet - paste the link or upload a CSV on the Sources page",
         "denominator metric \"sloosh_web_landed\" for \"sloosh_web_signup\" has no value"
@@ -285,7 +285,7 @@
       "unit": "count",
       "caption": "— of — signups",
       "rowCount": 0,
-      "computedAt": "2026-10-27T15:14:42.772Z",
+      "computedAt": "2026-10-28T15:19:56.345Z",
       "warnings": [
         "source \"sloosh_web\" errored: Sloosh marketing funnel: not connected yet - paste the link or upload a CSV on the Sources page",
         "denominator metric \"sloosh_web_signup\" for \"sloosh_web_paid\" has no value"
@@ -307,7 +307,7 @@
       "unit": "count",
       "caption": "— of 0 total",
       "rowCount": 0,
-      "computedAt": "2026-10-27T15:14:42.772Z",
+      "computedAt": "2026-10-28T15:19:56.345Z",
       "warnings": [
         "source \"sloosh_social\" errored: Sloosh social followers: not connected yet - paste the link or upload a CSV on the Sources page"
       ],
@@ -329,7 +329,7 @@
       "unit": "count",
       "caption": "— of 0 total",
       "rowCount": 0,
-      "computedAt": "2026-10-27T15:14:42.772Z",
+      "computedAt": "2026-10-28T15:19:56.345Z",
       "warnings": [
         "source \"sloosh_social\" errored: Sloosh social followers: not connected yet - paste the link or upload a CSV on the Sources page"
       ],
@@ -351,7 +351,7 @@
       "unit": "count",
       "caption": "— of 0 total",
       "rowCount": 0,
-      "computedAt": "2026-10-27T15:14:42.772Z",
+      "computedAt": "2026-10-28T15:19:56.345Z",
       "warnings": [
         "source \"sloosh_social\" errored: Sloosh social followers: not connected yet - paste the link or upload a CSV on the Sources page"
       ],
@@ -373,7 +373,7 @@
       "unit": "count",
       "caption": "— of 0 total",
       "rowCount": 0,
-      "computedAt": "2026-10-27T15:14:42.772Z",
+      "computedAt": "2026-10-28T15:19:56.345Z",
       "warnings": [
         "source \"sloosh_social\" errored: Sloosh social followers: not connected yet - paste the link or upload a CSV on the Sources page"
       ],
@@ -390,7 +390,7 @@
         "Priyal"
       ],
       "raisedBy": "engine",
-      "raisedAt": "2026-10-27T15:14:42.772Z",
+      "raisedAt": "2026-10-28T15:19:56.345Z",
       "resolvedAt": null,
       "metricIds": [
         "sloosh_activated"
@@ -409,7 +409,7 @@
         "Priyal"
       ],
       "raisedBy": "engine",
-      "raisedAt": "2026-10-27T15:14:42.772Z",
+      "raisedAt": "2026-10-28T15:19:56.345Z",
       "resolvedAt": null,
       "metricIds": [
         "sloosh_cycle_time"
@@ -428,7 +428,7 @@
         "Priyal"
       ],
       "raisedBy": "engine",
-      "raisedAt": "2026-10-27T15:14:42.772Z",
+      "raisedAt": "2026-10-28T15:19:56.345Z",
       "resolvedAt": null,
       "metricIds": [
         "sloosh_followers_instagram"
@@ -447,7 +447,7 @@
         "Priyal"
       ],
       "raisedBy": "engine",
-      "raisedAt": "2026-10-27T15:14:42.772Z",
+      "raisedAt": "2026-10-28T15:19:56.345Z",
       "resolvedAt": null,
       "metricIds": [
         "sloosh_followers_linkedin"
@@ -466,7 +466,7 @@
         "Priyal"
       ],
       "raisedBy": "engine",
-      "raisedAt": "2026-10-27T15:14:42.772Z",
+      "raisedAt": "2026-10-28T15:19:56.345Z",
       "resolvedAt": null,
       "metricIds": [
         "sloosh_followers_x"
@@ -485,7 +485,7 @@
         "Priyal"
       ],
       "raisedBy": "engine",
-      "raisedAt": "2026-10-27T15:14:42.772Z",
+      "raisedAt": "2026-10-28T15:19:56.345Z",
       "resolvedAt": null,
       "metricIds": [
         "sloosh_followers_youtube"
@@ -504,7 +504,7 @@
         "Priyal"
       ],
       "raisedBy": "engine",
-      "raisedAt": "2026-10-27T15:14:42.772Z",
+      "raisedAt": "2026-10-28T15:19:56.345Z",
       "resolvedAt": null,
       "metricIds": [
         "sloosh_in_progress"
@@ -523,7 +523,7 @@
         "Priyal"
       ],
       "raisedBy": "engine",
-      "raisedAt": "2026-10-27T15:14:42.772Z",
+      "raisedAt": "2026-10-28T15:19:56.345Z",
       "resolvedAt": null,
       "metricIds": [
         "sloosh_paid"
@@ -542,7 +542,7 @@
         "Priyal"
       ],
       "raisedBy": "engine",
-      "raisedAt": "2026-10-27T15:14:42.772Z",
+      "raisedAt": "2026-10-28T15:19:56.345Z",
       "resolvedAt": null,
       "metricIds": [
         "sloosh_releases"
@@ -561,7 +561,7 @@
         "Priyal"
       ],
       "raisedBy": "engine",
-      "raisedAt": "2026-10-27T15:14:42.772Z",
+      "raisedAt": "2026-10-28T15:19:56.345Z",
       "resolvedAt": null,
       "metricIds": [
         "sloosh_returned"
@@ -580,7 +580,7 @@
         "Priyal"
       ],
       "raisedBy": "engine",
-      "raisedAt": "2026-10-27T15:14:42.772Z",
+      "raisedAt": "2026-10-28T15:19:56.345Z",
       "resolvedAt": null,
       "metricIds": [
         "sloosh_revenue"
@@ -599,7 +599,7 @@
         "Priyal"
       ],
       "raisedBy": "engine",
-      "raisedAt": "2026-10-27T15:14:42.772Z",
+      "raisedAt": "2026-10-28T15:19:56.345Z",
       "resolvedAt": null,
       "metricIds": [
         "sloosh_shipped"
@@ -618,7 +618,7 @@
         "Priyal"
       ],
       "raisedBy": "engine",
-      "raisedAt": "2026-10-27T15:14:42.772Z",
+      "raisedAt": "2026-10-28T15:19:56.345Z",
       "resolvedAt": null,
       "metricIds": [
         "sloosh_signups"
@@ -637,7 +637,7 @@
         "Priyal"
       ],
       "raisedBy": "engine",
-      "raisedAt": "2026-10-27T15:14:42.772Z",
+      "raisedAt": "2026-10-28T15:19:56.345Z",
       "resolvedAt": null,
       "metricIds": [
         "sloosh_wau"
@@ -656,7 +656,7 @@
         "Priyal"
       ],
       "raisedBy": "engine",
-      "raisedAt": "2026-10-27T15:14:42.772Z",
+      "raisedAt": "2026-10-28T15:19:56.345Z",
       "resolvedAt": null,
       "metricIds": [
         "sloosh_web_landed"
@@ -675,7 +675,7 @@
         "Priyal"
       ],
       "raisedBy": "engine",
-      "raisedAt": "2026-10-27T15:14:42.772Z",
+      "raisedAt": "2026-10-28T15:19:56.345Z",
       "resolvedAt": null,
       "metricIds": [
         "sloosh_web_paid"
@@ -694,7 +694,7 @@
         "Priyal"
       ],
       "raisedBy": "engine",
-      "raisedAt": "2026-10-27T15:14:42.772Z",
+      "raisedAt": "2026-10-28T15:19:56.345Z",
       "resolvedAt": null,
       "metricIds": [
         "sloosh_web_signup"
@@ -713,7 +713,7 @@
         "Priyal"
       ],
       "raisedBy": "engine",
-      "raisedAt": "2026-10-27T15:14:42.772Z",
+      "raisedAt": "2026-10-28T15:19:56.345Z",
       "resolvedAt": null,
       "metricIds": [
         "sloosh_activated"
@@ -732,7 +732,7 @@
         "Priyal"
       ],
       "raisedBy": "engine",
-      "raisedAt": "2026-10-27T15:14:42.772Z",
+      "raisedAt": "2026-10-28T15:19:56.345Z",
       "resolvedAt": null,
       "metricIds": [
         "sloosh_cycle_time"
@@ -751,7 +751,7 @@
         "Priyal"
       ],
       "raisedBy": "engine",
-      "raisedAt": "2026-10-27T15:14:42.772Z",
+      "raisedAt": "2026-10-28T15:19:56.345Z",
       "resolvedAt": null,
       "metricIds": [
         "sloosh_followers_instagram"
@@ -770,7 +770,7 @@
         "Priyal"
       ],
       "raisedBy": "engine",
-      "raisedAt": "2026-10-27T15:14:42.772Z",
+      "raisedAt": "2026-10-28T15:19:56.345Z",
       "resolvedAt": null,
       "metricIds": [
         "sloosh_followers_linkedin"
@@ -789,7 +789,7 @@
         "Priyal"
       ],
       "raisedBy": "engine",
-      "raisedAt": "2026-10-27T15:14:42.772Z",
+      "raisedAt": "2026-10-28T15:19:56.345Z",
       "resolvedAt": null,
       "metricIds": [
         "sloosh_followers_x"
@@ -808,7 +808,7 @@
         "Priyal"
       ],
       "raisedBy": "engine",
-      "raisedAt": "2026-10-27T15:14:42.772Z",
+      "raisedAt": "2026-10-28T15:19:56.345Z",
       "resolvedAt": null,
       "metricIds": [
         "sloosh_followers_youtube"
@@ -827,7 +827,7 @@
         "Priyal"
       ],
       "raisedBy": "engine",
-      "raisedAt": "2026-10-27T15:14:42.772Z",
+      "raisedAt": "2026-10-28T15:19:56.345Z",
       "resolvedAt": null,
       "metricIds": [
         "sloosh_in_progress"
@@ -846,7 +846,7 @@
         "Priyal"
       ],
       "raisedBy": "engine",
-      "raisedAt": "2026-10-27T15:14:42.772Z",
+      "raisedAt": "2026-10-28T15:19:56.345Z",
       "resolvedAt": null,
       "metricIds": [
         "sloosh_paid"
@@ -865,7 +865,7 @@
         "Priyal"
       ],
       "raisedBy": "engine",
-      "raisedAt": "2026-10-27T15:14:42.772Z",
+      "raisedAt": "2026-10-28T15:19:56.345Z",
       "resolvedAt": null,
       "metricIds": [
         "sloosh_releases"
@@ -884,7 +884,7 @@
         "Priyal"
       ],
       "raisedBy": "engine",
-      "raisedAt": "2026-10-27T15:14:42.772Z",
+      "raisedAt": "2026-10-28T15:19:56.345Z",
       "resolvedAt": null,
       "metricIds": [
         "sloosh_returned"
@@ -903,7 +903,7 @@
         "Priyal"
       ],
       "raisedBy": "engine",
-      "raisedAt": "2026-10-27T15:14:42.772Z",
+      "raisedAt": "2026-10-28T15:19:56.345Z",
       "resolvedAt": null,
       "metricIds": [
         "sloosh_revenue"
@@ -922,7 +922,7 @@
         "Priyal"
       ],
       "raisedBy": "engine",
-      "raisedAt": "2026-10-27T15:14:42.772Z",
+      "raisedAt": "2026-10-28T15:19:56.345Z",
       "resolvedAt": null,
       "metricIds": [
         "sloosh_shipped"
@@ -941,7 +941,7 @@
         "Priyal"
       ],
       "raisedBy": "engine",
-      "raisedAt": "2026-10-27T15:14:42.772Z",
+      "raisedAt": "2026-10-28T15:19:56.345Z",
       "resolvedAt": null,
       "metricIds": [
         "sloosh_signups"
@@ -960,7 +960,7 @@
         "Priyal"
       ],
       "raisedBy": "engine",
-      "raisedAt": "2026-10-27T15:14:42.772Z",
+      "raisedAt": "2026-10-28T15:19:56.345Z",
       "resolvedAt": null,
       "metricIds": [
         "sloosh_wau"
@@ -979,7 +979,7 @@
         "Priyal"
       ],
       "raisedBy": "engine",
-      "raisedAt": "2026-10-27T15:14:42.772Z",
+      "raisedAt": "2026-10-28T15:19:56.345Z",
       "resolvedAt": null,
       "metricIds": [
         "sloosh_web_landed"
@@ -998,7 +998,7 @@
         "Priyal"
       ],
       "raisedBy": "engine",
-      "raisedAt": "2026-10-27T15:14:42.772Z",
+      "raisedAt": "2026-10-28T15:19:56.345Z",
       "resolvedAt": null,
       "metricIds": [
         "sloosh_web_paid"
@@ -1017,7 +1017,7 @@
         "Priyal"
       ],
       "raisedBy": "engine",
-      "raisedAt": "2026-10-27T15:14:42.772Z",
+      "raisedAt": "2026-10-28T15:19:56.345Z",
       "resolvedAt": null,
       "metricIds": [
         "sloosh_web_signup"
@@ -1036,7 +1036,7 @@
         "Priyal"
       ],
       "raisedBy": "engine",
-      "raisedAt": "2026-10-27T15:14:42.772Z",
+      "raisedAt": "2026-10-28T15:19:56.345Z",
       "resolvedAt": null,
       "metricIds": [
         "sloosh_activated"
@@ -1055,7 +1055,7 @@
         "Priyal"
       ],
       "raisedBy": "engine",
-      "raisedAt": "2026-10-27T15:14:42.772Z",
+      "raisedAt": "2026-10-28T15:19:56.345Z",
       "resolvedAt": null,
       "metricIds": [
         "sloosh_cycle_time"
@@ -1074,7 +1074,7 @@
         "Priyal"
       ],
       "raisedBy": "engine",
-      "raisedAt": "2026-10-27T15:14:42.772Z",
+      "raisedAt": "2026-10-28T15:19:56.345Z",
       "resolvedAt": null,
       "metricIds": [
         "sloosh_followers_instagram"
@@ -1093,7 +1093,7 @@
         "Priyal"
       ],
       "raisedBy": "engine",
-      "raisedAt": "2026-10-27T15:14:42.772Z",
+      "raisedAt": "2026-10-28T15:19:56.345Z",
       "resolvedAt": null,
       "metricIds": [
         "sloosh_followers_linkedin"
@@ -1112,7 +1112,7 @@
         "Priyal"
       ],
       "raisedBy": "engine",
-      "raisedAt": "2026-10-27T15:14:42.772Z",
+      "raisedAt": "2026-10-28T15:19:56.345Z",
       "resolvedAt": null,
       "metricIds": [
         "sloosh_followers_x"
@@ -1131,7 +1131,7 @@
         "Priyal"
       ],
       "raisedBy": "engine",
-      "raisedAt": "2026-10-27T15:14:42.772Z",
+      "raisedAt": "2026-10-28T15:19:56.345Z",
       "resolvedAt": null,
       "metricIds": [
         "sloosh_followers_youtube"
@@ -1150,7 +1150,7 @@
         "Priyal"
       ],
       "raisedBy": "engine",
-      "raisedAt": "2026-10-27T15:14:42.772Z",
+      "raisedAt": "2026-10-28T15:19:56.345Z",
       "resolvedAt": null,
       "metricIds": [
         "sloosh_in_progress"
@@ -1169,7 +1169,7 @@
         "Priyal"
       ],
       "raisedBy": "engine",
-      "raisedAt": "2026-10-27T15:14:42.772Z",
+      "raisedAt": "2026-10-28T15:19:56.345Z",
       "resolvedAt": null,
       "metricIds": [
         "sloosh_paid"
@@ -1188,7 +1188,7 @@
         "Priyal"
       ],
       "raisedBy": "engine",
-      "raisedAt": "2026-10-27T15:14:42.772Z",
+      "raisedAt": "2026-10-28T15:19:56.345Z",
       "resolvedAt": null,
       "metricIds": [
         "sloosh_releases"
@@ -1207,7 +1207,7 @@
         "Priyal"
       ],
       "raisedBy": "engine",
-      "raisedAt": "2026-10-27T15:14:42.772Z",
+      "raisedAt": "2026-10-28T15:19:56.345Z",
       "resolvedAt": null,
       "metricIds": [
         "sloosh_returned"
@@ -1226,7 +1226,7 @@
         "Priyal"
       ],
       "raisedBy": "engine",
-      "raisedAt": "2026-10-27T15:14:42.772Z",
+      "raisedAt": "2026-10-28T15:19:56.345Z",
       "resolvedAt": null,
       "metricIds": [
         "sloosh_revenue"
@@ -1245,7 +1245,7 @@
         "Priyal"
       ],
       "raisedBy": "engine",
-      "raisedAt": "2026-10-27T15:14:42.772Z",
+      "raisedAt": "2026-10-28T15:19:56.345Z",
       "resolvedAt": null,
       "metricIds": [
         "sloosh_shipped"
@@ -1264,7 +1264,7 @@
         "Priyal"
       ],
       "raisedBy": "engine",
-      "raisedAt": "2026-10-27T15:14:42.772Z",
+      "raisedAt": "2026-10-28T15:19:56.345Z",
       "resolvedAt": null,
       "metricIds": [
         "sloosh_signups"
@@ -1283,7 +1283,7 @@
         "Priyal"
       ],
       "raisedBy": "engine",
-      "raisedAt": "2026-10-27T15:14:42.772Z",
+      "raisedAt": "2026-10-28T15:19:56.345Z",
       "resolvedAt": null,
       "metricIds": [
         "sloosh_wau"
@@ -1302,7 +1302,7 @@
         "Priyal"
       ],
       "raisedBy": "engine",
-      "raisedAt": "2026-10-27T15:14:42.772Z",
+      "raisedAt": "2026-10-28T15:19:56.345Z",
       "resolvedAt": null,
       "metricIds": [
         "sloosh_web_landed"
@@ -1321,7 +1321,7 @@
         "Priyal"
       ],
       "raisedBy": "engine",
-      "raisedAt": "2026-10-27T15:14:42.772Z",
+      "raisedAt": "2026-10-28T15:19:56.345Z",
       "resolvedAt": null,
       "metricIds": [
         "sloosh_web_paid"
@@ -1340,7 +1340,7 @@
         "Priyal"
       ],
       "raisedBy": "engine",
-      "raisedAt": "2026-10-27T15:14:42.772Z",
+      "raisedAt": "2026-10-28T15:19:56.345Z",
       "resolvedAt": null,
       "metricIds": [
         "sloosh_web_signup"
